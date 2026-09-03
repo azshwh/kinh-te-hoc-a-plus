@@ -7,7 +7,7 @@ const WORKED_PROBLEMS_DATA = [
     id: "prob1",
     category: "micro",
     chapter: 2,
-    title: "Dạng 1: Cân Bằng Cung - Cầu, Can Thiệp Thuế & Tính Thặng Dư Xã Hội",
+    title: "Dạng 1: Cân bằng cung - cầu, can thiệp thuế và tính thặng dư xã hội",
     examLevel: "Đề thi cuối kỳ Đại học Kinh tế Quốc dân (NEU)",
     context: `Một thị trường sản phẩm X có hàm cầu và hàm cung thị trường có dạng:
 $$Q_D = 120 - 2P \\quad \\text{và} \\quad Q_S = 30 + P$$
@@ -39,7 +39,7 @@ $$Q_D = 120 - 2P \\quad \\text{và} \\quad Q_S = 30 + P$$
           <p>Hàm cầu: $Q_D = 120 - 2P \\implies Q'_D(P) = -2$.</p>
           <p>Độ co giãn của cầu theo giá tại điểm cân bằng $(P^* = 30, Q^* = 60)$:</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$E_D = Q'_D(P) \\times \\frac{P^*}{Q^*} = -2 \\times \\frac{30}{60} = \\mathbf{-1} \\implies |E_D| = 1$$</div>
-          <p><strong>Kết luận:</strong> Cầu co giãn đơn vị ($|E_D| = 1$). Tại điểm này, doanh thu của doanh nghiệp đang đạt giá trị CỰC ĐẠI. Do đó doanh nghiệp nên <strong>giữ nguyên giá</strong>, bất kỳ hành động tăng giá hay giảm giá nào cũng sẽ làm giảm tổng doanh thu.</p>
+          <p><strong>Kết luận:</strong> Cầu co giãn đơn vị ($|E_D| = 1$). Tại điểm này, doanh thu của doanh nghiệp đang đạt giá trị cực đại. Do đó doanh nghiệp nên <strong>giữ nguyên giá</strong>, bất kỳ hành động tăng giá hay giảm giá nào cũng sẽ làm giảm tổng doanh thu.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
@@ -71,7 +71,7 @@ $$Q_D = 120 - 2P \\quad \\text{và} \\quad Q_S = 30 + P$$
     id: "prob2",
     category: "micro",
     chapter: 4,
-    title: "Dạng 2: Tối Ưu Hóa Người Tiêu Dùng Bằng Phương Pháp Đại Số & Lagrange",
+    title: "Dạng 2: Tối ưu hóa lựa chọn người tiêu dùng bằng đại số và nhân tử Lagrange",
     examLevel: "Đề thi Olympic Kinh tế học / ĐH Ngoại Thương (FTU)",
     context: `Một người tiêu dùng có mức thu nhập hàng tháng $I = 1.200.000$ đồng dùng để mua hai hàng hóa X và Y.
 Giá của hàng hóa X là $P_X = 20.000$ đồng/sp; giá của hàng hóa Y là $P_Y = 40.000$ đồng/sp.
@@ -132,7 +132,7 @@ $$U(X, Y) = X^{0.5} \\cdot Y^{0.5}$$`,
     id: "prob3",
     category: "micro",
     chapter: 5,
-    title: "Dạng 3: Hàm Chi Phí, Điểm Hòa Vốn, Điểm Đóng Cửa & Hàm Cung Ngắn Hạn",
+    title: "Dạng 3: Hàm chi phí, điểm hòa vốn, điểm đóng cửa và hàm cung ngắn hạn",
     examLevel: "Đề thi Đại học Kinh tế TP.HCM (UEH)",
     context: `Một doanh nghiệp hoạt động trong thị trường cạnh tranh hoàn hảo có hàm tổng chi phí ngắn hạn:
 $$TC = Q^2 + 10Q + 100$$
@@ -190,7 +190,7 @@ $$TC = Q^2 + 10Q + 100$$
     id: "prob4",
     category: "micro",
     chapter: 6,
-    title: "Dạng 4: Độc Quyền Thuần Túy & Phân Biệt Giá Cấp 3 Trên 2 Thị Trường",
+    title: "Dạng 4: Độc quyền thuần túy và phân biệt giá cấp 3 trên hai thị trường",
     examLevel: "Đề thi Học viện Ngoại giao (DAV) & NEU",
     context: `Một hãng dược phẩm độc quyền sản xuất một loại thuốc mới với hàm chi phí:
 $$TC = 20Q + 500 \\implies MC = 20$$
@@ -238,7 +238,7 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
     id: "prob5",
     category: "macro",
     chapter: 7,
-    title: "Dạng 5: Hạch Toán GDP, GNP, NNP, NI, PI, DI (Hệ Thống SNA Toàn Diện)",
+    title: "Dạng 5: Hạch toán GDP, GNP, NNP, NI, PI, DI theo hệ thống SNA",
     examLevel: "Đề thi Chuẩn Quốc Gia môn Kinh tế Vĩ mô",
     context: `Số liệu hạch toán quốc gia của một nền kinh tế trong năm (đơn vị: tỷ USD):
 - Tiêu dùng của hộ gia đình (C): 800
@@ -299,7 +299,7 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
     id: "prob6",
     category: "macro",
     chapter: 11,
-    title: "Dạng 6: Mô Hình Cân Bằng IS - LM & Đo Lường Hiện Tượng Lấn Át (Crowding-out)",
+    title: "Dạng 6: Mô hình cân bằng IS - LM và đo lường hiện tượng lấn át đầu tư (Crowding-out Effect)",
     examLevel: "Đề thi Cao học & Cuối kỳ ĐH Kinh tế Quốc dân (NEU)",
     context: `Một nền kinh tế đóng có các hàm số kinh tế vĩ mô như sau:
 - Hàm tiêu dùng: $C = 200 + 0.75 Y_d$ (với thuế $T = 100$)
@@ -360,7 +360,7 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
     id: "prob7",
     category: "micro",
     chapter: 4,
-    title: "Dạng 7: Phân Rã Hiệu Ứng Thay Thế (SE) & Hiệu Ứng Thu Nhập (IE) Theo Slutsky",
+    title: "Dạng 7: Phân rã hiệu ứng thay thế (SE) và hiệu ứng thu nhập (IE) theo Slutsky",
     examLevel: "Đề thi Phân loại Điểm 10 / Olympic Kinh tế học sinh viên",
     context: `Một người tiêu dùng có thu nhập $I = 120$ USD dùng để mua 2 hàng hóa X và Y với giá ban đầu $P_X = 2$ USD và $P_Y = 1$ USD.
 Hàm thỏa dụng của người này là $U(X, Y) = X \\cdot Y \\implies MU_X = Y, \\quad MU_Y = X$.
@@ -414,7 +414,7 @@ Sau đó, giá của hàng hóa X tăng lên thành $P_X' = 3$ USD (giá Y và t
     id: "prob8",
     category: "micro",
     chapter: 4,
-    title: "Dạng 8: Hàm Thỏa Dụng Đặc Thù: Hàng Thay Thế Hoàn Hảo & Bổ Sung Hoàn Hảo (Leontief)",
+    title: "Dạng 8: Hàm thỏa dụng đặc thù: Hàng thay thế hoàn hảo và bổ sung hoàn hảo (Leontief)",
     examLevel: "Đề thi Chọn Đội tuyển Olympic Kinh tế học / FTU",
     context: `Xét 2 người tiêu dùng với các hàm thỏa dụng phi tiêu chuẩn sau:
 - Người thứ nhất (Hàng bổ sung hoàn hảo): $U_1(X, Y) = \\min(2X, Y)$ với thu nhập $I_1 = 180$ USD, $P_X = 4, P_Y = 1$.
@@ -462,7 +462,7 @@ Sau đó, giá của hàng hóa X tăng lên thành $P_X' = 3$ USD (giá Y và t
     id: "prob9",
     category: "micro",
     chapter: 6,
-    title: "Dạng 9: Độc Quyền Nhóm: Cân Bằng Cournot (Hàm Phản Ứng) vs Dẫn Đầu Stackelberg",
+    title: "Dạng 9: Độc quyền nhóm: Cân bằng Cournot và mô hình dẫn đầu Stackelberg",
     examLevel: "Đề thi Cao học Kinh tế & ĐH Kinh tế Quốc dân (NEU)",
     context: `Một ngành công nghiệp gồm 2 doanh nghiệp (Duopoly) sản xuất sản phẩm đồng nhất với hàm cầu thị trường:
 $$P = 100 - (Q_1 + Q_2)$$
@@ -512,7 +512,7 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
     id: "prob10",
     category: "macro",
     chapter: 8,
-    title: "Dạng 10: Mô Hình Tăng Trưởng Solow & Quy Tắc Vàng Tích Lũy Tư Bản",
+    title: "Dạng 10: Mô hình tăng trưởng Solow và quy tắc vàng tích lũy tư bản",
     examLevel: "Đề thi Phân loại Học bổng Cao học / Chuẩn Mankiw Chapter 8-9",
     context: `Hàm sản xuất tổng hợp của một nền kinh tế có dạng Cobb-Douglas:
 $$Y = F(K, L) = K^{0.5} L^{0.5} \\implies y = k^{0.5}$$
@@ -562,7 +562,7 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\\delta = 0.
     id: "prob11",
     category: "macro",
     chapter: 12,
-    title: "Dạng 11: Mô Hình Mundell - Fleming: Tỷ Giá Thả Nổi vs Cố Định (Bộ Ba Bất Khả Thi)",
+    title: "Dạng 11: Mô hình Mundell - Fleming: Tỷ giá thả nổi và cố định (Bộ ba bất khả thi)",
     examLevel: "Đề thi Phân loại Thủ khoa / Tài chính Quốc tế Nâng cao",
     context: `Xét một nền kinh tế mở nhỏ với dòng vốn luân chuyển tự do hoàn hảo ($r = r^* = 5\\%$):
 - Thị trường hàng hóa (IS*): $Y = 1.000 + 0.8(Y - T) + 400 - 20r^* + 300 + (200 - 50e)$
@@ -614,7 +614,7 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\\delta = 0.
     id: "prob12",
     category: "macro",
     chapter: 11,
-    title: "Dạng 12: Quy Tắc Điều Hành Lãi Suất Taylor & Ứng Phó Cú Sốc Lạm Phát / Suy Thoái",
+    title: "Dạng 12: Quy tắc điều hành lãi suất Taylor và ứng phó cú sốc vĩ mô",
     examLevel: "Đề thi Nghiệp vụ Ngân Hàng Trung Ương / Chuẩn Học thuật Vĩ mô",
     context: `Ngân hàng Trung ương điều hành chính sách tiền tệ theo Quy tắc Taylor chuẩn:
 $$i = r^* + \\pi + 0.5(\\pi - \\pi^*) + 0.5(y - \\bar{y})$$

@@ -5,7 +5,7 @@ const MOCK_EXAMS_DATA = [
   // ================= ĐỀ THI 1: KINH TẾ VI MÔ =================
   {
     id: "exam-micro-1",
-    title: "Đề Thi Cuối Kỳ Chuẩn: Kinh Tế Vi Mô Đại Cương",
+    title: "Đề thi cuối kỳ chuẩn: Kinh tế vi mô đại cương",
     targetUniversity: "Đại học Kinh tế Quốc dân (NEU) & Ngoại thương (FTU)",
     durationMinutes: 60,
     totalPoints: 10,
@@ -105,7 +105,7 @@ $DWL = \\frac{1}{2} \\times (P_f - P^*) \\times (Q_S - Q^*) + \\dots = \\mathbf{
   // ================= ĐỀ THI 2: KINH TẾ VĨ MÔ =================
   {
     id: "exam-macro-2",
-    title: "Đề Thi Cuối Kỳ Chuẩn: Kinh Tế Vĩ Mô Đại Cương",
+    title: "Đề thi cuối kỳ chuẩn: Kinh tế vĩ mô đại cương",
     targetUniversity: "Đại học Kinh tế TP.HCM (UEH) & VNU-UEB",
     durationMinutes: 60,
     totalPoints: 10,
@@ -204,7 +204,7 @@ $\\mathbf{Y_1^* = 1.000 + 50(11.5) = 1.575}$.
   // ================= ĐỀ THI 3: TỔNG HỢP VI MÔ & VĨ MÔ =================
   {
     id: "exam-comprehensive-3",
-    title: "Đề Thi Tổng Hợp Cuối Kỳ: Vi Mô & Vĩ Mô Phân Loại Thủ Khoa",
+    title: "Đề thi tổng hợp cuối kỳ: Vi mô và vĩ mô phân loại học lực A+",
     targetUniversity: "Đại học Kinh tế - ĐHQGHN (VNU-UEB) & Học viện Ngoại giao (DAV)",
     durationMinutes: 90,
     totalPoints: 10,
