@@ -761,6 +761,35 @@ function initFormulasTab() {
         </div>
         <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">${item.description}</p>
         
+        ${item.variables && item.variables.length > 0 ? `
+          <div class="my-3 p-3.5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700/80">
+            <h4 class="text-xs font-bold text-indigo-900 dark:text-indigo-200 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+              <i data-lucide="info" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+              Chú giải ký hiệu & Đơn vị đo lường:
+            </h4>
+            <div class="overflow-x-auto">
+              <table class="w-full text-xs text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+                    <th class="py-1 px-2 font-semibold">Ký hiệu</th>
+                    <th class="py-1 px-2 font-semibold">Ý nghĩa kinh tế</th>
+                    <th class="py-1 px-2 font-semibold text-emerald-600 dark:text-emerald-400">Đơn vị đo chuẩn</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                  ${item.variables.map(v => `
+                    <tr>
+                      <td class="py-1.5 px-2 font-mono font-bold text-indigo-600 dark:text-indigo-400">$${v.symbol}$</td>
+                      <td class="py-1.5 px-2">${v.meaning}</td>
+                      <td class="py-1.5 px-2 font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-50/50 dark:bg-emerald-950/20 rounded">${v.unit || 'Không có đơn vị'}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ` : ''}
+        
         ${item.example ? `
           <div class="text-xs bg-slate-50 dark:bg-slate-900/40 p-3 rounded-lg border border-slate-200 dark:border-slate-800 mb-3 text-slate-700 dark:text-slate-300">
             <strong>Ví dụ áp dụng:</strong> ${item.example}
