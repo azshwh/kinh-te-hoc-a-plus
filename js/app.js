@@ -1842,6 +1842,42 @@ function initUniversalSearch() {
       });
     }
 
+    // 5. Search Worked Problems
+    if (typeof WORKED_PROBLEMS_DATA !== 'undefined') {
+      WORKED_PROBLEMS_DATA.forEach(prob => {
+        if (prob.title.toLowerCase().includes(q) || prob.context.toLowerCase().includes(q)) {
+          matches.push({
+            type: 'problem',
+            badge: 'Tự luận A+',
+            badgeColor: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300',
+            title: prob.title,
+            snippet: prob.examLevel,
+            action: () => {
+              switchTab('worked-problems');
+            }
+          });
+        }
+      });
+    }
+
+    // 6. Search True/False
+    if (typeof TRUE_FALSE_DATA !== 'undefined') {
+      TRUE_FALSE_DATA.forEach(tf => {
+        if (tf.statement.toLowerCase().includes(q) || tf.topic.toLowerCase().includes(q) || tf.explanation.toLowerCase().includes(q)) {
+          matches.push({
+            type: 'tf',
+            badge: `Đúng/Sai: ${tf.verdict}`,
+            badgeColor: tf.verdict === 'ĐÚNG' ? 'bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300' : 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300',
+            title: tf.statement,
+            snippet: tf.explanation,
+            action: () => {
+              switchTab('true-false');
+            }
+          });
+        }
+      });
+    }
+
     if (matches.length === 0) {
       resultsDiv.innerHTML = `<p class="text-xs text-center text-slate-400 py-6">Không tìm thấy nội dung phù hợp với "<strong>${q}</strong>". Hãy thử từ khóa khác như "thặng dư", "độc quyền", "CPI", "số nhân"...</p>`;
       return;
@@ -1871,10 +1907,573 @@ function initUniversalSearch() {
 function updateReadinessMeter() {
   const percentEl = document.getElementById('readiness-percent');
   if (!percentEl) return;
-  let score = 45;
+  let score = 55;
   if (localStorage.getItem('econ_last_quiz_score')) score += 25;
   if (localStorage.getItem('econ_theme')) score += 10;
   if (score > 100) score = 100;
   percentEl.textContent = `${score}%`;
+}
+
+// ================= 12 BÀI TẬP TỰ LUẬN ĐẠI HỌC =================
+function initWorkedProblemsTab() {
+  const container = document.getElementById('worked-problems-container');
+  if (!container || typeof WORKED_PROBLEMS_DATA === 'undefined') return;
+
+  const filterBtns = document.querySelectorAll('.prob-filter-btn');
+
+  function renderProblems(category = 'all') {
+    const filtered = WORKED_PROBLEMS_DATA.filter(p => category === 'all' || p.category === category);
+    container.innerHTML = filtered.map(item => `
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-lg font-bold text-xs ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
+              ${item.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
+            </span>
+            <h3 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-slate-100">${item.title}</h3>
+          </div>
+          <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+            🎯 ${item.examLevel}
+          </span>
+        </div>
+
+        <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl text-sm leading-relaxed border border-slate-100 dark:border-slate-700/60">
+          <p class="font-bold text-slate-700 dark:text-slate-300 mb-1">Đề bài:</p>
+          <div>${item.context}</div>
+        </div>
+
+        <div class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 font-medium pl-2 border-l-2 border-indigo-400">
+          ${item.subQuestions.map(q => `<p>• ${q}</p>`).join('')}
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <button class="btn-toggle-problem-solution px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5" data-prob-id="${item.id}">
+            <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+            <span>Xem Lời Giải Chi Tiết Từng Bước (Chuẩn Điểm 10)</span>
+          </button>
+        </div>
+
+        <div id="prob-solution-${item.id}" class="hidden mt-3 space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+          ${item.fullSolutionHtml}
+          ${item.commonMistakes && item.commonMistakes.length > 0 ? `
+            <div class="p-3 bg-rose-50 dark:bg-rose-950/40 rounded-xl border border-rose-200 dark:border-rose-900 text-xs text-rose-800 dark:text-rose-200">
+              <p class="font-bold mb-1">⚠️ Cạm bẫy dễ mất điểm tự luận:</p>
+              <ul class="list-disc list-inside space-y-1">
+                ${item.commonMistakes.map(m => `<li>${m}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `).join('');
+
+    renderMath(container);
+    if (window.lucide) window.lucide.createIcons();
+
+    container.querySelectorAll('.btn-toggle-problem-solution').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-prob-id');
+        const solEl = document.getElementById(`prob-solution-${id}`);
+        if (solEl) {
+          const isHidden = solEl.classList.contains('hidden');
+          solEl.classList.toggle('hidden');
+          btn.innerHTML = isHidden 
+            ? `<i data-lucide="eye-off" class="w-3.5 h-3.5"></i> <span>Thu Gọn Lời Giải</span>`
+            : `<i data-lucide="eye" class="w-3.5 h-3.5"></i> <span>Xem Lời Giải Chi Tiết Từng Bước (Chuẩn Điểm 10)</span>`;
+          if (window.lucide) window.lucide.createIcons();
+          if (isHidden) renderMath(solEl);
+        }
+      });
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-emerald-600', 'text-white');
+        b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      });
+      btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      btn.classList.add('bg-emerald-600', 'text-white');
+      renderProblems(btn.getAttribute('data-filter'));
+    });
+  });
+
+  renderProblems('all');
+}
+
+// ================= NHẬN ĐỊNH ĐÚNG / SAI GIẢI THÍCH =================
+function initTrueFalseTab() {
+  const container = document.getElementById('true-false-grid');
+  const searchInput = document.getElementById('tf-search-input');
+  if (!container || typeof TRUE_FALSE_DATA === 'undefined') return;
+
+  const filterBtns = document.querySelectorAll('.tf-filter-btn');
+  let currentCategory = 'all';
+  let searchQuery = '';
+
+  function renderTF() {
+    let filtered = TRUE_FALSE_DATA.filter(item => currentCategory === 'all' || item.category === currentCategory);
+    if (searchQuery) {
+      filtered = filtered.filter(item => item.statement.toLowerCase().includes(searchQuery) || item.topic.toLowerCase().includes(searchQuery) || item.explanation.toLowerCase().includes(searchQuery));
+    }
+
+    container.innerHTML = filtered.map(item => `
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
+              Chương ${item.chapter} • ${item.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
+            </span>
+          </div>
+          <span class="text-xs font-semibold text-slate-400">${item.topic}</span>
+        </div>
+
+        <div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700/50">
+          <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-snug">
+            "${item.statement}"
+          </p>
+        </div>
+
+        <button class="btn-reveal-tf w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-sky-50 dark:hover:bg-sky-950 text-sky-700 dark:text-sky-300 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1" data-tf-id="${item.id}">
+          <span>Kiểm Tra Nhận Định & Lập Luận A+</span>
+        </button>
+
+        <div id="tf-detail-${item.id}" class="hidden space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg ${item.verdict === 'ĐÚNG' ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'}">
+              KẾT LUẬN: ${item.verdict}
+            </span>
+          </div>
+
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 leading-relaxed">
+            <strong>✓ Luận cứ chuẩn chấm thi đại học:</strong><br>
+            ${item.explanation}
+          </div>
+
+          ${item.academicFormula ? `
+            <div class="p-2 bg-indigo-50 dark:bg-indigo-950/40 rounded-lg text-indigo-900 dark:text-indigo-200 border border-indigo-100 dark:border-indigo-900">
+              <strong>Công thức / Cơ chế:</strong> $${item.academicFormula}$
+            </div>
+          ` : ''}
+
+          <div class="p-2 bg-amber-50 dark:bg-amber-950/40 rounded-lg text-amber-800 dark:text-amber-300">
+            <strong>💡 Mẹo đồ thị / Thi cử:</strong> ${item.graphTip}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    renderMath(container);
+
+    container.querySelectorAll('.btn-reveal-tf').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-tf-id');
+        const detail = document.getElementById(`tf-detail-${id}`);
+        if (detail) {
+          detail.classList.toggle('hidden');
+          renderMath(detail);
+        }
+      });
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-sky-600', 'text-white');
+        b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      });
+      btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      btn.classList.add('bg-sky-600', 'text-white');
+      currentCategory = btn.getAttribute('data-filter');
+      renderTF();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      renderTF();
+    });
+  }
+
+  renderTF();
+}
+
+// ================= MÔ HÌNH IS - LM LAB =================
+let islmChart = null;
+
+function initISLMLab() {
+  const calcBtn = document.getElementById('btn-calc-islm');
+  const presetStd = document.getElementById('btn-islm-preset-standard');
+  const presetExp = document.getElementById('btn-islm-preset-expansion');
+
+  function calculateAndDrawISLM() {
+    const c0 = parseFloat(document.getElementById('islm-c0').value) || 0;
+    const mpc = parseFloat(document.getElementById('islm-mpc').value) || 0.75;
+    const t = parseFloat(document.getElementById('islm-t').value) || 0;
+    const g = parseFloat(document.getElementById('islm-g').value) || 0;
+    const i0 = parseFloat(document.getElementById('islm-i0').value) || 0;
+    const d = parseFloat(document.getElementById('islm-d').value) || 20;
+    const msp = parseFloat(document.getElementById('islm-msp').value) || 500;
+    const k = parseFloat(document.getElementById('islm-k').value) || 0.5;
+    const h = parseFloat(document.getElementById('islm-h').value) || 40;
+    const deltaG = parseFloat(document.getElementById('islm-deltag').value) || 0;
+    const deltaM = parseFloat(document.getElementById('islm-deltam').value) || 0;
+
+    const solCard = document.getElementById('islm-solution-card');
+
+    try {
+      const res = EconSolver.solveISLM(c0, mpc, t, i0, d, g, 0, msp, k, h, deltaG, deltaM);
+
+      let policyHtml = '';
+      if (res.policyAnalysis) {
+        policyHtml = `
+          <div class="p-3.5 bg-purple-50 dark:bg-purple-950/40 rounded-xl border border-purple-200 dark:border-purple-800 text-xs space-y-1.5">
+            <p class="font-bold text-purple-900 dark:text-purple-200 uppercase">Tác Động Thực Thi Chính Sách (ΔG = ${deltaG}, ΔM = ${deltaM}):</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <div class="p-2 bg-white dark:bg-slate-900 rounded border border-purple-100 dark:border-purple-900">
+                • Lãi suất mới: <strong class="text-purple-600 dark:text-purple-400">${res.policyAnalysis.new_r}%</strong>
+              </div>
+              <div class="p-2 bg-white dark:bg-slate-900 rounded border border-purple-100 dark:border-purple-900">
+                • Sản lượng mới: <strong class="text-emerald-600 dark:text-emerald-400">${res.policyAnalysis.new_Y}</strong>
+              </div>
+              <div class="p-2 bg-white dark:bg-slate-900 rounded border border-purple-100 dark:border-purple-900">
+                • Đầu tư tư nhân: <strong>${res.policyAnalysis.new_I}</strong>
+              </div>
+              <div class="p-2 bg-white dark:bg-slate-900 rounded border border-purple-100 dark:border-purple-900 text-rose-600 dark:text-rose-400 font-bold">
+                • Lấn át đầu tư (ΔI): <strong>${res.policyAnalysis.deltaI}</strong>
+              </div>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 mt-1">
+              💡 <em>Phân tích lấn át:</em> Do lãi suất tăng từ ${res.equilibrium.r}% lên ${res.policyAnalysis.new_r}%, đầu tư tư nhân bị lấn át ${Math.abs(res.policyAnalysis.deltaI)} tỷ. Sản lượng thực tế tăng $\\Delta Y = ${res.policyAnalysis.actualDeltaY}$ tỷ (thay vì tăng ${res.policyAnalysis.actualDeltaY + res.policyAnalysis.crowdedOutY} tỷ nếu lãi suất không đổi). Lượng sản lượng bị lấn át mất: <strong>${res.policyAnalysis.crowdedOutY} tỷ đồng</strong>.
+            </p>
+          </div>
+        `;
+      }
+
+      solCard.innerHTML = `
+        <div class="space-y-3">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-indigo-50 dark:bg-slate-800 rounded-xl border border-indigo-200 dark:border-slate-700">
+              <p class="font-bold text-indigo-700 dark:text-indigo-300 uppercase">Đường IS (Thị trường hàng hóa)</p>
+              <p class="text-sm font-extrabold mt-1">$IS: ${res.IS.formula}$</p>
+              <p class="text-slate-500 text-[11px] mt-0.5">Dốc xuống: lãi suất r tăng làm đầu tư giảm, sản lượng giảm.</p>
+            </div>
+            <div class="p-3 bg-emerald-50 dark:bg-slate-800 rounded-xl border border-emerald-200 dark:border-slate-700">
+              <p class="font-bold text-emerald-700 dark:text-emerald-300 uppercase">Đường LM (Thị trường tiền tệ)</p>
+              <p class="text-sm font-extrabold mt-1">$LM: ${res.LM.formula}$</p>
+              <p class="text-slate-500 text-[11px] mt-0.5">Dốc lên: sản lượng Y tăng làm cầu tiền tăng, kéo lãi suất tăng.</p>
+            </div>
+            <div class="p-3 bg-amber-50 dark:bg-slate-800 rounded-xl border border-amber-200 dark:border-slate-700">
+              <p class="font-bold text-amber-700 dark:text-amber-300 uppercase">Cân Bằng Đồng Thời (E*)</p>
+              <p class="text-sm font-extrabold mt-1 text-amber-800 dark:text-amber-300">$r^* = ${res.equilibrium.r}\\% \\quad Y^* = ${res.equilibrium.Y}$</p>
+              <p class="text-slate-500 text-[11px] mt-0.5">Đầu tư tư nhân tại cân bằng: $I^* = ${res.equilibrium.I}$ tỷ.</p>
+            </div>
+          </div>
+          ${policyHtml}
+        </div>
+      `;
+      renderMath(solCard);
+
+      // Draw Chart
+      drawISLMChart(res);
+    } catch (e) {
+      solCard.innerHTML = `<p class="text-red-500 font-bold p-3">${e.message}</p>`;
+    }
+  }
+
+  function drawISLMChart(res) {
+    const canvas = document.getElementById('islm-chart');
+    if (!canvas) return;
+
+    if (islmChart) {
+      islmChart.destroy();
+    }
+
+    const Y_star = res.equilibrium.Y;
+    const r_star = res.equilibrium.r;
+
+    const r_min = 0;
+    const r_max = Math.max(25, r_star * 1.8);
+    const steps = 10;
+    const stepSize = (r_max - r_min) / steps;
+
+    const isData = [];
+    const lmData = [];
+    const isNewData = [];
+
+    for (let i = 0; i <= steps; i++) {
+      const rVal = r_min + i * stepSize;
+      const yIS = res.IS.intercept - res.IS.slope * rVal;
+      const yLM = res.LM.intercept + res.LM.slope * rVal;
+      if (yIS >= 0) isData.push({ x: Number(yIS.toFixed(1)), y: Number(rVal.toFixed(2)) });
+      if (yLM >= 0) lmData.push({ x: Number(yLM.toFixed(1)), y: Number(rVal.toFixed(2)) });
+
+      if (res.policyAnalysis) {
+        const deltaG = parseFloat(document.getElementById('islm-deltag').value) || 0;
+        const mpc = parseFloat(document.getElementById('islm-mpc').value) || 0.75;
+        const shiftY = (1 / (1 - mpc)) * deltaG;
+        const yISNew = (res.IS.intercept + shiftY) - res.IS.slope * rVal;
+        if (yISNew >= 0) isNewData.push({ x: Number(yISNew.toFixed(1)), y: Number(rVal.toFixed(2)) });
+      }
+    }
+
+    const datasets = [
+      {
+        label: 'Đường IS (Ban đầu)',
+        data: isData,
+        borderColor: '#4f46e5',
+        backgroundColor: '#4f46e5',
+        borderWidth: 2.5,
+        tension: 0
+      },
+      {
+        label: 'Đường LM',
+        data: lmData,
+        borderColor: '#059669',
+        backgroundColor: '#059669',
+        borderWidth: 2.5,
+        tension: 0
+      },
+      {
+        label: `Điểm Cân Bằng E* (Y*=${Y_star}, r*=${r_star}%)`,
+        data: [{ x: Y_star, y: r_star }],
+        borderColor: '#f59e0b',
+        backgroundColor: '#f59e0b',
+        pointRadius: 6,
+        pointHoverRadius: 8,
+        showLine: false
+      }
+    ];
+
+    if (isNewData.length > 0 && res.policyAnalysis) {
+      datasets.push({
+        label: `Đường IS' sau kích cầu (r₁*=${res.policyAnalysis.new_r}%, Y₁*=${res.policyAnalysis.new_Y})`,
+        data: isNewData,
+        borderColor: '#9333ea',
+        backgroundColor: '#9333ea',
+        borderDash: [5, 5],
+        borderWidth: 2.5,
+        tension: 0
+      });
+      datasets.push({
+        label: `Điểm Cân Bằng Mới E₁*`,
+        data: [{ x: res.policyAnalysis.new_Y, y: res.policyAnalysis.new_r }],
+        borderColor: '#9333ea',
+        backgroundColor: '#9333ea',
+        pointRadius: 7,
+        pointHoverRadius: 9,
+        showLine: false
+      });
+    }
+
+    const isDark = document.documentElement.classList.contains('dark');
+    const textColor = isDark ? '#94a3b8' : '#475569';
+    const gridColor = isDark ? 'rgba(51, 65, 85, 0.4)' : 'rgba(226, 232, 240, 0.8)';
+
+    islmChart = new Chart(canvas, {
+      type: 'scatter',
+      data: { datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            title: { display: true, text: 'Sản Lượng Quốc Dân (Y)', color: textColor, font: { weight: 'bold' } },
+            ticks: { color: textColor },
+            grid: { color: gridColor }
+          },
+          y: {
+            title: { display: true, text: 'Lãi Suất Thị Trường (r%)', color: textColor, font: { weight: 'bold' } },
+            ticks: { color: textColor },
+            grid: { color: gridColor }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: textColor, font: { size: 11 } }
+          }
+        }
+      }
+    });
+  }
+
+  if (calcBtn) calcBtn.addEventListener('click', calculateAndDrawISLM);
+
+  if (presetStd) {
+    presetStd.addEventListener('click', () => {
+      document.getElementById('islm-c0').value = 200;
+      document.getElementById('islm-mpc').value = 0.75;
+      document.getElementById('islm-t').value = 100;
+      document.getElementById('islm-g').value = 250;
+      document.getElementById('islm-i0').value = 300;
+      document.getElementById('islm-d').value = 20;
+      document.getElementById('islm-msp').value = 500;
+      document.getElementById('islm-k').value = 0.5;
+      document.getElementById('islm-h').value = 40;
+      document.getElementById('islm-deltag').value = 0;
+      document.getElementById('islm-deltam').value = 0;
+      calculateAndDrawISLM();
+    });
+  }
+
+  if (presetExp) {
+    presetExp.addEventListener('click', () => {
+      document.getElementById('islm-c0').value = 200;
+      document.getElementById('islm-mpc').value = 0.75;
+      document.getElementById('islm-t').value = 100;
+      document.getElementById('islm-g').value = 250;
+      document.getElementById('islm-i0').value = 300;
+      document.getElementById('islm-d').value = 20;
+      document.getElementById('islm-msp').value = 500;
+      document.getElementById('islm-k').value = 0.5;
+      document.getElementById('islm-h').value = 40;
+      document.getElementById('islm-deltag').value = 50;
+      document.getElementById('islm-deltam').value = 0;
+      calculateAndDrawISLM();
+    });
+  }
+
+  // Khởi tạo ban đầu
+  calculateAndDrawISLM();
+}
+
+// ================= 3 ĐỀ THI CHUẨN HỌC KỲ =================
+function initMockExamsTab() {
+  const selector = document.getElementById('mock-exam-selector');
+  const container = document.getElementById('mock-exam-view');
+  if (!container || typeof MOCK_EXAMS_DATA === 'undefined') return;
+
+  function renderExam(examId) {
+    const exam = MOCK_EXAMS_DATA.find(e => e.id === examId) || MOCK_EXAMS_DATA[0];
+    if (!exam) return;
+
+    container.innerHTML = `
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+        <div class="text-center border-b border-slate-200 dark:border-slate-800 pb-5">
+          <span class="text-xs font-bold px-3 py-1 bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300 rounded-full uppercase tracking-wider">
+            Đề Thi Học Kỳ Chính Thức
+          </span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-slate-100 mt-2">${exam.title}</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+            Thời gian làm bài: <strong>${exam.durationMinutes} phút</strong> • Thang điểm: <strong>${exam.totalPoints}.0 điểm</strong> • Mục tiêu: <strong>${exam.targetUniversity}</strong>
+          </p>
+        </div>
+
+        ${exam.parts.map(part => `
+          <div class="space-y-4 pt-2">
+            <h4 class="font-extrabold text-sm sm:text-base text-indigo-600 dark:text-indigo-400 uppercase tracking-wide border-b border-indigo-100 dark:border-slate-800 pb-1.5">
+              ${part.partTitle}
+            </h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 italic">${part.description}</p>
+
+            ${part.questions ? `
+              <div class="space-y-3">
+                ${part.questions.map(q => `
+                  <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-2 text-xs">
+                    <p class="font-bold text-slate-900 dark:text-slate-100">Câu ${q.qNum}: ${q.text}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      ${q.options.map((opt, oIdx) => `
+                        <div class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
+                          <strong>${String.fromCharCode(65 + oIdx)}.</strong> ${opt}
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+
+            ${part.items ? `
+              <div class="space-y-3">
+                ${part.items.map(item => `
+                  <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-2 text-xs">
+                    <p class="font-bold text-slate-900 dark:text-slate-100">Nhận định ${item.itemNum}: "${item.statement}"</p>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+
+            ${part.problemText ? `
+              <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 text-xs leading-relaxed space-y-2">
+                <div>${part.problemText}</div>
+              </div>
+            ` : ''}
+          </div>
+        `).join('')}
+
+        <!-- Toggle Solution Button -->
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 text-center">
+          <button id="btn-toggle-mock-solution" class="px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold text-sm transition-all shadow-md">
+            Xem Toàn Bộ Đáp Án & Barem Điểm Chi Tiết
+          </button>
+        </div>
+
+        <div id="mock-exam-solution-box" class="hidden pt-4 space-y-6">
+          <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200 dark:border-emerald-800 text-xs space-y-4">
+            <h4 class="font-black text-sm text-emerald-800 dark:text-emerald-300 uppercase">
+              Barem Chấm Điểm & Lời Giải Chính Thức
+            </h4>
+
+            ${exam.parts[0].questions ? `
+              <div>
+                <p class="font-bold text-slate-800 dark:text-slate-200 mb-2">Đáp án Phần I (Trắc nghiệm):</p>
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                  ${exam.parts[0].questions.map(q => `
+                    <div class="p-2 bg-white dark:bg-slate-900 rounded border border-emerald-200 dark:border-emerald-900">
+                      <strong>Câu ${q.qNum}:</strong> <span class="font-bold text-emerald-600">${String.fromCharCode(65 + q.correct)}</span> (0.4đ)
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${exam.parts[1].items ? `
+              <div>
+                <p class="font-bold text-slate-800 dark:text-slate-200 mb-2">Đáp án & Barem Phần II (Đúng / Sai):</p>
+                <div class="space-y-2">
+                  ${exam.parts[1].items.map(item => `
+                    <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-emerald-200 dark:border-emerald-900">
+                      <p><strong>Nhận định ${item.itemNum}:</strong> Kết luận <strong class="${item.verdict === 'ĐÚNG' ? 'text-emerald-600' : 'text-rose-600'}">${item.verdict}</strong></p>
+                      <pre class="text-[11px] text-slate-600 dark:text-slate-300 whitespace-pre-line font-sans mt-1">${item.rubric}</pre>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${exam.parts[2].fullSolution ? `
+              <div>
+                <p class="font-bold text-slate-800 dark:text-slate-200 mb-2">Lời giải & Barem Phần III (Bài tập tự luận):</p>
+                <div class="p-3 bg-white dark:bg-slate-900 rounded-lg border border-emerald-200 dark:border-emerald-900 whitespace-pre-line leading-relaxed text-xs">
+                  ${exam.parts[2].fullSolution}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+
+    renderMath(container);
+
+    const solBtn = document.getElementById('btn-toggle-mock-solution');
+    const solBox = document.getElementById('mock-exam-solution-box');
+    if (solBtn && solBox) {
+      solBtn.addEventListener('click', () => {
+        solBox.classList.toggle('hidden');
+        renderMath(solBox);
+      });
+    }
+  }
+
+  if (selector) {
+    selector.addEventListener('change', (e) => {
+      renderExam(e.target.value);
+    });
+    renderExam(selector.value);
+  }
 }
 
