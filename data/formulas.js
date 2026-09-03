@@ -313,7 +313,7 @@ const FORMULAS_DATA = [
       "title": "Hạ gục toàn bộ đối thủ nhờ đẩy AFC về sát 0 trên dòng xe Model T",
       "context": "Đầu thế kỷ 20, ô tô là xa xỉ phẩm được đóng thủ công với giá $2.000. Henry Ford phát minh ra dây chuyền sản xuất hàng loạt (Assembly line) cho dòng xe Model T, chấp nhận đầu tư chi phí cố định nhà xưởng khổng lồ ($FC$).",
       "analysis": "Nhờ sản xuất hàng trăm ngàn chiếc xe cùng một mẫu, Chi phí cố định trung bình bị nghiền nhỏ theo sản lượng ($AFC = FC / Q \\to 0$). Kết hợp với đường cong kinh nghiệm làm giảm $AVC$, Chi phí trung bình $ATC$ của chiếc xe Model T giảm từ $850 xuống còn $260. Henry Ford hạ giá bán chiếc xe xuống mức người công nhân bình thường cũng mua được, buộc hàng trăm xưởng xe thủ công có $ATC$ cao phải phá sản.",
-      "lesson": "Hiệu quả kinh tế nhờ quy mô (Economies of Scale) cho phép doanh nghiệp lớn vận hành tại đáy của đường ATC dài hạn, dựng rào cản chi phí tuyệt đối."
+      "lesson": "Hiệu quả kinh tế nhờ quy mô (Economies of Scale) cho phép doanh nghiệp lớn vận hành tại đáy của đường $ dài hạn, dựng rào cản chi phí tuyệt đối."
     }
   },
   {
