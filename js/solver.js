@@ -46,10 +46,10 @@ const EconSolver = {
     steps.push(`<div class="step-box">
       <h4 class="font-bold text-indigo-700 dark:text-indigo-300">1. Xác định điểm cân bằng ban đầu (E₀)</h4>
       <p>Phương trình cân bằng thị trường: $Q_D = Q_S$</p>
-      <p>$$\\iff ${a} - ${b}P = ${c} + ${d}P$$</p>
-      <p>$$\\iff ${b + d}P = ${a - c} \\implies P^* = \\mathbf{${P_star.toFixed(2)}}$$</p>
+      <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\iff ${a} - ${b}P = ${c} + ${d}P$$</div>
+      <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\iff ${b + d}P = ${a - c} \\implies P^* = \\mathbf{${P_star.toFixed(2)}}$$</div>
       <p>Thay $P^* = ${P_star.toFixed(2)}$ vào phương trình cầu:</p>
-      <p>$$Q^* = ${a} - ${b}(${P_star.toFixed(2)}) = \\mathbf{${Q_star.toFixed(2)}}$$</p>
+      <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Q^* = ${a} - ${b}(${P_star.toFixed(2)}) = \\mathbf{${Q_star.toFixed(2)}}$$</div>
       <p>• Thặng dư người tiêu dùng: $CS_0 = \\frac{1}{2}(${P_max_demand.toFixed(2)} - ${P_star.toFixed(2)}) \\times ${Q_star.toFixed(2)} = \\mathbf{${CS_0.toFixed(2)}}$</p>
       <p>• Thặng dư nhà sản xuất: $PS_0 = \\frac{1}{2}(${P_star.toFixed(2)} - ${P_min_supply.toFixed(2)}) \\times ${Q_star.toFixed(2)} = \\mathbf{${PS_0.toFixed(2)}}$</p>
       <p>• Tổng thặng dư xã hội: $TS_0 = CS_0 + PS_0 = \\mathbf{${TS_0.toFixed(2)}}$</p>
@@ -94,7 +94,7 @@ const EconSolver = {
         <p>Khi Chính phủ đánh thuế $t = ${t}$/đơn vị sản phẩm, người bán nhận được $P_s = P_b - ${t}$.</p>
         <p>Hàm cung mới theo giá người mua trả: $Q_S' = ${c} + ${d}(P_b - ${t}) = ${(c - d*t).toFixed(2)} + ${d}P_b$</p>
         <p>Cân bằng mới:</p>
-        <p>$$${a} - ${b}P_b = ${(c - d*t).toFixed(2)} + ${d}P_b \\implies P_b = \\mathbf{${Pb.toFixed(2)}}$$</p>
+        <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$${a} - ${b}P_b = ${(c - d*t).toFixed(2)} + ${d}P_b \\implies P_b = \\mathbf{${Pb.toFixed(2)}}$$</div>
         <p>• Giá người mua trả: $P_b = \\mathbf{${Pb.toFixed(2)}}$</p>
         <p>• Giá người bán nhận: $P_s = P_b - t = ${Pb.toFixed(2)} - ${t} = \\mathbf{${Ps.toFixed(2)}}$</p>
         <p>• Sản lượng giao dịch mới: $Q_t = ${a} - ${b}(${Pb.toFixed(2)}) = \\mathbf{${Qt.toFixed(2)}}$</p>

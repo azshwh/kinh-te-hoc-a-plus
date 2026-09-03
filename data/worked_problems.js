@@ -23,14 +23,14 @@ $$Q_D = 120 - 2P \\quad \\text{và} \\quad Q_S = 30 + P$$
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Điểm cân bằng ban đầu & Thặng dư</h4>
           <p>Tại điểm cân bằng thị trường: $Q_D = Q_S$</p>
-          <p>$$\\iff 120 - 2P = 30 + P \\iff 3P = 90 \\implies \\mathbf{P^* = 30} \\text{ (nghìn đồng)}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\iff 120 - 2P = 30 + P \\iff 3P = 90 \\implies \\mathbf{P^* = 30} \\text{ (nghìn đồng)}$$</div>
           <p>Thay $P^* = 30$ vào hàm cầu (hoặc cung): $Q^* = 120 - 2(30) = \\mathbf{60} \\text{ (nghìn sản phẩm)}$.</p>
           <p class="mt-2">• Tung độ góc đường cầu ($Q_D = 0$): $120 - 2P = 0 \\implies P_{max} = 60$.</p>
           <p>• Tung độ góc đường cung ($Q_S = 0$): $30 + P = 0 \\implies P_{min} = 0$ (với $P \\ge 0$).</p>
           <p class="mt-2">• <strong>Thặng dư tiêu dùng (CS):</strong></p>
-          <p>$$CS_0 = \\frac{1}{2} \\times (P_{max} - P^*) \\times Q^* = \\frac{1}{2} \\times (60 - 30) \\times 60 = \\mathbf{900} \\text{ (triệu đồng)}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$CS_0 = \\frac{1}{2} \\times (P_{max} - P^*) \\times Q^* = \\frac{1}{2} \\times (60 - 30) \\times 60 = \\mathbf{900} \\text{ (triệu đồng)}$$</div>
           <p>• <strong>Thặng dư sản xuất (PS):</strong></p>
-          <p>$$PS_0 = \\frac{(Q_0 + Q^*) \\times P^*}{2} = \\frac{(30 + 60) \\times 30}{2} = \\mathbf{1.350} \\text{ (triệu đồng)}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$PS_0 = \\frac{(Q_0 + Q^*) \\times P^*}{2} = \\frac{(30 + 60) \\times 30}{2} = \\mathbf{1.350} \\text{ (triệu đồng)}$$</div>
           <p>• <strong>Tổng thặng dư xã hội (TS):</strong> $TS_0 = CS_0 + PS_0 = 900 + 1.350 = \\mathbf{2.250} \\text{ (triệu đồng)}$.</p>
         </div>
 
@@ -38,7 +38,7 @@ $$Q_D = 120 - 2P \\quad \\text{và} \\quad Q_S = 30 + P$$
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b: Độ co giãn của cầu tại điểm cân bằng</h4>
           <p>Hàm cầu: $Q_D = 120 - 2P \\implies Q'_D(P) = -2$.</p>
           <p>Độ co giãn của cầu theo giá tại điểm cân bằng $(P^* = 30, Q^* = 60)$:</p>
-          <p>$$E_D = Q'_D(P) \\times \\frac{P^*}{Q^*} = -2 \\times \\frac{30}{60} = \\mathbf{-1} \\implies |E_D| = 1$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$E_D = Q'_D(P) \\times \\frac{P^*}{Q^*} = -2 \\times \\frac{30}{60} = \\mathbf{-1} \\implies |E_D| = 1$$</div>
           <p><strong>Kết luận:</strong> Cầu co giãn đơn vị ($|E_D| = 1$). Tại điểm này, doanh thu của doanh nghiệp đang đạt giá trị CỰC ĐẠI. Do đó doanh nghiệp nên <strong>giữ nguyên giá</strong>, bất kỳ hành động tăng giá hay giảm giá nào cũng sẽ làm giảm tổng doanh thu.</p>
         </div>
 
@@ -46,16 +46,16 @@ $$Q_D = 120 - 2P \\quad \\text{và} \\quad Q_S = 30 + P$$
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu c: Tác động của chính sách thuế t = 6</h4>
           <p>Khi đánh thuế $t = 6$ vào người bán, giá người bán thực nhận là $P_s = P_b - 6$.</p>
           <p>Đường cung mới sau thuế:</p>
-          <p>$$Q_S' = 30 + (P - 6) = P + 24$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Q_S' = 30 + (P - 6) = P + 24$$</div>
           <p>Cân bằng thị trường mới: $Q_D = Q_S' \\iff 120 - 2P = P + 24 \\iff 3P = 96$</p>
-          <p>$$\\implies \\mathbf{P_b = 32} \\text{ (nghìn đồng, giá người mua trả)}$$</p>
-          <p>$$\\implies \\mathbf{P_s = P_b - t = 32 - 6 = 26} \\text{ (nghìn đồng, giá người bán nhận)}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies \\mathbf{P_b = 32} \\text{ (nghìn đồng, giá người mua trả)}$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies \\mathbf{P_s = P_b - t = 32 - 6 = 26} \\text{ (nghìn đồng, giá người bán nhận)}$$</div>
           <p>Sản lượng giao dịch mới: $Q_t = 120 - 2(32) = \\mathbf{56} \\text{ (nghìn sản phẩm)}$.</p>
           <p class="mt-2">• Thuế người mua chịu: $t_b = P_b - P^* = 32 - 30 = \\mathbf{2} \\text{ nghìn đồng/sp}$.</p>
           <p>• Thuế người bán chịu: $t_s = P^* - P_s = 30 - 26 = \\mathbf{4} \\text{ nghìn đồng/sp}$.</p>
           <p>• Số thu ngân sách của Chính phủ: $T = t \\times Q_t = 6 \\times 56 = \\mathbf{336} \\text{ (triệu đồng)}$.</p>
           <p>• <strong>Tổn thất vô ích của xã hội (DWL):</strong></p>
-          <p>$$DWL = \\frac{1}{2} \\times t \\times (Q^* - Q_t) = \\frac{1}{2} \\times 6 \\times (60 - 56) = \\mathbf{12} \\text{ (triệu đồng)}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$DWL = \\frac{1}{2} \\times t \\times (Q^* - Q_t) = \\frac{1}{2} \\times 6 \\times (60 - 56) = \\mathbf{12} \\text{ (triệu đồng)}$$</div>
         </div>
       </div>
     `,
@@ -88,7 +88,7 @@ $$U(X, Y) = X^{0.5} \\cdot Y^{0.5}$$`,
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Phương trình đường ngân sách</h4>
           <p>Phương trình tổng quát: $P_X \\cdot X + P_Y \\cdot Y = I$</p>
-          <p>$$\\iff 20.000 X + 40.000 Y = 1.200.000 \\iff \\mathbf{X + 2Y = 60} \\iff \\mathbf{Y = 30 - 0.5X}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\iff 20.000 X + 40.000 Y = 1.200.000 \\iff \\mathbf{X + 2Y = 60} \\iff \\mathbf{Y = 30 - 0.5X}$$</div>
           <p>• Điểm cắt trục hoành ($Y=0$): $X_{max} = I / P_X = 1.200 / 20 = 60$ sản phẩm.</p>
           <p>• Điểm cắt trục tung ($X=0$): $Y_{max} = I / P_Y = 1.200 / 40 = 30$ sản phẩm.</p>
           <p>• Độ dốc đường ngân sách: $-\\frac{P_X}{P_Y} = -\\frac{20}{40} = -0.5$.</p>
@@ -97,25 +97,25 @@ $$U(X, Y) = X^{0.5} \\cdot Y^{0.5}$$`,
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b: Phương pháp cân bằng biên ($MRS = P_X/P_Y$)</h4>
           <p>Lợi ích cận biên của X và Y:</p>
-          <p>$$MU_X = \\frac{\\partial U}{\\partial X} = 0.5 X^{-0.5} Y^{0.5} = \\frac{0.5 Y^{0.5}}{X^{0.5}}$$</p>
-          <p>$$MU_Y = \\frac{\\partial U}{\\partial Y} = 0.5 X^{0.5} Y^{-0.5} = \\frac{0.5 X^{0.5}}{Y^{0.5}}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$MU_X = \\frac{\\partial U}{\\partial X} = 0.5 X^{-0.5} Y^{0.5} = \\frac{0.5 Y^{0.5}}{X^{0.5}}$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$MU_Y = \\frac{\\partial U}{\\partial Y} = 0.5 X^{0.5} Y^{-0.5} = \\frac{0.5 X^{0.5}}{Y^{0.5}}$$</div>
           <p>Tỷ lệ thay thế biên:</p>
-          <p>$$MRS_{XY} = \\frac{MU_X}{MU_Y} = \\frac{0.5 Y^{0.5} / X^{0.5}}{0.5 X^{0.5} / Y^{0.5}} = \\mathbf{\\frac{Y}{X}}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$MRS_{XY} = \\frac{MU_X}{MU_Y} = \\frac{0.5 Y^{0.5} / X^{0.5}}{0.5 X^{0.5} / Y^{0.5}} = \\mathbf{\\frac{Y}{X}}$$</div>
           <p>Điều kiện tối đa hóa thỏa dụng:</p>
-          <p>$$MRS_{XY} = \\frac{P_X}{P_Y} \\iff \\frac{Y}{X} = \\frac{20.000}{40.000} = \\frac{1}{2} \\implies \\mathbf{X = 2Y}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$MRS_{XY} = \\frac{P_X}{P_Y} \\iff \\frac{Y}{X} = \\frac{20.000}{40.000} = \\frac{1}{2} \\implies \\mathbf{X = 2Y}$$</div>
           <p>Thay $X = 2Y$ vào phương trình đường ngân sách $X + 2Y = 60$:</p>
-          <p>$$2Y + 2Y = 60 \\iff 4Y = 60 \\implies \\mathbf{Y^* = 15} \\implies \\mathbf{X^* = 30}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$2Y + 2Y = 60 \\iff 4Y = 60 \\implies \\mathbf{Y^* = 15} \\implies \\mathbf{X^* = 30}$$</div>
           <p>Mức thỏa dụng cực đại: $U_{max} = (30)^{0.5} \\cdot (15)^{0.5} = \\sqrt{450} \\approx \\mathbf{21.21}$.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu c: Phương pháp Nhân tử Lagrange</h4>
           <p>Thiết lập hàm Lagrange:</p>
-          <p>$$\\mathcal{L}(X, Y, \\lambda) = X^{0.5} Y^{0.5} + \\lambda(1.200 - 20X - 40Y)$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\mathcal{L}(X, Y, \\lambda) = X^{0.5} Y^{0.5} + \\lambda(1.200 - 20X - 40Y)$$</div>
           <p>Hệ điều kiện bậc nhất (First Order Conditions - FOC):</p>
-          <p>$$\\begin{cases} \\frac{\\partial \\mathcal{L}}{\\partial X} = 0.5 X^{-0.5} Y^{0.5} - 20\\lambda = 0 & (1) \\\\ \\frac{\\partial \\mathcal{L}}{\\partial Y} = 0.5 X^{0.5} Y^{-0.5} - 40\\lambda = 0 & (2) \\\\ \\frac{\\partial \\mathcal{L}}{\\partial \\lambda} = 1.200 - 20X - 40Y = 0 & (3) \\end{cases}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\begin{cases} \\frac{\\partial \\mathcal{L}}{\\partial X} = 0.5 X^{-0.5} Y^{0.5} - 20\\lambda = 0 & (1) \\\\ \\frac{\\partial \\mathcal{L}}{\\partial Y} = 0.5 X^{0.5} Y^{-0.5} - 40\\lambda = 0 & (2) \\\\ \\frac{\\partial \\mathcal{L}}{\\partial \\lambda} = 1.200 - 20X - 40Y = 0 & (3) \\end{cases}$$</div>
           <p>Chia phương trình (1) cho phương trình (2):</p>
-          <p>$$\\frac{0.5 X^{-0.5} Y^{0.5}}{0.5 X^{0.5} Y^{-0.5}} = \\frac{20\\lambda}{40\\lambda} \\iff \\frac{Y}{X} = \\frac{1}{2} \\implies X = 2Y$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\frac{0.5 X^{-0.5} Y^{0.5}}{0.5 X^{0.5} Y^{-0.5}} = \\frac{20\\lambda}{40\\lambda} \\iff \\frac{Y}{X} = \\frac{1}{2} \\implies X = 2Y$$</div>
           <p>Thay vào (3) cho nghiệm duy nhất: $\\mathbf{X^* = 30, Y^* = 15, \\lambda^* \\approx 0.0177}$.</p>
         </div>
       </div>
@@ -169,7 +169,7 @@ $$TC = Q^2 + 10Q + 100$$
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu d & e: Đường cung và Lựa chọn tối ưu khi P = 50</h4>
           <p>• <strong>Đường cung ngắn hạn ($S$):</strong> Là phần đường $MC$ nằm trên $AVC_{min}$.</p>
-          <p>$$P = MC \\iff P = 2Q + 10 \\iff \\mathbf{Q_S = 0.5P - 5} \\quad \\text{với } P \\ge 10$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$P = MC \\iff P = 2Q + 10 \\iff \\mathbf{Q_S = 0.5P - 5} \\quad \\text{với } P \\ge 10$$</div>
           <p>• <strong>Khi giá thị trường P = 50:</strong></p>
           <p>Do $P = 50 > P_{hv} = 30$, doanh nghiệp sản xuất và có lợi nhuận dương.</p>
           <p>Điều kiện tối ưu: $P = MC \\iff 50 = 2Q + 10 \\iff 2Q = 40 \\implies \\mathbf{Q^* = 20}$ sản phẩm.</p>
@@ -208,11 +208,11 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Tối đa hóa lợi nhuận khi phân biệt giá cấp 3</h4>
           <p>Quy tắc: Cho $MR_1 = MR_2 = MC = 20$.</p>
           <p>• <strong>Thị trường 1:</strong> $P_1 = 100 - Q_1 \\implies TR_1 = 100Q_1 - Q_1^2 \\implies MR_1 = 100 - 2Q_1$.</p>
-          <p>$$MR_1 = MC \\iff 100 - 2Q_1 = 20 \\iff 2Q_1 = 80 \\implies \\mathbf{Q_1^* = 40}$$</p>
-          <p>$$P_1^* = 100 - 40 = \\mathbf{60}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$MR_1 = MC \\iff 100 - 2Q_1 = 20 \\iff 2Q_1 = 80 \\implies \\mathbf{Q_1^* = 40}$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$P_1^* = 100 - 40 = \\mathbf{60}$$</div>
           <p>• <strong>Thị trường 2:</strong> $P_2 = 140 - 2Q_2 \\implies TR_2 = 140Q_2 - 2Q_2^2 \\implies MR_2 = 140 - 4Q_2$.</p>
-          <p>$$MR_2 = MC \\iff 140 - 4Q_2 = 20 \\iff 4Q_2 = 120 \\implies \\mathbf{Q_2^* = 30}$$</p>
-          <p>$$P_2^* = 140 - 2(30) = \\mathbf{80}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$MR_2 = MC \\iff 140 - 4Q_2 = 20 \\iff 4Q_2 = 120 \\implies \\mathbf{Q_2^* = 30}$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$P_2^* = 140 - 2(30) = \\mathbf{80}$$</div>
           <p>• Tổng sản lượng: $Q = Q_1 + Q_2 = 40 + 30 = 70$.</p>
           <p>• Tổng doanh thu: $TR = P_1 Q_1 + P_2 Q_2 = 60(40) + 80(30) = 2.400 + 2.400 = 4.800$.</p>
           <p>• Tổng chi phí: $TC = 20(70) + 500 = 1.400 + 500 = 1.900$.</p>
@@ -266,7 +266,7 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
           <p>• Tổng đầu tư: $I = I_n + De = 120 + 80 = \\mathbf{200}$ tỷ USD.</p>
           <p>• Xuất khẩu ròng: $NX = X - IM = 250 - 220 = \\mathbf{30}$ tỷ USD.</p>
           <p>• <strong>Tổng sản phẩm quốc nội (GDP):</strong></p>
-          <p>$$GDP = C + I + G + NX = 800 + 200 + 300 + 30 = \\mathbf{1.330} \\text{ tỷ USD}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$GDP = C + I + G + NX = 800 + 200 + 300 + 30 = \\mathbf{1.330} \\text{ tỷ USD}$$</div>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
@@ -279,12 +279,12 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu c & d: Tính PI, DI và Tiết kiệm Sp</h4>
           <p>• Thu nhập cá nhân (PI):</p>
-          <p>$$PI = NI - (\\text{Lợi nhuận giữ lại} + \\text{Thuế TNDN} + \\text{Bảo hiểm XH}) + Tr$$</p>
-          <p>$$PI = 1.150 - (40 + 50 + 60) + 90 = 1.150 - 150 + 90 = \\mathbf{1.090} \\text{ tỷ USD}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$PI = NI - (\\text{Lợi nhuận giữ lại} + \\text{Thuế TNDN} + \\text{Bảo hiểm XH}) + Tr$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$PI = 1.150 - (40 + 50 + 60) + 90 = 1.150 - 150 + 90 = \\mathbf{1.090} \\text{ tỷ USD}$$</div>
           <p>• Thu nhập khả dụng (DI):</p>
-          <p>$$DI = PI - \\text{Thuế TNCN} = 1.090 - 80 = \\mathbf{1.010} \\text{ tỷ USD}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$DI = PI - \\text{Thuế TNCN} = 1.090 - 80 = \\mathbf{1.010} \\text{ tỷ USD}$$</div>
           <p>• Tiết kiệm của hộ gia đình ($S_p$):</p>
-          <p>$$S_p = DI - C = 1.010 - 800 = \\mathbf{210} \\text{ tỷ USD}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$S_p = DI - C = 1.010 - 800 = \\mathbf{210} \\text{ tỷ USD}$$</div>
         </div>
       </div>
     `,
@@ -318,20 +318,20 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Thiết lập phương trình IS và LM</h4>
           <p>• <strong>Thị trường hàng hóa (Đường IS):</strong> Cân bằng $Y = C + I + G$</p>
-          <p>$$Y = 200 + 0.75(Y - 100) + 300 - 20r + 250$$</p>
-          <p>$$Y = 675 + 0.75Y - 20r \\iff 0.25Y = 675 - 20r$$</p>
-          <p>$$\\implies \\mathbf{IS: Y = 2.700 - 80r} \\quad \\text{hay } r = 33.75 - 0.0125Y$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Y = 200 + 0.75(Y - 100) + 300 - 20r + 250$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Y = 675 + 0.75Y - 20r \\iff 0.25Y = 675 - 20r$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies \\mathbf{IS: Y = 2.700 - 80r} \\quad \\text{hay } r = 33.75 - 0.0125Y$$</div>
           <p>• <strong>Thị trường tiền tệ (Đường LM):</strong> Cân bằng $M^S/P = M^D/P$</p>
-          <p>$$500 = 0.5Y - 40r \\iff 40r = 0.5Y - 500$$</p>
-          <p>$$\\implies \\mathbf{LM: r = 0.0125Y - 12.5} \\quad \\text{hay } Y = 1.000 + 80r$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$500 = 0.5Y - 40r \\iff 40r = 0.5Y - 500$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies \\mathbf{LM: r = 0.0125Y - 12.5} \\quad \\text{hay } Y = 1.000 + 80r$$</div>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b: Cân bằng đồng thời (r*, Y*)</h4>
           <p>Giải hệ phương trình IS và LM:</p>
-          <p>$$2.700 - 80r = 1.000 + 80r \\iff 160r = 1.700 \\implies \\mathbf{r^* = 10.625\\%}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$2.700 - 80r = 1.000 + 80r \\iff 160r = 1.700 \\implies \\mathbf{r^* = 10.625\\%}$$</div>
           <p>Thay $r^* = 10.625$ vào phương trình LM (hoặc IS):</p>
-          <p>$$Y^* = 1.000 + 80(10.625) = \\mathbf{1.850} \\text{ tỷ USD}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Y^* = 1.000 + 80(10.625) = \\mathbf{1.850} \\text{ tỷ USD}$$</div>
           <p>Đầu tư tư nhân tại điểm cân bằng: $I_0 = 300 - 20(10.625) = \\mathbf{87.5}$ tỷ USD.</p>
         </div>
 
@@ -339,10 +339,10 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu c & d: Khi G tăng 50 và Hiện tượng lấn át</h4>
           <p>Chi tiêu tự định tăng thêm: $\\Delta G = 50$. Với số nhân chi tiêu $k = \\frac{1}{1 - 0.75} = 4$.</p>
           <p>Đường IS dịch phải một đoạn $k \\times \\Delta G = 4 \\times 50 = 200$:</p>
-          <p>$$\\mathbf{IS': Y = 2.900 - 80r}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\mathbf{IS': Y = 2.900 - 80r}$$</div>
           <p>Cân bằng mới $IS' = LM$:</p>
-          <p>$$2.900 - 80r = 1.000 + 80r \\iff 160r = 1.900 \\implies \\mathbf{r_1^* = 11.875\\%}$$</p>
-          <p>$$Y_1^* = 1.000 + 80(11.875) = \\mathbf{1.950} \\text{ tỷ USD}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$2.900 - 80r = 1.000 + 80r \\iff 160r = 1.900 \\implies \\mathbf{r_1^* = 11.875\\%}$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Y_1^* = 1.000 + 80(11.875) = \\mathbf{1.950} \\text{ tỷ USD}$$</div>
           <p class="mt-2">• Đầu tư tư nhân mới: $I_1 = 300 - 20(11.875) = \\mathbf{62.5}$ tỷ USD.</p>
           <p>• <strong>Quy mô đầu tư bị lấn át:</strong> $\\Delta I = I_1 - I_0 = 62.5 - 87.5 = \\mathbf{-25}$ tỷ USD.</p>
           <p>• <strong>Sản lượng bị lấn át:</strong> Nếu lãi suất không đổi, sản lượng tăng $4 \\times 50 = 200$ (đạt $2.050$). Nhưng do lãi suất tăng nên sản lượng chỉ đạt $1.950$, bị lấn át mất: $2.050 - 1.950 = \\mathbf{100}$ tỷ USD sản lượng!</p>
@@ -387,17 +387,17 @@ Sau đó, giá của hàng hóa X tăng lên thành $P_X' = 3$ USD (giá Y và t
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Thu nhập bù đắp và giỏ hàng giả định B (Slutsky)</h4>
           <p>• Thu nhập bù đắp $I'$ để mua vừa đủ giỏ hàng ban đầu $A(30, 60)$ ở mức giá mới $(P_X'=3, P_Y=1)$:</p>
-          <p>$$I' = P_X' \\cdot X_A + P_Y \\cdot Y_A = 3(30) + 1(60) = 90 + 60 = \\mathbf{150} \\text{ USD}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$I' = P_X' \\cdot X_A + P_Y \\cdot Y_A = 3(30) + 1(60) = 90 + 60 = \\mathbf{150} \\text{ USD}$$</div>
           <p>• Tại điểm giả định B: với $I' = 150$, giá mới $P_X' = 3, P_Y = 1$ và tỷ lệ tối ưu $Y = 3X$:</p>
-          <p>$$3X + 3X = 150 \\iff 6X = 150 \\implies \\mathbf{X_B = 25, Y_B = 75}$$.</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$3X + 3X = 150 \\iff 6X = 150 \\implies \\mathbf{X_B = 25, Y_B = 75}$$.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu d: Phân rã SE, IE và Kết luận</h4>
           <p>• <strong>Hiệu ứng thay thế (Substitution Effect - SE):</strong> Từ A sang B do thay đổi giá tương đối:</p>
-          <p>$$SE = X_B - X_A = 25 - 30 = \\mathbf{-5} \\text{ đơn vị (luôn âm khi giá tăng)}$$</p>
+          <p>$$SE = X_B - X_A = 25 - 30 = \\mathbf{-5} \\text{ đơn vị (luôn âm khi giá tăng)}$$</div>
           <p>• <strong>Hiệu ứng thu nhập (Income Effect - IE):</strong> Từ B sang C do sức mua thực tế giảm từ 150 về 120:</p>
-          <p>$$IE = X_C - X_B = 20 - 25 = \\mathbf{-5} \\text{ đơn vị}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$IE = X_C - X_B = 20 - 25 = \\mathbf{-5} \\text{ đơn vị}$$</div>
           <p>• Kiểm tra: $SE + IE = (-5) + (-5) = -10 = \\Delta X_{tổng}$.</p>
           <p class="mt-2"><strong>Kết luận bản chất:</strong> Khi sức mua giảm (từ B sang C), lượng cầu X giảm ($IE = -5 < 0$). Do đó X là <strong>Hàng hóa thông thường (Normal Good)</strong>. Trong trường hợp này, Hiệu ứng thay thế và Hiệu ứng thu nhập cùng chiều làm giảm cầu khi giá tăng.</p>
         </div>
@@ -430,10 +430,10 @@ Sau đó, giá của hàng hóa X tăng lên thành $P_X' = 3$ USD (giá Y và t
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Hàm Leontief (Hàng bổ sung hoàn hảo)</h4>
           <p>Hàm $U_1 = \\min(2X, Y)$ có đường bàng quan hình chữ L góc vuông. Tại đỉnh góc nhọn, hàm số không có đạo hàm, do đó không thể dùng $MRS = P_X/P_Y$.</p>
           <p>Người tiêu dùng duy lý sẽ luôn tiêu dùng tại đỉnh góc nhọn để không lãng phí hàng hóa:</p>
-          <p>$$2X = Y \\iff Y = 2X$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$2X = Y \\iff Y = 2X$$</div>
           <p>Thay vào phương trình đường ngân sách $P_X X + P_Y Y = I_1$:</p>
-          <p>$$4X + 1(2X) = 180 \\iff 6X = 180 \\implies \\mathbf{X_1^* = 30}$$</p>
-          <p>$$\\implies \\mathbf{Y_1^* = 2(30) = 60}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$4X + 1(2X) = 180 \\iff 6X = 180 \\implies \\mathbf{X_1^* = 30}$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies \\mathbf{Y_1^* = 2(30) = 60}$$</div>
           <p>Mức thỏa dụng đạt được: $U_1^* = \\min(2 \\times 30, 60) = \\mathbf{60}$.</p>
         </div>
 
@@ -444,10 +444,10 @@ Sau đó, giá của hàng hóa X tăng lên thành $P_X' = 3$ USD (giá Y và t
           <p>Tỷ giá thị trường ban đầu: $\\frac{P_X}{P_Y} = \\frac{5}{2} = 2.5$.</p>
           <p><strong>So sánh:</strong> $MRS_{XY} = 3 > \\frac{P_X}{P_Y} = 2.5 \\implies \\frac{MU_X}{P_X} = \\frac{3}{5} = 0.6 > \\frac{MU_Y}{P_Y} = \\frac{1}{2} = 0.5$.</p>
           <p>Mỗi đồng chi cho X mang lại thỏa dụng cao hơn chi cho Y. Người tiêu dùng sẽ dùng 100% thu nhập mua X (Nghiệm góc Corner Solution):</p>
-          <p>$$\\mathbf{X_2^* = \\frac{I}{P_X} = \\frac{120}{5} = 24}, \\quad \\mathbf{Y_2^* = 0} \\implies U_2^* = 3(24) = 72$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\mathbf{X_2^* = \\frac{I}{P_X} = \\frac{120}{5} = 24}, \\quad \\mathbf{Y_2^* = 0} \\implies U_2^* = 3(24) = 72$$</div>
           <p class="mt-2">• <strong>Khi giá X giảm xuống P_X' = 2:</strong></p>
           <p>Tỷ giá mới $\\frac{P_X'}{P_Y} = \\frac{2}{2} = 1 < MRS = 3$. X càng trở nên hấp dẫn hơn nữa:</p>
-          <p>$$\\mathbf{X_2^{*\\prime} = \\frac{120}{2} = 60}, \\quad \\mathbf{Y_2^{*\\prime} = 0} \\implies U_2^{*\\prime} = 3(60) = 180$$.</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\mathbf{X_2^{*\\prime} = \\frac{120}{2} = 60}, \\quad \\mathbf{Y_2^{*\\prime} = 0} \\implies U_2^{*\\prime} = 3(60) = 180$$.</p>
         </div>
       </div>
     `,
@@ -479,10 +479,10 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
           <p>• Doanh thu của DN 1: $TR_1 = P \\cdot Q_1 = [100 - (Q_1 + Q_2)] Q_1 = 100Q_1 - Q_1^2 - Q_1 Q_2$.</p>
           <p>Doanh thu biên: $MR_1 = \\frac{\\partial TR_1}{\\partial Q_1} = 100 - 2Q_1 - Q_2$.</p>
           <p>Điều kiện $MR_1 = MC_1 \\iff 100 - 2Q_1 - Q_2 = 10 \\iff 2Q_1 = 90 - Q_2$</p>
-          <p>$$\\implies \\mathbf{Q_1 = R_1(Q_2) = 45 - 0.5Q_2} \\quad (\\text{Hàm phản ứng DN 1})$$</p>
+          <p>$$\\implies \\mathbf{Q_1 = R_1(Q_2) = 45 - 0.5Q_2} \\quad (\\text{Hàm phản ứng DN 1})$$</div>
           <p>Tương tự do tính đối xứng: $\\mathbf{Q_2 = R_2(Q_1) = 45 - 0.5Q_1}$.</p>
           <p class="mt-2">• <strong>Cân bằng Cournot:</strong> Thay $Q_2$ vào $Q_1$:</p>
-          <p>$$Q_1 = 45 - 0.5(45 - 0.5Q_1) = 45 - 22.5 + 0.25Q_1 \\iff 0.75Q_1 = 22.5 \\implies \\mathbf{Q_1^* = 30, Q_2^* = 30}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Q_1 = 45 - 0.5(45 - 0.5Q_1) = 45 - 22.5 + 0.25Q_1 \\iff 0.75Q_1 = 22.5 \\implies \\mathbf{Q_1^* = 30, Q_2^* = 30}$$</div>
           <p>Tổng sản lượng: $Q = 30 + 30 = 60$. Mức giá thị trường: $P = 100 - 60 = \\mathbf{40}$.</p>
           <p>Lợi nhuận mỗi DN: $\\pi_1 = \\pi_2 = (P - MC) \\times Q_i = (40 - 10) \\times 30 = \\mathbf{900}$.</p>
         </div>
@@ -490,8 +490,8 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu c: Mô hình Stackelberg (DN 1 dẫn đầu)</h4>
           <p>DN 1 biết trước hàm phản ứng của DN 2: $Q_2 = 45 - 0.5Q_1$. DN 1 thế trực tiếp vào hàm cầu của mình:</p>
-          <p>$$P = 100 - Q_1 - (45 - 0.5Q_1) = 55 - 0.5Q_1$$</p>
-          <p>$$TR_1 = P \\cdot Q_1 = 55Q_1 - 0.5Q_1^2 \\implies MR_1 = 55 - Q_1$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$P = 100 - Q_1 - (45 - 0.5Q_1) = 55 - 0.5Q_1$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$TR_1 = P \\cdot Q_1 = 55Q_1 - 0.5Q_1^2 \\implies MR_1 = 55 - Q_1$$</div>
           <p>Cho $MR_1 = MC_1 \\iff 55 - Q_1 = 10 \\implies \\mathbf{Q_{1, Stackelberg}^* = 45}$.</p>
           <p>DN 2 đi sau chấp nhận sản lượng: $Q_2 = 45 - 0.5(45) = \\mathbf{22.5}$.</p>
           <p>Tổng sản lượng: $Q = 45 + 22.5 = 67.5$. Giá bán: $P = 100 - 67.5 = \\mathbf{32.5}$.</p>
@@ -529,8 +529,8 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\\delta = 0.
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Trạng thái dừng ban đầu (k*, y*, c*)</h4>
           <p>Phương trình tích lũy tư bản Solow: $\\Delta k = s \\cdot f(k) - (\\delta + n)k$.</p>
           <p>Tại trạng thái dừng: $\\Delta k = 0 \\iff s \\cdot k^{0.5} = (\\delta + n)k$</p>
-          <p>$$0.3 k^{0.5} = (0.05 + 0.01)k = 0.06k \\iff \\frac{k}{k^{0.5}} = \\frac{0.3}{0.06} = 5$$</p>
-          <p>$$\\implies k^{0.5} = 5 \\implies \\mathbf{k^* = 25} \\text{ (tư bản trên mỗi lao động)}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$0.3 k^{0.5} = (0.05 + 0.01)k = 0.06k \\iff \\frac{k}{k^{0.5}} = \\frac{0.3}{0.06} = 5$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies k^{0.5} = 5 \\implies \\mathbf{k^* = 25} \\text{ (tư bản trên mỗi lao động)}$$</div>
           <p>• Sản lượng trạng thái dừng: $y^* = f(k^*) = (25)^{0.5} = \\mathbf{5}$.</p>
           <p>• Đầu tư trạng thái dừng: $i^* = s \\cdot y^* = 0.3 \\times 5 = \\mathbf{1.5}$.</p>
           <p>• Tiêu dùng trạng thái dừng: $c^* = y^* - i^* = 5 - 1.5 = \\mathbf{3.5}$.</p>
@@ -540,10 +540,10 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\\delta = 0.
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Quy tắc vàng của tích lũy tư bản (Golden Rule)</h4>
           <p>Tiêu dùng tại trạng thái dừng: $c(k) = f(k) - (\\delta + n)k$.</p>
           <p>Để tối đa hóa tiêu dùng bền vững, lấy đạo hàm theo k và cho bằng 0:</p>
-          <p>$$c'(k) = f'(k) - (\\delta + n) = 0 \\iff \\mathbf{MPK = \\delta + n}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$c'(k) = f'(k) - (\\delta + n) = 0 \\iff \\mathbf{MPK = \\delta + n}$$</div>
           <p>Với hàm $f(k) = k^{0.5} \\implies MPK = 0.5 k^{-0.5} = \\frac{0.5}{k^{0.5}}$.</p>
-          <p>$$\\frac{0.5}{k^{0.5}} = 0.05 + 0.01 = 0.06 \\iff k^{0.5} = \\frac{0.5}{0.06} = \\frac{25}{3} \\approx 8.333$$</p>
-          <p>$$\\implies \\mathbf{k_{gold}^* = \\left(\\frac{25}{3}\\right)^2 = \\frac{625}{9} \\approx 69.44}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\frac{0.5}{k^{0.5}} = 0.05 + 0.01 = 0.06 \\iff k^{0.5} = \\frac{0.5}{0.06} = \\frac{25}{3} \\approx 8.333$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies \\mathbf{k_{gold}^* = \\left(\\frac{25}{3}\\right)^2 = \\frac{625}{9} \\approx 69.44}$$</div>
           <p>• Sản lượng tại điểm vàng: $y_{gold}^* = (69.44)^{0.5} = 8.333$.</p>
           <p>• Tỷ lệ tiết kiệm vàng cần thiết: $s_{gold} = \\frac{(\\delta + n)k_{gold}^*}{y_{gold}^*} = \\frac{0.06 \\times 69.44}{8.333} = \\mathbf{0.50} \\text{ (tức } 50\\%\\text{)}$.</p>
           <p>• Tiêu dùng cực đại tại điểm vàng: $c_{gold}^* = y^* - (\\delta + n)k^* = 8.333 - 4.167 = \\mathbf{4.166} > 3.5$.</p>
@@ -580,15 +580,15 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\\delta = 0.
           <p>• <strong>Đường LM*:</strong> $850 = 0.5Y - 30(5) = 0.5Y - 150 \\iff 0.5Y = 1.000 \\implies \\mathbf{Y^* = 2.000}$.</p>
           <p><em>(Chú ý: Đường LM* là đường thẳng đứng tại Y = 2.000 vì lãi suất cố định r = r*!)</em></p>
           <p>• <strong>Đường IS*:</strong></p>
-          <p>$$Y = 1.000 + 0.8Y - 160 + 400 - 100 + 300 + 200 - 50e = 1.640 + 0.8Y - 50e$$</p>
-          <p>$$0.2Y = 1.640 - 50e \\iff \\mathbf{IS^*: Y = 8.200 - 250e}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Y = 1.000 + 0.8Y - 160 + 400 - 100 + 300 + 200 - 50e = 1.640 + 0.8Y - 50e$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$0.2Y = 1.640 - 50e \\iff \\mathbf{IS^*: Y = 8.200 - 250e}$$</div>
           <p>• Cân bằng $Y = 2.000$: $2.000 = 8.200 - 250e \\iff 250e = 6.200 \\implies \\mathbf{e^* = 24.8}$.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b: Tỷ giá thả nổi & Sự vô hiệu của Tài khóa</h4>
           <p>Khi G tăng 100, đường IS* dịch phải một đoạn $k \\times \\Delta G = 5 \\times 100 = 500$:</p>
-          <p>$$IS^{*\\prime}: Y = 8.700 - 250e$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$IS^{*\\prime}: Y = 8.700 - 250e$$</div>
           <p>Do đường LM* thẳng đứng tại $Y = 2.000$, giao điểm mới vẫn có: $\\mathbf{Y = 2.000}$ (Sản lượng KHÔNG ĐỔI!).</p>
           <p>Tỷ giá hối đoái mới: $2.000 = 8.700 - 250e \\iff 250e = 6.700 \\implies \\mathbf{e_1^* = 26.8}$ (Đồng nội tệ tăng giá mạnh!).</p>
           <p><strong>Kết luận kinh tế:</strong> Dưới tỷ giá thả nổi, chính sách tài khóa mở rộng hoàn toàn <strong>VÔ HIỆU</strong> trong việc tăng sản lượng. Chi tiêu chính phủ tăng chỉ làm nội tệ tăng giá, bóp nghẹt xuất khẩu ròng $\\Delta NX = -100$ triệt tiêu hoàn toàn $\\Delta G$.</p>
@@ -598,7 +598,7 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\\delta = 0.
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu c: Tỷ giá cố định & Hiệu lực tối đa</h4>
           <p>Dưới tỷ giá cố định, khi G tăng gây áp lực tăng giá nội tệ, NHTW buộc phải bán nội tệ mua ngoại tệ vào dự trữ, làm cung tiền $M^S$ tăng theo, dịch đường LM* sang phải.</p>
           <p>Tại $e = 2$: Sản lượng mới trên đường $IS^{*\\prime}$:</p>
-          <p>$$Y_{mới} = 8.700 - 250(2) = \\mathbf{8.200}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Y_{mới} = 8.700 - 250(2) = \\mathbf{8.200}$$</div>
           <p>Sản lượng tăng vọt trọn vẹn: $\\Delta Y = 500$. Chính sách tài khóa đạt <strong>HIỆU LỰC TỐI ĐA</strong> dưới chế độ tỷ giá cố định!</p>
         </div>
       </div>
@@ -634,15 +634,15 @@ Cho biết:
           <p>Khi lạm phát đạt mục tiêu ($\\pi = \\pi^* = 2\\%$) và sản lượng ở mức tiềm năng ($y = \\bar{y} = 6\\%$):</p>
           <p>Khoảng trống lạm phát: $\\pi - \\pi^* = 2 - 2 = 0$.</p>
           <p>Khoảng trống sản lượng: $y - \\bar{y} = 6 - 6 = 0$.</p>
-          <p>$$i = r^* + \\pi + 0.5(0) + 0.5(0) = 2\\% + 2\\% = \\mathbf{4.0\\%}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = r^* + \\pi + 0.5(0) + 0.5(0) = 2\\% + 2\\% = \\mathbf{4.0\\%}$$</div>
           <p>Lãi suất danh nghĩa trung tính là 4.0%/năm.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Phản ứng trước cú sốc lạm phát và Nguyên lý Taylor</h4>
           <p>Khi $\\pi = 6\\%$ (vượt mục tiêu $6 - 2 = 4\\%$) và $y = 8\\%$ (tăng nóng $8 - 6 = 2\\%$):</p>
-          <p>$$i = 2\\% + 6\\% + 0.5(6 - 2) + 0.5(8 - 6)$$</p>
-          <p>$$i = 8\\% + 0.5(4\\%) + 0.5(2\\%) = 8\\% + 2\\% + 1\\% = \\mathbf{11.0\\%}$$</p>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = 2\\% + 6\\% + 0.5(6 - 2) + 0.5(8 - 6)$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = 8\\% + 0.5(4\\%) + 0.5(2\\%) = 8\\% + 2\\% + 1\\% = \\mathbf{11.0\\%}$$</div>
           <p>• <strong>Lãi suất thực tế mới:</strong> $r = i - \\pi = 11\\% - 6\\% = \\mathbf{5.0\\%}$ (Tăng từ $2\\%$ lên $5\\%$!).</p>
           <p class="mt-2">• <strong>Giải thích Nguyên lý Taylor (Taylor Principle):</strong></p>
           <p>Hệ số trước lạm phát là $1 + 0.5 = 1.5 > 1$. Khi lạm phát tăng thêm 1%, NHTW phải tăng lãi suất danh nghĩa thêm 1.5% (tức tăng lớn hơn 1-1). Điều này đảm bảo rằng <strong>LÃI SUẤT THỰC TẾ r SẼ TĂNG LÊN</strong>. Lãi suất thực tăng làm hạ nhiệt chi tiêu vay mượn và đầu tư, kéo tổng cầu giảm xuống, từ đó dập tắt lạm phát. Nếu NHTW tăng lãi suất danh nghĩa ít hơn 1-1, lãi suất thực tế sẽ giảm và vô tình đổ thêm dầu vào lửa lạm phát.</p>
