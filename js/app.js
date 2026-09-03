@@ -758,14 +758,37 @@ function initFormulasTab() {
         ` : ''}
 
         ${item.examTrap ? `
-          <div class="text-xs bg-amber-50 dark:bg-amber-950/40 p-3 rounded-lg border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300">
+          <div class="text-xs bg-amber-50 dark:bg-amber-950/40 p-3 rounded-lg border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 mb-3">
             <strong>⚠️ BẪY ĐỀ THI:</strong> ${item.examTrap}
+          </div>
+        ` : ''}
+
+        ${item.caseStudy ? `
+          <div class="mt-4 p-4 bg-gradient-to-br from-indigo-50/70 to-purple-50/70 dark:from-slate-900/90 dark:to-indigo-950/40 rounded-xl border border-indigo-200/80 dark:border-indigo-800/60 text-xs space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold text-[11px] text-indigo-700 dark:text-indigo-300 flex items-center gap-1.5">
+                <i data-lucide="building-2" class="w-3.5 h-3.5 text-indigo-600"></i>
+                ${item.caseStudy.entity}
+              </span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 font-bold">
+                ${item.caseStudy.badge || 'Hồ sơ thực chiến'}
+              </span>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-slate-100 text-xs">${item.caseStudy.title}</h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">${item.caseStudy.context}</p>
+            <div class="p-2.5 bg-white/80 dark:bg-slate-800/80 rounded-lg border border-indigo-100 dark:border-slate-700 text-slate-700 dark:text-slate-200">
+              <strong>Ứng dụng công thức:</strong> ${item.caseStudy.analysis}
+            </div>
+            <p class="text-[11px] text-amber-700 dark:text-amber-300 font-medium">
+              💡 <em>Bài học thi cử:</em> ${item.caseStudy.lesson}
+            </p>
           </div>
         ` : ''}
       </div>
     `).join('');
 
     renderMath(container);
+    if (window.lucide) window.lucide.createIcons();
   }
 
   if (searchInput) searchInput.addEventListener('input', renderFormulas);
