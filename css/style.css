@@ -89,7 +89,7 @@
   }
 }
 
-/* Video Player Modal */
+/* Video Player Modal & Search Modal */
 .modal-backdrop {
   background-color: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(4px);
@@ -139,3 +139,40 @@
   font-weight: 700;
 }
 
+/* Trap severity badges */
+.badge-severity-high {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.dark .badge-severity-high {
+  background-color: #7f1d1d;
+  color: #fecaca;
+  border-color: #991b1b;
+}
+
+/* Universal Search Highlights */
+.search-highlight {
+  background-color: #fef08a;
+  color: #854d0e;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+.dark .search-highlight {
+  background-color: #854d0e;
+  color: #fef08a;
+}
+
+/* Print Friendly Stylesheet */
+@media print {
+  header, footer, nav, #btn-open-search, #video-theatre, .channel-filter-btn, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .tab-pane {
+    display: block !important;
+  }
+}
