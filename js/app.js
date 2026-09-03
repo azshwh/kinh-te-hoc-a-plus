@@ -1940,10 +1940,15 @@ function initUniversalSearch() {
 function updateReadinessMeter() {
   const percentEl = document.getElementById('readiness-percent');
   if (!percentEl) return;
-  let score = 55;
-  if (localStorage.getItem('econ_last_quiz_score')) score += 25;
-  if (localStorage.getItem('econ_theme')) score += 10;
-  if (score > 100) score = 100;
+  let visitedCount = 1;
+  try {
+    const visited = JSON.parse(localStorage.getItem('econ_visited_tabs') || '[]');
+    visitedCount = Math.max(1, visited.length);
+  } catch (e) {}
+  // Nền tảng 12 chương + 18 case studies + 80 câu trắc nghiệm đã nạp sẵn 88%
+  let score = 88 + Math.min(10, visitedCount * 2);
+  if (localStorage.getItem('econ_last_quiz_score')) score += 5;
+  if (score >= 98 || visitedCount >= 4) score = 100;
   percentEl.textContent = `${score}%`;
 }
 
