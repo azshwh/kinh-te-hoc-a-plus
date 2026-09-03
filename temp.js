@@ -336,5 +336,4 @@ const THEORY_DATA = [
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = THEORY_DATA;
 }
-
-module.exports = THEORY_DATA;
+\nmodule.exports = THEORY_DATA;

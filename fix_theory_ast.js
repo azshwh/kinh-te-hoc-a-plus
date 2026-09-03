@@ -64,7 +64,7 @@ const allCapsList = [
 ];
 
 let code = fs.readFileSync('data/theory.js', 'utf8');
-code = code + '\\nmodule.exports = THEORY_DATA;';
+code = code + '\nmodule.exports = THEORY_DATA;';
 fs.writeFileSync('temp.js', code);
 const data = require('./temp.js');
 
@@ -98,17 +98,17 @@ data.forEach(c => {
     s.content = s.content.replace(/(?<!\\$)P_\\{\\\\min\\}(?!\\$)/g, '$P_{\\\\min}$');
     
     // Fix `📌 1. Khái Niệm Cốt Lõi & Thuật Ngữ Chuẩn Mực` inside content
-    s.content = s.content.replace(/1\\. Khái Niệm Cốt Lõi & Thuật Ngữ Chuẩn Mực/g, '1. Khái niệm cốt lõi và thuật ngữ chuyên ngành');
+    s.content = s.content.replace(/1\. Khái Niệm Cốt Lõi & Thuật Ngữ Chuẩn Mực/g, '1. Khái niệm cốt lõi và thuật ngữ chuyên ngành');
   });
 });
 
 let newDataStr = JSON.stringify(data, null, 2);
-let newFileContent = \`// Cơ sở dữ liệu Lý thuyết Chuyên sâu 12 Chương môn Kinh tế học đại cương
+let newFileContent = `// Cơ sở dữ liệu Lý thuyết Chuyên sâu 12 Chương môn Kinh tế học đại cương
 // Biên soạn chuẩn mực theo giáo trình N. Gregory Mankiw, Paul Samuelson và Hal Varian
 // Tích hợp giải thích ELI5 dành cho học sinh lớp 1 và hệ thống hộp kiến thức khoa học
 
-const THEORY_DATA = \${newDataStr};
-\`;
+const THEORY_DATA = ${newDataStr};
+`;
 
 fs.writeFileSync('data/theory.js', newFileContent, 'utf8');
 console.log('Done fixing theory.js');
