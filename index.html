@@ -825,6 +825,210 @@
       </div>
     </section>
 
+    <!-- ================= TAB: 12 BÀI TẬP TỰ LUẬN ĐẠI HỌC ================= -->
+    <section id="pane-worked-problems" class="tab-pane hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+            <i data-lucide="file-check-2" class="w-5 h-5 text-emerald-600"></i>
+            12 Chuyên Đề Bài Tập Tự Luận Định Lượng Lớn (Chuẩn Đề Thi Đại Học)
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Bao trọn 100% các dạng bài tập tự luận thi học kỳ tại NEU, FTU, UEH, VNU. Trình bày lời giải chi tiết từng dòng, có công thức KaTeX, phương pháp đại số, Lagrange và cảnh báo bẫy trừ điểm.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-2">
+          <button class="prob-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-emerald-600 text-white shadow-sm" data-filter="all">
+            Tất cả 12 dạng bài
+          </button>
+          <button class="prob-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200" data-filter="micro">
+            Vi mô (6 dạng)
+          </button>
+          <button class="prob-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200" data-filter="macro">
+            Vĩ mô (6 dạng)
+          </button>
+        </div>
+      </div>
+
+      <div id="worked-problems-container" class="space-y-6">
+        <!-- Rendered dynamically by JS from WORKED_PROBLEMS_DATA -->
+      </div>
+    </section>
+
+    <!-- ================= TAB: NHẬN ĐỊNH ĐÚNG / SAI GIẢI THÍCH ================= -->
+    <section id="pane-true-false" class="tab-pane hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+            <i data-lucide="check-check" class="w-5 h-5 text-sky-500"></i>
+            Kho 40+ Câu Hỏi Nhận Định Đúng / Sai & Luận Giải Chuẩn A+
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Dạng câu hỏi phân loại học sinh chiếm 20 - 30% đề thi học kỳ. Cung cấp kết luận Đúng/Sai, khung dàn ý lập luận kinh tế học, công thức và hướng dẫn vẽ đồ thị ăn trọn điểm tuyệt đối.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input id="tf-search-input" type="text" placeholder="Tìm câu nhận định..." class="px-3 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs w-44">
+          <button class="tf-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-sky-600 text-white shadow-sm" data-filter="all">
+            Tất cả
+          </button>
+          <button class="tf-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200" data-filter="micro">
+            Vi mô
+          </button>
+          <button class="tf-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200" data-filter="macro">
+            Vĩ mô
+          </button>
+        </div>
+      </div>
+
+      <div id="true-false-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Rendered dynamically by JS from TRUE_FALSE_DATA -->
+      </div>
+    </section>
+
+    <!-- ================= TAB: MÔ HÌNH IS - LM LAB ================= -->
+    <section id="pane-islm-lab" class="tab-pane hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+            <i data-lucide="git-branch" class="w-5 h-5 text-purple-600"></i>
+            Phòng Thí Nghiệm Mô Hình Cân Bằng Đồng Thời IS - LM & Lấn Át Đầu Tư
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Thiết lập phương trình đường IS (thị trường hàng hóa), đường LM (thị trường tiền tệ), tìm điểm cân bằng $(r^*, Y^*)$, và mô phỏng tác động lấn át khi thực thi chính sách tài khóa / tiền tệ.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button id="btn-islm-preset-standard" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors">
+            Ví dụ NEU Chuẩn
+          </button>
+          <button id="btn-islm-preset-expansion" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-purple-50 text-purple-700 dark:bg-purple-950 dark:text-purple-300 border border-purple-200 dark:border-purple-800 hover:bg-purple-100 transition-colors">
+            Kích Cầu Tài Khóa ΔG=50
+          </button>
+        </div>
+      </div>
+
+      <!-- IS-LM Interactive Board -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Input Parameters Form -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 text-sm border-b border-slate-100 dark:border-slate-800 pb-2">
+            1. Thị Trường Hàng Hóa (Đường IS)
+          </h3>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div>
+              <label class="text-slate-500 font-medium">Tiêu dùng tự định C₀:</label>
+              <input id="islm-c0" type="number" value="200" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium">MPC (cận biên):</label>
+              <input id="islm-mpc" type="number" step="0.05" value="0.75" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium">Thuế T:</label>
+              <input id="islm-t" type="number" value="100" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium">Chi tiêu CP G:</label>
+              <input id="islm-g" type="number" value="250" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium">Đầu tư tự định I₀:</label>
+              <input id="islm-i0" type="number" value="300" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium">Độ nhạy đ/tư theo r (d):</label>
+              <input id="islm-d" type="number" value="20" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+          </div>
+
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 text-sm border-b border-slate-100 dark:border-slate-800 pb-2 pt-2">
+            2. Thị Trường Tiền Tệ (Đường LM)
+          </h3>
+          <div class="grid grid-cols-3 gap-2 text-xs">
+            <div>
+              <label class="text-slate-500 font-medium">Cung tiền M/P:</label>
+              <input id="islm-msp" type="number" value="500" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium">Độ nhạy thu nhập k:</label>
+              <input id="islm-k" type="number" step="0.1" value="0.5" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium">Độ nhạy lãi suất h:</label>
+              <input id="islm-h" type="number" value="40" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold">
+            </div>
+          </div>
+
+          <h3 class="font-bold text-purple-700 dark:text-purple-300 text-sm border-b border-purple-100 dark:border-purple-900 pb-2 pt-2">
+            3. Mô Phỏng Chính Sách Vĩ Mô (Tùy chọn)
+          </h3>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div>
+              <label class="text-slate-500 font-medium">Thay đổi chi tiêu ΔG:</label>
+              <input id="islm-deltag" type="number" value="50" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-purple-300 dark:border-purple-700 bg-purple-50 dark:bg-purple-950/40 font-semibold">
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium">Bơm thêm tiền ΔM:</label>
+              <input id="islm-deltam" type="number" value="0" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-purple-300 dark:border-purple-700 bg-purple-50 dark:bg-purple-950/40 font-semibold">
+            </div>
+          </div>
+
+          <button id="btn-calc-islm" class="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-bold text-sm transition-colors shadow-sm mt-2">
+            Giải Hệ IS - LM & Phân Tích Lấn Át
+          </button>
+        </div>
+
+        <!-- Output Results and Chart -->
+        <div class="lg:col-span-2 space-y-4">
+          <div id="islm-solution-card" class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <p class="text-slate-400 text-xs text-center py-6">Nhấn "Giải Hệ IS - LM & Phân Tích Lấn Át" để hiển thị phương trình và đồ thị cân bằng.</p>
+          </div>
+
+          <!-- Chart Box -->
+          <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <h4 class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-3 flex items-center justify-between">
+              <span>Đồ Thị Cân Bằng IS - LM (Trục Tung: Lãi Suất r%, Trục Hoành: Sản Lượng Y)</span>
+              <span class="text-[10px] text-slate-400 font-normal">Tự động cập nhật theo thông số</span>
+            </h4>
+            <div class="h-64 sm:h-72 w-full">
+              <canvas id="islm-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB: 3 ĐỀ THI CHUẨN HỌC KỲ ================= -->
+    <section id="pane-mock-exams" class="tab-pane hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+            <i data-lucide="clipboard-list" class="w-5 h-5 text-rose-500"></i>
+            Phòng Thi Thử Học Kỳ Trọn Vẹn (3 Mock Final Exams Kèm Barem Điểm)
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Đề thi hoàn chỉnh 3 phần: Trắc nghiệm (4đ), Nhận định Đúng/Sai (3đ), Bài tập tính toán tự luận (3đ). Kèm barem chấm điểm chi tiết từng 0.25đ của giảng viên đại học.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <select id="mock-exam-selector" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200">
+            <option value="exam-micro-1">Đề 1: Kinh tế Vi mô (NEU & FTU) - 60 phút</option>
+            <option value="exam-macro-2">Đề 2: Kinh tế Vĩ mô (UEH & VNU) - 60 phút</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Exam Viewer Container -->
+      <div id="mock-exam-view" class="space-y-6">
+        <!-- Rendered dynamically by JS from MOCK_EXAMS_DATA -->
+      </div>
+    </section>
+
     <!-- ================= TAB: SỔ TAY 20 BẪY ĐỀ THI A+ ================= -->
     <section id="pane-traps" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -1219,6 +1423,9 @@
   <script src="data/videos.js"></script>
   <script src="data/theory.js"></script>
   <script src="data/traps.js"></script>
+  <script src="data/true_false.js"></script>
+  <script src="data/worked_problems.js"></script>
+  <script src="data/mock_exams.js"></script>
   <script src="data/quiz.js"></script>
   <script src="data/flashcards.js"></script>
   <script src="js/solver.js"></script>
