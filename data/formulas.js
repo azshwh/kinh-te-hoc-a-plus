@@ -132,7 +132,7 @@ const FORMULAS_DATA = [
       "entity": "Quốc Hội Hoa Kỳ & Đạo Luật Thuế Hàng Xa Xỉ 1990",
       "badge": "Thảm Họa Thuế Đi Vào Lịch Sử",
       "title": "Đánh thuế người giàu nhưng công nhân nghèo mất việc làm",
-      "context": "Năm 1990, Quốc hội Mỹ đánh thuế 10% lên du thuyền xa xỉ giá trên $100.000 nhằm mục đích tăng thu ngân sách từ giới nhà giàu mà không ảnh hưởng đến người lao động.",
+      "context": "Năm 1990, Quốc hội Mỹ đánh thuế 10% lên du thuyền xa xỉ giá trên 100.000 USD nhằm mục đích tăng thu ngân sách từ giới nhà giàu mà không ảnh hưởng đến người lao động.",
       "analysis": "Người giàu có độ co giãn của cầu theo giá cực kỳ cao ($|E_D| > 4$ do du thuyền là hàng xa xỉ dễ thay thế bằng cách thuê thuyền ở nước ngoài). Cầu sụt giảm kinh hoàng, lượng bán du thuyền Mỹ giảm 71%. Ngành đóng tàu Mỹ phá sản, 25.000 công nhân mất việc. Khoản thuế thu được vỏn vẹn 16.6 triệu USD, trong khi chính phủ phải chi 24.5 triệu USD tiền trợ cấp thất nghiệp! Tổn thất vô ích $DWL$ phá hủy toàn bộ thị trường.",
       "lesson": "Bên nào có độ co giãn cao hơn thì né thuế dễ hơn. Thuế đánh vào người mua hàng co giãn cao sẽ bị đẩy ngược gánh nặng lên nhà sản xuất và người lao động!"
     }
@@ -173,7 +173,7 @@ const FORMULAS_DATA = [
       "entity": "Turing Pharmaceuticals (Martin Shkreli) vs Netflix (2011 Qwikster)",
       "badge": "Vụ Bê Bối Giá Thuốc Toàn Cầu",
       "title": "Tăng giá 5.455% thành công vs Mất 800.000 khách hàng trong 1 quý",
-      "context": "Năm 2015, 'Gã tồi nhất nước Mỹ' Martin Shkreli mua độc quyền thuốc Daraprim (trị ký sinh trùng HIV) và tăng giá từ $13.5 lên $750/viên (+5.455%). Cùng lúc, Netflix năm 2011 tăng giá gói xem phim thêm 60%.",
+      "context": "Năm 2015, 'Gã tồi nhất nước Mỹ' Martin Shkreli mua độc quyền thuốc Daraprim (trị ký sinh trùng HIV) và tăng giá từ 13.5 USD lên 750 USD/viên (+5.455%). Cùng lúc, Netflix năm 2011 tăng giá gói xem phim thêm 60%.",
       "analysis": "Thuốc Daraprim không có sản phẩm thay thế và là thuốc cứu mạng, nên cầu co giãn gần như hoàn toàn không ($|E_D| \\approx 0$). Tăng giá 5.455% khiến doanh thu của Turing tăng vọt vì người bệnh buộc phải mua bằng mọi giá. Ngược lại, dịch vụ xem phim của Netflix là giải trí có nhiều lựa chọn thay thế ($|E_D| > 1$). Khi Netflix tăng giá, 800.000 khách hàng lập tức hủy đăng ký, cổ phiếu Netflix bốc hơi 77% giá trị!",
       "lesson": "Doanh nghiệp chỉ có thể tăng giá để tăng doanh thu khi cầu co giãn kém ($|E_D| < 1$). Nếu $|E_D| > 1$, tăng giá là tự sát thương mại."
     }

@@ -56,12 +56,14 @@
 /* KaTeX formula readability and elegance */
 .katex-display {
   margin: 0.85em 0 !important;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-width: 100% !important;
   padding: 0.5rem 0.75rem;
   background: rgba(99, 102, 241, 0.03);
   border-radius: 0.625rem;
   border: 1px solid rgba(99, 102, 241, 0.08);
+  -webkit-overflow-scrolling: touch;
 }
 
 .dark .katex-display {
@@ -217,9 +219,20 @@ p, li {
   text-rendering: geometricPrecision;
 }
 
-/* Ngăn chặn tình trạng ngắt dòng gãy đôi công thức toán trong đoạn văn */
-p .katex, span .katex, li .katex, td .katex {
-  white-space: nowrap;
+/* Mobile responsive containment & overflow protection */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+#app, main, header, footer, .tab-pane {
+  max-width: 100vw !important;
+  box-sizing: border-box;
+}
+
+.katex {
+  max-width: 100%;
 }
 
 /* ELI5 Child-Friendly Box styling */
