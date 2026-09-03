@@ -899,6 +899,45 @@
         </div>
       </div>
 
+      <!-- Chapter & Difficulty Selectors -->
+      <div class="flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-800">
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="flex items-center gap-2">
+            <label class="text-xs font-semibold text-slate-500">Chương:</label>
+            <select id="quiz-chapter-filter" class="px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-medium text-slate-800 dark:text-slate-200">
+              <option value="all">Tất cả 12 chương (65 câu)</option>
+              <option value="1">Chương 1: 10 Nguyên lý & Chi phí cơ hội</option>
+              <option value="2">Chương 2: Cung - Cầu & Cân bằng thị trường</option>
+              <option value="3">Chương 3: Độ co giãn của Cung & Cầu</option>
+              <option value="4">Chương 4: Chính sách giá, Thuế & Tối ưu tiêu dùng</option>
+              <option value="5">Chương 5: Sản xuất & Chi phí doanh nghiệp</option>
+              <option value="6">Chương 6: 4 Cấu trúc thị trường & Lý thuyết trò chơi</option>
+              <option value="7">Chương 7: Đo lường sản lượng quốc gia (GDP)</option>
+              <option value="8">Chương 8: Tăng trưởng kinh tế & Năng suất</option>
+              <option value="9">Chương 9: Lạm phát, CPI & Thất nghiệp</option>
+              <option value="10">Chương 10: Hệ thống tiền tệ & NHTW</option>
+              <option value="11">Chương 11: Mô hình AD-AS & Chính sách tài khóa</option>
+              <option value="12">Chương 12: Kinh tế vĩ mô trong nền kinh tế mở</option>
+            </select>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <label class="text-xs font-semibold text-slate-500">Độ khó:</label>
+            <select id="quiz-diff-filter" class="px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-medium text-slate-800 dark:text-slate-200">
+              <option value="all">Tất cả 4 cấp độ</option>
+              <option value="remember">1. Nhận biết (Khái niệm)</option>
+              <option value="understand">2. Thông hiểu (Bản chất)</option>
+              <option value="apply">3. Vận dụng (Tính toán)</option>
+              <option value="advanced">4. Vận dụng cao / Bẫy A+</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="quiz-filter-count" class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+          Hiển thị: 65 câu
+        </div>
+      </div>
+
       <!-- Exam Timer Banner (Conditional) -->
       <div id="quiz-timer-container" class="hidden bg-amber-50 dark:bg-amber-950/30 p-4 rounded-xl border border-amber-200 dark:border-amber-900 flex items-center justify-between">
         <div class="flex items-center gap-2 text-amber-800 dark:text-amber-200 font-bold text-sm">
