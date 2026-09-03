@@ -265,7 +265,7 @@ const FORMULAS_DATA = [
       "entity": "Tập Đoàn Apple Inc. (Steve Jobs & Tim Cook)",
       "badge": "Nghệ Thuật Trói Chân Hệ Sinh Thái",
       "title": "Gói Apple One và nghệ thuật thao túng đường bàng quan người dùng",
-      "context": "Thay vì bán riêng lẻ iPhone, dịch vụ lưu trữ iCloud ($2.99), Apple Music ($10.99), và Apple TV+ ($6.99), Apple tung ra gói combo Apple One với giá $19.95/tháng, đồng thời thiết kế tính năng AirDrop, iMessage đồng bộ mượt mà giữa các thiết bị.",
+      "context": "Thay vì bán riêng lẻ iPhone, dịch vụ lưu trữ iCloud (2.99 USD), Apple Music (10.99 USD), và Apple TV+ (6.99 USD), Apple tung ra gói combo Apple One với giá $19.95/tháng, đồng thời thiết kế tính năng AirDrop, iMessage đồng bộ mượt mà giữa các thiết bị.",
       "analysis": "Bằng việc tích hợp hệ sinh thái, Apple đã làm gia tăng độ thỏa dụng biên chéo: dùng thêm MacBook làm tăng thỏa dụng biên của việc sở hữu iPhone ($MU_{iPhone} \\uparrow$). Đồng thời, gói combo Apple One giảm giá biên trên từng dịch vụ, đẩy tỷ số $MU/P$ của các dịch vụ Apple lên cao hơn hẳn so với Spotify hay Google Drive, khiến điểm tiếp xúc tối ưu của đường ngân sách người dùng bị khóa chặt (Lock-in) vĩnh viễn trong hệ sinh thái Apple.",
       "lesson": "Tối ưu hóa tiêu dùng không chỉ phụ thuộc vào giá, mà các tập đoàn lớn luôn tìm cách dịch chuyển đường bàng quan của người tiêu dùng thông qua hiệu ứng mạng lưới."
     }
@@ -311,9 +311,9 @@ const FORMULAS_DATA = [
       "entity": "Ford Motor Company & Henry Ford (Năm 1908 - 1920)",
       "badge": "Cuộc Cách Mạng Dây Chuyền Lắp Ráp",
       "title": "Hạ gục toàn bộ đối thủ nhờ đẩy AFC về sát 0 trên dòng xe Model T",
-      "context": "Đầu thế kỷ 20, ô tô là xa xỉ phẩm được đóng thủ công với giá $2.000. Henry Ford phát minh ra dây chuyền sản xuất hàng loạt (Assembly line) cho dòng xe Model T, chấp nhận đầu tư chi phí cố định nhà xưởng khổng lồ ($FC$).",
-      "analysis": "Nhờ sản xuất hàng trăm ngàn chiếc xe cùng một mẫu, Chi phí cố định trung bình bị nghiền nhỏ theo sản lượng ($AFC = FC / Q \\to 0$). Kết hợp với đường cong kinh nghiệm làm giảm $AVC$, Chi phí trung bình $ATC$ của chiếc xe Model T giảm từ $850 xuống còn $260. Henry Ford hạ giá bán chiếc xe xuống mức người công nhân bình thường cũng mua được, buộc hàng trăm xưởng xe thủ công có $ATC$ cao phải phá sản.",
-      "lesson": "Hiệu quả kinh tế nhờ quy mô (Economies of Scale) cho phép doanh nghiệp lớn vận hành tại đáy của đường $ dài hạn, dựng rào cản chi phí tuyệt đối."
+      "context": "Đầu thế kỷ 20, ô tô là xa xỉ phẩm được đóng thủ công với giá 2.000 USD. Henry Ford phát minh ra dây chuyền sản xuất hàng loạt (Assembly line) cho dòng xe Model T, chấp nhận đầu tư chi phí cố định nhà xưởng khổng lồ ($FC$).",
+      "analysis": "Nhờ sản xuất hàng trăm ngàn chiếc xe cùng một mẫu, Chi phí cố định trung bình bị nghiền nhỏ theo sản lượng ($AFC = FC / Q \\to 0$). Kết hợp với đường cong kinh nghiệm làm giảm $AVC$, Chi phí trung bình $ATC$ của chiếc xe Model T giảm từ 850 USD xuống còn 260 USD. Henry Ford hạ giá bán chiếc xe xuống mức người công nhân bình thường cũng mua được, buộc hàng trăm xưởng xe thủ công có $ATC$ cao phải phá sản.",
+      "lesson": "Hiệu quả kinh tế nhờ quy mô (Economies of Scale) cho phép doanh nghiệp lớn vận hành tại đáy của đường $ATC$ dài hạn, dựng rào cản chi phí tuyệt đối."
     }
   },
   {
@@ -388,7 +388,7 @@ const FORMULAS_DATA = [
       "entity": "Khối Các Nước Xuất Khẩu Dầu Mỏ (OPEC & OPEC+)",
       "badge": "Nobel Kinh Tế John Nash",
       "title": "Cuộc chiến giá dầu Nga - Saudi Arabia 2020 và sự sụp đổ của Cartel",
-      "context": "OPEC là một Cartel gồm các nước dầu mỏ hợp tác để cắt giảm sản lượng nhằm giữ giá dầu trên $80/thùng. Tháng 3/2020, trước làn sóng Covid-19 làm cầu sụt giảm, Saudi Arabia yêu cầu cắt giảm sản lượng nhưng Nga từ chối.",
+      "context": "OPEC là một Cartel gồm các nước dầu mỏ hợp tác để cắt giảm sản lượng nhằm giữ giá dầu trên 80 USD/thùng. Tháng 3/2020, trước làn sóng Covid-19 làm cầu sụt giảm, Saudi Arabia yêu cầu cắt giảm sản lượng nhưng Nga từ chối.",
       "analysis": "Đây là thế lưỡng nan của người tù kinh điển: Hợp tác cùng cắt giảm thì giá dầu cao, cả hai cùng có lợi. Nhưng mỗi bên đều có chiến lược áp đảo (Dominant strategy) là bơm thêm dầu để chiếm thị phần. Khi niềm tin vỡ vụn, Saudi Arabia mở van xả dầu hết công suất và hạ giá bán chiết khấu. Cả hai lao vào Cân bằng Nash không hợp tác: giá dầu lao dốc không phanh, thậm chí dầu WTI có thời điểm rơi xuống mức âm (-$37/thùng)!",
       "lesson": "Các liên minh cấu kết (Cartel) luôn chứa đựng mầm mống tự hủy diệt vì mỗi thành viên luôn có động cơ đơn phương gian lận hạn ngạch."
     }
