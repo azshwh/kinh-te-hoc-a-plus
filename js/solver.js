@@ -337,6 +337,122 @@ const EconSolver = {
       deflator: Number(deflator.toFixed(2)),
       inflation: Number(inflation.toFixed(2))
     };
+  },
+
+  /**
+   * Solver 4: Tối ưu hóa lựa chọn người tiêu dùng (Consumer Choice)
+   * Hàm thỏa dụng Cobb-Douglas: U(X, Y) = X^alpha * Y^beta
+   * Đường ngân sách: Px * X + Py * Y = I
+   */
+  solveConsumerChoice(alpha, beta, I, Px, Py) {
+    if (alpha <= 0 || beta <= 0 || I <= 0 || Px <= 0 || Py <= 0) {
+      throw new Error("Tất cả các thông số (alpha, beta, I, Px, Py) phải lớn hơn 0.");
+    }
+    const X_star = (alpha / (alpha + beta)) * (I / Px);
+    const Y_star = (beta / (alpha + beta)) * (I / Py);
+    const maxUtility = Math.pow(X_star, alpha) * Math.pow(Y_star, beta);
+    const spendingX = Px * X_star;
+    const spendingY = Py * Y_star;
+    const MRS = (alpha * Y_star) / (beta * X_star); // MRS = Px / Py
+
+    return {
+      X_star: Number(X_star.toFixed(2)),
+      Y_star: Number(Y_star.toFixed(2)),
+      maxUtility: Number(maxUtility.toFixed(2)),
+      spendingX: Number(spendingX.toFixed(2)),
+      spendingY: Number(spendingY.toFixed(2)),
+      MRS: Number(MRS.toFixed(3)),
+      priceRatio: Number((Px / Py).toFixed(3)),
+      explanation: `Tại điểm tối ưu E*(X* = ${X_star.toFixed(2)}, Y* = ${Y_star.toFixed(2)}), độ dốc đường bàng quan MRS = Px/Py = ${(Px / Py).toFixed(2)}. Tổng mức thỏa dụng đạt U_max = ${maxUtility.toFixed(2)}.`
+    };
+  },
+
+  /**
+   * Solver 5: Độc quyền thuần túy vs Cạnh tranh hoàn hảo
+   * Cầu thị trường: P = a - b*Q
+   * Chi phí: TC = c*Q^2 + d*Q + e  => MC = 2*c*Q + d
+   */
+  solveMonopoly(a, b, c, d, e) {
+    if (a <= d || b <= 0 || c < 0) {
+      throw new Error("Hệ số a phải lớn hơn d, b > 0 và c >= 0 để tồn tại sản lượng dương.");
+    }
+    // 1. Độc quyền: MR = MC => a - 2bQ = 2cQ + d => Q_M = (a - d) / (2b + 2c)
+    const Q_M = (a - d) / (2 * b + 2 * c);
+    const P_M = a - b * Q_M;
+    const TR_M = P_M * Q_M;
+    const TC_M = c * Math.pow(Q_M, 2) + d * Q_M + e;
+    const profit_M = TR_M - TC_M;
+    const MC_M = 2 * c * Q_M + d;
+    const CS_M = 0.5 * (a - P_M) * Q_M;
+
+    // 2. Cạnh tranh hoàn hảo: P = MC => a - bQ = 2cQ + d => Q_C = (a - d) / (b + 2c)
+    const Q_C = (a - d) / (b + 2 * c);
+    const P_C = a - b * Q_C;
+    const CS_C = 0.5 * (a - P_C) * Q_C;
+
+    // 3. Tổn thất xã hội (DWL) do độc quyền
+    const DWL = 0.5 * (P_M - MC_M) * (Q_C - Q_M);
+    const lerner = (P_M - MC_M) / P_M;
+
+    return {
+      monopoly: {
+        Q: Number(Q_M.toFixed(2)),
+        P: Number(P_M.toFixed(2)),
+        TR: Number(TR_M.toFixed(2)),
+        TC: Number(TC_M.toFixed(2)),
+        profit: Number(profit_M.toFixed(2)),
+        MC: Number(MC_M.toFixed(2)),
+        CS: Number(CS_M.toFixed(2)),
+        lernerIndex: Number(lerner.toFixed(3))
+      },
+      competitive: {
+        Q: Number(Q_C.toFixed(2)),
+        P: Number(P_C.toFixed(2)),
+        CS: Number(CS_C.toFixed(2))
+      },
+      DWL: Number(DWL.toFixed(2)),
+      comparison: `Độc quyền bán giá cao hơn (P_M = ${P_M.toFixed(2)} > P_C = ${P_C.toFixed(2)}) và sản lượng ít hơn (Q_M = ${Q_M.toFixed(2)} < Q_C = ${Q_C.toFixed(2)}), gây ra tổn thất vô ích DWL = ${DWL.toFixed(2)}.`
+    };
+  },
+
+  /**
+   * Solver 6: Mô hình số nhân chi tiêu Keynes (Keynesian Cross & Multiplier)
+   * C = C0 + MPC*(1 - t)*Y
+   * AE = C0 + I0 + G0 + NX0 + MPC*(1 - t)*Y
+   */
+  solveKeynesianCross(C0, MPC, I0, G0, NX0, taxRate = 0, Y_potential = null) {
+    if (MPC <= 0 || MPC >= 1) {
+      throw new Error("Xu hướng tiêu dùng cận biên MPC phải trong khoảng (0, 1).");
+    }
+    if (taxRate < 0 || taxRate >= 1) {
+      throw new Error("Thuế suất t phải trong khoảng [0, 1).");
+    }
+
+    const A0 = C0 + I0 + G0 + NX0; // Chi tiêu tự định
+    const slope = MPC * (1 - taxRate); // Độ dốc đường AE
+    const k = 1 / (1 - slope); // Số nhân chi tiêu
+    const Y_star = k * A0; // Sản lượng cân bằng
+
+    let gapAnalysis = null;
+    if (Y_potential !== null && Y_potential > 0) {
+      const deltaY = Y_potential - Y_star;
+      const deltaG = deltaY / k; // Cần tăng/giảm G
+      gapAnalysis = {
+        Y_potential: Number(Y_potential.toFixed(2)),
+        deltaY: Number(deltaY.toFixed(2)),
+        type: deltaY > 0 ? "Suy thoái (Recessionary Gap)" : deltaY < 0 ? "Lạm phát (Inflationary Gap)" : "Cân bằng tiềm năng",
+        requiredDeltaG: Number(deltaG.toFixed(2))
+      };
+    }
+
+    return {
+      A0: Number(A0.toFixed(2)),
+      slope: Number(slope.toFixed(3)),
+      multiplier: Number(k.toFixed(3)),
+      Y_star: Number(Y_star.toFixed(2)),
+      taxMultiplier: Number((-MPC / (1 - slope)).toFixed(3)),
+      gapAnalysis
+    };
   }
 };
 
