@@ -113,20 +113,40 @@ function switchTab(tabId) {
   updateReadinessMeter();
 }
 
-// ================= HÀM HỖ TRỢ RENDER KATEX =================
+// ================= HÀM HỖ TRỢ RENDER KATEX CHUYÊN SÂU =================
 function renderMath(element = document.body) {
-  if (window.renderMathInElement) {
+  const doRender = () => {
+    if (!window.renderMathInElement || !element) return;
     try {
       window.renderMathInElement(element, {
         delimiters: [
           { left: '$$', right: '$$', display: true },
-          { left: '$', right: '$', display: false }
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
         ],
+        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"],
         throwOnError: false
       });
     } catch (e) {
       console.warn("KaTeX render error:", e);
     }
+  };
+
+  if (window.renderMathInElement) {
+    doRender();
+  } else {
+    // Tự động kiểm tra và render ngay khi thư viện KaTeX tải xong từ CDN
+    let attempts = 0;
+    const timer = setInterval(() => {
+      attempts++;
+      if (window.renderMathInElement) {
+        clearInterval(timer);
+        doRender();
+      } else if (attempts > 25) {
+        clearInterval(timer);
+      }
+    }, 120);
   }
 }
 
@@ -756,8 +776,8 @@ function initFormulasTab() {
           <span class="text-xs text-slate-400">${item.chapter}</span>
         </div>
         <h3 class="font-bold text-lg text-slate-900 dark:text-slate-100 mb-2">${item.title}</h3>
-        <div class="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-xl my-3 text-center border border-slate-100 dark:border-slate-800">
-          <span class="text-lg font-semibold text-indigo-600 dark:text-indigo-400">$$${item.formula}$$</span>
+        <div class="math-card my-3 p-4 text-center overflow-x-auto shadow-sm">
+          <div class="text-lg font-bold text-indigo-700 dark:text-indigo-300">$$${item.formula}$$</div>
         </div>
         <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">${item.description}</p>
         
