@@ -50,7 +50,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css?v=2.2.0">
+  <link rel="stylesheet" href="css/style.css?v=2.3.0">
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col font-sans antialiased">
 
@@ -162,7 +162,7 @@
     <section id="pane-market" class="tab-pane space-y-6">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="activity" class="w-5 h-5 text-indigo-600"></i>
             Phòng thí nghiệm đồ thị cung - cầu và phân tích chính sách
           </h2>
@@ -237,8 +237,8 @@
               <select id="policy-type" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-medium">
                 <option value="none">Không can thiệp (thị trường tự do)</option>
                 <option value="tax">Đánh thuế đơn vị ($t$) vào sản phẩm</option>
-                <option value="ceiling">Quy định giá trần (*price ceiling*)</option>
-                <option value="floor">Quy định giá sàn (*price floor*)</option>
+                <option value="ceiling">Quy định giá trần (price ceiling)</option>
+                <option value="floor">Quy định giá sàn (price floor)</option>
               </select>
               <div>
                 <span class="text-[11px] text-slate-500 font-medium">Giá trị chính sách (t hoặc mức giá P):</span>
@@ -279,7 +279,7 @@
       <!-- Hub Header & Sub-tab switcher -->
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="graduation-cap" class="w-6 h-6 text-indigo-600"></i>
             Giảng đường quốc tế và lý thuyết chuyên sâu
           </h2>
@@ -518,7 +518,7 @@
     <!-- ================= TAB 2: GIẢI TOÁN VI MÔ ================= -->
     <section id="pane-micro-solvers" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-        <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
           <i data-lucide="cpu" class="w-5 h-5 text-indigo-600"></i>
           Công cụ tính toán kinh tế vi mô toàn diện
         </h2>
@@ -643,7 +643,7 @@
           </div>
 
           <button id="btn-calc-consumer" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl font-semibold text-sm transition-colors shadow-sm">
-            Xác Định Giỏ Hàng Tối Ưu (X*, Y*) & MRS
+            Xác Định Giỏ Hàng Tối Ưu (X*, Y) & MRS
           </button>
 
           <div id="cons-result" class="pt-2"></div>
@@ -691,7 +691,7 @@
     <!-- ================= TAB 3: GIẢI TOÁN VĨ MÔ ================= -->
     <section id="pane-macro-solvers" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-        <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
           <i data-lucide="landmark" class="w-5 h-5 text-indigo-600"></i>
           Công cụ tính toán kinh tế vĩ mô
         </h2>
@@ -832,7 +832,7 @@
     <section id="pane-worked-problems" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="file-check-2" class="w-5 h-5 text-emerald-600"></i>
             12 Chuyên Đề Bài Tập Tự Luận Định Lượng Lớn (Chuẩn Đề Thi Đại Học)
           </h2>
@@ -863,7 +863,7 @@
     <section id="pane-true-false" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="check-check" class="w-5 h-5 text-sky-500"></i>
             Kho 40+ Câu Hỏi Nhận Định Đúng / Sai & Luận Giải Chuẩn A+
           </h2>
@@ -895,12 +895,12 @@
     <section id="pane-islm-lab" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="git-branch" class="w-5 h-5 text-purple-600"></i>
             Phòng thí nghiệm mô hình cân bằng đồng thời IS - LM & Lấn Át Đầu Tư
           </h2>
           <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Thiết lập phương trình đường IS (thị trường hàng hóa), đường LM (thị trường tiền tệ), tìm điểm cân bằng $(r^*, Y^*)$, và mô phỏng tác động lấn át khi thực thi chính sách tài khóa / tiền tệ.
+            Thiết lập phương trình đường IS (thị trường hàng hóa), đường LM (thị trường tiền tệ), tìm điểm cân bằng $(r^*, Y^)$, và mô phỏng tác động lấn át khi thực thi chính sách tài khóa / tiền tệ.
           </p>
         </div>
 
@@ -1009,7 +1009,7 @@
     <section id="pane-mock-exams" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="clipboard-list" class="w-5 h-5 text-rose-500"></i>
             Phòng Thi Thử Học Kỳ Trọn Vẹn (3 Mock Final Exams Kèm Barem Điểm)
           </h2>
@@ -1037,7 +1037,7 @@
     <section id="pane-traps" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="alert-octagon" class="w-5 h-5 text-amber-500"></i>
             Kho Vũ Khí Phá Bẫy Đề Thi A+ (20 Lethal Traps Buster)
           </h2>
@@ -1070,7 +1070,7 @@
     <section id="pane-formulas" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="bookmark" class="w-5 h-5 text-indigo-600"></i>
             Sổ tay công thức toàn tập và lưu ý thi cử
           </h2>
@@ -1101,7 +1101,7 @@
       <!-- Quiz Header Controls -->
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="trophy" class="w-5 h-5 text-amber-500"></i>
             Đấu Trường Luyện Thi Trắc Nghiệm Chuẩn A+
           </h2>
@@ -1236,7 +1236,7 @@
     <section id="pane-flashcards" class="tab-pane hidden space-y-6">
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-start sm:items-center gap-2.5">
             <i data-lucide="layers" class="w-5 h-5 text-indigo-600"></i>
             Thẻ Ghi Nhớ Tốc Độ Cao (3D Flashcards)
           </h2>
@@ -1409,7 +1409,7 @@
           <!-- Story 1: Chi phí cơ hội -->
           <div class="p-5 rounded-2xl bg-amber-50/50 dark:bg-slate-800 border border-amber-200 dark:border-slate-700 space-y-2.5">
             <div class="text-2xl">🍭 🏎️</div>
-            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Chi phí cơ hội (*opportunity cost*)</h4>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Chi phí cơ hội (opportunity cost)</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               <strong>Chuyện kể:</strong> Bạn chỉ có đúng 10 nghìn đồng trong túi. Bạn rất thèm 1 cây kẹo mút (10k), nhưng bạn Bo lại rủ góp 10k để thuê xe ô tô điện chơi cùng. Bạn quyết định mua kẹo mút ăn.<br>
               <strong>Bản chất:</strong> Chi phí của cây kẹo mút không chỉ là tờ 10k, mà là <em>niềm vui được lái xe ô tô điện cùng bạn Bo mà bạn vừa phải từ bỏ</em>! Đó chính là Chi phí cơ hội.
@@ -1419,7 +1419,7 @@
           <!-- Story 2: Cung Cầu & Bàn tay vô hình -->
           <div class="p-5 rounded-2xl bg-sky-50/50 dark:bg-slate-800 border border-sky-200 dark:border-slate-700 space-y-2.5">
             <div class="text-2xl">🍦 ☀️ 🌧️</div>
-            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Cung - cầu và giá cả cân bằng (*market equilibrium*)</h4>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Cung - cầu và giá cả cân bằng (market equilibrium)</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               <strong>Chuyện kể:</strong> Ngày nắng chang chang, cả cổng trường chỉ có 1 bác bán kem mà có 20 bạn xếp hàng muốn ăn. Bác bán kem tăng giá từ 5k lên 10k mà vẫn bán hết sạch (Cầu vượt Cung $\to$ Giá tăng).<br>
               Hôm sau trời đổ mưa rét căm căm, chẳng ai muốn ăn kem, bác bán kem ế ẩm phải đại hạ giá xuống 3k để bán nhanh về nhà (Cung vượt Cầu $\to$ Giá giảm). Đó chính là Bàn tay vô hình điều chỉnh giá!
@@ -1459,7 +1459,7 @@
           <!-- Story 6: Độc quyền -->
           <div class="p-5 rounded-2xl bg-indigo-50/50 dark:bg-slate-800 border border-indigo-200 dark:border-slate-700 space-y-2.5">
             <div class="text-2xl">🏜️ 🥤 👑</div>
-            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Thế lực độc quyền bán (*monopoly power*)</h4>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Thế lực độc quyền bán (monopoly power)</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               <strong>Chuyện kể:</strong> Trong công viên giải trí rộng mênh mông đi bộ mỏi rã rời, chỉ có duy nhất 1 quầy bán nước ngọt của một bác, cấm mang nước từ ngoài vào. Bình thường lon nước giá 10k, bác bán 30k mà mặt vẫn lạnh như băng.<br>
               Dù vừa đắt vừa bực mình bạn vẫn phải mua vì không còn lựa chọn nào khác. Đó chính là Độc quyền thuần túy vì có rào cản ngăn người khác bán cùng!
@@ -1570,16 +1570,16 @@
   </footer>
 
   <!-- DATA & APP SCRIPTS -->
-  <script src="data/formulas.js?v=2.2.0"></script>
-  <script src="data/videos.js?v=2.2.0"></script>
-  <script src="data/theory.js?v=2.2.0"></script>
-  <script src="data/traps.js?v=2.2.0"></script>
-  <script src="data/true_false.js?v=2.2.0"></script>
-  <script src="data/worked_problems.js?v=2.2.0"></script>
-  <script src="data/mock_exams.js?v=2.2.0"></script>
-  <script src="data/quiz.js?v=2.2.0"></script>
-  <script src="data/flashcards.js?v=2.2.0"></script>
-  <script src="js/solver.js?v=2.2.0"></script>
-  <script src="js/app.js?v=2.2.0"></script>
+  <script src="data/formulas.js?v=2.3.0"></script>
+  <script src="data/videos.js?v=2.3.0"></script>
+  <script src="data/theory.js?v=2.3.0"></script>
+  <script src="data/traps.js?v=2.3.0"></script>
+  <script src="data/true_false.js?v=2.3.0"></script>
+  <script src="data/worked_problems.js?v=2.3.0"></script>
+  <script src="data/mock_exams.js?v=2.3.0"></script>
+  <script src="data/quiz.js?v=2.3.0"></script>
+  <script src="data/flashcards.js?v=2.3.0"></script>
+  <script src="js/solver.js?v=2.3.0"></script>
+  <script src="js/app.js?v=2.3.0"></script>
 </body>
 </html>

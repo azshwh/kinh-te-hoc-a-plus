@@ -1707,30 +1707,30 @@ function initTrapsTab() {
       <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow space-y-3">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <span class="w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-bold text-xs flex items-center justify-center">
-              ${item.id}
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 font-bold text-xs font-mono">
+              Bẫy #${item.id.replace('trap-', '')}
             </span>
             <span class="text-xs font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
               ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
             </span>
           </div>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.severity === 'high' ? 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' : 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300'}">
-            ${item.severity === 'high' ? '⚠️ Tỷ lệ sai > 80%' : '⚡ Dễ nhầm lẫn'}
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.severity && item.severity.toLowerCase().includes('cao') ? 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' : 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300'}">
+            ${item.severity && item.severity.toLowerCase().includes('cao') ? '⚠️ Tỷ lệ sai > 80%' : '⚡ Dễ nhầm lẫn'}
           </span>
         </div>
 
         <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base leading-snug">${item.title}</h3>
 
         <div class="p-3 bg-rose-50 dark:bg-rose-950/30 rounded-xl border border-rose-100 dark:border-rose-900/50 text-xs text-rose-900 dark:text-rose-200">
-          <strong>❌ Ngộ nhận thường gặp:</strong> ${item.misconception}
+          <strong>❌ Ngộ nhận thường gặp:</strong> ${item.trapDesc || item.misconception || 'Cần đặc biệt lưu ý ngữ cảnh bài thi.'}
         </div>
 
         <div class="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-100 dark:border-emerald-900/50 text-xs text-emerald-900 dark:text-emerald-200">
-          <strong>✓ Bản chất theo Mankiw:</strong> ${item.mankiwInsight}
+          <strong>✓ Bản chất theo Mankiw:</strong> ${item.correctInsight || item.mankiwInsight || 'Nắm vững định nghĩa và bản chất kinh tế học.'}
         </div>
 
         <div class="p-2.5 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-900 text-xs text-amber-800 dark:text-amber-300 font-semibold">
-          💡 ${item.proTip}
+          💡 ${item.examTip || item.proTip || 'Đọc kỹ câu hỏi trắc nghiệm trước khi chọn phương án.'}
         </div>
 
         <!-- Practice Question Toggle -->
@@ -1739,7 +1739,7 @@ function initTrapsTab() {
             <span>Làm thử câu trắc nghiệm thực chiến</span> →
           </button>
           <div id="trap-q-box-${item.id}" class="hidden mt-3 p-3 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700 text-xs space-y-2">
-            <p class="font-semibold text-slate-800 dark:text-slate-100">${item.sampleQuestion.question}</p>
+            <p class="font-semibold text-slate-800 dark:text-slate-100">${item.sampleQuestion ? (item.sampleQuestion.q || item.sampleQuestion.question || "") : ""}</p>
             <div class="space-y-1.5">
               ${item.sampleQuestion.options.map((opt, oIdx) => `
                 <button class="trap-opt-btn w-full text-left p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-indigo-50 dark:hover:bg-indigo-950 transition-colors" data-trap-id="${item.id}" data-opt="${oIdx}" data-correct="${item.sampleQuestion.correct}">
