@@ -29,9 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheoryHub();
   initMicroSolvers();
   initMacroSolvers();
+  initTrapsTab();
   initFormulasTab();
   initQuizTab();
   initFlashcardsTab();
+  initUniversalSearch();
+  updateReadinessMeter();
 
   // Khởi tạo Lucide icons nếu có
   if (window.lucide) {
