@@ -1154,6 +1154,42 @@
 
   </main>
 
+  <!-- ================= UNIVERSAL SEARCH MODAL (Ctrl + K) ================= -->
+  <div id="search-modal" class="fixed inset-0 z-50 hidden flex items-start justify-center pt-16 sm:pt-24 px-4 modal-backdrop">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[80vh]">
+      <!-- Search Input Header -->
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-indigo-500 flex-shrink-0"></i>
+        <input id="search-modal-input" type="text" placeholder="Tìm kiến thức, video, công thức, bẫy thi cử, solver... (hoặc gõ Esc để đóng)" class="w-full bg-transparent text-sm sm:text-base outline-none text-slate-800 dark:text-slate-100 placeholder-slate-400">
+        <button id="search-modal-close" class="p-1 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Quick Categories / Scope Pills -->
+      <div class="px-4 py-2 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-slate-500 flex items-center gap-2 overflow-x-auto whitespace-nowrap">
+        <span>Phạm vi:</span>
+        <span class="px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">12 Chương Lý Thuyết</span>
+        <span class="px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300">17 Video Quốc Tế</span>
+        <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300">20 Bẫy Đề Thi A+</span>
+        <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">Solvers & Công Thức</span>
+      </div>
+
+      <!-- Search Results Scrollable Area -->
+      <div id="search-modal-results" class="p-4 overflow-y-auto space-y-2 divide-y divide-slate-100 dark:divide-slate-800/60 max-h-96">
+        <p class="text-xs text-center text-slate-400 py-6">Nhập từ khóa bất kỳ để tra cứu tức thì toàn bộ giáo trình và công cụ...</p>
+      </div>
+
+      <!-- Search Footer -->
+      <div class="px-4 py-2.5 bg-slate-50 dark:bg-slate-800/80 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span><kbd class="px-1 py-0.5 bg-slate-200 dark:bg-slate-700 rounded font-mono">Esc</kbd> để đóng</span>
+        </div>
+        <span>Bấm vào kết quả để chuyển ngay đến nội dung</span>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-6 text-center text-xs text-slate-400">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
@@ -1166,6 +1202,7 @@
   <script src="data/formulas.js"></script>
   <script src="data/videos.js"></script>
   <script src="data/theory.js"></script>
+  <script src="data/traps.js"></script>
   <script src="data/quiz.js"></script>
   <script src="data/flashcards.js"></script>
   <script src="js/solver.js"></script>
