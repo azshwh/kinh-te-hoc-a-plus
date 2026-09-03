@@ -88,6 +88,10 @@ function switchTab(tabId) {
     if (btn.getAttribute('data-tab') === tabId) {
       btn.classList.add('bg-indigo-600', 'text-white');
       btn.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:bg-slate-100', 'dark:hover:bg-slate-800');
+      // Tự động căn giữa tab vào tầm mắt với hiệu ứng cuộn mượt mà
+      try {
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      } catch(e) {}
     } else {
       btn.classList.remove('bg-indigo-600', 'text-white');
       btn.classList.add('text-slate-600', 'dark:text-slate-300', 'hover:bg-slate-100', 'dark:hover:bg-slate-800');
