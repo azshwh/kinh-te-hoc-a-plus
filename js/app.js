@@ -373,6 +373,196 @@ function initMicroSolvers() {
   if (costCalcBtn) {
     costCalcBtn.addEventListener('click', handleCostCalculation);
   }
+
+  // Solver 3: Tối ưu hóa tiêu dùng Cobb-Douglas
+  const consCalcBtn = document.getElementById('btn-calc-consumer');
+  if (consCalcBtn) {
+    consCalcBtn.addEventListener('click', handleConsumerCalculation);
+  }
+
+  // Solver 4: Độc quyền vs Cạnh tranh
+  const monoCalcBtn = document.getElementById('btn-calc-monopoly');
+  if (monoCalcBtn) {
+    monoCalcBtn.addEventListener('click', handleMonopolyCalculation);
+  }
+}
+
+function handleConsumerCalculation() {
+  const alpha = parseFloat(document.getElementById('cons-alpha').value);
+  const beta = parseFloat(document.getElementById('cons-beta').value);
+  const income = parseFloat(document.getElementById('cons-income').value);
+  const px = parseFloat(document.getElementById('cons-px').value);
+  const py = parseFloat(document.getElementById('cons-py').value);
+  const resDiv = document.getElementById('cons-result');
+
+  try {
+    const res = EconSolver.solveConsumerChoice(alpha, beta, income, px, py);
+    resDiv.innerHTML = `
+      <div class="p-4 bg-amber-50 dark:bg-slate-800 rounded-xl border border-amber-200 dark:border-slate-700 space-y-2 text-sm">
+        <div class="grid grid-cols-2 gap-2 text-slate-800 dark:text-slate-100 font-medium text-xs">
+          <div class="p-2 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+            • Lượng hàng X* tối ưu: <strong class="text-amber-600">${res.X_star}</strong>
+          </div>
+          <div class="p-2 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+            • Lượng hàng Y* tối ưu: <strong class="text-amber-600">${res.Y_star}</strong>
+          </div>
+          <div class="p-2 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+            • Thỏa dụng cực đại ($U_{max}$): <strong>${res.maxUtility}</strong>
+          </div>
+          <div class="p-2 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+            • Độ dốc $MRS = P_X/P_Y$: <strong>${res.MRS}</strong>
+          </div>
+        </div>
+        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">${res.explanation}</p>
+      </div>
+    `;
+    renderMath(resDiv);
+  } catch (err) {
+    resDiv.innerHTML = `<p class="text-red-500 font-bold p-3">${err.message}</p>`;
+  }
+}
+
+function handleMonopolyCalculation() {
+  const a = parseFloat(document.getElementById('mono-a').value);
+  const b = parseFloat(document.getElementById('mono-b').value);
+  const c = parseFloat(document.getElementById('mono-c').value);
+  const d = parseFloat(document.getElementById('mono-d').value);
+  const e = parseFloat(document.getElementById('mono-e').value);
+  const resDiv = document.getElementById('mono-result');
+
+  try {
+    const res = EconSolver.solveMonopoly(a, b, c, d, e);
+    resDiv.innerHTML = `
+      <div class="p-4 bg-purple-50 dark:bg-slate-800 rounded-xl border border-purple-200 dark:border-slate-700 space-y-3 text-sm">
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-purple-200 dark:border-purple-800">
+            <p class="font-bold text-purple-700 dark:text-purple-300 uppercase">1. Độc quyền thuần túy (MR = MC)</p>
+            <p>• Sản lượng: $Q_M = \\mathbf{${res.monopoly.Q}}$</p>
+            <p>• Mức giá bán: $P_M = \\mathbf{${res.monopoly.P}}$</p>
+            <p>• Lợi nhuận: $\\pi_M = \\mathbf{${res.monopoly.profit}}$</p>
+            <p>• Chỉ số Lerner ($L$): $\\mathbf{${res.monopoly.lernerIndex}}$</p>
+          </div>
+          <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-emerald-200 dark:border-emerald-800">
+            <p class="font-bold text-emerald-700 dark:text-emerald-300 uppercase">2. Cạnh tranh hoàn hảo (P = MC)</p>
+            <p>• Sản lượng: $Q_C = \\mathbf{${res.competitive.Q}}$</p>
+            <p>• Mức giá bán: $P_C = \\mathbf{${res.competitive.P}}$</p>
+            <p>• Thặng dư người mua: $CS_C = \\mathbf{${res.competitive.CS}}$</p>
+          </div>
+        </div>
+        <div class="p-2.5 bg-rose-50 dark:bg-rose-950/40 rounded-lg border border-rose-200 dark:border-rose-900 text-xs text-rose-800 dark:text-rose-200 font-semibold">
+          ⚠️ Tổn thất vô ích của xã hội ($DWL$): $\\mathbf{${res.DWL}}$<br>
+          <span class="font-normal text-slate-600 dark:text-slate-300">${res.comparison}</span>
+        </div>
+      </div>
+    `;
+    renderMath(resDiv);
+  } catch (err) {
+    resDiv.innerHTML = `<p class="text-red-500 font-bold p-3">${err.message}</p>`;
+  }
+}
+
+// ================= 3. MODULE BỘ TÍNH VĨ MÔ =================
+function initMacroSolvers() {
+  const calcMoneyBtn = document.getElementById('btn-calc-money');
+  if (calcMoneyBtn) {
+    calcMoneyBtn.addEventListener('click', () => {
+      const cr = parseFloat(document.getElementById('macro-cr').value);
+      const rr = parseFloat(document.getElementById('macro-rr').value);
+      const mb = parseFloat(document.getElementById('macro-mb').value);
+      const resDiv = document.getElementById('macro-money-result');
+
+      try {
+        const res = EconSolver.solveMoneySupply(cr, rr, mb);
+        resDiv.innerHTML = `
+          <div class="p-4 bg-indigo-50 dark:bg-slate-800 rounded-xl border border-indigo-200 dark:border-slate-700 space-y-2 text-sm">
+            <p>• <strong>Số nhân tiền ($m_M$):</strong> $\\frac{cr + 1}{cr + rr} = \\frac{${cr} + 1}{${cr} + ${rr}} = \\mathbf{${res.moneyMultiplier}}$</p>
+            <p>• <strong>Tổng mức cung tiền ($MS$):</strong> $MS = m_M \\times MB = ${res.moneyMultiplier} \\times ${mb} = \\mathbf{${res.moneySupply}}$ tỷ đồng.</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">💡 Ý nghĩa: Cứ mỗi 1 đồng cơ sở tiền (MB) được NHTW đưa vào lưu thông sẽ tạo ra ${res.moneyMultiplier} đồng cung tiền trong nền kinh tế qua hệ thống tạo tiền gửi của NHTM.</p>
+          </div>
+        `;
+        renderMath(resDiv);
+      } catch (e) {
+        resDiv.innerHTML = `<p class="text-red-500 p-2">${e.message}</p>`;
+      }
+    });
+  }
+
+  const calcGdpBtn = document.getElementById('btn-calc-gdp');
+  if (calcGdpBtn) {
+    calcGdpBtn.addEventListener('click', () => {
+      const c = parseFloat(document.getElementById('gdp-c').value) || 0;
+      const i = parseFloat(document.getElementById('gdp-i').value) || 0;
+      const g = parseFloat(document.getElementById('gdp-g').value) || 0;
+      const x = parseFloat(document.getElementById('gdp-x').value) || 0;
+      const im = parseFloat(document.getElementById('gdp-im').value) || 0;
+      const resDiv = document.getElementById('macro-gdp-result');
+
+      const nx = x - im;
+      const gdp = c + i + g + nx;
+
+      resDiv.innerHTML = `
+        <div class="p-4 bg-emerald-50 dark:bg-slate-800 rounded-xl border border-emerald-200 dark:border-slate-700 space-y-2 text-sm">
+          <p>• <strong>Xuất khẩu ròng ($NX$):</strong> $X - IM = ${x} - ${im} = \\mathbf{${nx}}$ tỷ đồng.</p>
+          <p>• <strong>Tổng sản phẩm quốc nội ($GDP$):</strong> $C + I + G + NX = ${c} + ${i} + ${g} + (${nx}) = \\mathbf{${gdp}}$ tỷ đồng.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">⚠️ Lưu ý thi: Khoản chi trợ cấp (Transfer payments - Tr) của chính phủ KHÔNG được tính vào $G$!</p>
+        </div>
+      `;
+      renderMath(resDiv);
+    });
+  }
+
+  // Solver 3: Mô hình số nhân chi tiêu Keynes
+  const calcKeynesBtn = document.getElementById('btn-calc-keynes');
+  if (calcKeynesBtn) {
+    calcKeynesBtn.addEventListener('click', () => {
+      const c0 = parseFloat(document.getElementById('keynes-c0').value) || 0;
+      const mpc = parseFloat(document.getElementById('keynes-mpc').value) || 0.8;
+      const t = parseFloat(document.getElementById('keynes-t').value) || 0;
+      const i0 = parseFloat(document.getElementById('keynes-i0').value) || 0;
+      const g0 = parseFloat(document.getElementById('keynes-g0').value) || 0;
+      const nx0 = parseFloat(document.getElementById('keynes-nx0').value) || 0;
+      const yp = parseFloat(document.getElementById('keynes-yp').value) || null;
+      const resDiv = document.getElementById('macro-keynes-result');
+
+      try {
+        const res = EconSolver.solveKeynesianCross(c0, mpc, i0, g0, nx0, t, yp);
+        let gapHtml = '';
+        if (res.gapAnalysis) {
+          gapHtml = `
+            <div class="p-2.5 bg-amber-50 dark:bg-amber-950/40 rounded-lg border border-amber-200 dark:border-amber-900 text-xs space-y-1 mt-2">
+              <p class="font-bold text-amber-800 dark:text-amber-200">Phân tích Khoảng trống sản lượng (Output Gap):</p>
+              <p>• Trạng thái nền kinh tế: <strong>${res.gapAnalysis.type}</strong></p>
+              <p>• Chênh lệch sản lượng: $\\Delta Y = Y_p - Y^* = ${res.gapAnalysis.Y_potential} - ${res.Y_star} = \\mathbf{${res.gapAnalysis.deltaY}}$ tỷ</p>
+              <p>• <strong>Khuyến nghị Chính sách Tài khóa:</strong> Cần điều chỉnh chi tiêu chính phủ $\\Delta G = \\frac{\\Delta Y}{k} = \\mathbf{${res.gapAnalysis.requiredDeltaG}}$ tỷ đồng để đưa nền kinh tế về mức toàn dụng.</p>
+            </div>
+          `;
+        }
+
+        resDiv.innerHTML = `
+          <div class="p-4 bg-indigo-50 dark:bg-slate-800 rounded-xl border border-indigo-200 dark:border-slate-700 space-y-2 text-sm">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+              <div class="p-2 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+                • Chi tiêu tự định ($A_0$): <strong>${res.A0}</strong>
+              </div>
+              <div class="p-2 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+                • Số nhân chi tiêu ($k$): <strong class="text-indigo-600 dark:text-indigo-400">${res.multiplier}</strong>
+              </div>
+              <div class="p-2 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+                • Số nhân thuế ($k_T$): <strong>${res.taxMultiplier}</strong>
+              </div>
+              <div class="p-2 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+                • Sản lượng cân bằng ($Y^*$): <strong class="text-emerald-600 dark:text-emerald-400">${res.Y_star}</strong>
+              </div>
+            </div>
+            ${gapHtml}
+          </div>
+        `;
+        renderMath(resDiv);
+      } catch (err) {
+        resDiv.innerHTML = `<p class="text-red-500 font-bold p-3">${err.message}</p>`;
+      }
+    });
+  }
 }
 
 function handleElasticityCalculation() {
