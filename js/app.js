@@ -779,6 +779,11 @@ function initQuizTab() {
   if (btnExam) btnExam.addEventListener('click', () => startQuiz('exam'));
   if (btnTrap) btnTrap.addEventListener('click', () => startQuiz('trap'));
 
+  const chapFilter = document.getElementById('quiz-chapter-filter');
+  const diffFilter = document.getElementById('quiz-diff-filter');
+  if (chapFilter) chapFilter.addEventListener('change', () => startQuiz(quizState.mode));
+  if (diffFilter) diffFilter.addEventListener('change', () => startQuiz(quizState.mode));
+
   document.getElementById('btn-prev-question')?.addEventListener('click', () => {
     if (quizState.currentIndex > 0) {
       quizState.currentIndex--;
@@ -830,11 +835,35 @@ function startQuiz(mode) {
 
   // Lựa chọn danh sách câu hỏi
   let pool = [...QUIZ_DATA];
+
+  // Lọc theo chương nếu chọn
+  const chapVal = document.getElementById('quiz-chapter-filter')?.value || 'all';
+  if (chapVal !== 'all') {
+    const cNum = parseInt(chapVal, 10);
+    pool = pool.filter(q => q.chapter === cNum);
+  }
+
+  // Lọc theo độ khó nếu chọn
+  const diffVal = document.getElementById('quiz-diff-filter')?.value || 'all';
+  if (diffVal !== 'all') {
+    pool = pool.filter(q => q.difficulty === diffVal);
+  }
+
   if (mode === 'trap') {
     pool = pool.filter(q => q.isTrap);
   } else if (mode === 'exam') {
     // Trộn ngẫu nhiên câu hỏi
     pool = pool.sort(() => Math.random() - 0.5).slice(0, 30);
+  }
+
+  const countBadge = document.getElementById('quiz-filter-count');
+  if (countBadge) {
+    countBadge.textContent = `Hiển thị: ${pool.length} câu`;
+  }
+
+  if (pool.length === 0) {
+    alert("Không tìm thấy câu hỏi nào phù hợp với bộ lọc đã chọn. Hệ thống sẽ hiển thị toàn bộ câu hỏi.");
+    pool = [...QUIZ_DATA];
   }
 
   quizState.activeQuestions = pool;
