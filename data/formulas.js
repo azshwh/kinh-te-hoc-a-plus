@@ -1,205 +1,195 @@
 // Sổ tay công thức toàn diện môn Kinh tế học đại cương (Vi mô & Vĩ mô)
-// Tích hợp tình huống thực chiến kinh điển của các tập đoàn hàng đầu thế giới và các công trình Nobel Kinh tế chấn động toàn cầu
-// Tích hợp chú giải ký hiệu toán học và đơn vị đo lường chuẩn mực cho từng biến số
-// 100% công thức và biến số được chuẩn hóa KaTeX toán học sắc nét
+// Biên soạn theo chuẩn ngữ pháp tiếng Việt học thuật, đối chiếu thuật ngữ tiếng Anh gốc
+// Tích hợp tình huống thực chiến kinh điển của các tập đoàn hàng đầu thế giới và các công trình Nobel Kinh tế
+// Chuẩn hóa 100% KaTeX toán học sắc nét
 
 const FORMULAS_DATA = [
   {
     "id": "micro-1",
     "category": "micro",
-    "chapter": "Chương 1: Khái quát & Các nguyên lý cơ bản",
-    "title": "Chi phí cơ hội & Đường giới hạn khả năng sản xuất (PPF)",
-    "formula": "OC_X = \\frac{|\\Delta Y|}{|\\Delta X|}",
-    "description": "Chi phí cơ hội của việc sản xuất thêm 1 đơn vị hàng hóa X là số lượng hàng hóa Y phải từ bỏ.",
+    "chapter": "Chương 1: Mười nguyên lý kinh tế học & Tư duy cận biên",
+    "title": "Chi phí cơ hội (*opportunity cost - OC*) và đường giới hạn khả năng sản xuất (*production possibilities frontier - PPF*)",
+    "formula": "OC_X = \\frac{|\\Delta Y|}{|\\Delta X|} = -\\frac{dY}{dX} = MRT_{XY}",
+    "description": "Chi phí cơ hội của một phương án là giá trị của phương án tốt nhất tiếp theo bị bỏ qua khi đưa ra quyết định lựa chọn.",
     "variables": [
       {
         "symbol": "OC_X",
-        "meaning": "Chi phí cơ hội của việc sản xuất thêm 1 đơn vị hàng X",
-        "unit": "Đơn vị hàng Y / 1 đơn vị hàng X"
+        "meaning": "Chi phí cơ hội để sản xuất thêm 1 đơn vị hàng hóa X (*opportunity cost of X*)",
+        "unit": "Đơn vị hàng hóa Y / 1 đơn vị hàng hóa X"
       },
       {
         "symbol": "\\Delta Y",
-        "meaning": "Số lượng hàng hóa Y bị giảm sút (từ bỏ)",
-        "unit": "Sản phẩm (chiếc, tấn, kg...)"
+        "meaning": "Số lượng hàng hóa Y bị hy sinh hoặc giảm bớt",
+        "unit": "Đơn vị sản phẩm Y (chiếc, tấn, kg...)"
       },
       {
         "symbol": "\\Delta X",
         "meaning": "Số lượng hàng hóa X thu thêm được",
-        "unit": "Sản phẩm (chiếc, tấn, kg...)"
+        "unit": "Đơn vị sản phẩm X (chiếc, tấn, kg...)"
       },
       {
-        "symbol": "MRT",
-        "meaning": "Tỷ lệ chuyển đổi biên (độ dốc đường PPF)",
-        "unit": "Đơn vị Y / 1 đơn vị X"
+        "symbol": "MRT_{XY}",
+        "meaning": "Tỷ lệ chuyển đổi biên giữa hai hàng hóa (*marginal rate of transformation*)",
+        "unit": "Độ dốc tiếp tuyến của đường PPF (vô thứ nguyên)"
       }
     ],
-    "example": "Nếu nền kinh tế chuyển từ phương án A (100 tấn lúa, 0 tấn thép) sang B (80 tấn lúa, 10 tấn thép): $OC_{\\text{thép}} = \\frac{|80 - 100|}{|10 - 0|} = \\mathbf{2} \\text{ tấn lúa / 1 tấn thép}$.",
-    "examTrap": "BẪY KINH ĐIỂN: Đề bài hay hỏi 'Chi phí cơ hội của X' nhưng sinh viên lại lấy $\\frac{\\Delta X}{\\Delta Y}$ (đó là chi phí cơ hội của Y). Nhớ quy tắc: Muốn tìm chi phí cơ hội của cái gì thì chia cho cái đó ở mẫu số: $OC_X = \\frac{|\\Delta Y|}{|\\Delta X|}$!",
-    "notes": "Đường $PPF$ cong lồi ra ngoài phản ánh quy luật Chi phí cơ hội tăng dần.",
+    "example": "Nếu nền kinh tế chuyển từ phương án A (100 tấn lúa, 0 tấn thép) sang phương án B (80 tấn lúa, 10 tấn thép): $OC_{\\text{thép}} = \\frac{|80 - 100|}{|10 - 0|} = 2$ tấn lúa / 1 tấn thép.",
+    "examTrap": "Lưu ý đề thi: Khi đề bài hỏi chi phí cơ hội của hàng hóa X, học viên thường nhầm lẫn lấy $\\frac{\\Delta X}{\\Delta Y}$ (đây là chi phí cơ hội của Y). Quy tắc ghi nhớ chuẩn mực: Muốn tìm chi phí cơ hội của đại lượng nào thì đặt độ biến thiên của đại lượng đó ở mẫu số: $OC_X = \\frac{|\\Delta Y|}{|\\Delta X|}$.",
+    "notes": "Đường giới hạn khả năng sản xuất có dạng cong lồi ra phía ngoài (*bowed outward*) phản ánh quy luật chi phí cơ hội tăng dần (*law of increasing opportunity cost*).",
     "caseStudy": {
-      "entity": "Liên minh Anh - Pháp & Dự án Máy Bay Siêu Thanh Concorde",
-      "badge": "Nghiên Cứu Nobel Daniel Kahneman",
-      "title": "Ngụy biện chi phí chìm và cái bẫy hàng tỷ USD của Concorde",
-      "context": "Chính phủ Anh và Pháp đã đổ hàng tỷ USD để phát triển dòng máy bay siêu thanh Concorde. Dù nhận ra dự án không bao giờ hòa vốn do tốn nhiên liệu và tiếng ồn lớn, cả hai chính phủ vẫn tiếp tục bơm tiền vì 'đã lỡ chi quá nhiều tiền rồi, dừng lại là mất trắng'.",
-      "analysis": "Đây là vụ việc kinh điển về việc nhầm lẫn giữa Chi phí chìm (Sunk Cost) và Chi phí cơ hội ($OC$). Khoản tiền đã chi không thể thu hồi lại. Lẽ ra liên minh phải so sánh Lợi ích biên trong tương lai với Chi phí biên bỏ thêm ($MB < MC$). Mỗi đồng tiền đổ vào Concorde có chi phí cơ hội là đã tước đoạt nguồn vốn phát triển y tế, giáo dục hay dòng máy bay phản lực thương mại siêu tiết kiệm nhiên liệu.",
-      "lesson": "Khi phân tích quyết định sản xuất trên đường PPF hoặc dự án đầu tư, tuyệt đối gạch bỏ Chi phí chìm ra khỏi hàm tính toán!"
+      "entity": "Tập đoàn máy bay Boeing (Hoa Kỳ) và dự án Boeing 787 Dreamliner",
+      "badge": "Bài học kinh điển về chi phí cơ hội",
+      "title": "Cân nhắc đánh đổi 32 tỷ USD vốn tự có hay gửi trái phiếu chính phủ Mỹ",
+      "context": "Năm 2004, ban lãnh đạo Boeing phê duyệt ngân sách 32 tỷ USD để phát triển dòng máy bay thân rộng 787 Dreamliner sử dụng vật liệu composite sợi carbon.",
+      "analysis": "Các nhà kinh tế học tại Boeing tính toán rằng chi phí cơ hội thực sự của 32 tỷ USD tiền mặt không phải là con số 0, mà chính là khoản lợi nhuận an toàn 1,6 tỷ USD mỗi năm nếu mang số vốn đó đầu tư vào trái phiếu kho bạc chính phủ Mỹ với lãi suất 5%/năm. Do đó, dự án 787 chỉ thực sự sinh lời về mặt kinh tế khi tỷ suất sinh lời nội bộ (*internal rate of return - IRR*) vượt xa chi phí sử dụng vốn bình quân (*WACC*) cộng với chi phí cơ hội này.",
+      "lesson": "Lợi nhuận kế toán (*accounting profit*) chỉ trừ đi chi phí tường minh (*explicit cost*), trong khi lợi nhuận kinh tế (*economic profit*) bắt buộc phải trừ cả chi phí ẩn (*implicit cost*) là chi phí cơ hội của vốn tự có."
     }
   },
   {
     "id": "micro-2",
     "category": "micro",
-    "chapter": "Chương 2: Cung - Cầu & Cân bằng thị trường",
-    "title": "Phương trình Cung, Cầu và Điểm cân bằng thị trường",
-    "formula": "Q_D = Q_S \\iff a - bP = c + dP \\implies P^* = \\frac{a - c}{b + d}, \\quad Q^* = a - bP^*",
-    "description": "Cân bằng thị trường xảy ra tại mức giá $P^*$ mà lượng cầu bằng lượng cung: $Q_D = Q_S$.",
+    "chapter": "Chương 2: Cung - Cầu và cơ chế hoạt động của thị trường",
+    "title": "Phương trình cung, cầu và trạng thái cân bằng thị trường (*market equilibrium*)",
+    "formula": "Q_D = a - bP, \\quad Q_S = c + dP \\implies Q_D = Q_S \\iff P^*, Q^*",
+    "description": "Trạng thái cân bằng thị trường xuất hiện tại mức giá mà tại đó lượng cầu bằng lượng cung ($Q_D = Q_S$).",
     "variables": [
       {
-        "symbol": "P",
-        "meaning": "Mức giá của hàng hóa trên thị trường",
-        "unit": "Đơn vị tiền tệ / sản phẩm (nghìn đồng/kg, USD/thùng...)"
-      },
-      {
-        "symbol": "Q_D",
-        "meaning": "Lượng cầu của người tiêu dùng tại mức giá P",
-        "unit": "Đơn vị sản phẩm (chiếc, tấn, m³...)"
-      },
-      {
-        "symbol": "Q_S",
-        "meaning": "Lượng cung của người sản xuất tại mức giá P",
-        "unit": "Đơn vị sản phẩm (chiếc, tấn, m³...)"
-      },
-      {
         "symbol": "P^*",
-        "meaning": "Mức giá cân bằng thị trường (P_D = P_S)",
-        "unit": "Đơn vị tiền tệ / sản phẩm (nghìn đồng/sp)"
+        "meaning": "Mức giá cân bằng thị trường (*equilibrium price*)",
+        "unit": "Đơn vị tiền tệ / sản phẩm (đồng/kg, USD/thùng...)"
       },
       {
         "symbol": "Q^*",
-        "meaning": "Sản lượng cân bằng thị trường (Q_D = Q_S)",
+        "meaning": "Sản lượng cân bằng thị trường (*equilibrium quantity*)",
+        "unit": "Đơn vị sản phẩm (chiếc, tấn, m³...)"
+      },
+      {
+        "symbol": "a, c",
+        "meaning": "Lượng cầu và lượng cung tự định (*autonomous demand and supply*)",
         "unit": "Đơn vị sản phẩm (chiếc, tấn...)"
+      },
+      {
+        "symbol": "b, d",
+        "meaning": "Độ nhạy cảm của lượng cầu và lượng cung theo biến động giá cả",
+        "unit": "Đơn vị sản phẩm / đơn vị giá"
       }
     ],
-    "example": "Cho $Q_D = 120 - 2P$ và $Q_S = 30 + P$. Tại cân bằng: $Q_D = Q_S \\iff 120 - 2P = 30 + P \\iff 3P = 90 \\implies \\mathbf{P^* = 30}, \\mathbf{Q^* = 60}$.",
-    "examTrap": "Phân biệt cực kỳ cẩn thận giữa 'Hàm cầu theo giá' ($Q_D = f(P)$) và 'Hàm cầu ngược' ($P_D = f(Q)$). Nếu đề cho $P = 60 - 0.5Q$, nhớ đổi đúng thành $Q = 120 - 2P$ trước khi giải hoặc vẽ đồ thị.",
-    "notes": "Giá trần (Price Ceiling) phải đặt DƯỚI giá cân bằng ($P_c < P^*$) mới có hiệu lực, gây thiếu hụt ($Q_D > Q_S$). Giá sàn (Price Floor) phải đặt TRÊN giá cân bằng ($P_f > P^*$) mới có hiệu lực, gây dư thừa ($Q_S > Q_D$).",
+    "example": "Cho hàm cầu $Q_D = 120 - 2P$ và hàm cung $Q_S = 30 + P$. Tại điểm cân bằng: $Q_D = Q_S \\iff 120 - 2P = 30 + P \\iff 3P = 90 \\implies P^* = 30, Q^* = 60$.",
+    "examTrap": "Phân biệt giữa hàm cầu thuận theo giá ($Q_D = f(P)$) và hàm cầu ngược ($P_D = f(Q)$). Nếu đề thi cho $P = 60 - 0.5Q$, cần chuyển đổi chính xác thành $Q = 120 - 2P$ trước khi giải hệ phương trình cân bằng hoặc vẽ đồ thị.",
+    "notes": "Chính sách giá trần (*price ceiling*) chỉ có hiệu lực khi được ấn định thấp hơn giá cân bằng ($P_c < P^*$), dẫn tới tình trạng thiếu hụt hàng hóa (*shortage*). Ngược lại, giá sàn (*price floor*) chỉ có hiệu lực khi ấn định cao hơn giá cân bằng ($P_f > P^*$), gây ra tình trạng dư thừa hàng hóa (*surplus*).",
     "caseStudy": {
-      "entity": "Chính quyền Tổng thống Richard Nixon (1971 - 1973)",
-      "badge": "Cú Sốc Kiểm Soát Giá Toàn Cầu",
-      "title": "Hàng dài xe hơi xếp hàng xuyên đêm và thảm họa Giá trần Xăng dầu",
-      "context": "Trước thềm bầu cử năm 1971 và cú sốc dầu mỏ 1973, Tổng thống Mỹ Richard Nixon ra lệnh đóng băng giá và quy định giá trần (Price Ceiling) đối với xăng dầu để ngăn chặn lạm phát.",
-      "analysis": "Mức giá trần được áp đặt thấp hơn nhiều so với giá cân bằng thị trường ($P_{ceiling} < P^*$). Tại mức giá rẻ nhân tạo này, lượng cầu tăng vọt ($Q_D \\uparrow$) trong khi các nhà máy lọc dầu cắt giảm sản lượng ($Q_S \\downarrow$), dẫn đến tình trạng thiếu hụt trầm trọng ($Q_D > Q_S$). Các trạm xăng đóng cửa, hàng dài xe hơi xếp hàng hàng km chờ mua xăng, thị trường ngầm bán lậu xăng với giá gấp 3 lần.",
-      "lesson": "Giá trần có hiệu lực không làm người nghèo mua được hàng rẻ hơn, mà chỉ biến chi phí tiền bạc thành chi phí thời gian chờ đợi và tạo ra chợ đen!"
+      "entity": "Cuộc khủng hoảng kiểm soát giá vé máy bay nội địa Hoa Kỳ (Trước năm 1978)",
+      "badge": "Nghiên cứu thị trường của Alfred Kahn",
+      "title": "Bãi bỏ kiểm soát giá vé và sự bùng nổ của ngành hàng không giá rẻ",
+      "context": "Trước năm 1978, Ủy ban Hàng không Dân dụng Hoa Kỳ (CAB) can thiệp ấn định mức giá vé sàn rất cao để bảo hộ các hãng hàng không lớn, khiến người dân có thu nhập trung bình không thể tiếp cận dịch vụ bay.",
+      "analysis": "Chính sách giá sàn nhân tạo khiến thị trường rơi vào trạng thái dư thừa công suất nghiêm trọng, các chuyến bay thường xuyên trống 50% số ghế. Sau khi Đạo luật Bãi bỏ Kiểm soát Hàng không năm 1978 có hiệu lực, giá vé được giải phóng về đúng điểm cân bằng tự nhiên theo quy luật cung - cầu. Giá vé thực tế giảm hơn 40%, tỷ lệ lấp đầy ghế tăng vọt lên trên 85% và mở đường cho mô hình hàng không giá rẻ ra đời.",
+      "lesson": "Can thiệp giá nhân tạo làm triệt tiêu cơ chế tự điều chỉnh của bàn tay vô hình (*invisible hand*), làm méo mó tín hiệu giá cả và gây tổn thất phúc lợi xã hội nghiêm trọng."
     }
   },
   {
     "id": "micro-3",
     "category": "micro",
-    "chapter": "Chương 2: Cung - Cầu & Cân bằng thị trường",
-    "title": "Thặng dư tiêu dùng (CS), Thặng dư sản xuất (PS) & Tổn thất vô ích (DWL)",
-    "formula": "CS = \\frac{1}{2}(P_{max} - P^*) \\times Q^*, \\quad PS = \\frac{1}{2}(P^* - P_{min}) \\times Q^*, \\quad DWL = \\frac{1}{2} t \\times (Q^* - Q_t)",
-    "description": "CS là diện tích tam giác dưới đường cầu và trên giá cân bằng. PS là diện tích tam giác trên đường cung và dưới giá cân bằng.",
+    "chapter": "Chương 2: Cung - Cầu và chính sách can thiệp của chính phủ",
+    "title": "Thặng dư tiêu dùng (*consumer surplus - CS*), thặng dư sản xuất (*producer surplus - PS*) và tổn thất vô ích (*deadweight loss - DWL*)",
+    "formula": "CS = \\frac{1}{2}(P_{\\max} - P^*)Q^*, \\quad PS = \\frac{1}{2}(P^* - P_{\\min})Q^*, \\quad DWL = \\frac{1}{2}t(Q^* - Q_t)",
+    "description": "Đo lường mức độ thỏa mãn ròng của người mua và người bán trên thị trường, cùng phần tổn thất phúc lợi xã hội phát sinh khi có thuế hoặc kiểm soát giá.",
     "variables": [
       {
         "symbol": "CS",
-        "meaning": "Thặng dư của người tiêu dùng (Consumer Surplus)",
-        "unit": "Đơn vị tiền tệ (triệu đồng, nghìn USD)"
+        "meaning": "Thặng dư của người tiêu dùng (*consumer surplus*)",
+        "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       },
       {
         "symbol": "PS",
-        "meaning": "Thặng dư của nhà sản xuất (Producer Surplus)",
-        "unit": "Đơn vị tiền tệ (triệu đồng, nghìn USD)"
+        "meaning": "Thặng dư của nhà sản xuất (*producer surplus*)",
+        "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       },
       {
         "symbol": "DWL",
-        "meaning": "Tổn thất vô ích của xã hội (Deadweight Loss)",
-        "unit": "Đơn vị tiền tệ (triệu đồng, nghìn USD)"
+        "meaning": "Tổn thất vô ích của xã hội (*deadweight loss / excess burden*)",
+        "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       },
       {
         "symbol": "t",
-        "meaning": "Mức thuế đánh trên một đơn vị sản phẩm",
-        "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
-      },
-      {
-        "symbol": "P_{\\max}, P_{\\min}",
-        "meaning": "Mức giá chặn trên của Cầu (khi Q=0) và chặn dưới của Cung",
-        "unit": "Đơn vị tiền tệ / sản phẩm"
+        "meaning": "Mức thuế gián thu đánh trên một đơn vị sản phẩm (*unit tax*)",
+        "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp, USD/sp)"
       }
     ],
-    "example": "Với hàm cầu $P = 60 - 0.5Q$ ($P_{\\max} = 60$) và điểm cân bằng $P^* = 30, Q^* = 60$: $CS = \\frac{1}{2} \\times (60 - 30) \\times 60 = \\mathbf{900} \\text{ triệu đồng}$.",
-    "examTrap": "Khi có Thuế ($t$): Tổng thặng dư giảm một lượng gọi là $DWL = \\frac{1}{2} \\times t \\times (Q^* - Q_t)$. Đừng quên cộng cả Doanh thu thuế của Chính phủ ($T = t \\times Q_t$) khi tính Tổng thặng dư xã hội sau thuế ($TS = CS + PS + T$)!",
-    "notes": "Thị trường tự do không can thiệp đạt hiệu quả Pareto tối đa hóa tổng thặng dư $TS = CS + PS$.",
+    "example": "Với hàm cầu $P = 60 - 0.5Q$ ($P_{\\max} = 60$) và điểm cân bằng $P^* = 30, Q^* = 60$: thặng dư tiêu dùng đạt $CS = \\frac{1}{2} \\times (60 - 30) \\times 60 = 900$ triệu đồng.",
+    "examTrap": "Khi chính phủ áp thuế đơn vị ($t$), tổng thặng dư xã hội bị suy giảm một lượng bằng tổn thất vô ích $DWL = \\frac{1}{2} \\times t \\times (Q^* - Q_t)$. Lưu ý phải cộng cả khoản thu ngân sách từ thuế ($T = t \\times Q_t$) khi tính tổng thặng dư xã hội sau thuế: $TS = CS + PS + T$.",
+    "notes": "Trạng thái cân bằng cạnh tranh tự do không có can thiệp đạt hiệu quả Pareto (*Pareto efficiency*), tại đó tổng thặng dư xã hội ($TS = CS + PS$) đạt giá trị cực đại.",
     "caseStudy": {
-      "entity": "Quốc Hội Hoa Kỳ & Đạo Luật Thuế Hàng Xa Xỉ 1990",
-      "badge": "Thảm Họa Thuế Đi Vào Lịch Sử",
-      "title": "Đánh thuế người giàu nhưng công nhân nghèo mất việc làm",
-      "context": "Năm 1990, Quốc hội Mỹ đánh thuế 10% lên du thuyền xa xỉ giá trên 100.000 USD nhằm mục đích tăng thu ngân sách từ giới nhà giàu mà không ảnh hưởng đến người lao động.",
-      "analysis": "Người giàu có độ co giãn của cầu theo giá cực kỳ cao ($|E_D| > 4$ do du thuyền là hàng xa xỉ dễ thay thế bằng cách thuê thuyền ở nước ngoài). Cầu sụt giảm kinh hoàng, lượng bán du thuyền Mỹ giảm 71%. Ngành đóng tàu Mỹ phá sản, 25.000 công nhân mất việc. Khoản thuế thu được vỏn vẹn 16.6 triệu USD, trong khi chính phủ phải chi 24.5 triệu USD tiền trợ cấp thất nghiệp! Tổn thất vô ích $DWL$ phá hủy toàn bộ thị trường.",
-      "lesson": "Bên nào có độ co giãn cao hơn thì né thuế dễ hơn. Thuế đánh vào người mua hàng co giãn cao sẽ bị đẩy ngược gánh nặng lên nhà sản xuất và người lao động!"
+      "entity": "Sắc thuế đánh vào du thuyền hạng sang của Quốc hội Hoa Kỳ (Năm 1990)",
+      "badge": "Sai lầm chính sách thuế kinh điển",
+      "title": "Dự kiến thu 31 triệu USD nhưng làm phá sản 100 xưởng đóng tàu",
+      "context": "Năm 1990, Quốc hội Mỹ thông qua sắc thuế tiêu thụ đặc biệt 10% đánh vào các mặt hàng xa xỉ như du thuyền, máy bay tư nhân và trang sức đắt tiền với mục tiêu tăng thu ngân sách từ tầng lớp thượng lưu.",
+      "analysis": "Chính phủ giả định rằng lượng cầu của người giàu rất ít co giãn theo giá. Tuy nhiên, du thuyền là mặt hàng xa xỉ có độ co giãn của cầu theo giá cực lớn ($|E_D| \\gg 1$). Giới thượng lưu lập tức ngừng mua du thuyền tại Mỹ và chuyển sang đặt hàng tại châu Âu hoặc Bahamas. Doanh số đóng thuyền tại Mỹ sụt giảm hơn 70%, khiến 25.000 công nhân mất việc làm và ngân sách phải chi hàng chục triệu USD tiền trợ cấp thất nghiệp, vượt xa số tiền thuế thu được ít ỏi.",
+      "lesson": "Bên nào có độ co giãn kém hơn (*inelastic*) sẽ phải gánh chịu phần lớn gánh nặng thuế (*tax incidence*). Công nhân đóng tàu có độ co giãn cung kém hơn người mua giàu có nên đã phải gánh toàn bộ hậu quả của sắc thuế."
     }
   },
   {
     "id": "micro-4",
     "category": "micro",
-    "chapter": "Chương 3: Độ co giãn của Cung & Cầu",
-    "title": "Độ co giãn của Cầu theo Giá ($E_D$) & Tác động đến Doanh thu ($TR$)",
-    "formula": "E_D^{khoảng} = \\frac{Q_2 - Q_1}{(Q_1 + Q_2)/2} \\div \\frac{P_2 - P_1}{(P_1 + P_2)/2}, \\quad E_D^{điểm} = Q'(P) \\times \\frac{P}{Q}",
-    "description": "Đo lường mức độ phản ứng của lượng cầu trước sự thay đổi của giá cả.",
+    "chapter": "Chương 3: Độ co giãn của cung, cầu và ứng dụng thực tiễn",
+    "title": "Độ co giãn của cầu theo giá (*price elasticity of demand - $E_D$*) và tác động đến tổng doanh thu (*total revenue - $TR$*)",
+    "formula": "E_D = \\frac{\\%\\Delta Q_D}{\\%\\Delta P} = Q'_D(P) \\times \\frac{P}{Q}, \\quad E_D^{\\text{trung điểm}} = \\frac{Q_2 - Q_1}{(Q_1 + Q_2)/2} \\div \\frac{P_2 - P_1}{(P_1 + P_2)/2}",
+    "description": "Phản ánh mức độ phản ứng của lượng cầu hàng hóa khi mức giá của chính hàng hóa đó thay đổi 1%.",
     "variables": [
       {
         "symbol": "E_D",
-        "meaning": "Hệ số co giãn của cầu theo giá (theo khoảng hoặc điểm)",
-        "unit": "Vô thứ nguyên (không có đơn vị / tỷ số %)"
+        "meaning": "Hệ số co giãn của cầu theo giá (*price elasticity of demand*)",
+        "unit": "Vô thứ nguyên (luôn mang dấu âm theo luật cầu)"
+      },
+      {
+        "symbol": "|E_D|",
+        "meaning": "Độ lớn tuyệt đối của hệ số co giãn",
+        "unit": "Vô thứ nguyên ($|E_D| > 1$: co giãn nhiều; $|E_D| < 1$: co giãn ít)"
       },
       {
         "symbol": "TR",
-        "meaning": "Tổng doanh thu của doanh nghiệp (TR = P × Q)",
-        "unit": "Đơn vị tiền tệ (triệu đồng, nghìn USD)"
+        "meaning": "Tổng doanh thu bán hàng của doanh nghiệp ($TR = P \\times Q$)",
+        "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       },
       {
         "symbol": "MR",
-        "meaning": "Doanh thu biên tăng thêm khi bán thêm 1 sản phẩm",
+        "meaning": "Doanh thu cận biên thu thêm khi bán thêm 1 sản phẩm (*marginal revenue*)",
         "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
-      },
-      {
-        "symbol": "P, Q",
-        "meaning": "Mức giá bán và lượng sản phẩm bán ra",
-        "unit": "Tiền tệ/sp và Số lượng sản phẩm"
       }
     ],
-    "example": "Nếu $Q_D = 100 - 2P$. Tại $P = 20, Q = 60$: $E_D = (-2) \\times \\frac{20}{60} = -0.67$. Vì $|E_D| < 1$, hàng hóa co giãn ít theo giá.",
-    "examTrap": "Công thức co giãn khoảng (Midpoint method): mẫu số BẮT BUỘC là trung bình cộng $\\frac{Q_1 + Q_2}{2}$, không phải $Q_1$ ban đầu! Trả lời trắc nghiệm chú ý xem đề bài hỏi hệ số âm $E_D$ hay lấy độ lớn tuyệt đối $|E_D|$.",
-    "notes": "Quy tắc vàng: Nếu cầu co giãn nhiều ($|E_D| > 1$), muốn tăng doanh thu thì PHẢI HẠ GIÁ. Nếu cầu co giãn ít ($|E_D| < 1$), muốn tăng doanh thu thì PHẢI TĂNG GIÁ. Khi $|E_D| = 1$, doanh thu đạt cực đại ($MR = 0$).",
+    "example": "Cho hàm cầu $Q_D = 100 - 2P$. Tại mức giá $P = 20$, lượng cầu là $Q = 60$: hệ số co giãn điểm là $E_D = (-2) \\times \\frac{20}{60} = -0.67$. Vì $|E_D| = 0.67 < 1$, cầu về hàng hóa này co giãn ít theo giá.",
+    "examTrap": "Khi áp dụng phương pháp trung điểm (*midpoint method*), mẫu số bắt buộc phải lấy giá trị trung bình cộng $\\frac{Q_1 + Q_2}{2}$ và $\\frac{P_1 + P_2}{2}$, không được lấy giá trị ban đầu. Đọc kỹ đề trắc nghiệm xem câu hỏi yêu cầu giá trị đại số âm ($E_D$) hay độ lớn tuyệt đối ($|E_D|$).",
+    "notes": "Nguyên tắc quan hệ giữa độ co giãn và tổng doanh thu: Nếu cầu co giãn nhiều ($|E_D| > 1$), giảm giá bán sẽ làm tăng tổng doanh thu. Nếu cầu co giãn ít ($|E_D| < 1$), tăng giá bán sẽ làm tăng tổng doanh thu. Khi cầu co giãn đơn vị ($|E_D| = 1$), tổng doanh thu đạt cực đại ($MR = 0$).",
     "caseStudy": {
-      "entity": "Turing Pharmaceuticals (Martin Shkreli) vs Netflix (2011 Qwikster)",
-      "badge": "Vụ Bê Bối Giá Thuốc Toàn Cầu",
-      "title": "Tăng giá 5.455% thành công vs Mất 800.000 khách hàng trong 1 quý",
-      "context": "Năm 2015, 'Gã tồi nhất nước Mỹ' Martin Shkreli mua độc quyền thuốc Daraprim (trị ký sinh trùng HIV) và tăng giá từ 13.5 USD lên 750 USD/viên (+5.455%). Cùng lúc, Netflix năm 2011 tăng giá gói xem phim thêm 60%.",
-      "analysis": "Thuốc Daraprim không có sản phẩm thay thế và là thuốc cứu mạng, nên cầu co giãn gần như hoàn toàn không ($|E_D| \\approx 0$). Tăng giá 5.455% khiến doanh thu của Turing tăng vọt vì người bệnh buộc phải mua bằng mọi giá. Ngược lại, dịch vụ xem phim của Netflix là giải trí có nhiều lựa chọn thay thế ($|E_D| > 1$). Khi Netflix tăng giá, 800.000 khách hàng lập tức hủy đăng ký, cổ phiếu Netflix bốc hơi 77% giá trị!",
-      "lesson": "Doanh nghiệp chỉ có thể tăng giá để tăng doanh thu khi cầu co giãn kém ($|E_D| < 1$). Nếu $|E_D| > 1$, tăng giá là tự sát thương mại."
+      "entity": "Tập đoàn dược phẩm Turing Pharmaceuticals và chiến lược giá của Netflix năm 2011",
+      "badge": "Ứng dụng độ co giãn vào chiến lược giá",
+      "title": "Tăng giá 5.455% thuốc Daraprim thành công đối lập với sự cố mất 800.000 thuê bao của Netflix",
+      "context": "Năm 2015, Martin Shkreli mua độc quyền thuốc Daraprim điều trị ký sinh trùng cho bệnh nhân HIV và tăng giá từ 13.5 USD lên 750 USD một viên (+5.455%). Cùng thời điểm trước đó năm 2011, Netflix tăng giá gói thuê bao thêm 60%.",
+      "analysis": "Thuốc Daraprim là loại dược phẩm cứu mạng không có sản phẩm thay thế hoàn hảo, do đó cầu về thuốc gần như hoàn toàn không co giãn ($|E_D| \\approx 0$). Việc tăng giá sốc giúp doanh thu tăng vọt vì người bệnh bắt buộc phải chi trả. Ngược lại, dịch vụ giải trí của Netflix có rất nhiều phương án thay thế ($|E_D| > 1$), nên đợt tăng giá năm 2011 khiến 800.000 khách hàng lập tức hủy tài khoản và cổ phiếu công ty mất 77% giá trị.",
+      "lesson": "Doanh nghiệp chỉ nên tăng giá bán để mở rộng tổng doanh thu khi biết chắc chắn lượng cầu sản phẩm có độ co giãn kém ($|E_D| < 1$)."
     }
   },
   {
     "id": "micro-5",
     "category": "micro",
-    "chapter": "Chương 3: Độ co giãn của Cung & Cầu",
-    "title": "Độ co giãn theo Thu nhập ($E_I$) & Co giãn chéo ($E_{XY}$)",
+    "chapter": "Chương 3: Độ co giãn của cung, cầu và ứng dụng thực tiễn",
+    "title": "Độ co giãn của cầu theo thu nhập (*income elasticity - $E_I$*) và độ co giãn chéo (*cross-price elasticity - $E_{XY}$*)",
     "formula": "E_I = \\frac{\\%\\Delta Q}{\\%\\Delta I}, \\quad E_{XY} = \\frac{\\%\\Delta Q_X}{\\%\\Delta P_Y}",
-    "description": "Phân loại tính chất của hàng hóa dựa vào dấu và độ lớn của hệ số co giãn.",
+    "description": "Phân loại thuộc tính kinh tế của hàng hóa (hàng thông thường, hàng thứ cấp, hàng thay thế hoặc hàng bổ sung) căn cứ vào dấu đại số của hệ số co giãn.",
     "variables": [
       {
         "symbol": "E_I",
-        "meaning": "Độ co giãn của cầu theo thu nhập (phân loại bình thường / thứ cấp)",
-        "unit": "Vô thứ nguyên (tỷ số % biến động)"
+        "meaning": "Độ co giãn của cầu theo thu nhập (*income elasticity of demand*)",
+        "unit": "Vô thứ nguyên ($E_I > 0$: hàng thông thường; $E_I < 0$: hàng thứ cấp)"
       },
       {
         "symbol": "E_{XY}",
-        "meaning": "Độ co giãn chéo của cầu giữa hai hàng hóa X và Y",
-        "unit": "Vô thứ nguyên (tỷ số % biến động)"
+        "meaning": "Độ co giãn chéo của cầu giữa hai hàng hóa X và Y (*cross-price elasticity*)",
+        "unit": "Vô thứ nguyên ($E_{XY} > 0$: thay thế; $E_{XY} < 0$: bổ sung)"
       },
       {
         "symbol": "I",
-        "meaning": "Thu nhập khả dụng của người tiêu dùng",
-        "unit": "Đơn vị tiền tệ (triệu đồng/tháng hoặc USD/năm)"
+        "meaning": "Mức thu nhập khả dụng của người tiêu dùng (*disposable income*)",
+        "unit": "Đơn vị tiền tệ (triệu đồng/tháng, USD/năm)"
       },
       {
         "symbol": "P_Y",
@@ -208,578 +198,573 @@ const FORMULAS_DATA = [
       },
       {
         "symbol": "Q_X",
-        "meaning": "Lượng cầu tiêu thụ về hàng hóa X",
+        "meaning": "Lượng cầu tiêu thụ đối với hàng hóa X",
         "unit": "Đơn vị sản phẩm X (chiếc, kg...)"
       }
     ],
-    "example": "Thu nhập tăng 10%, lượng mua mì gói giảm 5%: $E_I = \\frac{-5\\%}{10\\%} = -0.5 < 0 \\implies$ Mì gói là hàng hóa cấp thấp (Inferior good).",
-    "examTrap": "Dấu của $E_I$ và $E_{XY}$ mang ý nghĩa bản chất kinh tế sống còn, TUYỆT ĐỐI KHÔNG ĐƯỢC lấy giá trị tuyệt đối! $E_{XY} > 0$ là thay thế, $E_{XY} < 0$ là bổ sung.",
-    "notes": "Đề thi đại học rất hay hỏi câu ghép: Cho $E_I = -0.8 < 0$ và $E_{XY} = 1.2 > 0$, kết luận: X là hàng cấp thấp và thay thế cho Y!",
+    "example": "Khi thu nhập của người dân tăng 10%, lượng tiêu thụ mì gói giảm 5%: hệ số $E_I = \\frac{-5\\%}{10\\%} = -0.5 < 0$, chứng minh mì gói là hàng hóa thứ cấp (*inferior good*).",
+    "examTrap": "Dấu đại số của $E_I$ và $E_{XY}$ mang ý nghĩa bản chất kinh tế quyết định, tuyệt đối không được lấy trị tuyệt đối. Nếu $E_{XY} > 0$ là hàng hóa thay thế (*substitutes*); nếu $E_{XY} < 0$ là hàng hóa bổ sung (*complements*); nếu $E_{XY} = 0$ là hai hàng hóa độc lập.",
+    "notes": "Đề thi đại học thường tích hợp câu hỏi nhận định: Cho $E_I = -0.8 < 0$ và $E_{XY} = 1.2 > 0$, kết luận hàng hóa X vừa là hàng hóa thứ cấp, vừa là hàng hóa thay thế cho hàng hóa Y.",
     "caseStudy": {
-      "entity": "Hãng Xe Điện Tesla vs Cuộc Chiến Nền Tảng Spotify & Apple Music",
-      "badge": "Chiến Lược Phân Loại Thị Trường",
-      "title": "Xe điện sang trọng trong suy thoái và sự dịch chuyển thuê bao âm nhạc",
-      "context": "Khi lạm phát toàn cầu năm 2022 làm giảm thu nhập thực tế của người dân, doanh số các thương hiệu xa xỉ như Porsche, Tesla vẫn duy trì tăng trưởng, trong khi lượng tiêu thụ xe máy phổ thông sụt giảm. Đồng thời, khi Apple Music tăng giá thuê bao từ 9.99 USD lên 10.99 USD, Spotify ghi nhận lượng người dùng mới tăng kỷ lục.",
-      "analysis": "Tesla Model S thuộc nhóm hàng xa xỉ ($E_I > 1$), tiêu dùng bởi tầng lớp có của cải lớn ít bị tổn thương bởi suy thoái thu nhập ngắn hạn. Trong khi đó, Apple Music và Spotify là hai hàng hóa thay thế hoàn hảo ($E_{XY} > 0$). Khi giá Apple Music tăng ($P_Y \\uparrow$), lượng cầu dịch vụ của Spotify tăng theo ($Q_X \\uparrow$).",
-      "lesson": "Dấu dương hay âm của $E_I$ và $E_{XY}$ quyết định toàn bộ định vị phân khúc khách hàng và chiến lược phòng thủ trước đối thủ cạnh tranh."
+      "entity": "Tập đoàn xe điện Tesla và cuộc chiến thuê bao giữa Spotify với Apple Music",
+      "badge": "Chiến lược phân khúc thị trường",
+      "title": "Doanh số xe hơi hạng sang trong thời kỳ suy thoái và sự dịch chuyển thuê bao âm nhạc",
+      "context": "Năm 2022, khi lạm phát toàn cầu bào mòn thu nhập thực tế của người dân, doanh số xe hơi phổ thông sụt giảm mạnh nhưng dòng xe cao cấp của Porsche và Tesla vẫn duy trì đà tăng trưởng. Cùng lúc đó, khi Apple Music nâng giá thuê bao từ 9.99 USD lên 10.99 USD, Spotify ghi nhận lượng người đăng ký mới tăng đột biến.",
+      "analysis": "Dòng xe Tesla cao cấp thuộc nhóm hàng hóa xa xỉ phẩm (*luxury good*) có $E_I > 1$, phục vụ tầng lớp có tích lũy tài sản lớn ít bị tác động bởi suy thoái ngắn hạn. Trong khi đó, dịch vụ nghe nhạc trực tuyến giữa Spotify và Apple Music là hai hàng hóa thay thế có độ co giãn chéo dương rất cao ($E_{XY} > 0$). Khi giá Apple Music tăng ($P_Y \\uparrow$), lượng cầu đăng ký của Spotify lập tức tăng theo ($Q_X \\uparrow$).",
+      "lesson": "Dấu dương hay âm của các hệ số co giãn $E_I$ và $E_{XY}$ định hình toàn bộ chiến lược phân khúc khách hàng và phương án cạnh tranh của doanh nghiệp."
     }
   },
   {
     "id": "micro-6",
     "category": "micro",
-    "chapter": "Chương 4: Lý thuyết hành vi người tiêu dùng",
-    "title": "Tối đa hóa Lợi ích (Utility Maximization) & Tỷ lệ thay thế biên (MRS)",
+    "chapter": "Chương 4: Lý thuyết hành vi của người tiêu dùng",
+    "title": "Tối đa hóa thỏa dụng (*utility maximization*) và tỷ lệ thay thế biên (*marginal rate of substitution - MRS*)",
     "formula": "\\frac{MU_X}{P_X} = \\frac{MU_Y}{P_Y} \\iff MRS_{XY} = \\frac{MU_X}{MU_Y} = \\frac{P_X}{P_Y}, \\quad X P_X + Y P_Y = I",
-    "description": "Người tiêu dùng đạt lợi ích tối đa khi đồng tiền cuối cùng chi tiêu cho mỗi loại hàng hóa đem lại lợi ích cận biên như nhau.",
+    "description": "Người tiêu dùng phân bổ ngân sách đạt mức thỏa dụng tối đa khi lợi ích cận biên trên một đồng chi tiêu cuối cùng cho các hàng hóa bằng nhau.",
     "variables": [
       {
-        "symbol": "U",
-        "meaning": "Tổng mức thỏa dụng / độ hài lòng của người tiêu dùng",
-        "unit": "Đơn vị hữu dụng (Utils)"
+        "symbol": "U, TU",
+        "meaning": "Tổng mức thỏa dụng của người tiêu dùng (*total utility*)",
+        "unit": "Đơn vị thỏa dụng (Utils)"
       },
       {
         "symbol": "MU_X, MU_Y",
-        "meaning": "Thỏa dụng biên tăng thêm từ đơn vị hàng X và Y cuối cùng",
-        "unit": "Utils / đơn vị sản phẩm"
+        "meaning": "Thỏa dụng cận biên của hàng hóa X và Y (*marginal utility*)",
+        "unit": "Utils / sản phẩm ($MU_X = \\frac{\\partial U}{\\partial X}$)"
       },
       {
         "symbol": "MRS_{XY}",
         "meaning": "Tỷ lệ thay thế biên giữa hai hàng hóa X và Y",
-        "unit": "Đơn vị hàng Y / 1 đơn vị hàng X"
-      },
-      {
-        "symbol": "P_X, P_Y",
-        "meaning": "Mức giá của từng sản phẩm X và Y",
-        "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
+        "unit": "Tỷ số sản phẩm Y / sản phẩm X ($MRS_{XY} = -\\frac{dY}{dX}$)"
       },
       {
         "symbol": "I",
-        "meaning": "Tổng ngân sách tiêu dùng phân bổ",
+        "meaning": "Tổng ngân sách chi tiêu của người tiêu dùng (*income / budget*)",
         "unit": "Đơn vị tiền tệ (đồng, USD)"
+      },
+      {
+        "symbol": "P_X, P_Y",
+        "meaning": "Đơn giá của hàng hóa X và hàng hóa Y",
+        "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
       }
     ],
-    "example": "Cho $TU(X, Y) = X \\cdot Y$. Giá $P_X = 2, P_Y = 5$, ngân sách $I = 100$. Thỏa dụng biên $MU_X = Y, MU_Y = X$. Điều kiện tối ưu: $\\frac{Y}{2} = \\frac{X}{5} \\implies X = 2.5Y$. Thay vào ngân sách $2(2.5Y) + 5Y = 100 \\implies \\mathbf{Y^* = 10, X^* = 25}$.",
-    "examTrap": "Nếu $\\frac{MU_X}{P_X} > \\frac{MU_Y}{P_Y}$, 1 đồng chi cho X mang lại thỏa dụng lớn hơn Y, người tiêu dùng thông minh nên TĂNG mua X và GIẢM mua Y để đạt trạng thái cân bằng!",
-    "notes": "Độ dốc của đường ngân sách là $-\\frac{P_X}{P_Y}$. Tiếp điểm giữa đường bàng quan và đường ngân sách là điểm tiêu dùng tối ưu.",
+    "example": "Hàm thỏa dụng $U(X, Y) = X \\cdot Y$, giá $P_X = 2$, $P_Y = 5$, thu nhập $I = 100$. Ta có $MU_X = Y$, $MU_Y = X$. Điều kiện tối ưu: $\\frac{Y}{2} = \\frac{X}{5} \\implies X = 2.5Y$. Thay vào đường ngân sách $2(2.5Y) + 5Y = 100 \\implies Y^* = 10, X^* = 25$.",
+    "examTrap": "Khi $\\frac{MU_X}{P_X} > \\frac{MU_Y}{P_Y}$, nghĩa là mỗi đồng chi tiêu cho hàng hóa X mang lại mức thỏa dụng lớn hơn so với chi tiêu cho hàng hóa Y. Người tiêu dùng duy lý sẽ tăng mua hàng hóa X và giảm mua hàng hóa Y để nâng cao tổng mức thỏa dụng cho tới khi hai tỷ số cân bằng.",
+    "notes": "Độ dốc của đường ngân sách là $-\\frac{P_X}{P_Y}$. Tiếp điểm giữa đường bàng quan (*indifference curve*) và đường ngân sách (*budget line*) xác định giỏ hàng hóa tiêu dùng tối ưu.",
     "caseStudy": {
-      "entity": "Tập Đoàn Apple Inc. (Steve Jobs & Tim Cook)",
-      "badge": "Nghệ Thuật Trói Chân Hệ Sinh Thái",
-      "title": "Gói Apple One và nghệ thuật thao túng đường bàng quan người dùng",
-      "context": "Thay vì bán riêng lẻ iPhone, dịch vụ lưu trữ iCloud (2.99 USD), Apple Music (10.99 USD), và Apple TV+ (6.99 USD), Apple tung ra gói combo Apple One với giá $19.95/tháng, đồng thời thiết kế tính năng AirDrop, iMessage đồng bộ mượt mà giữa các thiết bị.",
-      "analysis": "Bằng việc tích hợp hệ sinh thái, Apple đã làm gia tăng độ thỏa dụng biên chéo: dùng thêm MacBook làm tăng thỏa dụng biên của việc sở hữu iPhone ($MU_{iPhone} \\uparrow$). Đồng thời, gói combo Apple One giảm giá biên trên từng dịch vụ, đẩy tỷ số $MU/P$ của các dịch vụ Apple lên cao hơn hẳn so với Spotify hay Google Drive, khiến điểm tiếp xúc tối ưu của đường ngân sách người dùng bị khóa chặt (Lock-in) vĩnh viễn trong hệ sinh thái Apple.",
-      "lesson": "Tối ưu hóa tiêu dùng không chỉ phụ thuộc vào giá, mà các tập đoàn lớn luôn tìm cách dịch chuyển đường bàng quan của người tiêu dùng thông qua hiệu ứng mạng lưới."
+      "entity": "Tập đoàn công nghệ Apple và gói dịch vụ tích hợp Apple One",
+      "badge": "Chiến lược gói sản phẩm hệ sinh thái",
+      "title": "Nghệ thuật định giá giỏ hàng hóa để dịch chuyển đường bàng quan của người dùng",
+      "context": "Thay vì bán riêng lẻ từng dịch vụ như lưu trữ đám mây iCloud (2.99 USD), Apple Music (10.99 USD) và Apple TV+ (6.99 USD), Apple cung cấp gói Apple One chỉ với 19.95 USD mỗi tháng.",
+      "analysis": "Với mức giá trọn gói thấp hơn tổng giá bán lẻ từng dịch vụ, Apple làm thay đổi tỷ lệ đánh đổi biên giữa tiền và dịch vụ số. Khi chi phí cận biên trên mỗi dịch vụ cộng thêm trở nên rất nhỏ, người dùng nhận thấy lợi ích cận biên trên một đồng chi tiêu ($\\frac{MU}{P}$) của gói combo vượt trội hoàn toàn so với việc mua rời, thúc đẩy hàng chục triệu người đăng ký gói dịch vụ mở rộng.",
+      "lesson": "Tối ưu hóa hành vi tiêu dùng không chỉ dựa trên mức giá của từng mặt hàng đơn lẻ, mà các tập đoàn lớn thường thiết lập cấu trúc giá giỏ hàng để định hướng tỷ lệ thay thế biên của khách hàng."
     }
   },
   {
     "id": "micro-7",
     "category": "micro",
-    "chapter": "Chương 5: Lý thuyết sản xuất & Chi phí",
-    "title": "Hệ thống các loại chi phí sản xuất & Điểm hòa vốn",
+    "chapter": "Chương 5: Lý thuyết sản xuất và chi phí doanh nghiệp",
+    "title": "Hệ thống các loại chi phí sản xuất và ngưỡng hòa vốn (*break-even point*)",
     "formula": "TC = FC + VC, \\quad ATC = \\frac{TC}{Q} = AFC + AVC, \\quad MC = TC'(Q) = VC'(Q)",
-    "description": "Trong ngắn hạn có chi phí cố định (FC) và chi phí biến đổi (VC). Trong dài hạn mọi chi phí đều là biến đổi (FC = 0).",
+    "description": "Trong ngắn hạn, doanh nghiệp duy trì chi phí cố định ($FC > 0$) và chi phí biến đổi ($VC$). Trong dài hạn, mọi yếu tố đầu vào đều có thể điều chỉnh linh hoạt nên toàn bộ chi phí đều là chi phí biến đổi ($FC = 0$).",
     "variables": [
       {
         "symbol": "TC",
-        "meaning": "Tổng chi phí sản xuất (TC = FC + VC)",
+        "meaning": "Tổng chi phí sản xuất ngắn hạn (*total cost: $TC = FC + VC$*)",
         "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       },
       {
         "symbol": "FC, VC",
-        "meaning": "Chi phí cố định và Chi phí biến đổi của doanh nghiệp",
+        "meaning": "Chi phí cố định (*fixed cost*) và chi phí biến đổi (*variable cost*)",
         "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       },
       {
         "symbol": "ATC, AVC, AFC",
-        "meaning": "Chi phí trung bình (tổng, biến đổi, cố định) trên 1 đơn vị",
+        "meaning": "Chi phí trung bình: tổng (*ATC*), biến đổi (*AVC*), cố định (*AFC*)",
         "unit": "Đơn vị tiền tệ / sản phẩm (nghìn đồng/sp)"
       },
       {
         "symbol": "MC",
-        "meaning": "Chi phí biên tăng thêm để sản xuất thêm 1 sản phẩm",
+        "meaning": "Chi phí cận biên để sản xuất thêm 1 đơn vị sản phẩm (*marginal cost*)",
         "unit": "Đơn vị tiền tệ / sản phẩm (nghìn đồng/sp)"
       },
       {
         "symbol": "P_{\\text{hòa vốn}}, P_{\\text{đóng cửa}}",
-        "meaning": "Mức giá hòa vốn (ATC_min) và Mức giá đóng cửa (AVC_min)",
+        "meaning": "Mức giá hòa vốn ($ATC_{\\min}$) và mức giá đóng cửa sản xuất ($AVC_{\\min}$)",
         "unit": "Đơn vị tiền tệ / sản phẩm (nghìn đồng/sp)"
       }
     ],
-    "example": "Cho $TC = Q^2 + 10Q + 100$. Ta có $FC = 100$, $VC = Q^2 + 10Q$, $MC = 2Q + 10$, $ATC = Q + 10 + \\frac{100}{Q}$.",
-    "examTrap": "Đường $MC$ luôn cắt đường $AVC$ và $ATC$ tại chính ĐIỂM CỰC TIỂU của chúng ($MC = AVC_{\\min}$ và $MC = ATC_{\\min}$). Đây là câu trắc nghiệm xuất hiện trong 90% đề thi!",
-    "notes": "Khi $MC < ATC$, đường $ATC$ đang dốc xuống. Khi $MC > ATC$, đường $ATC$ đang dốc lên. Khi $MC = ATC$, $ATC$ đạt cực tiểu.",
+    "example": "Hàm tổng chi phí $TC = Q^2 + 10Q + 100$. Ta suy ra chi phí cố định $FC = 100$, chi phí biến đổi $VC = Q^2 + 10Q$, chi phí cận biên $MC = 2Q + 10$, chi phí trung bình $ATC = Q + 10 + \\frac{100}{Q}$.",
+    "examTrap": "Đường chi phí cận biên ($MC$) luôn đi qua điểm cực tiểu của cả đường $AVC$ và đường $ATC$ ($MC = AVC_{\\min}$ và $MC = ATC_{\\min}$). Đây là một trong những câu hỏi kiểm tra lý thuyết căn bản xuất hiện thường xuyên nhất trong đề thi.",
+    "notes": "Khi $MC < ATC$, đường chi phí trung bình đang có xu hướng giảm. Khi $MC > ATC$, đường chi phí trung bình đang có xu hướng tăng. Tại giao điểm $MC = ATC$, đường $ATC$ đạt giá trị nhỏ nhất.",
     "caseStudy": {
-      "entity": "Ford Motor Company & Henry Ford (Năm 1908 - 1920)",
-      "badge": "Cuộc Cách Mạng Dây Chuyền Lắp Ráp",
-      "title": "Hạ gục toàn bộ đối thủ nhờ đẩy AFC về sát 0 trên dòng xe Model T",
-      "context": "Đầu thế kỷ 20, ô tô là xa xỉ phẩm được đóng thủ công với giá 2.000 USD. Henry Ford phát minh ra dây chuyền sản xuất hàng loạt (Assembly line) cho dòng xe Model T, chấp nhận đầu tư chi phí cố định nhà xưởng khổng lồ ($FC$).",
-      "analysis": "Nhờ sản xuất hàng trăm ngàn chiếc xe cùng một mẫu, Chi phí cố định trung bình bị nghiền nhỏ theo sản lượng ($AFC = FC / Q \\to 0$). Kết hợp với đường cong kinh nghiệm làm giảm $AVC$, Chi phí trung bình $ATC$ của chiếc xe Model T giảm từ 850 USD xuống còn 260 USD. Henry Ford hạ giá bán chiếc xe xuống mức người công nhân bình thường cũng mua được, buộc hàng trăm xưởng xe thủ công có $ATC$ cao phải phá sản.",
-      "lesson": "Hiệu quả kinh tế nhờ quy mô (Economies of Scale) cho phép doanh nghiệp lớn vận hành tại đáy của đường $ATC$ dài hạn, dựng rào cản chi phí tuyệt đối."
+      "entity": "Công ty ô tô Ford Motor và nhà sáng lập Henry Ford (Giai đoạn 1908 - 1920)",
+      "badge": "Cách mạng dây chuyền sản xuất hàng loạt",
+      "title": "Hạ gục toàn bộ đối thủ cạnh tranh nhờ phân bổ chi phí cố định về gần 0 trên dòng xe Model T",
+      "context": "Đầu thế kỷ 20, ô tô là mặt hàng xa xỉ được chế tạo thủ công với mức giá trên 2.000 USD. Henry Ford sáng chế ra dây chuyền lắp ráp di động liên tục (*moving assembly line*) cho dòng xe Model T, chấp nhận bỏ ra khoản chi phí cố định xây dựng nhà xưởng khổng lồ ($FC$).",
+      "analysis": "Nhờ sản xuất hàng trăm nghìn chiếc xe cùng thông số, chi phí cố định trung bình trên mỗi chiếc xe giảm gần về 0 ($AFC = \\frac{FC}{Q} \\to 0$). Kết hợp với hiệu ứng đường cong kinh nghiệm làm giảm chi phí biến đổi trung bình ($AVC$), tổng chi phí trung bình ($ATC$) của một chiếc Model T giảm từ 850 USD xuống chỉ còn 260 USD. Ford hạ giá bán mạnh mẽ, mở rộng quy mô thị trường và buộc hàng trăm xưởng sản xuất thủ công có chi phí trung bình cao phải rời bỏ cuộc chơi.",
+      "lesson": "Hiệu quả kinh tế theo quy mô (*economies of scale*) cho phép doanh nghiệp lớn vận hành tại đáy của đường chi phí trung bình dài hạn ($LRATC$), dựng nên rào cản chi phí vững chắc trước các đối thủ mới gia nhập."
     }
   },
   {
     "id": "micro-8",
     "category": "micro",
-    "chapter": "Chương 6: Cấu trúc thị trường & Tối đa hóa lợi nhuận",
-    "title": "Nguyên tắc tối đa hóa lợi nhuận (MR = MC) & Độc quyền",
-    "formula": "MR = MC \\implies \\pi_{max}, \\quad L = \\frac{P - MC}{P} = \\frac{1}{|E_D|}",
-    "description": "Doanh nghiệp ở bất kỳ thị trường nào cũng tối đa hóa lợi nhuận tại mức sản lượng có Doanh thu cận biên bằng Chi phí cận biên.",
+    "chapter": "Chương 6: Bốn cấu trúc thị trường và chiến lược tối đa hóa lợi nhuận",
+    "title": "Nguyên tắc tối đa hóa lợi nhuận ($MR = MC$) và thế lực độc quyền bán (*monopoly power*)",
+    "formula": "MR = MC \\implies Q^*, \\quad L = \\frac{P - MC}{P} = \\frac{1}{|E_D|}",
+    "description": "Doanh nghiệp trong mọi cấu trúc thị trường đều tối đa hóa lợi nhuận tại mức sản lượng mà tại đó doanh thu cận biên bằng chi phí cận biên ($MR = MC$).",
     "variables": [
       {
         "symbol": "L",
-        "meaning": "Chỉ số Lerner đo lường mức độ quyền lực độc quyền",
-        "unit": "Vô thứ nguyên (chạy từ 0 đến 1)"
+        "meaning": "Chỉ số Lerner đo lường mức độ thế lực độc quyền bán (*Lerner index of monopoly power*)",
+        "unit": "Vô thứ nguyên ($0 \\le L \\le 1$)"
       },
       {
         "symbol": "P_M",
-        "meaning": "Mức giá bán tối đa hóa lợi nhuận của nhà độc quyền",
+        "meaning": "Mức giá bán tối ưu của doanh nghiệp độc quyền",
         "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
       },
       {
         "symbol": "Q_M",
-        "meaning": "Sản lượng cung ứng tối ưu của nhà độc quyền (MR = MC)",
+        "meaning": "Sản lượng cung ứng tối ưu thỏa mãn điều kiện $MR = MC$",
         "unit": "Đơn vị sản phẩm (chiếc, tấn...)"
       },
       {
         "symbol": "\\pi_M",
-        "meaning": "Lợi nhuận kinh tế siêu ngạch của nhà độc quyền",
+        "meaning": "Lợi nhuận kinh tế siêu ngạch của nhà độc quyền (*economic profit*)",
         "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       }
     ],
-    "example": "Doanh nghiệp độc quyền có cầu $P = 100 - Q \\implies TR = 100Q - Q^2 \\implies MR = 100 - 2Q$. Nếu $MC = 20$: $MR = MC \\iff 100 - 2Q = 20 \\implies \\mathbf{Q^* = 40, P^* = 60}$.",
-    "examTrap": "Với Doanh nghiệp độc quyền: Đường $MR$ luôn dốc gấp đôi đường cầu tuyến tính! (Nếu $P = a - bQ \\implies MR = a - 2bQ$). Rất nhiều bạn quên nhân 2 vào hệ số góc dẫn đến tính sai $Q^*$!",
-    "notes": "Đường cung ngắn hạn của doanh nghiệp cạnh tranh hoàn hảo là phần đường $MC$ nằm PHÍA TRÊN điểm cực tiểu của $AVC$ ($P \\ge AVC_{\\min}$).",
+    "example": "Doanh nghiệp độc quyền đối diện hàm cầu $P = 100 - Q \\implies TR = 100Q - Q^2 \\implies MR = 100 - 2Q$. Nếu chi phí cận biên $MC = 20$: phương trình $MR = MC \\iff 100 - 2Q = 20 \\implies Q^* = 40, P^* = 60$.",
+    "examTrap": "Đối với doanh nghiệp độc quyền bán có hàm cầu tuyến tính dạng $P = a - bQ$, hàm doanh thu cận biên luôn có độ dốc gấp hai lần hàm cầu: $MR = a - 2bQ$. Cần chú ý nhân đôi hệ số góc để tránh tính sai sản lượng tối ưu.",
+    "notes": "Đường cung ngắn hạn của doanh nghiệp cạnh tranh hoàn hảo chính là nhánh của đường chi phí cận biên ($MC$) nằm phía trên điểm cực tiểu của đường chi phí biến đổi trung bình ($P \\ge AVC_{\\min}$). Doanh nghiệp độc quyền không có đường cung riêng biệt mà chỉ có điểm cung ứng.",
     "caseStudy": {
-      "entity": "Tập Đoàn Khai Thác Kim Cương De Beers (Nam Phi)",
-      "badge": "Đế Chế Độc Quyền Huyền Thoại Thế Kỷ 20",
-      "title": "Thông điệp 'Kim cương là vĩnh cửu' và nghệ thuật siết van sản lượng",
-      "context": "Trong suốt thế kỷ 20, tập đoàn De Beers kiểm soát hơn 85% nguồn cung kim cương thô toàn cầu. Họ sáng tạo ra thông điệp marketing vĩ đại nhất lịch sử: 'A Diamond is Forever' để gắn kim cương với nhẫn đính hôn.",
-      "analysis": "Có quyền lực độc quyền tuyệt đối, De Beers không hành xử như cạnh tranh hoàn hảo ($P = MC$). Họ thiết lập phương trình $MR = MC$. Chi phí khai thác kim cương rất rẻ ($MC$ thấp), nhưng De Beers cố tình giữ hàng nghìn tấn kim cương trong kho tại London, chỉ mở nhỏ giọt ra thị trường. Bằng cách giảm sản lượng $Q_M < Q_C$, họ đẩy giá bán $P_M$ lên gấp hàng chục lần so với $MC$, đạt chỉ số Lerner $L \\to 1$ và tối đa hóa lợi nhuận siêu ngạch.",
-      "lesson": "Bản chất độc quyền không phải là bán nhiều nhất có thể, mà là hạn chế sản lượng có chủ đích để neo giá bán ở mức $MR = MC$ trên đường cầu dốc xuống."
+      "entity": "Tập đoàn khai khoáng De Beers (Nam Phi)",
+      "badge": "Mô hình độc quyền bán nguyên liệu toàn cầu",
+      "title": "Thông điệp tiếp thị kim cương vĩnh cửu và chính sách điều tiết van sản lượng",
+      "context": "Trong phần lớn thế kỷ 20, tập đoàn De Beers nắm giữ trên 85% nguồn cung kim cương thô của thế giới và xây dựng thông điệp biểu tượng: 'Kim cương là vĩnh cửu' (*A Diamond is Forever*).",
+      "analysis": "Với thế lực độc quyền gần như tuyệt đối, De Beers không định giá theo chi phí cận biên ($P = MC$) như thị trường cạnh tranh. Họ giải bài toán tối ưu tại $MR = MC$. Chi phí khai thác mỗi carat kim cương tương đối thấp ($MC$ nhỏ), nhưng De Beers lưu trữ kim cương trong các kho bảo mật tại London và đưa ra thị trường với số lượng hạn chế có chủ đích ($Q_M < Q_C$). Nhờ vậy, họ duy trì mức giá bán độc quyền $P_M$ cao hơn gấp nhiều lần chi phí cận biên, thiết lập chỉ số Lerner $L$ tiệm cận 1.",
+      "lesson": "Bản chất của thế lực độc quyền là quyền năng kiểm soát lượng cung ứng để nâng giá bán vượt lên trên chi phí cận biên, đánh đổi sản lượng thị trường để thu về lợi nhuận kinh tế siêu ngạch."
     }
   },
   {
     "id": "micro-9",
     "category": "micro",
-    "chapter": "Chương 6: Cấu trúc thị trường & Lý thuyết trò chơi",
-    "title": "Cân bằng Nash (Nash Equilibrium) & Thế lưỡng nan của người tù",
+    "chapter": "Chương 6: Bốn cấu trúc thị trường và lý thuyết trò chơi",
+    "title": "Cân bằng Nash (*Nash equilibrium*) và thế lưỡng nan của người tù (*prisoner's dilemma*)",
     "formula": "\\text{Cân bằng Nash}: \\pi_i(s_i^*, s_{-i}^*) \\ge \\pi_i(s_i, s_{-i}^*) \\quad \\forall s_i",
-    "description": "Một tập hợp các chiến lược là Cân bằng Nash nếu không có người chơi nào có động cơ đơn phương thay đổi chiến lược của mình.",
+    "description": "Một tập hợp các chiến lược được gọi là cân bằng Nash nếu không có bất kỳ người chơi nào có động cơ đơn phương thay đổi chiến lược khi các đối thủ giữ nguyên lựa chọn của họ.",
     "variables": [
       {
+        "symbol": "s_i^*",
+        "meaning": "Chiến lược tối ưu của người chơi thứ i (*optimal strategy*)",
+        "unit": "Quyết định hành động (hợp tác, cạnh tranh, giá cao, giá thấp...)"
+      },
+      {
+        "symbol": "s_{-i}^*",
+        "meaning": "Tập hợp các chiến lược của tất cả các đối thủ còn lại",
+        "unit": "Quyết định hành động của các đối thủ"
+      },
+      {
         "symbol": "\\pi_i",
-        "meaning": "Mức lợi nhuận / lợi ích chi trả cho người chơi i (Payoff)",
-        "unit": "Đơn vị tiền tệ hoặc Điểm hữu dụng"
-      },
-      {
-        "symbol": "s_i",
-        "meaning": "Chiến lược hành động được lựa chọn (Giá cả P, Sản lượng Q...)",
-        "unit": "Tùy biến (đồng, chiếc, chiến dịch...)"
-      },
-      {
-        "symbol": "R_i(s_j)",
-        "meaning": "Hàm phản ứng chiến lược tốt nhất của doanh nghiệp i",
-        "unit": "Đơn vị sản phẩm hoặc đơn vị giá"
+        "meaning": "Mức lợi ích hoặc lợi nhuận thanh toán của người chơi (*payoff*)",
+        "unit": "Đơn vị tiền tệ hoặc điểm thỏa dụng"
       }
     ],
-    "example": "Hai doanh nghiệp A và B cùng chọn giá: Nếu cả hai cùng đặt giá cao $\\to$ cùng lời 10 tỷ. Nếu A gian lận hạ giá $\\to$ A lời 15 tỷ, B lỗ 2 tỷ. Cân bằng Nash: Cả hai cùng hạ giá $\\to$ mỗi bên chỉ lời 3 tỷ.",
-    "examTrap": "Cân bằng Nash KHÔNG PHẢI là kết quả tốt nhất cho cả hai doanh nghiệp, mà là kết quả cân bằng do động cơ tư lợi cá nhân chi phối ($MB > MC$ khi phản bội Cartel)!",
-    "notes": "Chiến lược thống trị (Dominant Strategy) là chiến lược tối ưu nhất cho người chơi bất kể đối thủ hành động như thế nào.",
+    "example": "Hai doanh nghiệp A và B cùng cân nhắc mức giá: Nếu cả hai cùng đặt giá cao, mỗi bên thu lợi nhuận 10 tỷ đồng. Nếu một bên hạ giá trong khi bên kia giữ giá cao, bên hạ giá thu 15 tỷ đồng còn đối thủ lỗ 2 tỷ đồng. Nếu cả hai cùng hạ giá, mỗi bên nhận 3 tỷ đồng. Kết quả cân bằng Nash là cả hai cùng hạ giá để nhận 3 tỷ đồng.",
+    "examTrap": "Cân bằng Nash không đồng nghĩa với kết quả mang lại tổng phúc lợi tốt nhất cho toàn thể các bên tham gia (trạng thái tối ưu Pareto), mà là điểm cân bằng phát sinh do động cơ tối đa hóa lợi ích cá nhân độc lập.",
+    "notes": "Chiến lược thống trị (*dominant strategy*) là chiến lược đem lại kết quả tốt nhất cho một người chơi bất kể các đối thủ khác lựa chọn hành động nào.",
     "caseStudy": {
-      "entity": "Khối Các Nước Xuất Khẩu Dầu Mỏ (OPEC & OPEC+)",
-      "badge": "Nobel Kinh Tế John Nash",
-      "title": "Cuộc chiến giá dầu Nga - Saudi Arabia 2020 và sự sụp đổ của Cartel",
-      "context": "OPEC là một Cartel gồm các nước dầu mỏ hợp tác để cắt giảm sản lượng nhằm giữ giá dầu trên 80 USD/thùng. Tháng 3/2020, trước làn sóng Covid-19 làm cầu sụt giảm, Saudi Arabia yêu cầu cắt giảm sản lượng nhưng Nga từ chối.",
-      "analysis": "Đây là thế lưỡng nan của người tù kinh điển: Hợp tác cùng cắt giảm thì giá dầu cao, cả hai cùng có lợi. Nhưng mỗi bên đều có chiến lược áp đảo (Dominant strategy) là bơm thêm dầu để chiếm thị phần. Khi niềm tin vỡ vụn, Saudi Arabia mở van xả dầu hết công suất và hạ giá bán chiết khấu. Cả hai lao vào Cân bằng Nash không hợp tác: giá dầu lao dốc không phanh, thậm chí dầu WTI có thời điểm rơi xuống mức âm (-$37/thùng)!",
-      "lesson": "Các liên minh cấu kết (Cartel) luôn chứa đựng mầm mống tự hủy diệt vì mỗi thành viên luôn có động cơ đơn phương gian lận hạn ngạch."
+      "entity": "Tổ chức các nước xuất khẩu dầu mỏ (OPEC) và Nga trong cuộc chiến giá dầu tháng 3/2020",
+      "badge": "Lý thuyết trò chơi ứng dụng trên trường quốc tế",
+      "title": "Thỏa hiệp Cartel bất thành và sự sụp đổ tạm thời của giá dầu thế giới",
+      "context": "Khối liên minh OPEC+ thường xuyên thỏa thuận hạn ngạch cắt giảm sản lượng khai thác nhằm neo giữ giá dầu thô thế giới trên ngưỡng 60 USD - 80 USD mỗi thùng. Tháng 3 năm 2020, nhu cầu năng lượng toàn cầu suy giảm mạnh do đại dịch.",
+      "analysis": "Saudi Arabia đề xuất tiếp tục cắt giảm sản lượng để giữ giá, nhưng Nga từ chối vì lo ngại các nhà sản xuất dầu đá phiến của Mỹ sẽ chiếm thị phần. Cả hai bên rơi vào thế lưỡng nan của người tù kinh điển: Chiến lược thống trị của mỗi quốc gia là bơm mạnh dầu ra thị trường để tối đa hóa doanh thu riêng. Kết quả là nguồn cung dư thừa trầm trọng, đẩy giá dầu WTI có thời điểm rơi xuống mức âm lịch sử và cả hai bên đều chịu thiệt hại nặng nề trước khi buộc phải ngồi lại đàm phán thỏa thuận mới.",
+      "lesson": "Các thỏa thuận cấu kết (*collusion*) trong mô hình độc quyền nhóm (*oligopoly*) luôn chứa đựng động cơ phá vỡ thỏa thuận ngầm, trừ khi có cơ chế giám sát và trừng phạt đáng tin cậy."
     }
   },
   {
     "id": "micro-10",
     "category": "micro",
-    "chapter": "Chương 6: Thất bại thị trường & Ngoại ứng",
-    "title": "Ngoại ứng tiêu cực, Chi phí xã hội & Thuế Pigou",
-    "formula": "MSC = MPC + MEC, \\quad t_{Pigou} = MEC(Q^*)",
-    "description": "Khi có ngoại ứng tiêu cực (ô nhiễm), Chi phí cận biên xã hội (MSC) cao hơn Chi phí cận biên tư nhân (MPC). Thị trường tự do sẽ sản xuất thừa so với mức tối ưu.",
+    "chapter": "Chương 4: Vai trò của chính phủ và hiệu quả thị trường",
+    "title": "Ngoại ứng tiêu cực (*negative externality*), chi phí xã hội và sắc thuế Pigou (*Pigouvian tax*)",
+    "formula": "MSC = MPC + MEC, \\quad t^* = MEC(Q^*)",
+    "description": "Thị trường tự do phân bổ thất bại khi có tác động ngoại ứng tiêu cực, khiến sản lượng thực tế vượt quá mức tối ưu xã hội. Thuế Pigou nội hóa chi phí ngoại ứng để đưa sản lượng về mức hiệu quả.",
     "variables": [
       {
-        "symbol": "MSC, MPC",
-        "meaning": "Chi phí biên xã hội và Chi phí biên tư nhân",
+        "symbol": "MSC",
+        "meaning": "Chi phí xã hội cận biên (*marginal social cost*)",
+        "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
+      },
+      {
+        "symbol": "MPC",
+        "meaning": "Chi phí tư nhân cận biên của doanh nghiệp sản xuất (*marginal private cost*)",
         "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
       },
       {
         "symbol": "MEC",
-        "meaning": "Chi phí ngoại ứng biên do tác hại ô nhiễm gây ra",
+        "meaning": "Chi phí ngoại ứng cận biên gây ra cho cộng đồng (*marginal external cost*)",
         "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
       },
       {
         "symbol": "t^*",
-        "meaning": "Thuế Pigou khắc phục ngoại ứng tối ưu (t* = MEC)",
-        "unit": "Đơn vị tiền tệ / sản phẩm (đồng/sp)"
+        "meaning": "Mức thuế Pigou tối ưu trên mỗi đơn vị sản phẩm gây ô nhiễm",
+        "unit": "Đơn vị tiền tệ / sản phẩm ($t^* = MEC$)"
       }
     ],
-    "example": "Nhà máy thép có MPC = 20 + Q, chi phí ô nhiễm MEC = 10. Khi đó MSC = 30 + Q. Chính phủ nên đánh thuế t = 10 để đưa sản lượng về mức tối ưu xã hội.",
-    "examTrap": "Thuế thông thường gây ra tổn thất vô ích $DWL$, nhưng THUẾ PIGOU LẠI LÀM TĂNG HIỆU QUẢ XÃ HỘI VÀ TRIỆT TIÊU $DWL$ bằng cách đưa chi phí tư nhân tiệm cận chi phí xã hội ($t^* = MEC$)!",
-    "notes": "Định lý Coase: Nếu quyền sở hữu tài sản được xác định rõ ràng và chi phí giao dịch bằng 0, các bên tư nhân có thể tự thương lượng để đạt hiệu quả Pareto mà không cần chính phủ can thiệp.",
+    "example": "Một nhà máy hóa chất có chi phí sản xuất tư nhân $MPC = 20 + 2Q$. Hoạt động xả thải gây ô nhiễm môi trường với chi phí ngoại ứng $MEC = 10$. Chi phí xã hội toàn diện là $MSC = MPC + MEC = 30 + 2Q$. Mức thuế Pigou tối ưu cần áp dụng là $t^* = 10$ đồng trên mỗi đơn vị hóa chất.",
+    "examTrap": "Các sắc thuế thông thường tạo ra tổn thất vô ích ($DWL$), nhưng sắc thuế Pigou thì hoàn toàn ngược lại: Thuế Pigou triệt tiêu tổn thất vô ích của thị trường và nâng cao phúc lợi xã hội thông qua việc nội hóa chi phí ngoại ứng (*internalizing the externality*).",
+    "notes": "Định lý Coase (*Coase theorem*): Nếu quyền sở hữu tài sản được phân định rõ ràng và chi phí giao dịch (*transaction cost*) không đáng kể, các bên tư nhân có thể tự thương lượng để đạt được kết quả phân bổ hiệu quả Pareto mà không cần chính phủ can thiệp trực tiếp.",
     "caseStudy": {
-      "entity": "Liên Minh Châu Âu (EU) & Hệ Thống Giao Dịch Phát Thải EU ETS",
-      "badge": "Cơ Chế Thuế Pigou Toàn Cầu",
-      "title": "Định giá khí thải Carbon buộc các tập đoàn công nghiệp xanh hóa",
-      "context": "Các nhà máy điện than và luyện kim tại Châu Âu xả hàng triệu tấn $CO_2$ gây biến đổi khí hậu nhưng không phải trả tiền trong giá thành sản phẩm. EU thiết lập hệ thống hạn ngạch phát thải ETS, áp mức thuế carbon lên tới gần 100 Euro/tấn $CO_2$.",
-      "analysis": "Khí thải $CO_2$ là chi phí ngoại ứng tiêu cực ($MEC$). Bằng việc bắt các doanh nghiệp phải mua tín chỉ phát thải đúng bằng lượng khí xả ra, chính phủ đã nội hóa ngoại ứng (Internalizing the externality), đẩy đường cung tư nhân $MPC$ lên trùng với đường chi phí xã hội $MSC$. Kết quả: các nhà máy buộc phải đầu tư năng lượng tái tạo hoặc giảm sản lượng bẩn, đưa phát thải toàn khối EU giảm 37% mà vẫn đảm bảo tăng trưởng kinh tế.",
-      "lesson": "Thuế Pigou là công cụ duy nhất biến chi phí vô hình ngoài xã hội thành chi phí tiền mặt hữu hình trong sổ sách kế toán của doanh nghiệp."
+      "entity": "Hệ thống mua bán phát thải của Liên minh châu Âu (EU Emissions Trading System - EU ETS)",
+      "badge": "Cơ chế thị trường giải quyết ô nhiễm môi trường",
+      "title": "Tạo lập thị trường tín chỉ carbon theo tư duy định lý Coase",
+      "context": "Thay vì ra mệnh lệnh hành chính giới hạn sản xuất của các nhà máy công nghiệp, năm 2005 Liên minh châu Âu thiết lập thị trường mua bán hạn ngạch phát thải khí nhà kính (EU ETS).",
+      "analysis": "Chính phủ ấn định tổng lượng phát thải trần cho toàn khối và phân bổ giấy phép phát thải cho các doanh nghiệp. Các nhà máy có công nghệ hiện đại với chi phí cắt giảm ô nhiễm thấp sẽ chủ động giảm xả thải và bán lại hạn ngạch dư thừa cho các nhà máy lạc hậu. Giá tín chỉ carbon tự hình thành theo cơ chế thị trường tương đương một mức thuế Pigou động, tạo động lực tài chính mạnh mẽ để doanh nghiệp chuyển đổi sang năng lượng sạch.",
+      "lesson": "Khi quyền sở hữu tài sản môi trường được lượng hóa và đưa vào giao dịch thị trường, các thành phần kinh tế sẽ tự điều chỉnh hành vi với chi phí xã hội thấp nhất."
     }
   },
   {
     "id": "macro-1",
     "category": "macro",
-    "chapter": "Chương 7: Đo lường sản lượng quốc gia (GDP & GNP)",
-    "title": "Tổng sản phẩm quốc nội (GDP) theo 3 phương pháp",
-    "formula": "GDP = C + I + G + NX, \\quad GNP = GDP + NPI",
-    "description": "GDP là tổng giá trị thị trường của tất cả hàng hóa và dịch vụ CUỐI CÙNG được sản xuất ra trong phạm vi một lãnh thổ quốc gia trong một thời kỳ nhất định.",
+    "chapter": "Chương 7: Đo lường sản lượng quốc gia và thu nhập quốc dân",
+    "title": "Tổng sản phẩm quốc nội (*gross domestic product - GDP*) theo ba phương pháp hạch toán",
+    "formula": "GDP = C + I + G + NX, \\quad GDP = w + r + i + \\text{Pr} + Dep + T_e",
+    "description": "Tổng giá trị thị trường của toàn bộ hàng hóa và dịch vụ cuối cùng được sản xuất ra trong phạm vi lãnh thổ một quốc gia trong một khoảng thời gian nhất định (thường là một năm hoặc một quý).",
     "variables": [
       {
         "symbol": "GDP",
-        "meaning": "Tổng sản phẩm quốc nội đo lường giá trị hàng hóa cuối cùng",
-        "unit": "Đơn vị tiền tệ quốc gia (tỷ VND hoặc tỷ USD)"
+        "meaning": "Tổng sản phẩm quốc nội (*gross domestic product*)",
+        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       },
       {
         "symbol": "C",
-        "meaning": "Tổng chi tiêu tiêu dùng của khu vực hộ gia đình",
-        "unit": "Đơn vị tiền tệ (tỷ VND)"
+        "meaning": "Chi tiêu tiêu dùng của khu vực hộ gia đình (*consumption*)",
+        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       },
       {
         "symbol": "I",
-        "meaning": "Tổng đầu tư tư nhân trong nước (gồm mua nhà ở mới)",
-        "unit": "Đơn vị tiền tệ (tỷ VND)"
+        "meaning": "Tổng đầu tư tư nhân trong nước (*gross private domestic investment*)",
+        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       },
       {
         "symbol": "G",
-        "meaning": "Chi tiêu mua sắm hàng hóa & dịch vụ của chính phủ",
-        "unit": "Đơn vị tiền tệ (tỷ VND)"
+        "meaning": "Chi tiêu mua sắm hàng hóa và dịch vụ của chính phủ (*government purchases*)",
+        "unit": "Đơn vị tiền tệ (không bao gồm chi chuyển nhượng trợ cấp)"
       },
       {
         "symbol": "NX",
-        "meaning": "Xuất khẩu ròng (Cán cân thương mại NX = X - IM)",
-        "unit": "Đơn vị tiền tệ (tỷ VND)"
-      },
-      {
-        "symbol": "VA",
-        "meaning": "Giá trị gia tăng qua từng công đoạn sản xuất (VA = Doanh thu - Chi phí trung gian)",
-        "unit": "Đơn vị tiền tệ (tỷ VND)"
+        "meaning": "Xuất khẩu ròng (*net exports: $NX = X - IM$*)",
+        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       }
     ],
-    "example": "Cho $C = 600, I = 200, G = 150, X = 100, IM = 80 \\implies GDP = 600 + 200 + 150 + (100 - 80) = \\mathbf{970} \\text{ tỷ VND}$.",
-    "examTrap": "BẪY 1: Chi chuyển nhượng của Chính phủ (Tr) như trợ cấp người nghèo, lương hưu KHÔNG tính trực tiếp vào GDP. BẪY 2: Bán lại xe máy cũ hay mua cổ phiếu KHÔNG tính vào GDP!",
-    "notes": "GDP danh nghĩa ($GDP_n$) tính theo giá hiện hành; GDP thực tế ($GDP_r$) tính theo giá cố định của năm gốc.",
+    "example": "Một nền kinh tế ghi nhận chi tiêu tiêu dùng $C = 600$, đầu tư $I = 200$, chi tiêu chính phủ $G = 150$, kim ngạch xuất khẩu $X = 100$, nhập khẩu $IM = 80$: tổng sản phẩm quốc nội đạt $GDP = 600 + 200 + 150 + (100 - 80) = 970$ tỷ đồng.",
+    "examTrap": "Các khoản chi chuyển nhượng của chính phủ (*transfer payments - Tr*) như trợ cấp người già, tiền lương hưu hoặc học bổng không được tính vào $G$ và $GDP$ vì không kèm theo hành vi tạo ra hàng hóa hoặc cung cấp dịch vụ mới trong kỳ.",
+    "notes": "Phân biệt giữa tổng sản phẩm quốc nội ($GDP$ - tính theo lãnh thổ địa lý) và tổng thu nhập quốc gia ($GNP$ - tính theo quyền sở hữu quốc tịch của công dân): $GNP = GDP + NFA$, trong đó $NFA$ là thu nhập yếu tố ròng từ nước ngoài (*net factor income from abroad*).",
     "caseStudy": {
-      "entity": "Tập Đoàn Apple Inc. & Cộng Hòa Ireland (Năm 2015)",
-      "badge": "Hiện Tượng Leprechaun Economics",
-      "title": "GDP Ireland tăng vọt 26.3% trong 1 đêm và bài học về giới hạn của GDP",
-      "context": "Năm 2015, Cục Thống kê Ireland công bố một con số gây sốc toàn cầu: GDP của Ireland tăng trưởng kỷ lục 26.3% chỉ trong một năm. Nhà kinh tế đoạt giải Nobel Paul Krugman lập tức gọi đây là 'Kinh tế yêu tinh' (Leprechaun Economics).",
-      "analysis": "Nguyên nhân không phải do nền kinh tế Ireland bùng nổ, mà do Apple chuyển quyền sở hữu trí tuệ trị giá hàng trăm tỷ USD vào các công ty con đặt tại Ireland để tối ưu hóa thuế. Toàn bộ doanh thu bán iPhone toàn cầu đổ vào sổ sách Ireland khiến chỉ số $GDP = C + I + G + NX$ phình to đột biến qua xuất khẩu ròng $NX$. Nhưng thực tế, người dân Ireland không hề được hưởng lợi vì lợi nhuận này được chuyển ngược về cổ đông Mỹ. Ireland sau đó buộc phải phát minh ra chỉ số $GNI^*$ (GNI điều chỉnh) để đo lường thực chất.",
-      "lesson": "GDP đo lường sản lượng trong biên giới lãnh thổ, không phản ánh chính xác thu nhập thực tế mà công dân nước đó được hưởng nếu có dòng vốn FDI khổng lồ chuyển lợi nhuận ra nước ngoài!"
+      "entity": "Hiện tượng Leprechaun Economics tại Ireland (Năm 2015)",
+      "badge": "Lỗ hổng kinh điển trong đo lường GDP",
+      "title": "Tăng trưởng GDP 26% trong một đêm nhờ chiêu bài chuyển giao tài sản trí tuệ của các tập đoàn công nghệ",
+      "context": "Năm 2015, Cơ quan Thống kê Trung ương Ireland công bố số liệu khiến giới kinh tế học toàn cầu chấn động: GDP của Ireland tăng trưởng tới 26,3% chỉ trong vòng 1 năm.",
+      "analysis": "Giáo sư đoạt giải Nobel Paul Krugman gọi đây là 'nền kinh tế yêu tinh lùn' (*Leprechaun economics*). Sự tăng vọt này không xuất phát từ việc công nhân Ireland làm việc năng suất hơn hay mở thêm nhà xưởng thực tế, mà do các tập đoàn đa quốc gia như Apple tái cơ cấu thuế, chuyển hàng trăm tỷ USD tài sản trí tuệ đăng ký về Ireland. Khoản vốn này làm phồng chỉ số đầu tư và tài sản vốn trong GDP trên sổ sách, nhưng người dân bản xứ không được hưởng lợi tương xứng.",
+      "lesson": "Chỉ số GDP có thể bị bóp méo bởi dòng vốn đa quốc gia; đối với các nền kinh tế có độ mở lớn, chỉ số tổng thu nhập quốc gia điều chỉnh (*GNI* modified) phản ánh đời sống người dân chính xác hơn."
     }
   },
   {
     "id": "macro-2",
     "category": "macro",
-    "chapter": "Chương 7: Đo lường sản lượng quốc gia (GDP & GNP)",
-    "title": "Chỉ số điều chỉnh GDP (Deflator) & Tốc độ tăng trưởng",
-    "formula": "DGDP = \\frac{GDP_n}{GDP_r} \\times 100, \\quad g = \\frac{GDP_{r, t} - GDP_{r, t-1}}{GDP_{r, t-1}} \\times 100\\%",
-    "description": "DGDP phản ánh mức giá chung của tất cả hàng hóa và dịch vụ được sản xuất trong nước.",
+    "chapter": "Chương 7: Đo lường sản lượng quốc gia và thu nhập quốc dân",
+    "title": "Chỉ số điều chỉnh GDP (*GDP deflator*) và tốc độ tăng trưởng kinh tế thực tế (*real economic growth*)",
+    "formula": "\\text{GDP Deflator} = \\frac{GDP_n}{GDP_r} \\times 100, \\quad g_t = \\frac{GDP_{r, t} - GDP_{r, t-1}}{GDP_{r, t-1}} \\times 100\\%",
+    "description": "Đo lường mức giá chung của toàn bộ hàng hóa và dịch vụ sản xuất trong nước, làm thước đo tách biệt giữa biến động giá cả lạm phát và tăng trưởng sản lượng thực tế.",
     "variables": [
       {
-        "symbol": "GDP_N",
-        "meaning": "GDP danh nghĩa tính theo giá thị trường hiện hành",
-        "unit": "Đơn vị tiền tệ (tỷ VND hoặc tỷ USD)"
+        "symbol": "GDP_n",
+        "meaning": "Tổng sản phẩm quốc nội danh nghĩa theo giá hiện hành (*nominal GDP*)",
+        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       },
       {
-        "symbol": "GDP_R",
-        "meaning": "GDP thực tế tính theo mức giá cố định của năm gốc",
-        "unit": "Đơn vị tiền tệ (tỷ VND hoặc tỷ USD)"
+        "symbol": "GDP_r",
+        "meaning": "Tổng sản phẩm quốc nội thực tế theo giá so sánh của năm gốc (*real GDP*)",
+        "unit": "Đơn vị tiền tệ tính theo giá năm gốc"
       },
       {
         "symbol": "\\text{GDP Deflator}",
-        "meaning": "Chỉ số điều chỉnh GDP phản ánh mức biến động giá",
-        "unit": "Điểm chỉ số (Năm gốc = 100, không đơn vị tiền tệ)"
+        "meaning": "Chỉ số điều chỉnh GDP (*implicit price deflator for GDP*)",
+        "unit": "Điểm chỉ số (năm gốc luôn bằng 100)"
       },
       {
-        "symbol": "g",
-        "meaning": "Tốc độ tăng trưởng kinh tế thực tế hàng năm",
+        "symbol": "g_t",
+        "meaning": "Tốc độ tăng trưởng kinh tế thực tế của năm t so với năm trước",
         "unit": "Tỷ lệ phần trăm (% / năm)"
       }
     ],
-    "example": "Năm 2024 có $GDP_n = 1.200, GDP_r = 1.000 \\implies \\text{GDP Deflator} = \\frac{1.200}{1.000} \\times 100 = \\mathbf{120}$. Nghĩa là mức giá chung đã tăng 20% so với năm gốc.",
-    "examTrap": "Tính tốc độ tăng trưởng kinh tế $g$ BẮT BUỘC dùng GDP THỰC TẾ ($GDP_r$): $g = \\frac{GDP_{r, t} - GDP_{r, t-1}}{GDP_{r, t-1}} \\times 100\\%$, tuyệt đối KHÔNG được dùng GDP danh nghĩa!",
-    "notes": "Năm gốc luôn có $GDP_n = GDP_r \\implies \\text{GDP Deflator} = 100$.",
+    "example": "Năm 2024 có $GDP_n = 1.200$ tỷ đồng, $GDP_r = 1.000$ tỷ đồng: chỉ số điều chỉnh GDP là $\\text{GDP Deflator} = \\frac{1.200}{1.000} \\times 100 = 120$. Mức giá bình quân của các sản phẩm sản xuất nội địa đã tăng 20% so với năm gốc.",
+    "examTrap": "Khi tính toán tốc độ tăng trưởng kinh tế ($g$), bắt buộc phải sử dụng số liệu $GDP$ thực tế ($GDP_r$). Tuyệt đối không dùng $GDP$ danh nghĩa vì giá trị danh nghĩa đã bị khuếch đại bởi yếu tố tăng giá lạm phát.",
+    "notes": "Tại năm gốc (*base year*), giá trị danh nghĩa luôn bằng giá trị thực tế ($GDP_n = GDP_r$), do đó chỉ số điều chỉnh GDP tại năm gốc luôn có giá trị quy ước là 100.",
     "caseStudy": {
-      "entity": "Cộng Hòa Venezuela & Khủng Hoảng Kinh Tế (2016 - 2019)",
-      "badge": "Thảm Họa Tiền Tệ Mỹ Latinh",
-      "title": "GDP danh nghĩa tăng hàng tỷ lần nhưng nhân dân thiếu ăn",
-      "context": "Trong giai đoạn 2016 - 2019, chính quyền Venezuela in tiền ồ ạt để trang trải thâm hụt ngân sách. Trên sổ sách tiền tệ Bolivar, GDP danh nghĩa ($GDP_n$) tăng vọt hàng ngàn phần trăm mỗi năm.",
-      "analysis": "Khi phân tích bằng công thức $DGDP = (GDP_n / GDP_r) \\times 100$, sự thật trần trụi lộ rõ: chỉ số điều chỉnh GDP tăng vọt hàng triệu phần trăm, trong khi sản lượng hàng hóa thực tế ($GDP_r$) sụp đổ hơn 65%. Nền nông nghiệp và công nghiệp đình đốn, các nhà máy đóng cửa vì thiếu linh kiện. Tăng trưởng danh nghĩa chỉ là ảo ảnh lạm phát tiền tệ.",
-      "lesson": "Không bao giờ lấy GDP danh nghĩa để đánh giá sức khỏe nền kinh tế. Chỉ có $GDP_r$ (đã loại trừ lạm phát) mới phản ánh mức sống và phúc lợi thực của người dân."
+      "entity": "Nền kinh tế Nhật Bản và ba thập kỷ trì trệ (1990 - 2020)",
+      "badge": "Bài học giảm phát và tăng trưởng thực tế",
+      "title": "Chỉ số điều chỉnh GDP liên tục âm và hiện tượng bẫy thanh khoản",
+      "context": "Sau khi bong bóng bất động sản và thị trường chứng khoán vỡ tung vào đầu thập niên 1990, Nhật Bản bước vào thời kỳ giảm phát kéo dài hàng thập kỷ.",
+      "analysis": "Trong nhiều giai đoạn, chỉ số điều chỉnh GDP của Nhật Bản ở mức âm (nhỏ hơn 100), phản ánh mức giá hàng hóa sản xuất nội địa suy giảm theo thời gian. Mặc dù GDP danh nghĩa hầu như đi ngang hoặc sụt giảm nhẹ, GDP thực tế của Nhật Bản vẫn duy trì mức tăng trưởng dương khoảng 1%/năm nhờ năng suất lao động được cải thiện và giá cả sụt giảm.",
+      "lesson": "Tăng trưởng danh nghĩa có thể đánh lừa cảm nhận của người làm chính sách; sự thịnh vượng vật chất thực sự của người dân phụ thuộc vào số lượng hàng hóa và dịch vụ thực tế ($GDP_r$) chứ không phải con số tiền tệ danh nghĩa."
     }
   },
   {
     "id": "macro-3",
     "category": "macro",
-    "chapter": "Chương 8: Chi phí sinh hoạt, Lạm phát & Thất nghiệp",
-    "title": "Chỉ số giá tiêu dùng (CPI), Tỷ lệ lạm phát & Lãi suất thực",
-    "formula": "CPI_t = \\frac{\\sum (P_t \\times Q_0)}{\\sum (P_0 \\times Q_0)} \\times 100, \\quad \\pi_t = \\frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \\times 100\\%, \\quad r \\approx i - \\pi",
-    "description": "CPI đo lường chi phí của giỏ hàng hóa và dịch vụ cố định mà một người tiêu dùng điển hình mua.",
+    "chapter": "Chương 9: Lạm phát, chỉ số giá tiêu dùng và thị trường lao động",
+    "title": "Chỉ số giá tiêu dùng (*consumer price index - CPI*), tỷ lệ lạm phát (*inflation rate*) và hiệu ứng Fisher (*Fisher effect*)",
+    "formula": "CPI_t = \\frac{\\sum (P_{i, t} \\times Q_{i, 0})}{\\sum (P_{i, 0} \\times Q_{i, 0})} \\times 100, \\quad \\pi_t = \\frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \\times 100\\%, \\quad i \\approx r + \\pi",
+    "description": "Đo lường sự biến động chi phí sinh hoạt bình quân của một hộ gia đình điển hình qua thời gian thông qua một giỏ hàng hóa và dịch vụ tiêu dùng cố định.",
     "variables": [
       {
-        "symbol": "CPI",
-        "meaning": "Chỉ số giá tiêu dùng của giỏ hàng hóa cố định",
-        "unit": "Điểm chỉ số (Năm gốc = 100)"
+        "symbol": "CPI_t",
+        "meaning": "Chỉ số giá tiêu dùng tại thời kỳ t (*consumer price index*)",
+        "unit": "Điểm chỉ số (năm gốc = 100)"
       },
       {
-        "symbol": "\\pi",
-        "meaning": "Tỷ lệ lạm phát hàng năm của nền kinh tế",
+        "symbol": "\\pi_t",
+        "meaning": "Tỷ lệ lạm phát trong kỳ (*inflation rate*)",
         "unit": "Tỷ lệ phần trăm (% / năm hoặc % / tháng)"
       },
       {
         "symbol": "i",
-        "meaning": "Lãi suất danh nghĩa niêm yết tại các ngân hàng",
+        "meaning": "Lãi suất danh nghĩa ghi trên hợp đồng tín dụng (*nominal interest rate*)",
         "unit": "Tỷ lệ phần trăm (% / năm)"
       },
       {
         "symbol": "r",
-        "meaning": "Lãi suất thực tế sau khi đã trừ đi lạm phát (r ≈ i - π)",
+        "meaning": "Lãi suất thực tế đã trừ lạm phát (*real interest rate*)",
         "unit": "Tỷ lệ phần trăm (% / năm)"
       }
     ],
-    "example": "Nếu gửi ngân hàng lãi suất danh nghĩa $i = 8\\%$, tỷ lệ lạm phát $\\pi = 3\\% \\implies$ Lãi suất thực tế nhận được: $r \\approx i - \\pi = 8\\% - 3\\% = \\mathbf{5\\%}$.",
-    "examTrap": "So sánh $CPI$ và $\\text{GDP Deflator}$: $CPI$ dùng giỏ hàng cố định ($Q_0$) và tính cả hàng nhập khẩu tiêu dùng. $\\text{GDP Deflator}$ chỉ tính hàng sản xuất TRONG NƯỚC ($Q_t$) và không tính hàng nhập khẩu.",
-    "notes": "Hiệu ứng Fisher: Khi lạm phát kỳ vọng $\\pi^e$ tăng 1%, lãi suất danh nghĩa $i$ sẽ tăng đúng 1% để duy trì lãi suất thực $r$ không đổi.",
+    "example": "Gửi tiền tiết kiệm với lãi suất danh nghĩa $i = 8\\%/năm$, tỷ lệ lạm phát kỳ vọng là $\\pi = 3\\%/năm$: lãi suất thực tế người gửi nhận được xấp xỉ $r = 8\\% - 3\\% = 5\\%/năm$.",
+    "examTrap": "Phân biệt giữa chỉ số $CPI$ và chỉ số điều chỉnh $GDP$: $CPI$ sử dụng quyền số giỏ hàng cố định của năm gốc ($Q_0$) và bao gồm cả hàng tiêu dùng nhập khẩu; chỉ số điều chỉnh $GDP$ sử dụng sản lượng thay đổi của năm hiện hành ($Q_t$) và chỉ đo lường hàng hóa sản xuất nội địa, không tính hàng nhập khẩu.",
+    "notes": "Hiệu ứng Fisher (*Fisher effect*): Trong dài hạn, khi tỷ lệ lạm phát kỳ vọng tăng 1%, ngân hàng thương mại và thị trường sẽ điều chỉnh tăng lãi suất danh nghĩa thêm đúng 1% để giữ cho lãi suất thực tế không đổi.",
     "caseStudy": {
-      "entity": "Cục Dự Trữ Liên Bang Mỹ (Fed) & Cú Sốc Lãi Suất Volcker Shock (1979 - 1982)",
-      "badge": "Chiến Công Của Paul Volcker",
-      "title": "Chấp nhận suy thoái đau đớn để bẻ gãy lạm phát 14%",
-      "context": "Sau 2 cuộc khủng hoảng dầu mỏ thập niên 1970, lạm phát Mỹ leo thang lên mức 14.8%/năm. Chủ tịch Fed Paul Volcker đưa ra quyết định táo bạo nhất lịch sử ngân hàng trung ương: nâng lãi suất điều hành lên mức kỷ lục 20%.",
-      "analysis": "Theo phương trình Fisher: $r \\approx i - \\pi$. Với mức lãi suất danh nghĩa $i = 20\\%$, lãi suất thực tế tăng vọt lên mức dương cực lớn ($r > 6\\%$). Chi phí vốn vay mua nhà, mua xe đắt đỏ bóp nghẹt tổng cầu, khiến nền kinh tế Mỹ rơi vào suy thoái với tỷ lệ thất nghiệp lên 10.8%. Nhưng cái giá đắt đó đã thành công bẻ gãy kỳ vọng lạm phát, kéo lạm phát CPI về dưới 3% và tạo tiền đề cho 2 thập kỷ tăng trưởng thịnh vượng sau đó.",
-      "lesson": "Muốn dập tắt lạm phát kỳ vọng cao, lãi suất danh nghĩa $i$ bắt buộc phải tăng nhanh hơn tỷ lệ lạm phát $\\pi$ để đưa lãi suất thực tế $r$ về vùng dương kiềm chế tổng cầu."
+      "entity": "Cục Dự trữ Liên bang Hoa Kỳ (Fed) dưới thời Chủ tịch Paul Volcker (Giai đoạn 1979 - 1982)",
+      "badge": "Chiến dịch hạ gục lạm phát lịch sử",
+      "title": "Nâng lãi suất điều hành lên 20% để bẻ gãy tâm lý kỳ vọng lạm phát",
+      "context": "Cuối thập niên 1970, nước Mỹ rơi vào tình trạng đình lạm (*stagflation*) tồi tệ, tỷ lệ lạm phát theo chỉ số CPI chạm ngưỡng 14,8% mỗi năm.",
+      "analysis": "Theo phương trình Fisher ($i \\approx r + \\pi$), nếu kỳ vọng lạm phát duy trì ở mức cao, lãi suất danh nghĩa sẽ tiếp tục bị đẩy lên. Chủ tịch Paul Volcker quyết định thực thi chính sách tiền tệ thắt chặt chưa từng có tiền lệ, nâng lãi suất quỹ liên bang lên mức kỷ lục 20%. Mặc dù chính sách này đẩy kinh tế Mỹ vào đợt suy thoái ngắn hạn năm 1982, nó đã bẻ gãy hoàn toàn tâm lý kỳ vọng lạm phát, kéo lạm phát CPI về dưới 4% và tạo nền tảng cho chu kỳ tăng trưởng ổn định suốt hai thập kỷ sau đó.",
+      "lesson": "Kiểm soát lạm phát thực chất là cuộc chiến kiểm soát kỳ vọng lạm phát (*anchoring inflation expectations*); khi công chúng tin tưởng vào sự kiên quyết của ngân hàng trung ương, chi phí xã hội để đưa lạm phát về mục tiêu sẽ giảm đi đáng kể."
     }
   },
   {
     "id": "macro-4",
     "category": "macro",
-    "chapter": "Chương 8: Chi phí sinh hoạt, Lạm phát & Thất nghiệp",
-    "title": "Tỷ lệ thất nghiệp & Lực lượng lao động",
-    "formula": "LF = E + U, \\quad u = \\frac{U}{LF} \\times 100\\%, \\quad \\text{Tỷ lệ tham gia LLLĐ} = \\frac{LF}{\\text{Dân số trưởng thành}} \\times 100\\%",
-    "description": "Thất nghiệp là người trong độ tuổi lao động, có khả năng lao động, đang tích cực tìm việc nhưng chưa có việc làm.",
+    "chapter": "Chương 9: Lạm phát, chỉ số giá tiêu dùng và thị trường lao động",
+    "title": "Tỷ lệ thất nghiệp (*unemployment rate - $u$*) và cấu trúc lực lượng lao động (*labor force - LF*)",
+    "formula": "LF = E + U, \\quad u = \\frac{U}{LF} \\times 100\\%, \\quad \\text{Tỷ lệ tham gia LF} = \\frac{LF}{\\text{Dân số trưởng thành}} \\times 100\\%",
+    "description": "Thước đo mức độ sử dụng nguồn nhân lực của nền kinh tế, phản ánh tỷ lệ những người trong độ tuổi lao động có khả năng và đang tích cực tìm việc nhưng chưa có việc làm.",
     "variables": [
       {
         "symbol": "LF",
-        "meaning": "Tổng lực lượng lao động (dân số hoạt động kinh tế LF = E + U)",
+        "meaning": "Lực lượng lao động (*labor force*)",
         "unit": "Số người (triệu người)"
       },
       {
         "symbol": "E",
-        "meaning": "Số lượng người đang có việc làm hợp pháp",
+        "meaning": "Số người đang có việc làm (*employed*)",
         "unit": "Số người (triệu người)"
       },
       {
         "symbol": "U",
-        "meaning": "Số lượng người trong độ tuổi đang thất nghiệp và tích cực tìm việc",
+        "meaning": "Số người thất nghiệp đang tích cực tìm việc (*unemployed*)",
         "unit": "Số người (triệu người)"
       },
       {
         "symbol": "u",
-        "meaning": "Tỷ lệ thất nghiệp thực tế của nền kinh tế (u = U / LF × 100%)",
+        "meaning": "Tỷ lệ thất nghiệp thực tế (*unemployment rate*)",
         "unit": "Tỷ lệ phần trăm (% lực lượng lao động)"
       },
       {
         "symbol": "u_n",
-        "meaning": "Tỷ lệ thất nghiệp tự nhiên (gồm cọ xát và cơ cấu)",
-        "unit": "Tỷ lệ phần trăm (% lực lượng lao động)"
+        "meaning": "Tỷ lệ thất nghiệp tự nhiên (*natural rate of unemployment*)",
+        "unit": "Tỷ lệ phần trăm (bao gồm thất nghiệp cọ xát và cơ cấu)"
       }
     ],
-    "example": "Dân số trưởng thành = 50 triệu người. Số người có việc $E = 38$ triệu. Thất nghiệp $U = 2$ triệu $\\implies LF = E + U = \\mathbf{40} \\text{ triệu}$. Tỷ lệ thất nghiệp: $u = \\frac{2}{40} \\times 100\\% = \\mathbf{5\\%}$.",
-    "examTrap": "Người nội trợ, sinh viên đi học toàn thời gian, người nản chí không còn tìm việc (Discouraged workers) KHÔNG thuộc lực lượng lao động (không tính vào U, cũng không tính vào LF)!",
-    "notes": "Thất nghiệp tự nhiên: $u_n = u_{\\text{cọ xát}} + u_{\\text{cơ cấu}}$. Thất nghiệp chu kỳ xuất hiện khi kinh tế suy thoái ($u > u_n$).",
+    "example": "Dân số trưởng thành là 50 triệu người; số người có việc làm $E = 38$ triệu người; số người thất nghiệp $U = 2$ triệu người: lực lượng lao động đạt $LF = 38 + 2 = 40$ triệu người. Tỷ lệ thất nghiệp là $u = \\frac{2}{40} \\times 100\\% = 5\\%$. Tỷ lệ tham gia lực lượng lao động là $\\frac{40}{50} \\times 100\\% = 80\\%$.",
+    "examTrap": "Người trong độ tuổi lao động nhưng không tích cực tìm kiếm việc làm (học sinh, sinh viên, người nội trợ, người nản chí từ bỏ tìm việc) được xếp vào nhóm ngoài lực lượng lao động (*not in labor force*), tuyệt đối không tính vào mẫu số hay tử số của tỷ lệ thất nghiệp.",
+    "notes": "Định luật Okun (*Okun's law*): Khi tỷ lệ thất nghiệp thực tế tăng thêm 1% so với tỷ lệ thất nghiệp tự nhiên ($u - u_n = 1\\%$), sản lượng $GDP$ thực tế của nền kinh tế sẽ sụt giảm khoảng 2% so với mức sản lượng tiềm năng.",
     "caseStudy": {
-      "entity": "GS. David Card (Đoạt Giải Nobel Kinh Tế 2021) & Alan Krueger (1994)",
-      "badge": "Công Trình Đoạt Giải Nobel Kinh Tế",
-      "title": "Nghiên cứu fast-food New Jersey lật ngược giáo điều về lương tối thiểu",
-      "context": "Lý thuyết kinh tế cổ điển luôn khẳng định: Tăng mức lương tối thiểu sẽ khiến các doanh nghiệp sa thải công nhân, làm tăng tỷ lệ thất nghiệp ($u \\uparrow$). Năm 1992, bang New Jersey tăng lương tối thiểu từ $4.25 lên $5.05/giờ, trong khi bang láng giềng Pennsylvania giữ nguyên.",
-      "analysis": "Card & Krueger đã khảo sát hơn 400 nhà hàng thức ăn nhanh (Burger King, KFC, Wendy's) tại hai bang. Kết quả thực nghiệm gây chấn động toàn bộ giới học thuật kinh tế: việc tăng lương tối thiểu tại New Jersey KHÔNG hề làm giảm việc làm, thậm chí còn giúp doanh nghiệp giữ chân nhân viên, giảm chi phí tuyển dụng và tăng năng suất lao động. Khám phá thực nghiệm mang tính đột phá này đã giúp David Card đoạt giải Nobel Kinh tế năm 2021.",
-      "lesson": "Thị trường lao động thực tế có tính độc quyền mua (Monopsony). Tăng lương tối thiểu hợp lý trong thị trường độc quyền mua có thể tăng cả tiền lương lẫn số lượng việc làm mà không gây thất nghiệp!"
+      "entity": "Công trình nghiên cứu đoạt giải Nobel Kinh tế năm 2021 của Giáo sư David Card",
+      "badge": "Đột phá phương pháp thực nghiệm",
+      "title": "Nghiên cứu về mức lương tối thiểu tại New Jersey và Pennsylvania",
+      "context": "Lý thuyết tân cổ điển truyền thống cho rằng nếu chính phủ tăng mức lương tối thiểu, chi phí của doanh nghiệp tăng lên sẽ dẫn tới việc sa thải bớt nhân công và làm gia tăng tỷ lệ thất nghiệp.",
+      "analysis": "Giáo sư David Card và cộng sự Alan Krueger tiến hành thí nghiệm tự nhiên so sánh các cửa hàng thức ăn nhanh tại bang New Jersey (nơi nâng lương tối thiểu từ 4.25 USD lên 5.05 USD mỗi giờ) với bang Pennsylvania lân cận (nơi giữ nguyên mức lương). Kết quả thực nghiệm chứng minh rằng việc tăng lương tối thiểu không hề làm gia tăng tỷ lệ thất nghiệp, thậm chí còn giúp cải thiện tỷ lệ gắn kết và năng suất lao động của công nhân.",
+      "lesson": "Thị trường lao động thực tế tồn tại cấu trúc độc quyền mua (*monopsony*); khi đó chính sách lương tối thiểu hợp lý có thể nâng cao thu nhập cho người lao động mà không gây tổn hại đến tổng việc làm của nền kinh tế."
     }
   },
   {
     "id": "macro-5",
     "category": "macro",
-    "chapter": "Chương 9: Tiền tệ, Hệ thống ngân hàng & Số nhân tiền",
-    "title": "Cung tiền ($M^S$), Cơ sở tiền ($MB$) & Số nhân tiền ($m_M$)",
-    "formula": "MS = m_M \\times MB, \\quad m_M = \\frac{cr + 1}{cr + rr}",
-    "description": "Ngân hàng thương mại tạo ra tiền thông qua hệ thống dự trữ một phần.",
+    "chapter": "Chương 10: Hệ thống tiền tệ và chính sách tiền tệ quốc gia",
+    "title": "Cung tiền (*money supply - $M^S$*), cơ sở tiền tệ (*monetary base - $MB$*) và số nhân tiền tệ (*money multiplier - $m_M$*)",
+    "formula": "m_M = \\frac{cr + 1}{cr + rr}, \\quad M^S = m_M \\times B = m_M \\times MB",
+    "description": "Quá trình sáng tạo tiền của hệ thống ngân hàng thương mại thông qua cơ chế nhận tiền gửi và cho vay theo tỷ lệ dự trữ bắt buộc.",
     "variables": [
       {
         "symbol": "M^S",
-        "meaning": "Tổng khối lượng tiền tệ cung ứng trong nền kinh tế",
-        "unit": "Đơn vị tiền tệ (tỷ VND hoặc tỷ USD)"
+        "meaning": "Tổng khối tiền tệ cung ứng trong nền kinh tế (*M1, M2*)",
+        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       },
       {
-        "symbol": "B",
-        "meaning": "Cơ số tiền tệ (tiền mạnh do NHTW trực tiếp phát hành)",
-        "unit": "Đơn vị tiền tệ (tỷ VND hoặc tỷ USD)"
+        "symbol": "MB, B",
+        "meaning": "Cơ sở tiền tệ hoặc tiền mạnh do NHTW phát hành (*monetary base / high-powered money*)",
+        "unit": "Đơn vị tiền tệ (tiền mặt lưu thông ngoài ngân hàng + dự trữ tại NHTW)"
       },
       {
         "symbol": "m_M",
-        "meaning": "Số nhân tiền tệ của hệ thống ngân hàng thương mại",
-        "unit": "Số lần (vô thứ nguyên, không đơn vị tiền tệ)"
+        "meaning": "Số nhân tiền tệ (*money multiplier*)",
+        "unit": "Số lần khuếch đại (vô thứ nguyên, luôn lớn hơn 1)"
       },
       {
         "symbol": "cr",
-        "meaning": "Tỷ lệ nắm giữ tiền mặt so với tiền gửi (C / D)",
-        "unit": "Tỷ số số thập phân hoặc %"
+        "meaning": "Tỷ lệ nắm giữ tiền mặt so với tiền gửi thanh toán (*currency-deposit ratio: $cr = C/D$*)",
+        "unit": "Tỷ số số thập phân (vô thứ nguyên)"
       },
       {
         "symbol": "rr",
-        "meaning": "Tỷ lệ dự trữ thực tế của ngân hàng thương mại (R / D)",
-        "unit": "Tỷ số số thập phân hoặc %"
+        "meaning": "Tỷ lệ dự trữ thực tế của các ngân hàng thương mại (*reserve-deposit ratio: $rr = R/D$*)",
+        "unit": "Tỷ số số thập phân (bao gồm dự trữ bắt buộc và dự trữ vượt mức)"
       }
     ],
-    "example": "Cho tỷ lệ tiền mặt $cr = 0.2$, tỷ lệ dự trữ $rr = 0.1$. Số nhân tiền: $m_M = \\frac{0.2 + 1}{0.2 + 0.1} = \\frac{1.2}{0.3} = \\mathbf{4}$. Nếu NHTW mua 100 tỷ trái phiếu ($B$ tăng 100) $\\implies$ Cung tiền tăng: $\\Delta M^S = 4 \\times 100 = \\mathbf{400} \\text{ tỷ VND}$.",
-    "examTrap": "3 công cụ của NHTW để TĂNG cung tiền: 1. MUA trái phiếu chính phủ trên thị trường mở (OMO); 2. GIẢM tỷ lệ dự trữ bắt buộc; 3. GIẢM lãi suất tái chiết khấu.",
-    "notes": "Khi người dân nắm giữ nhiều tiền mặt hơn ($cr$ tăng), số nhân tiền $m_M$ GIẢM, làm cung tiền thu hẹp.",
+    "example": "Tỷ lệ nắm giữ tiền mặt $cr = 0.2$, tỷ lệ dự trữ $rr = 0.1$: số nhân tiền tệ là $m_M = \\frac{0.2 + 1}{0.2 + 0.1} = \\frac{1.2}{0.3} = 4$. Nếu ngân hàng trung ương mua 100 tỷ đồng trái phiếu chính phủ thông qua nghiệp vụ thị trường mở, cung tiền sẽ mở rộng thêm $\\Delta M^S = 4 \\times 100 = 400$ tỷ đồng.",
+    "examTrap": "Khi công chúng lo ngại rủi ro và rút tiền ồ ạt để giữ tiền mặt (tỷ lệ $cr$ tăng mạnh), số nhân tiền tệ $m_M$ sẽ suy giảm nghiêm trọng, khiến tổng cung tiền bị thu hẹp đột ngột ngay cả khi ngân hàng trung ương không hề thay đổi cơ số tiền $MB$.",
+    "notes": "Ba công cụ điều hành chính sách tiền tệ truyền thống của ngân hàng trung ương gồm: Nghiệp vụ thị trường mở (*open market operations*), tỷ lệ dự trữ bắt buộc (*reserve requirements*), và lãi suất tái cấp vốn / chiết khấu (*discount rate*).",
     "caseStudy": {
-      "entity": "Vụ Sụp Đổ Ngân Hàng Silicon Valley Bank - SVB (Tháng 3/2023)",
-      "badge": "Cuộc Tháo Chạy Tiền Gửi Kỷ Nguyên Số",
-      "title": "Bốc hơi 42 tỷ USD tiền gửi trong 10 tiếng kéo sập ngân hàng lớn thứ 16 nước Mỹ",
-      "context": "SVB là ngân hàng huyết mạch của các startup công nghệ Thung lũng Silicon. Khi các quỹ đầu tư mạo hiểm phát hiện SVB bị lỗ danh mục trái phiếu do Fed tăng lãi suất, họ gửi tin nhắn cảnh báo nhau trên Twitter/WhatsApp rút tiền ồ ạt.",
-      "analysis": "Hệ thống ngân hàng hoạt động theo cơ chế Dự trữ một phần ($rr$). SVB nhận tiền gửi nhưng đem đầu tư trái phiếu dài hạn, tiền mặt dự trữ chỉ chiếm một phần nhỏ. Trong ngày 9/3/2023, khách hàng rút kỷ lục 42 tỷ USD chỉ qua vài cú click chuột trên app điện thoại. Tỷ lệ rút tiền mặt $cr$ tăng phi mã làm số nhân tiền $m_M$ sụp đổ. SVB mất thanh khoản hoàn toàn và bị cơ quan quản lý đóng cửa chỉ sau 48 giờ, tạo nên cơn địa chấn ngân hàng toàn cầu.",
-      "lesson": "Ngân hàng thương mại bản chất là cỗ máy tạo thanh khoản dễ bị tổn thương trước tâm lý bầy đàn rút tiền hàng loạt (Bank run)."
+      "entity": "Cuộc Đại Khủng Hoảng Kinh Tế Hoa Kỳ (Giai đoạn 1929 - 1933) theo nghiên cứu của Milton Friedman",
+      "badge": "Công trình giải Nobel Kinh tế của Milton Friedman",
+      "title": "Sự sụp đổ của hệ thống ngân hàng và cung tiền sụt giảm 33%",
+      "context": "Trong cuốn sách kinh điển 'Lịch sử Tiền tệ Hoa Kỳ 1867 - 1960', Milton Friedman và Anna Schwartz chỉ ra nguyên nhân biến một đợt suy thoái thông thường thành thảm họa Đại Khủng hoảng.",
+      "analysis": "Khi làn sóng rút tiền hàng loạt (*bank runs*) bùng phát, người dân hoảng loạn rút tiền gửi để cất giữ tiền mặt ($cr$ tăng vọt), trong khi các ngân hàng thương mại nâng tỷ lệ dự trữ thanh khoản đề phòng đổ vỡ ($rr$ tăng cao). Hậu quả là số nhân tiền tệ $m_M$ giảm một nửa. Mặc dù cơ sở tiền tệ $MB$ của Fed tăng nhẹ, tổng cung tiền $M^S$ của toàn nước Mỹ vẫn sụt giảm kinh hoàng tới 33%, đẩy hàng chục nghìn doanh nghiệp vào cảnh vỡ nợ vì thiếu thanh khoản.",
+      "lesson": "Ngân hàng trung ương cần đóng vai trò là người cho vay cứu cánh cuối cùng (*lender of last resort*) để bơm thanh khoản khẩn cấp, ngăn chặn sự đứt gãy của hệ số nhân tiền tệ."
     }
   },
   {
     "id": "macro-6",
     "category": "macro",
-    "chapter": "Chương 10 & 11: Tổng cung - Tổng cầu & Chính sách tài khóa",
-    "title": "Số nhân chi tiêu Keynes & Bù đắp khoảng trống sản lượng",
-    "formula": "k = \\frac{1}{1 - MPC(1 - t)}, \\quad \\Delta Y = k \\times \\Delta G, \\quad k_T = \\frac{-MPC}{1 - MPC(1 - t)}",
-    "description": "Một sự thay đổi trong chi tiêu tự định của Chính phủ (G) hay Đầu tư (I) sẽ khuếch đại sản lượng quốc gia thông qua số nhân chi tiêu.",
+    "chapter": "Chương 11: Mô hình tổng cầu, tổng cung và chính sách tài khóa",
+    "title": "Mô hình số nhân chi tiêu Keynes (*Keynesian expenditure multiplier*) và chính sách tài khóa (*fiscal policy*)",
+    "formula": "k = \\frac{1}{1 - MPC(1 - t)}, \\quad k_T = \\frac{-MPC}{1 - MPC(1 - t)}, \\quad \\Delta Y = k \\times \\Delta G",
+    "description": "Hiệu ứng khuếch đại của tổng sản lượng quốc gia khi xuất hiện một khoản thay đổi tự định ban đầu trong chi tiêu tiêu dùng, đầu tư hoặc chi tiêu mua sắm của chính phủ.",
     "variables": [
       {
-        "symbol": "k",
-        "meaning": "Số nhân chi tiêu tự định trong mô hình Keynes",
-        "unit": "Số lần (vô thứ nguyên)"
+        "symbol": "k, m",
+        "meaning": "Số nhân chi tiêu của chính phủ (*government expenditure multiplier*)",
+        "unit": "Số lần (vô thứ nguyên, luôn lớn hơn 1)"
+      },
+      {
+        "symbol": "k_T",
+        "meaning": "Số nhân thuế (*tax multiplier*)",
+        "unit": "Số lần (luôn mang giá trị âm và nhỏ hơn số nhân chi tiêu: $|k_T| < k_G$)"
       },
       {
         "symbol": "MPC",
-        "meaning": "Xu hướng tiêu dùng cận biên (0 < MPC < 1)",
-        "unit": "Tỷ số số thập phân (không đơn vị)"
+        "meaning": "Xu hướng tiêu dùng cận biên (*marginal propensity to consume: $0 < MPC < 1$*)",
+        "unit": "Tỷ số số thập phân ($MPC = \\frac{\\Delta C}{\\Delta Y_d}$)"
       },
       {
         "symbol": "t",
-        "meaning": "Thuế suất thu nhập biên của chính phủ",
-        "unit": "Tỷ số số thập phân hoặc %"
-      },
-      {
-        "symbol": "Y^*, Y_p",
-        "meaning": "Sản lượng cân bằng thực tế và Sản lượng tiềm năng",
-        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
-      },
-      {
-        "symbol": "\\Delta G",
-        "meaning": "Quy mô gói kích cầu tài khóa cần điều chỉnh",
-        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
+        "meaning": "Thuế suất biên theo thu nhập (*marginal tax rate*)",
+        "unit": "Tỷ số số thập phân hoặc tỷ lệ phần trăm"
       }
     ],
-    "example": "Cho $MPC = 0.8 \\implies$ Số nhân chi tiêu: $k = \\frac{1}{1 - 0.8} = \\mathbf{5}$. Nếu Chính phủ tăng chi tiêu đầu tư công $\\Delta G = 20$ tỷ $\\implies$ Sản lượng tăng: $\\Delta Y = k \\times \\Delta G = 5 \\times 20 = \\mathbf{100} \\text{ tỷ VND}$.",
-    "examTrap": "Số nhân thuế $k_T = \\frac{-MPC}{1 - MPC}$ luôn có độ lớn NHỎ HƠN số nhân chi tiêu $k_G = \\frac{1}{1 - MPC}$ đúng 1 đơn vị! Tăng $G$ và tăng $T$ cùng một lượng sẽ làm $Y$ tăng đúng bằng lượng tăng của $G$ (Số nhân ngân sách cân bằng $k = 1$).",
-    "notes": "Khi có thuế thu nhập biên ($t$): Số nhân chi tiêu giảm xuống thành $k = \\frac{1}{1 - MPC(1 - t)}$.",
+    "example": "Giả sử $MPC = 0.8$, số nhân chi tiêu trong nền kinh tế giản đơn đạt $k = \\frac{1}{1 - 0.8} = 5$. Khi chính phủ quyết định giải ngân thêm 20 tỷ đồng cho các dự án hạ tầng công cộng, tổng sản lượng quốc gia sẽ tăng thêm $\\Delta Y = 5 \\times 20 = 100$ tỷ đồng.",
+    "examTrap": "Độ lớn của số nhân thuế luôn nhỏ hơn số nhân chi tiêu đúng 1 đơn vị ($|k_T| = k_G - 1$). Do đó, nếu chính phủ vừa tăng chi tiêu chính phủ $G$ thêm 100 tỷ đồng, vừa tăng thu thuế $T$ thêm 100 tỷ đồng, sản lượng quốc gia vẫn tăng đúng 100 tỷ đồng (đây là định lý số nhân ngân sách cân bằng: $k_{\\text{cân bằng}} = 1$).",
+    "notes": "Trong nền kinh tế mở có khu vực chính phủ và xuất nhập khẩu, mẫu số của số nhân chi tiêu sẽ mở rộng thêm thuế suất biên và xu hướng nhập khẩu cận biên ($MPI$), khiến hệ số nhân chi tiêu thực tế suy giảm so với mô hình giản đơn.",
     "caseStudy": {
-      "entity": "Gói Kích Cầu Khủng 787 Tỷ USD Của Tổng Thống Barack Obama (ARRA 2009)",
-      "badge": "Ứng Dụng Mô Hình Keynesian Lớn Nhất",
-      "title": "Đổ 787 tỷ USD vào nền kinh tế để ngăn chặn một cuộc Đại suy thoái thứ hai",
-      "context": "Sau cú sụp đổ của ngân hàng Lehman Brothers năm 2008, kinh tế Mỹ rơi vào suy thoái trầm trọng, hàng triệu người mất việc. Tháng 2/2009, Tổng thống Barack Obama ký ban hành Đạo luật Tái đầu tư và Phục hồi Mỹ (ARRA) trị giá 787 tỷ USD.",
-      "analysis": "Chính quyền Obama dựa trực tiếp vào mô hình số nhân chi tiêu Keynes: khi khu vực tư nhân đóng băng tiêu dùng và đầu tư ($C \\downarrow, I \\downarrow$), chỉ có Chính phủ tăng chi tiêu công khổng lồ ($G \\uparrow$) cho hạ tầng, cầu đường, năng lượng sạch mới tạo ra hiệu ứng số nhân $\\Delta Y = k \\times \\Delta G$. Với ước tính $k \\approx 1.5$, gói kích cầu đã tạo ra hoặc cứu vãn khoảng 2.5 triệu việc làm, kéo nền kinh tế Mỹ phục hồi nhanh hơn nhiều so với khu vực Châu Âu.",
-      "lesson": "Trong suy thoái sâu, chi tiêu tự định của chính phủ là lực đẩy duy nhất khởi động lại vòng xoay tiêu dùng của nền kinh tế."
+      "entity": "Đạo luật Phục hồi và Tái đầu tư Hoa Kỳ (ARRA 2009) của Tổng thống Barack Obama",
+      "badge": "Kích cầu tài khóa quy mô lớn",
+      "title": "Gói cứu trợ 831 tỷ USD giải cứu nền kinh tế khỏi cuộc khủng hoảng tài chính toàn cầu",
+      "context": "Sau cuộc khủng hoảng thế chấp dưới chuẩn năm 2008, chi tiêu tư nhân và niềm tin doanh nghiệp suy sụp, đẩy nước Mỹ vào khoảng trống suy thoái trầm trọng.",
+      "analysis": "Các cố vấn kinh tế Nhà Trắng áp dụng mô hình số nhân Keynes để thiết kế gói kích thích kinh tế 831 tỷ USD, gồm đầu tư cơ sở hạ tầng, giảm thuế cho hộ gia đình và trợ cấp người thất nghiệp. Với ước tính số nhân chi tiêu trung bình khoảng 1.5, gói chính sách đã bù đắp khoản thâm hụt sản lượng ước tính hơn 1.200 tỷ USD, kích thích tiêu dùng tư nhân phục hồi và ngăn chặn nguy cơ rơi vào chu kỳ giảm phát xoắn ốc.",
+      "lesson": "Khi khu vực kinh tế tư nhân suy yếu và thắt chặt hầu bao, chính phủ cần đóng vai trò là người chi tiêu cứu trợ để kích hoạt chuỗi số nhân chi tiêu lan tỏa cho toàn bộ nền kinh tế."
     }
   },
   {
     "id": "macro-7",
     "category": "macro",
-    "chapter": "Chương 11: Mô hình IS - LM & Phối hợp chính sách",
-    "title": "Mô hình cân bằng đồng thời IS - LM & Hiện tượng lấn át đầu tư",
-    "formula": "IS: Y = k \\cdot A_0 - k \\cdot d \\cdot r, \\quad LM: r = \\frac{k_{tiền}}{h}Y - \\frac{1}{h}\\frac{M^S}{P}",
-    "description": "Xác định điểm cân bằng đồng thời giữa thị trường hàng hóa (IS) và thị trường tiền tệ (LM).",
+    "chapter": "Chương 11: Mô hình tổng cầu, tổng cung và chính sách tài khóa",
+    "title": "Mô hình cân bằng đồng thời thị trường hàng hóa và tiền tệ (*IS - LM model*) cùng hiệu ứng lấn át (*crowding-out effect*)",
+    "formula": "\\begin{cases} IS: Y = C(Y-T) + I(r) + G + NX \\\\ LM: \\frac{M^S}{P} = L(Y, r) \\end{cases} \\implies (Y^*, r^*)",
+    "description": "Xác định đồng thời mức lãi suất cân bằng và sản lượng cân bằng của nền kinh tế tại giao điểm giữa thị trường hàng hóa (đường IS) và thị trường tiền tệ (đường LM).",
     "variables": [
       {
         "symbol": "r^*",
-        "meaning": "Mức lãi suất cân bằng đồng thời trên cả thị trường hàng hóa và tiền tệ",
+        "meaning": "Mức lãi suất thực tế cân bằng đồng thời hai thị trường (*equilibrium interest rate*)",
         "unit": "Tỷ lệ phần trăm (% / năm)"
       },
       {
         "symbol": "Y^*",
-        "meaning": "Mức sản lượng cân bằng đồng thời IS - LM",
+        "meaning": "Mức tổng sản lượng cân bằng kinh tế vĩ mô (*equilibrium income / output*)",
         "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       },
       {
-        "symbol": "M/P",
-        "meaning": "Khối lượng cung tiền thực tế",
-        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
+        "symbol": "I(r)",
+        "meaning": "Hàm cầu đầu tư tư nhân phụ thuộc nghịch biến vào lãi suất",
+        "unit": "Đơn vị tiền tệ (lãi suất tăng thì đầu tư giảm)"
       },
       {
-        "symbol": "\\Delta I",
-        "meaning": "Mức đầu tư tư nhân bị lấn át do lãi suất tăng cao",
-        "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
+        "symbol": "L(Y, r)",
+        "meaning": "Hàm cầu tiền thực tế (đồng biến với thu nhập, nghịch biến với lãi suất)",
+        "unit": "Đơn vị tiền tệ thực tế"
       }
     ],
-    "example": "Cho $IS: Y = 2.700 - 80r$ và $LM: Y = 1.000 + 80r$. Cân bằng đồng thời: $2.700 - 80r = 1.000 + 80r \\iff 160r = 1.700 \\implies \\mathbf{r^* = 10.625\\%}, \\mathbf{Y^* = 1.850}$.",
-    "examTrap": "Hiện tượng lấn át đầu tư (Crowding-out): Khi chính phủ tăng chi tiêu $G$, đường $IS$ dịch phải làm tăng $Y$ nhưng đồng thời đẩy lãi suất $r$ tăng lên, khiến đầu tư tư nhân $I$ bị co hẹp một phần.",
-    "notes": "Chính sách tiền tệ thắt chặt (giảm cung tiền) làm đường $LM$ dịch trái $\\implies$ Lãi suất $r \\uparrow$ và Sản lượng $Y \\downarrow$.",
+    "example": "Cho phương trình thị trường hàng hóa $IS: Y = 2.700 - 80r$ và thị trường tiền tệ $LM: Y = 1.000 + 80r$. Cân bằng đồng thời: $2.700 - 80r = 1.000 + 80r \\iff 160r = 1.700 \\implies r^* = 10.625\\%, Y^* = 1.850$ tỷ đồng.",
+    "examTrap": "Hiện tượng lấn át đầu tư (*crowding-out*): Khi chính phủ mở rộng chi tiêu tài khóa ($G$ tăng), đường $IS$ dịch chuyển sang phải làm gia tăng sản lượng $Y$, nhưng nhu cầu giao dịch tiền tệ tăng lên sẽ đẩy mức lãi suất $r$ tăng theo. Lãi suất tăng cao làm giảm bớt chi tiêu đầu tư tư nhân ($I$), khiến sản lượng thực tế tăng ít hơn so với dự kiến ban đầu của số nhân Keynes.",
+    "notes": "Chính sách tiền tệ mở rộng (tăng cung tiền $M^S$) làm đường $LM$ dịch chuyển sang phải, dẫn tới mức lãi suất thị trường giảm và kích thích sản lượng tăng, qua đó triệt tiêu hiệu ứng lấn át của chính sách tài khóa.",
     "caseStudy": {
-      "entity": "Chính Sách Kinh Tế 'Reaganomics' Của Tổng Thống Ronald Reagan (1981 - 1986)",
-      "badge": "Thực Tiễn Lấn Át Lớn Nhất Thế Kỷ 20",
-      "title": "Cắt giảm thuế, tăng chi tiêu quân sự và hiện tượng lấn át đầu tư bộc phát",
-      "context": "Tổng thống Ronald Reagan thực hiện cắt giảm thuế thu nhập sâu rộng đồng thời tăng chi tiêu quốc phòng khổng lồ cho quân đội trong Chiến tranh Lạnh, khiến thâm hụt ngân sách chính phủ Mỹ phình to chưa từng có.",
-      "analysis": "Trong mô hình IS-LM: Chi tiêu $G$ tăng vọt làm đường $IS$ dịch chuyển mạnh sang phải. Lãi suất thị trường bị đẩy lên cao chót vót ($r^* \\uparrow$). Lãi suất đắt đỏ làm các doanh nghiệp tư nhân Mỹ cắt giảm đầu tư nhà xưởng máy móc ($I \\downarrow$ - lấn át đầu tư tư nhân). Đồng thời, lãi suất cao thu hút dòng vốn quốc tế đổ vào Mỹ mua trái phiếu, đẩy giá đồng USD lên cao kỷ lục, làm triệt tiêu khả năng xuất khẩu của Mỹ và gây thâm hụt cán cân thương mại kỷ lục (Hiện tượng Thâm hụt kép - Twin Deficits).",
-      "lesson": "Chính sách tài khóa mở rộng không đi kèm nới lỏng tiền tệ sẽ luôn kích thích lãi suất tăng, làm triệt tiêu một phần đầu tư tư nhân và bóp nghẹt xuất khẩu."
+      "entity": "Kế hoạch tái thiết kinh tế dưới thời Tổng thống Ronald Reagan (Thập niên 1980)",
+      "badge": "Minh chứng thực tiễn về hiện tượng lấn át đầu tư",
+      "title": "Chính sách tài khóa mở rộng kết hợp tiền tệ thắt chặt đẩy lãi suất lên đỉnh",
+      "context": "Đầu thập niên 1980, chính quyền Reagan thực hiện chính sách tăng mạnh chi tiêu quốc phòng và cắt giảm thuế thu nhập, trong khi Fed duy trì chính sách kiểm soát cung tiền nghiêm ngặt.",
+      "analysis": "Sự kết hợp này tương ứng với việc đường $IS$ dịch mạnh sang phải trong khi đường $LM$ dịch sang trái. Lãi suất thực tế tại Mỹ bị đẩy lên mức cao kỷ lục, lấn át mạnh mẽ nguồn vốn đầu tư của các doanh nghiệp nội địa. Đồng thời, lãi suất cao thu hút dòng vốn quốc tế chảy ồ ạt vào Mỹ, đẩy đồng USD tăng giá mạnh và làm thâm hụt cán cân thương mại trầm trọng.",
+      "lesson": "Chính sách tài khóa và chính sách tiền tệ có sự tương tác chặt chẽ thông qua kênh lãi suất; nếu thiếu sự phối hợp đồng bộ, chính sách mở rộng chi tiêu có thể phản tác dụng do hiệu ứng lấn át tư nhân."
     }
   },
   {
     "id": "macro-8",
     "category": "macro",
-    "chapter": "Chương 10: Tiền tệ & Lạm phát dài hạn",
-    "title": "Phương trình số lượng tiền tệ Fisher & Siêu lạm phát",
+    "chapter": "Chương 10: Hệ thống tiền tệ và chính sách tiền tệ quốc gia",
+    "title": "Phương trình số lượng tiền tệ Fisher (*quantity equation of money*) và hiện tượng siêu lạm phát (*hyperinflation*)",
     "formula": "M \\times V = P \\times Y \\implies \\%\\Delta M + \\%\\Delta V = \\%\\Delta P + \\%\\Delta Y",
-    "description": "Trong dài hạn, tốc độ lưu thông tiền tệ V và sản lượng thực tế Y là không đổi, do đó tốc độ tăng cung tiền quyết định trực tiếp tỷ lệ lạm phát.",
+    "description": "Biểu thị mối quan hệ cốt lõi giữa khối lượng cung tiền, tốc độ lưu thông của tiền tệ với mức giá chung và sản lượng thực tế của nền kinh tế.",
     "variables": [
       {
         "symbol": "M",
-        "meaning": "Khối lượng cung tiền danh nghĩa đang lưu hành",
+        "meaning": "Khối lượng tiền tệ danh nghĩa lưu thông (*nominal money supply*)",
         "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       },
       {
         "symbol": "V",
-        "meaning": "Tốc độ chu chuyển (vòng quay) trung bình của đồng tiền",
-        "unit": "Số vòng / năm (vô thứ nguyên)"
+        "meaning": "Tốc độ chu chuyển (vòng quay) của đồng tiền (*velocity of money*)",
+        "unit": "Số vòng quay trong một năm (vô thứ nguyên)"
       },
       {
         "symbol": "P",
-        "meaning": "Mức giá chung của toàn bộ nền kinh tế",
-        "unit": "Điểm chỉ số giá (Năm gốc = 100)"
+        "meaning": "Mức giá chung của nền kinh tế (*price level*)",
+        "unit": "Điểm chỉ số giá"
       },
       {
         "symbol": "Y",
-        "meaning": "Tổng sản lượng GDP thực tế",
-        "unit": "Đơn vị tiền tệ năm gốc (tỷ đồng, tỷ USD)"
+        "meaning": "Tổng sản lượng quốc gia thực tế (*real output / real GDP*)",
+        "unit": "Đơn vị sản phẩm hoặc giá trị thực tế"
       }
     ],
-    "example": "Nếu cung tiền $M$ tăng $10\\%$/năm, GDP thực tế $Y$ tăng $3\\%$/năm, vòng quay tiền $V$ không đổi $\\implies$ Tỷ lệ lạm phát: $\\pi = \\%\\Delta M - \\%\\Delta Y = 10\\% - 3\\% = \\mathbf{7\\%}$/năm.",
-    "examTrap": "Tính trung tính của tiền tệ: Trong dài hạn, tăng cung tiền CHỈ LÀM TĂNG MỨC GIÁ DANH NGHĨA ($P$), hoàn toàn KHÔNG làm thay đổi sản lượng GDP thực tế ($Y$) hay việc làm!",
-    "notes": "Siêu lạm phát xảy ra khi chính phủ thâm hụt ngân sách nặng nề và lạm dụng việc in tiền để tài trợ chi tiêu công.",
+    "example": "Nếu cung tiền $M$ tăng trưởng 10%/năm, sản lượng thực tế $Y$ tăng 3%/năm, tốc độ vòng quay tiền tệ $V$ ổn định không đổi: tỷ lệ lạm phát dài hạn sẽ là $\\pi = \\%\\Delta P = 10\\% - 3\\% = 7\\%/năm$.",
+    "examTrap": "Nguyên lý tính trung tính của tiền tệ (*monetary neutrality*): Các nhà kinh tế học cổ điển chỉ ra rằng trong dài hạn, việc gia tăng cung tiền tệ chỉ làm thay đổi các biến số danh nghĩa (như mức giá $P$, tiền lương danh nghĩa), hoàn toàn không có khả năng làm biến đổi các biến số thực tế (như sản lượng thực tế $Y$, việc làm).",
+    "notes": "Hiện tượng siêu lạm phát xuất hiện khi tỷ lệ lạm phát vượt quá 50% mỗi tháng. Nguyên nhân duy nhất của mọi cuộc siêu lạm phát trong lịch sử đều bắt nguồn từ việc chính phủ thâm hụt ngân sách trầm trọng và lạm dụng việc in tiền để trang trải nợ nần.",
     "caseStudy": {
-      "entity": "Chính Quyền Tổng Thống Robert Mugabe & Siêu Lạm Phát Zimbabwe (Năm 2008)",
-      "badge": "Tuyên Ngôn Của Milton Friedman",
-      "title": "In tờ tiền 100.000 tỷ Dollar và bánh mì có giá 10 tỷ",
-      "context": "Sau khi tịch thu các trang trại thương mại khiến sản lượng nông nghiệp sụp đổ, chính quyền Zimbabwe rơi vào thâm hụt ngân sách khổng lồ. Tổng thống Robert Mugabe ra lệnh cho Ngân hàng Trung ương in tiền vô tội vạ để trả lương quân đội và công chức.",
-      "analysis": "Áp dụng phương trình số lượng $M \\times V = P \\times Y$: Sản lượng thực tế $Y$ tụt dốc, trong khi cung tiền $M$ tăng hàng triệu phần trăm. Hậu quả là mức giá $P$ tăng theo cấp số nhân, tỷ lệ lạm phát chạm mốc không tưởng: **79.600.000.000% mỗi tháng** (giá cả tăng gấp đôi sau mỗi 24 giờ). Ngân hàng phát hành tờ tiền mệnh giá kỷ lục thế giới: 100.000.000.000.000 Dollar Zimbabwe ($10^{14}$). Người dân phải chở hàng xe rùa tiền đi mua một ổ bánh mì. Nền kinh tế sụp đổ hoàn toàn cho đến khi chính phủ buộc phải từ bỏ đồng nội tệ để dùng đồng USD.",
-      "lesson": "Chính phủ không thể làm cho một quốc gia giàu lên bằng cách bật máy in tiền. In tiền không đi kèm sản lượng thực tế chỉ tạo ra siêu lạm phát tàn phá nền kinh tế."
+      "entity": "Thảm họa siêu lạm phát tại Cộng hòa Weimar (Đức, 1923) và Zimbabwe (2008)",
+      "badge": "Bài học đắt giá về in tiền vô tội vạ",
+      "title": "Tờ tiền 100 nghìn tỷ dollar và sự sụp đổ hoàn toàn của hệ thống tiền tệ",
+      "context": "Năm 2008 tại Zimbabwe, chính phủ in tiền ồ ạt để bù đắp thâm hụt tài khóa, đẩy lạm phát lên tới 79,6 tỷ phần trăm mỗi tháng, giá cả hàng hóa tăng gấp đôi sau mỗi 24 giờ.",
+      "analysis": "Căn cứ theo phương trình số lượng $M \\times V = P \\times Y$: Khi người dân nhận ra đồng tiền mất giá theo từng giờ, tốc độ chu chuyển tiền tệ ($V$) tăng vọt vì không ai muốn giữ tiền mặt trong túi, mọi người vội vã đổi tiền lấy bất kỳ món hàng vật chất nào. Sản lượng thực tế ($Y$) suy sụp, trong khi cung tiền ($M$) tăng theo cấp số nhân, khiến mức giá ($P$) phát nổ. Hệ thống tiền tệ bị vô hiệu hóa hoàn toàn cho đến khi chính phủ buộc phải từ bỏ đồng nội tệ và chuyển sang sử dụng đồng USD.",
+      "lesson": "Đúng như khẳng định bất hủ của Milton Friedman: 'Lạm phát ở bất kỳ đâu và vào bất kỳ lúc nào cũng luôn là một hiện tượng tiền tệ'."
     }
   }
 ];
