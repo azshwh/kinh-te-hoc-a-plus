@@ -756,6 +756,89 @@
 
           <div id="macro-gdp-result" class="pt-2"></div>
         </div>
+
+        <!-- Solver 3: Mô hình số nhân Keynes & Bù đắp sản lượng -->
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 md:col-span-2">
+          <div class="flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+            <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400 flex items-center justify-center font-bold text-sm">
+              3
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 dark:text-slate-200">Mô Hình Số Nhân Chi Tiêu Keynes & Bù Đắp Khoảng Trống Sản Lượng</h3>
+              <p class="text-xs text-slate-400">Tiêu dùng $C = C_0 + MPC(1 - t)Y$, Chi tiêu tự định $A_0 = C_0 + I_0 + G_0 + NX_0$, Số nhân $k = 1 / [1 - MPC(1 - t)]$</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 text-sm">
+            <div>
+              <label class="block text-xs font-medium text-slate-500">C₀ (tự định):</label>
+              <input id="keynes-c0" type="number" step="10" value="100" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold text-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-500">MPC (cận biên):</label>
+              <input id="keynes-mpc" type="number" step="0.05" value="0.8" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold text-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-500">Thuế suất t:</label>
+              <input id="keynes-t" type="number" step="0.05" value="0" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold text-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-500">Đầu tư I₀:</label>
+              <input id="keynes-i0" type="number" step="10" value="50" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold text-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-500">Chi tiêu G₀:</label>
+              <input id="keynes-g0" type="number" step="10" value="50" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold text-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-500">Xuất ròng NX₀:</label>
+              <input id="keynes-nx0" type="number" step="5" value="0" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold text-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-500">Sản lượng Y_p (tiềm năng):</label>
+              <input id="keynes-yp" type="number" step="50" value="1200" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-semibold text-xs">
+            </div>
+          </div>
+
+          <button id="btn-calc-keynes" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold text-sm transition-colors shadow-sm">
+            Tính Sản Lượng Cân Bằng Y*, Số Nhân k & Chính Sách Tài Khóa ΔG
+          </button>
+
+          <div id="macro-keynes-result" class="pt-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB: SỔ TAY 20 BẪY ĐỀ THI A+ ================= -->
+    <section id="pane-traps" class="tab-pane hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+            <i data-lucide="alert-octagon" class="w-5 h-5 text-amber-500"></i>
+            Kho Vũ Khí Phá Bẫy Đề Thi A+ (20 Lethal Traps Buster)
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Tổng hợp 20 bẫy gài kinh điển khiến 80% sinh viên mất điểm A+. Từng bẫy đều có ví dụ đề thi thực tế, phân tích ngộ nhận và câu hỏi tương tác luyện tập ngay.
+          </p>
+        </div>
+
+        <!-- Trap Filters -->
+        <div class="flex items-center gap-2">
+          <button class="trap-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-indigo-600 text-white shadow-sm" data-filter="all">
+            Tất cả 20 bẫy
+          </button>
+          <button class="trap-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200" data-filter="micro">
+            Vi mô (9 bẫy)
+          </button>
+          <button class="trap-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200" data-filter="macro">
+            Vĩ mô (11 bẫy)
+          </button>
+        </div>
+      </div>
+
+      <!-- Traps Grid Container -->
+      <div id="traps-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Rendered dynamically by JS from data/traps.js -->
       </div>
     </section>
 
