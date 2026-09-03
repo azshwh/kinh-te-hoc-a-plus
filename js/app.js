@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheoryHub();
   initMicroSolvers();
   initMacroSolvers();
+  initWorkedProblemsTab();
+  initTrueFalseTab();
+  initISLMLab();
+  initMockExamsTab();
   initTrapsTab();
   initFormulasTab();
   initQuizTab();
