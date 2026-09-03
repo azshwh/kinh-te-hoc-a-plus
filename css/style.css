@@ -1,0 +1,141 @@
+/* Custom styles for EconMaster A+ */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-gradient-start: #f8fafc;
+  --bg-gradient-end: #f1f5f9;
+}
+
+/* Smooth scrolling and transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* 3D Flashcard flip animation */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.flashcard-inner {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.7);
+}
+
+/* KaTeX formula readability */
+.katex-display {
+  margin: 0.75em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+
+/* Solver step box */
+.step-box {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.dark .step-box {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Chart Canvas container */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+@media (max-width: 640px) {
+  .chart-container {
+    height: 300px;
+  }
+}
+
+/* Video Player Modal */
+.modal-backdrop {
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+/* Channel badges */
+.badge-mru {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+.dark .badge-mru {
+  background-color: #312e81;
+  color: #c7d2fe;
+}
+
+.badge-crashcourse {
+  background-color: #ffe4e6;
+  color: #9f1239;
+}
+.dark .badge-crashcourse {
+  background-color: #881337;
+  color: #fecdd3;
+}
+
+.badge-jacob {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+.dark .badge-jacob {
+  background-color: #78350f;
+  color: #fde68a;
+}
+
+.badge-khan {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.dark .badge-khan {
+  background-color: #064e3b;
+  color: #a7f3d0;
+}
+
+/* Chapter accordion active state */
+.chapter-nav-item.active {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-weight: 700;
+}
+

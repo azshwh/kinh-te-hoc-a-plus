@@ -1,0 +1,5 @@
+# Secret configuration
+github_config.json
+*.log
+tmp/
+node_modules/
