@@ -1,6 +1,7 @@
 // Sổ tay công thức toàn diện môn Kinh tế học đại cương (Vi mô & Vĩ mô)
 // Tích hợp tình huống thực chiến kinh điển của các tập đoàn hàng đầu thế giới và các công trình Nobel Kinh tế chấn động toàn cầu
 // Tích hợp chú giải ký hiệu toán học và đơn vị đo lường chuẩn mực cho từng biến số
+// 100% công thức và biến số được chuẩn hóa KaTeX toán học sắc nét
 
 const FORMULAS_DATA = [
   {
@@ -32,9 +33,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị Y / 1 đơn vị X"
       }
     ],
-    "example": "Nếu nền kinh tế chuyển từ phương án A (100 tấn lúa, 0 tấn thép) sang B (80 tấn lúa, 10 tấn thép): $OC_{thép} = |80 - 100| / |10 - 0| = 2$ tấn lúa / 1 tấn thép.",
-    "examTrap": "BẪY KINH ĐIỂN: Đề bài hay hỏi 'Chi phí cơ hội của X' nhưng sinh viên lại lấy ΔX / ΔY (đó là chi phí cơ hội của Y). Nhớ quy tắc: Muốn tìm chi phí cơ hội của cái gì thì chia cho cái đó ở mẫu số!",
-    "notes": "Đường PPF cong lồi ra ngoài phản ánh quy luật Chi phí cơ hội tăng dần.",
+    "example": "Nếu nền kinh tế chuyển từ phương án A (100 tấn lúa, 0 tấn thép) sang B (80 tấn lúa, 10 tấn thép): $OC_{\\text{thép}} = \\frac{|80 - 100|}{|10 - 0|} = \\mathbf{2} \\text{ tấn lúa / 1 tấn thép}$.",
+    "examTrap": "BẪY KINH ĐIỂN: Đề bài hay hỏi 'Chi phí cơ hội của X' nhưng sinh viên lại lấy $\\frac{\\Delta X}{\\Delta Y}$ (đó là chi phí cơ hội của Y). Nhớ quy tắc: Muốn tìm chi phí cơ hội của cái gì thì chia cho cái đó ở mẫu số: $OC_X = \\frac{|\\Delta Y|}{|\\Delta X|}$!",
+    "notes": "Đường $PPF$ cong lồi ra ngoài phản ánh quy luật Chi phí cơ hội tăng dần.",
     "caseStudy": {
       "entity": "Liên minh Anh - Pháp & Dự án Máy Bay Siêu Thanh Concorde",
       "badge": "Nghiên Cứu Nobel Daniel Kahneman",
@@ -50,7 +51,7 @@ const FORMULAS_DATA = [
     "chapter": "Chương 2: Cung - Cầu & Cân bằng thị trường",
     "title": "Phương trình Cung, Cầu và Điểm cân bằng thị trường",
     "formula": "Q_D = Q_S \\iff a - bP = c + dP \\implies P^* = \\frac{a - c}{b + d}, \\quad Q^* = a - bP^*",
-    "description": "Cân bằng thị trường xảy ra tại mức giá P* mà lượng cầu bằng lượng cung.",
+    "description": "Cân bằng thị trường xảy ra tại mức giá $P^*$ mà lượng cầu bằng lượng cung: $Q_D = Q_S$.",
     "variables": [
       {
         "symbol": "P",
@@ -78,9 +79,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị sản phẩm (chiếc, tấn...)"
       }
     ],
-    "example": "Cho Q_D = 120 - 2P và Q_S = 30 + P. Cho Q_D = Q_S => 120 - 2P = 30 + P => 3P = 90 => P* = 30, Q* = 60.",
-    "examTrap": "Phân biệt cực kỳ cẩn thận giữa 'Hàm cầu theo giá' (Q_D = f(P)) và 'Hàm cầu ngược' (P_D = f(Q)). Nếu đề cho P = 60 - 0.5Q, nhớ đổi đúng trước khi giải hoặc vẽ đồ thị.",
-    "notes": "Giá trần (Price Ceiling) phải ĐẶT DƯỚI giá cân bằng mới có hiệu lực, gây thiếu hụt (Shortage). Giá sàn (Price Floor) phải ĐẶT TRÊN giá cân bằng mới có hiệu lực, gây dư thừa (Surplus).",
+    "example": "Cho $Q_D = 120 - 2P$ và $Q_S = 30 + P$. Tại cân bằng: $Q_D = Q_S \\iff 120 - 2P = 30 + P \\iff 3P = 90 \\implies \\mathbf{P^* = 30}, \\mathbf{Q^* = 60}$.",
+    "examTrap": "Phân biệt cực kỳ cẩn thận giữa 'Hàm cầu theo giá' ($Q_D = f(P)$) và 'Hàm cầu ngược' ($P_D = f(Q)$). Nếu đề cho $P = 60 - 0.5Q$, nhớ đổi đúng thành $Q = 120 - 2P$ trước khi giải hoặc vẽ đồ thị.",
+    "notes": "Giá trần (Price Ceiling) phải đặt DƯỚI giá cân bằng ($P_c < P^*$) mới có hiệu lực, gây thiếu hụt ($Q_D > Q_S$). Giá sàn (Price Floor) phải đặt TRÊN giá cân bằng ($P_f > P^*$) mới có hiệu lực, gây dư thừa ($Q_S > Q_D$).",
     "caseStudy": {
       "entity": "Chính quyền Tổng thống Richard Nixon (1971 - 1973)",
       "badge": "Cú Sốc Kiểm Soát Giá Toàn Cầu",
@@ -124,9 +125,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị tiền tệ / sản phẩm"
       }
     ],
-    "example": "Với P = 60 - 0.5Q (P_max = 60) và P* = 30, Q* = 60: CS = 0.5 * (60 - 30) * 60 = 900.",
-    "examTrap": "Khi có Thuế (t): Tổng thặng dư giảm một lượng gọi là DWL = 0.5 * t * (Q* - Q_t). Đừng quên cộng cả Doanh thu thuế của Chính phủ (T = t * Q_t) khi tính Tổng thặng dư xã hội sau thuế!",
-    "notes": "Thị trường tự do không can thiệp đạt hiệu quả Pareto tối đa hóa TS.",
+    "example": "Với hàm cầu $P = 60 - 0.5Q$ ($P_{\\max} = 60$) và điểm cân bằng $P^* = 30, Q^* = 60$: $CS = \\frac{1}{2} \\times (60 - 30) \\times 60 = \\mathbf{900} \\text{ triệu đồng}$.",
+    "examTrap": "Khi có Thuế ($t$): Tổng thặng dư giảm một lượng gọi là $DWL = \\frac{1}{2} \\times t \\times (Q^* - Q_t)$. Đừng quên cộng cả Doanh thu thuế của Chính phủ ($T = t \\times Q_t$) khi tính Tổng thặng dư xã hội sau thuế ($TS = CS + PS + T$)!",
+    "notes": "Thị trường tự do không can thiệp đạt hiệu quả Pareto tối đa hóa tổng thặng dư $TS = CS + PS$.",
     "caseStudy": {
       "entity": "Quốc Hội Hoa Kỳ & Đạo Luật Thuế Hàng Xa Xỉ 1990",
       "badge": "Thảm Họa Thuế Đi Vào Lịch Sử",
@@ -165,9 +166,9 @@ const FORMULAS_DATA = [
         "unit": "Tiền tệ/sp và Số lượng sản phẩm"
       }
     ],
-    "example": "Nếu Q_D = 100 - 2P. Tại P = 20, Q = 60: E_D = (-2) * (20/60) = -0.67. Vì |E_D| < 1, hàng hóa co giãn ít theo giá.",
-    "examTrap": "Công thức co giãn khoảng (Midpoint method): mẫu số PHẢI là trung bình cộng ((Q_1+Q_2)/2), không phải Q_1 ban đầu! Trả lời trắc nghiệm chú ý xem đề bài lấy giá trị âm hay lấy giá trị tuyệt đối |E_D|.",
-    "notes": "Quy tắc vàng: Nếu cầu co giãn nhiều, muốn tăng doanh thu thì PHẢI HẠ GIÁ. Nếu cầu co giãn ít, muốn tăng doanh thu thì PHẢI TĂNG GIÁ.",
+    "example": "Nếu $Q_D = 100 - 2P$. Tại $P = 20, Q = 60$: $E_D = (-2) \\times \\frac{20}{60} = -0.67$. Vì $|E_D| < 1$, hàng hóa co giãn ít theo giá.",
+    "examTrap": "Công thức co giãn khoảng (Midpoint method): mẫu số BẮT BUỘC là trung bình cộng $\\frac{Q_1 + Q_2}{2}$, không phải $Q_1$ ban đầu! Trả lời trắc nghiệm chú ý xem đề bài hỏi hệ số âm $E_D$ hay lấy độ lớn tuyệt đối $|E_D|$.",
+    "notes": "Quy tắc vàng: Nếu cầu co giãn nhiều ($|E_D| > 1$), muốn tăng doanh thu thì PHẢI HẠ GIÁ. Nếu cầu co giãn ít ($|E_D| < 1$), muốn tăng doanh thu thì PHẢI TĂNG GIÁ. Khi $|E_D| = 1$, doanh thu đạt cực đại ($MR = 0$).",
     "caseStudy": {
       "entity": "Turing Pharmaceuticals (Martin Shkreli) vs Netflix (2011 Qwikster)",
       "badge": "Vụ Bê Bối Giá Thuốc Toàn Cầu",
@@ -211,9 +212,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị sản phẩm X (chiếc, kg...)"
       }
     ],
-    "example": "Thu nhập tăng 10%, lượng mua mì gói giảm 5% => E_I = -5% / 10% = -0.5 < 0 => Mì gói là hàng hóa cấp thấp.",
-    "examTrap": "Dấu của E_I và E_XY mang ý nghĩa bản chất kinh tế cực kỳ quan trọng, KHÔNG ĐƯỢC lấy giá trị tuyệt đối!",
-    "notes": "Đề thi đại học rất hay hỏi câu ghép: Cho E_I = -0.8 và E_XY = 1.2, kết luận gì về hàng hóa X?",
+    "example": "Thu nhập tăng 10%, lượng mua mì gói giảm 5%: $E_I = \\frac{-5\\%}{10\\%} = -0.5 < 0 \\implies$ Mì gói là hàng hóa cấp thấp (Inferior good).",
+    "examTrap": "Dấu của $E_I$ và $E_{XY}$ mang ý nghĩa bản chất kinh tế sống còn, TUYỆT ĐỐI KHÔNG ĐƯỢC lấy giá trị tuyệt đối! $E_{XY} > 0$ là thay thế, $E_{XY} < 0$ là bổ sung.",
+    "notes": "Đề thi đại học rất hay hỏi câu ghép: Cho $E_I = -0.8 < 0$ và $E_{XY} = 1.2 > 0$, kết luận: X là hàng cấp thấp và thay thế cho Y!",
     "caseStudy": {
       "entity": "Hãng Xe Điện Tesla vs Cuộc Chiến Nền Tảng Spotify & Apple Music",
       "badge": "Chiến Lược Phân Loại Thị Trường",
@@ -257,9 +258,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị tiền tệ (đồng, USD)"
       }
     ],
-    "example": "Cho TU(X, Y) = X * Y. P_X = 2, P_Y = 5, I = 100. MU_X = Y, MU_Y = X. Điều kiện: Y/2 = X/5 => X = 2.5Y. Thay vào ngân sách: 2(2.5Y) + 5Y = 100 => Y = 10, X = 25.",
-    "examTrap": "Nếu MU_X / P_X > MU_Y / P_Y, người tiêu dùng thông minh nên TĂNG mua X và GIẢM mua Y để tăng tổng mức thỏa dụng!",
-    "notes": "Độ dốc của đường ngân sách là -P_X / P_Y. Tiếp điểm giữa đường bàng quan và đường ngân sách là điểm tối ưu.",
+    "example": "Cho $TU(X, Y) = X \\cdot Y$. Giá $P_X = 2, P_Y = 5$, ngân sách $I = 100$. Thỏa dụng biên $MU_X = Y, MU_Y = X$. Điều kiện tối ưu: $\\frac{Y}{2} = \\frac{X}{5} \\implies X = 2.5Y$. Thay vào ngân sách $2(2.5Y) + 5Y = 100 \\implies \\mathbf{Y^* = 10, X^* = 25}$.",
+    "examTrap": "Nếu $\\frac{MU_X}{P_X} > \\frac{MU_Y}{P_Y}$, 1 đồng chi cho X mang lại thỏa dụng lớn hơn Y, người tiêu dùng thông minh nên TĂNG mua X và GIẢM mua Y để đạt trạng thái cân bằng!",
+    "notes": "Độ dốc của đường ngân sách là $-\\frac{P_X}{P_Y}$. Tiếp điểm giữa đường bàng quan và đường ngân sách là điểm tiêu dùng tối ưu.",
     "caseStudy": {
       "entity": "Tập Đoàn Apple Inc. (Steve Jobs & Tim Cook)",
       "badge": "Nghệ Thuật Trói Chân Hệ Sinh Thái",
@@ -303,9 +304,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị tiền tệ / sản phẩm (nghìn đồng/sp)"
       }
     ],
-    "example": "Cho TC = Q^2 + 10Q + 100. Ta có FC = 100, VC = Q^2 + 10Q, MC = 2Q + 10, ATC = Q + 10 + 100/Q.",
-    "examTrap": "Đường MC luôn cắt đường AVC và đường ATC tại ĐIỂM CỰC TIỂU của chúng (MC = AVC_min và MC = ATC_min). Đây là câu trắc nghiệm xuất hiện trong 90% đề thi!",
-    "notes": "Khi MC < ATC, ATC đang dốc xuống. Khi MC > ATC, ATC đang dốc lên.",
+    "example": "Cho $TC = Q^2 + 10Q + 100$. Ta có $FC = 100$, $VC = Q^2 + 10Q$, $MC = 2Q + 10$, $ATC = Q + 10 + \\frac{100}{Q}$.",
+    "examTrap": "Đường $MC$ luôn cắt đường $AVC$ và $ATC$ tại chính ĐIỂM CỰC TIỂU của chúng ($MC = AVC_{\\min}$ và $MC = ATC_{\\min}$). Đây là câu trắc nghiệm xuất hiện trong 90% đề thi!",
+    "notes": "Khi $MC < ATC$, đường $ATC$ đang dốc xuống. Khi $MC > ATC$, đường $ATC$ đang dốc lên. Khi $MC = ATC$, $ATC$ đạt cực tiểu.",
     "caseStudy": {
       "entity": "Ford Motor Company & Henry Ford (Năm 1908 - 1920)",
       "badge": "Cuộc Cách Mạng Dây Chuyền Lắp Ráp",
@@ -344,9 +345,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       }
     ],
-    "example": "Doanh nghiệp độc quyền có cầu P = 100 - Q => TR = 100Q - Q^2 => MR = 100 - 2Q. Nếu MC = 20, MR = MC => 100 - 2Q = 20 => Q* = 40, P* = 60.",
-    "examTrap": "Với Doanh nghiệp độc quyền: Đường MR luôn có độ dốc GẤP ĐÔI độ dốc đường cầu! (Cầu: P = a - bQ => MR = a - 2bQ). Rất nhiều bạn quên điều này dẫn đến tính sai Q*!",
-    "notes": "Đường cung ngắn hạn của doanh nghiệp cạnh tranh hoàn hảo chính là phần đường MC nằm PHÍA TRÊN điểm cực tiểu của AVC.",
+    "example": "Doanh nghiệp độc quyền có cầu $P = 100 - Q \\implies TR = 100Q - Q^2 \\implies MR = 100 - 2Q$. Nếu $MC = 20$: $MR = MC \\iff 100 - 2Q = 20 \\implies \\mathbf{Q^* = 40, P^* = 60}$.",
+    "examTrap": "Với Doanh nghiệp độc quyền: Đường $MR$ luôn dốc gấp đôi đường cầu tuyến tính! (Nếu $P = a - bQ \\implies MR = a - 2bQ$). Rất nhiều bạn quên nhân 2 vào hệ số góc dẫn đến tính sai $Q^*$!",
+    "notes": "Đường cung ngắn hạn của doanh nghiệp cạnh tranh hoàn hảo là phần đường $MC$ nằm PHÍA TRÊN điểm cực tiểu của $AVC$ ($P \\ge AVC_{\\min}$).",
     "caseStudy": {
       "entity": "Tập Đoàn Khai Thác Kim Cương De Beers (Nam Phi)",
       "badge": "Đế Chế Độc Quyền Huyền Thoại Thế Kỷ 20",
@@ -380,9 +381,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị sản phẩm hoặc đơn vị giá"
       }
     ],
-    "example": "Hai doanh nghiệp A và B cùng chọn giá: Nếu cả hai cùng đặt giá cao -> cùng lời 10 tỷ. Nếu A gian lận hạ giá -> A lời 15 tỷ, B lỗ 2 tỷ. Cân bằng Nash: Cả hai cùng hạ giá -> mỗi bên chỉ lời 3 tỷ.",
-    "examTrap": "Cân bằng Nash KHÔNG PHẢI là kết quả tốt nhất cho cả hai bên (không phải tối ưu Pareto), mà là kết quả bền vững nhất khi mỗi bên đều hành động vị kỷ!",
-    "notes": "Mô hình Cournot và Bertrand là các ứng dụng kinh điển của cân bằng Nash trong độc quyền nhóm.",
+    "example": "Hai doanh nghiệp A và B cùng chọn giá: Nếu cả hai cùng đặt giá cao $\\to$ cùng lời 10 tỷ. Nếu A gian lận hạ giá $\\to$ A lời 15 tỷ, B lỗ 2 tỷ. Cân bằng Nash: Cả hai cùng hạ giá $\\to$ mỗi bên chỉ lời 3 tỷ.",
+    "examTrap": "Cân bằng Nash KHÔNG PHẢI là kết quả tốt nhất cho cả hai doanh nghiệp, mà là kết quả cân bằng do động cơ tư lợi cá nhân chi phối ($MB > MC$ khi phản bội Cartel)!",
+    "notes": "Chiến lược thống trị (Dominant Strategy) là chiến lược tối ưu nhất cho người chơi bất kể đối thủ hành động như thế nào.",
     "caseStudy": {
       "entity": "Khối Các Nước Xuất Khẩu Dầu Mỏ (OPEC & OPEC+)",
       "badge": "Nobel Kinh Tế John Nash",
@@ -417,8 +418,8 @@ const FORMULAS_DATA = [
       }
     ],
     "example": "Nhà máy thép có MPC = 20 + Q, chi phí ô nhiễm MEC = 10. Khi đó MSC = 30 + Q. Chính phủ nên đánh thuế t = 10 để đưa sản lượng về mức tối ưu xã hội.",
-    "examTrap": "Thuế thông thường gây ra tổn thất vô ích DWL, nhưng THUẾ PIGOU LẠI LÀM TĂNG HIỆU QUẢ XÃ HỘI VÀ TRIỆT TIÊU DWL! Đây là câu hỏi trắc nghiệm bẫy 100% sinh viên không chú ý.",
-    "notes": "Định lý Coase: Nếu quyền sở hữu tài sản được xác định rõ ràng và chi phí giao dịch bằng 0, các bên tư nhân có thể tự thương lượng để đạt hiệu quả mà không cần chính phủ can thiệp.",
+    "examTrap": "Thuế thông thường gây ra tổn thất vô ích $DWL$, nhưng THUẾ PIGOU LẠI LÀM TĂNG HIỆU QUẢ XÃ HỘI VÀ TRIỆT TIÊU $DWL$ bằng cách đưa chi phí tư nhân tiệm cận chi phí xã hội ($t^* = MEC$)!",
+    "notes": "Định lý Coase: Nếu quyền sở hữu tài sản được xác định rõ ràng và chi phí giao dịch bằng 0, các bên tư nhân có thể tự thương lượng để đạt hiệu quả Pareto mà không cần chính phủ can thiệp.",
     "caseStudy": {
       "entity": "Liên Minh Châu Âu (EU) & Hệ Thống Giao Dịch Phát Thải EU ETS",
       "badge": "Cơ Chế Thuế Pigou Toàn Cầu",
@@ -467,9 +468,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị tiền tệ (tỷ VND)"
       }
     ],
-    "example": "Cho C = 600, I = 200, G = 150, X = 100, IM = 80 => GDP = 600 + 200 + 150 + (100 - 80) = 970.",
+    "example": "Cho $C = 600, I = 200, G = 150, X = 100, IM = 80 \\implies GDP = 600 + 200 + 150 + (100 - 80) = \\mathbf{970} \\text{ tỷ VND}$.",
     "examTrap": "BẪY 1: Chi chuyển nhượng của Chính phủ (Tr) như trợ cấp người nghèo, lương hưu KHÔNG tính trực tiếp vào GDP. BẪY 2: Bán lại xe máy cũ hay mua cổ phiếu KHÔNG tính vào GDP!",
-    "notes": "GDP danh nghĩa tính theo giá hiện hành; GDP thực tế (GDP_r) tính theo giá cố định (năm gốc).",
+    "notes": "GDP danh nghĩa ($GDP_n$) tính theo giá hiện hành; GDP thực tế ($GDP_r$) tính theo giá cố định của năm gốc.",
     "caseStudy": {
       "entity": "Tập Đoàn Apple Inc. & Cộng Hòa Ireland (Năm 2015)",
       "badge": "Hiện Tượng Leprechaun Economics",
@@ -508,9 +509,9 @@ const FORMULAS_DATA = [
         "unit": "Tỷ lệ phần trăm (% / năm)"
       }
     ],
-    "example": "Năm 2024: GDP_n = 1200, GDP_r = 1000 => DGDP = (1200 / 1000) * 100 = 120. Nghĩa là mức giá tăng 20% so với năm gốc.",
-    "examTrap": "Tính tốc độ tăng trưởng kinh tế g BẮT BUỘC dùng GDP THỰC TẾ (GDP_r), tuyệt đối KHÔNG được dùng GDP danh nghĩa vì GDP danh nghĩa bị thổi phồng bởi lạm phát!",
-    "notes": "Năm gốc luôn có GDP_n = GDP_r => DGDP = 100.",
+    "example": "Năm 2024 có $GDP_n = 1.200, GDP_r = 1.000 \\implies \\text{GDP Deflator} = \\frac{1.200}{1.000} \\times 100 = \\mathbf{120}$. Nghĩa là mức giá chung đã tăng 20% so với năm gốc.",
+    "examTrap": "Tính tốc độ tăng trưởng kinh tế $g$ BẮT BUỘC dùng GDP THỰC TẾ ($GDP_r$): $g = \\frac{GDP_{r, t} - GDP_{r, t-1}}{GDP_{r, t-1}} \\times 100\\%$, tuyệt đối KHÔNG được dùng GDP danh nghĩa!",
+    "notes": "Năm gốc luôn có $GDP_n = GDP_r \\implies \\text{GDP Deflator} = 100$.",
     "caseStudy": {
       "entity": "Cộng Hòa Venezuela & Khủng Hoảng Kinh Tế (2016 - 2019)",
       "badge": "Thảm Họa Tiền Tệ Mỹ Latinh",
@@ -549,9 +550,9 @@ const FORMULAS_DATA = [
         "unit": "Tỷ lệ phần trăm (% / năm)"
       }
     ],
-    "example": "Nếu gửi ngân hàng lãi suất danh nghĩa i = 8%, tỷ lệ lạm phát pi = 3% => Lãi suất thực hưởng r = 8% - 3% = 5%.",
-    "examTrap": "So sánh CPI và GDP Deflator: CPI dùng giỏ hàng cố định (Q_0) và tính cả hàng nhập khẩu (ví dụ iPhone mua từ Mỹ). GDP Deflator chỉ tính hàng sản xuất TRONG NƯỚC (Q_t) và không tính hàng nhập khẩu.",
-    "notes": "Lạm phát làm tái phân phối của cải: Người đi vay ĐƯỢC LỢI, người cho vay BỊ THIỆT khi lạm phát thực tế cao hơn dự kiến.",
+    "example": "Nếu gửi ngân hàng lãi suất danh nghĩa $i = 8\\%$, tỷ lệ lạm phát $\\pi = 3\\% \\implies$ Lãi suất thực tế nhận được: $r \\approx i - \\pi = 8\\% - 3\\% = \\mathbf{5\\%}$.",
+    "examTrap": "So sánh $CPI$ và $\\text{GDP Deflator}$: $CPI$ dùng giỏ hàng cố định ($Q_0$) và tính cả hàng nhập khẩu tiêu dùng. $\\text{GDP Deflator}$ chỉ tính hàng sản xuất TRONG NƯỚC ($Q_t$) và không tính hàng nhập khẩu.",
+    "notes": "Hiệu ứng Fisher: Khi lạm phát kỳ vọng $\\pi^e$ tăng 1%, lãi suất danh nghĩa $i$ sẽ tăng đúng 1% để duy trì lãi suất thực $r$ không đổi.",
     "caseStudy": {
       "entity": "Cục Dự Trữ Liên Bang Mỹ (Fed) & Cú Sốc Lãi Suất Volcker Shock (1979 - 1982)",
       "badge": "Chiến Công Của Paul Volcker",
@@ -595,9 +596,9 @@ const FORMULAS_DATA = [
         "unit": "Tỷ lệ phần trăm (% lực lượng lao động)"
       }
     ],
-    "example": "Dân số trưởng thành = 50 triệu. Có việc = 38 triệu. Thất nghiệp = 2 triệu => LF = 40 triệu. u = (2 / 40) * 100% = 5%. Tỷ lệ tham gia LLLĐ = 40 / 50 = 80%.",
+    "example": "Dân số trưởng thành = 50 triệu người. Số người có việc $E = 38$ triệu. Thất nghiệp $U = 2$ triệu $\\implies LF = E + U = \\mathbf{40} \\text{ triệu}$. Tỷ lệ thất nghiệp: $u = \\frac{2}{40} \\times 100\\% = \\mathbf{5\\%}$.",
     "examTrap": "Người nội trợ, sinh viên đi học toàn thời gian, người nản chí không còn tìm việc (Discouraged workers) KHÔNG thuộc lực lượng lao động (không tính vào U, cũng không tính vào LF)!",
-    "notes": "Thất nghiệp tự nhiên = Thất nghiệp ma sát + Thất nghiệp cơ cấu. Thất nghiệp chu kỳ xuất hiện khi kinh tế suy thoái (u > u_n).",
+    "notes": "Thất nghiệp tự nhiên: $u_n = u_{\\text{cọ xát}} + u_{\\text{cơ cấu}}$. Thất nghiệp chu kỳ xuất hiện khi kinh tế suy thoái ($u > u_n$).",
     "caseStudy": {
       "entity": "GS. David Card (Đoạt Giải Nobel Kinh Tế 2021) & Alan Krueger (1994)",
       "badge": "Công Trình Đoạt Giải Nobel Kinh Tế",
@@ -641,9 +642,9 @@ const FORMULAS_DATA = [
         "unit": "Tỷ số số thập phân hoặc %"
       }
     ],
-    "example": "Cho cr = 0.2, tỷ lệ dự trữ rr = 0.1. Số nhân tiền m_M = (0.2 + 1) / (0.2 + 0.1) = 1.2 / 0.3 = 4. Nếu NHTW mua 100 tỷ trái phiếu => Cung tiền tăng 4 * 100 = 400 tỷ.",
+    "example": "Cho tỷ lệ tiền mặt $cr = 0.2$, tỷ lệ dự trữ $rr = 0.1$. Số nhân tiền: $m_M = \\frac{0.2 + 1}{0.2 + 0.1} = \\frac{1.2}{0.3} = \\mathbf{4}$. Nếu NHTW mua 100 tỷ trái phiếu ($B$ tăng 100) $\\implies$ Cung tiền tăng: $\\Delta M^S = 4 \\times 100 = \\mathbf{400} \\text{ tỷ VND}$.",
     "examTrap": "3 công cụ của NHTW để TĂNG cung tiền: 1. MUA trái phiếu chính phủ trên thị trường mở (OMO); 2. GIẢM tỷ lệ dự trữ bắt buộc; 3. GIẢM lãi suất tái chiết khấu.",
-    "notes": "Khi người dân giữ nhiều tiền mặt hơn (cr tăng), số nhân tiền m_M GIẢM, làm cung tiền thu hẹp.",
+    "notes": "Khi người dân nắm giữ nhiều tiền mặt hơn ($cr$ tăng), số nhân tiền $m_M$ GIẢM, làm cung tiền thu hẹp.",
     "caseStudy": {
       "entity": "Vụ Sụp Đổ Ngân Hàng Silicon Valley Bank - SVB (Tháng 3/2023)",
       "badge": "Cuộc Tháo Chạy Tiền Gửi Kỷ Nguyên Số",
@@ -687,9 +688,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       }
     ],
-    "example": "Cho MPC = 0.8 => k = 1 / (1 - 0.8) = 5. Nếu Chính phủ tăng chi tiêu G thêm 20 tỷ => ΔY = 5 * 20 = 100 tỷ.",
-    "examTrap": "Hiệu ứng ngân sách cân bằng: Nếu Chính phủ vừa tăng G thêm 100 tỷ VÀ tăng thuế T thêm đúng 100 tỷ thì sản lượng Y vẫn TĂNG thêm đúng 100 tỷ (số nhân ngân sách cân bằng luôn bằng 1)!",
-    "notes": "Khi có thuế theo thu nhập t, số nhân k giảm xuống, đóng vai trò là 'chất ổn định tự động' (Automatic stabilizer) cho nền kinh tế.",
+    "example": "Cho $MPC = 0.8 \\implies$ Số nhân chi tiêu: $k = \\frac{1}{1 - 0.8} = \\mathbf{5}$. Nếu Chính phủ tăng chi tiêu đầu tư công $\\Delta G = 20$ tỷ $\\implies$ Sản lượng tăng: $\\Delta Y = k \\times \\Delta G = 5 \\times 20 = \\mathbf{100} \\text{ tỷ VND}$.",
+    "examTrap": "Số nhân thuế $k_T = \\frac{-MPC}{1 - MPC}$ luôn có độ lớn NHỎ HƠN số nhân chi tiêu $k_G = \\frac{1}{1 - MPC}$ đúng 1 đơn vị! Tăng $G$ và tăng $T$ cùng một lượng sẽ làm $Y$ tăng đúng bằng lượng tăng của $G$ (Số nhân ngân sách cân bằng $k = 1$).",
+    "notes": "Khi có thuế thu nhập biên ($t$): Số nhân chi tiêu giảm xuống thành $k = \\frac{1}{1 - MPC(1 - t)}$.",
     "caseStudy": {
       "entity": "Gói Kích Cầu Khủng 787 Tỷ USD Của Tổng Thống Barack Obama (ARRA 2009)",
       "badge": "Ứng Dụng Mô Hình Keynesian Lớn Nhất",
@@ -728,9 +729,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị tiền tệ (tỷ đồng, tỷ USD)"
       }
     ],
-    "example": "Cho IS: Y = 2700 - 80r và LM: Y = 1000 + 80r. Cân bằng: 2700 - 80r = 1000 + 80r => 160r = 1700 => r* = 10.625%, Y* = 1850.",
-    "examTrap": "Bẫy thanh khoản (Liquidity Trap): Khi lãi suất xấp xỉ 0%, đường LM NẰM NGANG HOÀN TOÀN. Lúc này Chính sách tiền tệ hoàn toàn vô hiệu, còn Chính sách tài khóa đạt hiệu lực tối đa vì không hề bị lấn át đầu tư!",
-    "notes": "Chính sách tài khóa mở rộng làm IS dịch phải; Chính sách tiền tệ mở rộng làm LM dịch phải.",
+    "example": "Cho $IS: Y = 2.700 - 80r$ và $LM: Y = 1.000 + 80r$. Cân bằng đồng thời: $2.700 - 80r = 1.000 + 80r \\iff 160r = 1.700 \\implies \\mathbf{r^* = 10.625\\%}, \\mathbf{Y^* = 1.850}$.",
+    "examTrap": "Hiện tượng lấn át đầu tư (Crowding-out): Khi chính phủ tăng chi tiêu $G$, đường $IS$ dịch phải làm tăng $Y$ nhưng đồng thời đẩy lãi suất $r$ tăng lên, khiến đầu tư tư nhân $I$ bị co hẹp một phần.",
+    "notes": "Chính sách tiền tệ thắt chặt (giảm cung tiền) làm đường $LM$ dịch trái $\\implies$ Lãi suất $r \\uparrow$ và Sản lượng $Y \\downarrow$.",
     "caseStudy": {
       "entity": "Chính Sách Kinh Tế 'Reaganomics' Của Tổng Thống Ronald Reagan (1981 - 1986)",
       "badge": "Thực Tiễn Lấn Át Lớn Nhất Thế Kỷ 20",
@@ -769,9 +770,9 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị tiền tệ năm gốc (tỷ đồng, tỷ USD)"
       }
     ],
-    "example": "Nếu cung tiền M tăng 10%/năm, GDP thực tế Y tăng 3%/năm, tốc độ lưu thông V không đổi => Lạm phát pi = 10% - 3% = 7%/năm.",
-    "examTrap": "Tiền tệ là trung tính trong DÀI HẠN (Monetary Neutrality), nhưng trong NGẮN HẠN in tiền vẫn có thể kích thích sản lượng tăng tạm thời.",
-    "notes": "Tuyên ngôn bất hủ của Milton Friedman: 'Lạm phát ở bất kỳ đâu và bao giờ cũng là một hiện tượng tiền tệ'.",
+    "example": "Nếu cung tiền $M$ tăng $10\\%$/năm, GDP thực tế $Y$ tăng $3\\%$/năm, vòng quay tiền $V$ không đổi $\\implies$ Tỷ lệ lạm phát: $\\pi = \\%\\Delta M - \\%\\Delta Y = 10\\% - 3\\% = \\mathbf{7\\%}$/năm.",
+    "examTrap": "Tính trung tính của tiền tệ: Trong dài hạn, tăng cung tiền CHỈ LÀM TĂNG MỨC GIÁ DANH NGHĨA ($P$), hoàn toàn KHÔNG làm thay đổi sản lượng GDP thực tế ($Y$) hay việc làm!",
+    "notes": "Siêu lạm phát xảy ra khi chính phủ thâm hụt ngân sách nặng nề và lạm dụng việc in tiền để tài trợ chi tiêu công.",
     "caseStudy": {
       "entity": "Chính Quyền Tổng Thống Robert Mugabe & Siêu Lạm Phát Zimbabwe (Năm 2008)",
       "badge": "Tuyên Ngôn Của Milton Friedman",
