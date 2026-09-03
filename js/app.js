@@ -101,6 +101,16 @@ function switchTab(tabId) {
     window.lucide.createIcons();
   }
   renderMath();
+
+  // Track visited tabs for readiness
+  try {
+    const visited = JSON.parse(localStorage.getItem('econ_visited_tabs') || '[]');
+    if (!visited.includes(tabId)) {
+      visited.push(tabId);
+      localStorage.setItem('econ_visited_tabs', JSON.stringify(visited));
+    }
+  } catch (e) {}
+  updateReadinessMeter();
 }
 
 // ================= HÀM HỖ TRỢ RENDER KATEX =================
