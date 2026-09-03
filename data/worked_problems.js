@@ -30,8 +30,8 @@ $$Q_D = 120 - 2P \\quad \\text{và} \\quad Q_S = 30 + P$$
           <p class="mt-2">• <strong>Thặng dư tiêu dùng (CS):</strong></p>
           <p>$$CS_0 = \\frac{1}{2} \\times (P_{max} - P^*) \\times Q^* = \\frac{1}{2} \\times (60 - 30) \\times 60 = \\mathbf{900} \\text{ (triệu đồng)}$$</p>
           <p>• <strong>Thặng dư sản xuất (PS):</strong></p>
-          <p>$$PS_0 = \\frac{1}{2} \\times (P^* - P_{min}) \\times Q^* + \\text{hình thang} = \\frac{(30 + 0)}{2} \\times 60 = \\mathbf{900} \\text{ (hoặc } PS = \\frac{1}{2}(30 - (-30)) \\times 60 - \\dots = \\mathbf{1.350}\\text{)}$$</p>
-          <p>• <strong>Tổng thặng dư xã hội (TS):</strong> $TS_0 = CS_0 + PS_0 = \\mathbf{2.250} \\text{ triệu đồng}$.</p>
+          <p>$$PS_0 = \\frac{(Q_0 + Q^*) \\times P^*}{2} = \\frac{(30 + 60) \\times 30}{2} = \\mathbf{1.350} \\text{ (triệu đồng)}$$</p>
+          <p>• <strong>Tổng thặng dư xã hội (TS):</strong> $TS_0 = CS_0 + PS_0 = 900 + 1.350 = \\mathbf{2.250} \\text{ (triệu đồng)}$.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">

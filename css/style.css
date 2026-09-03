@@ -53,12 +53,32 @@
   background: rgba(99, 102, 241, 0.7);
 }
 
-/* KaTeX formula readability */
+/* KaTeX formula readability and elegance */
 .katex-display {
-  margin: 0.75em 0 !important;
+  margin: 0.85em 0 !important;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 4px 0;
+  padding: 0.5rem 0.75rem;
+  background: rgba(99, 102, 241, 0.03);
+  border-radius: 0.625rem;
+  border: 1px solid rgba(99, 102, 241, 0.08);
+}
+
+.dark .katex-display {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.18);
+}
+
+/* Math card container */
+.math-card {
+  background: linear-gradient(135deg, rgba(245, 247, 255, 0.95) 0%, rgba(243, 244, 246, 0.95) 100%);
+  border: 1px solid rgba(199, 210, 254, 0.8);
+  border-radius: 0.875rem;
+}
+
+.dark .math-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.85) 100%);
+  border-color: rgba(99, 102, 241, 0.25);
 }
 
 /* Solver step box */
@@ -191,9 +211,15 @@ p, li {
   line-height: 1.7;
 }
 
-/* KaTeX equations scaling */
+/* KaTeX equations scaling & typography */
 .katex {
-  font-size: 1.06em !important;
+  font-size: 1.08em !important;
+  text-rendering: geometricPrecision;
+}
+
+/* Ngăn chặn tình trạng ngắt dòng gãy đôi công thức toán trong đoạn văn */
+p .katex, span .katex, li .katex, td .katex {
+  white-space: nowrap;
 }
 
 /* ELI5 Child-Friendly Box styling */
