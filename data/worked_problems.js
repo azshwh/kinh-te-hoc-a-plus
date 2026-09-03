@@ -353,6 +353,306 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
       "Viết nhầm dấu phương trình IS (IS phải dốc xuống, hệ số trước r mang dấu âm).",
       "Quên tính hiện tượng lấn át đầu tư khi chính phủ tăng chi tiêu."
     ]
+  },
+
+  // ================= DẠNG 7: PHÂN RÃ SLUTSKY & HICKS (A+) =================
+  {
+    id: "prob7",
+    category: "micro",
+    chapter: 4,
+    title: "Dạng 7: Phân Rã Hiệu Ứng Thay Thế (SE) & Hiệu Ứng Thu Nhập (IE) Theo Slutsky",
+    examLevel: "Đề thi Phân loại Điểm 10 / Olympic Kinh tế học sinh viên",
+    context: `Một người tiêu dùng có thu nhập $I = 120$ USD dùng để mua 2 hàng hóa X và Y với giá ban đầu $P_X = 2$ USD và $P_Y = 1$ USD.
+Hàm thỏa dụng của người này là $U(X, Y) = X \\cdot Y \\implies MU_X = Y, \\quad MU_Y = X$.
+Sau đó, giá của hàng hóa X tăng lên thành $P_X' = 3$ USD (giá Y và thu nhập không đổi).`,
+    subQuestions: [
+      "a) Xác định giỏ hàng tối ưu ban đầu $A(X_1, Y_1)$ và giỏ hàng tối ưu cuối cùng $C(X_2, Y_2)$.",
+      "b) Theo phương pháp Slutsky, hãy tính mức thu nhập danh nghĩa giả định ($I'$) cần thiết để người tiêu dùng vừa đủ tiền mua lại giỏ hàng ban đầu A ở mức giá mới.",
+      "c) Xác định giỏ hàng giả định $B(X_B, Y_B)$ tại mức thu nhập $I'$ và giá mới.",
+      "d) Phân rã tổng thay đổi của lượng cầu X thành Hiệu ứng thay thế (SE) và Hiệu ứng thu nhập (IE). Kết luận X là hàng hóa thông thường, hàng cấp thấp hay hàng Giffen?"
+    ],
+    fullSolutionHtml: `
+      <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Điểm tối ưu ban đầu A và điểm cuối C</h4>
+          <p>• <strong>Tại điểm A (P_X = 2, P_Y = 1, I = 120):</strong></p>
+          <p>Điều kiện tối ưu: $\\frac{MU_X}{P_X} = \\frac{MU_Y}{P_Y} \\iff \\frac{Y}{2} = \\frac{X}{1} \\implies X = 0.5Y \\implies Y = 2X$.</p>
+          <p>Đường ngân sách: $2X + 1Y = 120 \\iff 2X + 2X = 120 \\implies \\mathbf{X_A = 30, Y_A = 60}$.</p>
+          <p class="mt-2">• <strong>Tại điểm C (P_X' = 3, P_Y = 1, I = 120):</strong></p>
+          <p>Điều kiện tối ưu: $\\frac{Y}{3} = \\frac{X}{1} \\implies Y = 3X$.</p>
+          <p>Đường ngân sách mới: $3X + 1(3X) = 120 \\iff 6X = 120 \\implies \\mathbf{X_C = 20, Y_C = 60}$.</p>
+          <p>Tổng thay đổi lượng cầu của X: $\\Delta X_{tổng} = X_C - X_A = 20 - 30 = \\mathbf{-10}$ đơn vị.</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Thu nhập bù đắp và giỏ hàng giả định B (Slutsky)</h4>
+          <p>• Thu nhập bù đắp $I'$ để mua vừa đủ giỏ hàng ban đầu $A(30, 60)$ ở mức giá mới $(P_X'=3, P_Y=1)$:</p>
+          <p>$$I' = P_X' \\cdot X_A + P_Y \\cdot Y_A = 3(30) + 1(60) = 90 + 60 = \\mathbf{150} \\text{ USD}$$</p>
+          <p>• Tại điểm giả định B: với $I' = 150$, giá mới $P_X' = 3, P_Y = 1$ và tỷ lệ tối ưu $Y = 3X$:</p>
+          <p>$$3X + 3X = 150 \\iff 6X = 150 \\implies \\mathbf{X_B = 25, Y_B = 75}$$.</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu d: Phân rã SE, IE và Kết luận</h4>
+          <p>• <strong>Hiệu ứng thay thế (Substitution Effect - SE):</strong> Từ A sang B do thay đổi giá tương đối:</p>
+          <p>$$SE = X_B - X_A = 25 - 30 = \\mathbf{-5} \\text{ đơn vị (luôn âm khi giá tăng)}$$</p>
+          <p>• <strong>Hiệu ứng thu nhập (Income Effect - IE):</strong> Từ B sang C do sức mua thực tế giảm từ 150 về 120:</p>
+          <p>$$IE = X_C - X_B = 20 - 25 = \\mathbf{-5} \\text{ đơn vị}$$</p>
+          <p>• Kiểm tra: $SE + IE = (-5) + (-5) = -10 = \\Delta X_{tổng}$.</p>
+          <p class="mt-2"><strong>Kết luận bản chất:</strong> Khi sức mua giảm (từ B sang C), lượng cầu X giảm ($IE = -5 < 0$). Do đó X là <strong>Hàng hóa thông thường (Normal Good)</strong>. Trong trường hợp này, Hiệu ứng thay thế và Hiệu ứng thu nhập cùng chiều làm giảm cầu khi giá tăng.</p>
+        </div>
+      </div>
+    `,
+    commonMistakes: [
+      "Lấy nhầm thu nhập ban đầu I thay vì thu nhập bù đắp I' khi tìm điểm B.",
+      "Nhầm lẫn dấu của Hiệu ứng thu nhập đối với hàng cấp thấp (với hàng cấp thấp, sức mua giảm làm lượng cầu tăng, IE > 0)."
+    ]
+  },
+
+  // ================= DẠNG 8: HÀM THỎA DỤNG ĐẶC THÙ (LEONTIEF & CORNER) =================
+  {
+    id: "prob8",
+    category: "micro",
+    chapter: 4,
+    title: "Dạng 8: Hàm Thỏa Dụng Đặc Thù: Hàng Thay Thế Hoàn Hảo & Bổ Sung Hoàn Hảo (Leontief)",
+    examLevel: "Đề thi Chọn Đội tuyển Olympic Kinh tế học / FTU",
+    context: `Xét 2 người tiêu dùng với các hàm thỏa dụng phi tiêu chuẩn sau:
+- Người thứ nhất (Hàng bổ sung hoàn hảo): $U_1(X, Y) = \\min(2X, Y)$ với thu nhập $I_1 = 180$ USD, $P_X = 4, P_Y = 1$.
+- Người thứ hai (Hàng thay thế hoàn hảo): $U_2(X, Y) = 3X + Y$ với thu nhập $I_2 = 120$ USD, $P_X = 5, P_Y = 2$.`,
+    subQuestions: [
+      "a) Xác định giỏ hàng tối ưu $(X_1^*, Y_1^*)$ và mức thỏa dụng của người thứ nhất. Giải thích tại sao không thể áp dụng phương pháp đạo hàm $MRS = P_X/P_Y$.",
+      "b) Xác định giỏ hàng tối ưu $(X_2^*, Y_2^*)$ và mức thỏa dụng của người thứ hai (Nghiệm góc Corner Solution).",
+      "c) Nếu giá hàng hóa X của người thứ hai giảm xuống còn $P_X' = 2$ USD, giỏ hàng tối ưu sẽ thay đổi như thế nào?"
+    ],
+    fullSolutionHtml: `
+      <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Hàm Leontief (Hàng bổ sung hoàn hảo)</h4>
+          <p>Hàm $U_1 = \\min(2X, Y)$ có đường bàng quan hình chữ L góc vuông. Tại đỉnh góc nhọn, hàm số không có đạo hàm, do đó không thể dùng $MRS = P_X/P_Y$.</p>
+          <p>Người tiêu dùng duy lý sẽ luôn tiêu dùng tại đỉnh góc nhọn để không lãng phí hàng hóa:</p>
+          <p>$$2X = Y \\iff Y = 2X$$</p>
+          <p>Thay vào phương trình đường ngân sách $P_X X + P_Y Y = I_1$:</p>
+          <p>$$4X + 1(2X) = 180 \\iff 6X = 180 \\implies \\mathbf{X_1^* = 30}$$</p>
+          <p>$$\\implies \\mathbf{Y_1^* = 2(30) = 60}$$</p>
+          <p>Mức thỏa dụng đạt được: $U_1^* = \\min(2 \\times 30, 60) = \\mathbf{60}$.</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Hàm tuyến tính (Hàng thay thế hoàn hảo & Nghiệm góc)</h4>
+          <p>Hàm $U_2 = 3X + Y \\implies MU_X = 3, MU_Y = 1$.</p>
+          <p>Tỷ lệ thay thế biên cố định: $MRS_{XY} = \\frac{MU_X}{MU_Y} = \\frac{3}{1} = 3$.</p>
+          <p>Tỷ giá thị trường ban đầu: $\\frac{P_X}{P_Y} = \\frac{5}{2} = 2.5$.</p>
+          <p><strong>So sánh:</strong> $MRS_{XY} = 3 > \\frac{P_X}{P_Y} = 2.5 \\implies \\frac{MU_X}{P_X} = \\frac{3}{5} = 0.6 > \\frac{MU_Y}{P_Y} = \\frac{1}{2} = 0.5$.</p>
+          <p>Mỗi đồng chi cho X mang lại thỏa dụng cao hơn chi cho Y. Người tiêu dùng sẽ dùng 100% thu nhập mua X (Nghiệm góc Corner Solution):</p>
+          <p>$$\\mathbf{X_2^* = \\frac{I}{P_X} = \\frac{120}{5} = 24}, \\quad \\mathbf{Y_2^* = 0} \\implies U_2^* = 3(24) = 72$$</p>
+          <p class="mt-2">• <strong>Khi giá X giảm xuống P_X' = 2:</strong></p>
+          <p>Tỷ giá mới $\\frac{P_X'}{P_Y} = \\frac{2}{2} = 1 < MRS = 3$. X càng trở nên hấp dẫn hơn nữa:</p>
+          <p>$$\\mathbf{X_2^{*\\prime} = \\frac{120}{2} = 60}, \\quad \\mathbf{Y_2^{*\\prime} = 0} \\implies U_2^{*\\prime} = 3(60) = 180$$.</p>
+        </div>
+      </div>
+    `,
+    commonMistakes: [
+      "Cố tình lấy đạo hàm hàm min Leontief dẫn đến sai lầm không thể giải được.",
+      "Cho nghiệm hàm tuyến tính bằng cách giải hệ thông thường thay vì so sánh độ dốc $MRS$ với $P_X/P_Y$ để tìm nghiệm góc."
+    ]
+  },
+
+  // ================= DẠNG 9: ĐỘC QUYỀN NHÓM COURNOT & STACKELBERG =================
+  {
+    id: "prob9",
+    category: "micro",
+    chapter: 6,
+    title: "Dạng 9: Độc Quyền Nhóm: Cân Bằng Cournot (Hàm Phản Ứng) vs Dẫn Đầu Stackelberg",
+    examLevel: "Đề thi Cao học Kinh tế & ĐH Kinh tế Quốc dân (NEU)",
+    context: `Một ngành công nghiệp gồm 2 doanh nghiệp (Duopoly) sản xuất sản phẩm đồng nhất với hàm cầu thị trường:
+$$P = 100 - (Q_1 + Q_2)$$
+Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_1 = 10Q_1$ và $TC_2 = 10Q_2 \\implies MC_1 = MC_2 = 10$.`,
+    subQuestions: [
+      "a) Trong mô hình Cournot, thiết lập hàm phản ứng của từng doanh nghiệp $Q_1 = R_1(Q_2)$ và $Q_2 = R_2(Q_1)$.",
+      "b) Xác định sản lượng cân bằng Cournot, mức giá thị trường và lợi nhuận của mỗi doanh nghiệp.",
+      "c) Trong mô hình Stackelberg, giả sử Doanh nghiệp 1 là người dẫn đầu (Leader) chọn sản lượng trước, Doanh nghiệp 2 là người đi sau (Follower). Hãy xác định sản lượng, giá và lợi nhuận của mỗi bên. So sánh với kết quả Cournot."
+    ],
+    fullSolutionHtml: `
+      <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a & b: Cân bằng Cournot (Đồng thời)</h4>
+          <p>• Doanh thu của DN 1: $TR_1 = P \\cdot Q_1 = [100 - (Q_1 + Q_2)] Q_1 = 100Q_1 - Q_1^2 - Q_1 Q_2$.</p>
+          <p>Doanh thu biên: $MR_1 = \\frac{\\partial TR_1}{\\partial Q_1} = 100 - 2Q_1 - Q_2$.</p>
+          <p>Điều kiện $MR_1 = MC_1 \\iff 100 - 2Q_1 - Q_2 = 10 \\iff 2Q_1 = 90 - Q_2$</p>
+          <p>$$\\implies \\mathbf{Q_1 = R_1(Q_2) = 45 - 0.5Q_2} \\quad (\\text{Hàm phản ứng DN 1})$$</p>
+          <p>Tương tự do tính đối xứng: $\\mathbf{Q_2 = R_2(Q_1) = 45 - 0.5Q_1}$.</p>
+          <p class="mt-2">• <strong>Cân bằng Cournot:</strong> Thay $Q_2$ vào $Q_1$:</p>
+          <p>$$Q_1 = 45 - 0.5(45 - 0.5Q_1) = 45 - 22.5 + 0.25Q_1 \\iff 0.75Q_1 = 22.5 \\implies \\mathbf{Q_1^* = 30, Q_2^* = 30}$$</p>
+          <p>Tổng sản lượng: $Q = 30 + 30 = 60$. Mức giá thị trường: $P = 100 - 60 = \\mathbf{40}$.</p>
+          <p>Lợi nhuận mỗi DN: $\\pi_1 = \\pi_2 = (P - MC) \\times Q_i = (40 - 10) \\times 30 = \\mathbf{900}$.</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu c: Mô hình Stackelberg (DN 1 dẫn đầu)</h4>
+          <p>DN 1 biết trước hàm phản ứng của DN 2: $Q_2 = 45 - 0.5Q_1$. DN 1 thế trực tiếp vào hàm cầu của mình:</p>
+          <p>$$P = 100 - Q_1 - (45 - 0.5Q_1) = 55 - 0.5Q_1$$</p>
+          <p>$$TR_1 = P \\cdot Q_1 = 55Q_1 - 0.5Q_1^2 \\implies MR_1 = 55 - Q_1$$</p>
+          <p>Cho $MR_1 = MC_1 \\iff 55 - Q_1 = 10 \\implies \\mathbf{Q_{1, Stackelberg}^* = 45}$.</p>
+          <p>DN 2 đi sau chấp nhận sản lượng: $Q_2 = 45 - 0.5(45) = \\mathbf{22.5}$.</p>
+          <p>Tổng sản lượng: $Q = 45 + 22.5 = 67.5$. Giá bán: $P = 100 - 67.5 = \\mathbf{32.5}$.</p>
+          <p>• Lợi nhuận người dẫn đầu: $\\pi_1 = (32.5 - 10) \\times 45 = \\mathbf{1.012.5}$ (Tăng so với Cournot 900!).</p>
+          <p>• Lợi nhuận người đi sau: $\\pi_2 = (32.5 - 10) \\times 22.5 = \\mathbf{506.25}$ (Giảm một nửa so với Cournot!).</p>
+          <p class="mt-2"><strong>Kết luận:</strong> Lợi thế của người đi trước (First-mover advantage) giúp người dẫn đầu chiếm thị phần áp đảo và đạt lợi nhuận cao nhất.</p>
+        </div>
+      </div>
+    `,
+    commonMistakes: [
+      "Đạo hàm nhầm hàm doanh thu khi chưa thế hàm phản ứng của đối thủ trong mô hình Stackelberg.",
+      "Quên rằng khi viết hàm $TR_1$, biến số $P$ phải chứa cả $Q_1$ và $Q_2$."
+    ]
+  },
+
+  // ================= DẠNG 10: TĂNG TRƯỞNG SOLOW & QUY TẮC VÀNG =================
+  {
+    id: "prob10",
+    category: "macro",
+    chapter: 8,
+    title: "Dạng 10: Mô Hình Tăng Trưởng Solow & Quy Tắc Vàng Tích Lũy Tư Bản",
+    examLevel: "Đề thi Phân loại Học bổng Cao học / Chuẩn Mankiw Chapter 8-9",
+    context: `Hàm sản xuất tổng hợp của một nền kinh tế có dạng Cobb-Douglas:
+$$Y = F(K, L) = K^{0.5} L^{0.5} \\implies y = k^{0.5}$$
+(Trong đó: y = Y/L là sản lượng trên một lao động; k = K/L là tư bản trên một lao động).
+Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\\delta = 0.05$, tốc độ tăng dân số $n = 0.01$, tiến bộ công nghệ $g = 0$.`,
+    subQuestions: [
+      "a) Xác định mức tư bản trạng thái dừng ($k^*$), sản lượng trạng thái dừng ($y^*$), tiêu dùng trên một lao động ($c^*$) và đầu tư trạng thái dừng ($i^*$).",
+      "b) Thiết lập điều kiện Quy tắc vàng của tích lũy tư bản (Golden Rule). Hãy xác định mức tư bản $k_{gold}^*$ và tỷ lệ tiết kiệm vàng $s_{gold}$ tối đa hóa tiêu dùng bền vững.",
+      "c) Nhận xét nền kinh tế ban đầu có đang tích lũy tư bản quá mức hay thiếu hụt tư bản so với Quy tắc vàng?"
+    ],
+    fullSolutionHtml: `
+      <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Trạng thái dừng ban đầu (k*, y*, c*)</h4>
+          <p>Phương trình tích lũy tư bản Solow: $\\Delta k = s \\cdot f(k) - (\\delta + n)k$.</p>
+          <p>Tại trạng thái dừng: $\\Delta k = 0 \\iff s \\cdot k^{0.5} = (\\delta + n)k$</p>
+          <p>$$0.3 k^{0.5} = (0.05 + 0.01)k = 0.06k \\iff \\frac{k}{k^{0.5}} = \\frac{0.3}{0.06} = 5$$</p>
+          <p>$$\\implies k^{0.5} = 5 \\implies \\mathbf{k^* = 25} \\text{ (tư bản trên mỗi lao động)}$$</p>
+          <p>• Sản lượng trạng thái dừng: $y^* = f(k^*) = (25)^{0.5} = \\mathbf{5}$.</p>
+          <p>• Đầu tư trạng thái dừng: $i^* = s \\cdot y^* = 0.3 \\times 5 = \\mathbf{1.5}$.</p>
+          <p>• Tiêu dùng trạng thái dừng: $c^* = y^* - i^* = 5 - 1.5 = \\mathbf{3.5}$.</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Quy tắc vàng của tích lũy tư bản (Golden Rule)</h4>
+          <p>Tiêu dùng tại trạng thái dừng: $c(k) = f(k) - (\\delta + n)k$.</p>
+          <p>Để tối đa hóa tiêu dùng bền vững, lấy đạo hàm theo k và cho bằng 0:</p>
+          <p>$$c'(k) = f'(k) - (\\delta + n) = 0 \\iff \\mathbf{MPK = \\delta + n}$$</p>
+          <p>Với hàm $f(k) = k^{0.5} \\implies MPK = 0.5 k^{-0.5} = \\frac{0.5}{k^{0.5}}$.</p>
+          <p>$$\\frac{0.5}{k^{0.5}} = 0.05 + 0.01 = 0.06 \\iff k^{0.5} = \\frac{0.5}{0.06} = \\frac{25}{3} \\approx 8.333$$</p>
+          <p>$$\\implies \\mathbf{k_{gold}^* = \\left(\\frac{25}{3}\\right)^2 = \\frac{625}{9} \\approx 69.44}$$</p>
+          <p>• Sản lượng tại điểm vàng: $y_{gold}^* = (69.44)^{0.5} = 8.333$.</p>
+          <p>• Tỷ lệ tiết kiệm vàng cần thiết: $s_{gold} = \\frac{(\\delta + n)k_{gold}^*}{y_{gold}^*} = \\frac{0.06 \\times 69.44}{8.333} = \\mathbf{0.50} \\text{ (tức } 50\\%\\text{)}$.</p>
+          <p>• Tiêu dùng cực đại tại điểm vàng: $c_{gold}^* = y^* - (\\delta + n)k^* = 8.333 - 4.167 = \\mathbf{4.166} > 3.5$.</p>
+          <p class="mt-2"><strong>Nhận xét:</strong> Mức tư bản hiện tại $k^* = 25 < k_{gold}^* = 69.44$ và tỷ lệ tiết kiệm $s = 0.3 < s_{gold} = 0.5$. Nền kinh tế đang <strong>thiếu hụt tư bản</strong> so với Quy tắc vàng. Để nâng cao mức sống cho các thế hệ tương lai, quốc gia cần tăng tỷ lệ tiết kiệm từ 30% lên 50%.</p>
+        </div>
+      </div>
+    `,
+    commonMistakes: [
+      "Quên cộng tốc độ tăng dân số n vào tỷ lệ khấu hao delta khi tính điểm dừng.",
+      "Nhầm điều kiện Quy tắc vàng là MPK = 0 thay vì MPK = delta + n."
+    ]
+  },
+
+  // ================= DẠNG 11: MÔ HÌNH MUNDELL - FLEMING (A+) =================
+  {
+    id: "prob11",
+    category: "macro",
+    chapter: 12,
+    title: "Dạng 11: Mô Hình Mundell - Fleming: Tỷ Giá Thả Nổi vs Cố Định (Bộ Ba Bất Khả Thi)",
+    examLevel: "Đề thi Phân loại Thủ khoa / Tài chính Quốc tế Nâng cao",
+    context: `Xét một nền kinh tế mở nhỏ với dòng vốn luân chuyển tự do hoàn hảo ($r = r^* = 5\\%$):
+- Thị trường hàng hóa (IS*): $Y = 1.000 + 0.8(Y - T) + 400 - 20r^* + 300 + (200 - 50e)$
+- Thuế $T = 200$, Lãi suất thế giới $r^* = 5$, Tỷ giá hối đoái danh nghĩa là $e$
+- Thị trường tiền tệ (LM*): $M^S/P = 0.5Y - 30r^*$, với mức cung tiền $M^S/P = 850$.`,
+    subQuestions: [
+      "a) Thiết lập phương trình đường IS* và đường LM*. Xác định tỷ giá hối đoái cân bằng ($e^*$) và sản lượng cân bằng ($Y^*$).",
+      "b) Dưới chế độ TỶ GIÁ THẢ NỔI, giả sử chính phủ tăng chi tiêu $\\Delta G = 100$. Hãy phân tích tác động đến sản lượng và tỷ giá. Chính sách tài khóa có hiệu lực kích cầu không?",
+      "c) Dưới chế độ TỶ GIÁ CỐ ĐỊNH tại $e = 2$, chính phủ tăng chi tiêu $\\Delta G = 100$. Ngân hàng Trung ương phải can thiệp như thế nào để giữ tỷ giá và sản lượng thay đổi ra sao?"
+    ],
+    fullSolutionHtml: `
+      <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Thiết lập IS* và LM*</h4>
+          <p>• <strong>Đường LM*:</strong> $850 = 0.5Y - 30(5) = 0.5Y - 150 \\iff 0.5Y = 1.000 \\implies \\mathbf{Y^* = 2.000}$.</p>
+          <p><em>(Chú ý: Đường LM* là đường thẳng đứng tại Y = 2.000 vì lãi suất cố định r = r*!)</em></p>
+          <p>• <strong>Đường IS*:</strong></p>
+          <p>$$Y = 1.000 + 0.8Y - 160 + 400 - 100 + 300 + 200 - 50e = 1.640 + 0.8Y - 50e$$</p>
+          <p>$$0.2Y = 1.640 - 50e \\iff \\mathbf{IS^*: Y = 8.200 - 250e}$$</p>
+          <p>• Cân bằng $Y = 2.000$: $2.000 = 8.200 - 250e \\iff 250e = 6.200 \\implies \\mathbf{e^* = 24.8}$.</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b: Tỷ giá thả nổi & Sự vô hiệu của Tài khóa</h4>
+          <p>Khi G tăng 100, đường IS* dịch phải một đoạn $k \\times \\Delta G = 5 \\times 100 = 500$:</p>
+          <p>$$IS^{*\\prime}: Y = 8.700 - 250e$$</p>
+          <p>Do đường LM* thẳng đứng tại $Y = 2.000$, giao điểm mới vẫn có: $\\mathbf{Y = 2.000}$ (Sản lượng KHÔNG ĐỔI!).</p>
+          <p>Tỷ giá hối đoái mới: $2.000 = 8.700 - 250e \\iff 250e = 6.700 \\implies \\mathbf{e_1^* = 26.8}$ (Đồng nội tệ tăng giá mạnh!).</p>
+          <p><strong>Kết luận kinh tế:</strong> Dưới tỷ giá thả nổi, chính sách tài khóa mở rộng hoàn toàn <strong>VÔ HIỆU</strong> trong việc tăng sản lượng. Chi tiêu chính phủ tăng chỉ làm nội tệ tăng giá, bóp nghẹt xuất khẩu ròng $\\Delta NX = -100$ triệt tiêu hoàn toàn $\\Delta G$.</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu c: Tỷ giá cố định & Hiệu lực tối đa</h4>
+          <p>Dưới tỷ giá cố định, khi G tăng gây áp lực tăng giá nội tệ, NHTW buộc phải bán nội tệ mua ngoại tệ vào dự trữ, làm cung tiền $M^S$ tăng theo, dịch đường LM* sang phải.</p>
+          <p>Tại $e = 2$: Sản lượng mới trên đường $IS^{*\\prime}$:</p>
+          <p>$$Y_{mới} = 8.700 - 250(2) = \\mathbf{8.200}$$</p>
+          <p>Sản lượng tăng vọt trọn vẹn: $\\Delta Y = 500$. Chính sách tài khóa đạt <strong>HIỆU LỰC TỐI ĐA</strong> dưới chế độ tỷ giá cố định!</p>
+        </div>
+      </div>
+    `,
+    commonMistakes: [
+      "Quên rằng đường LM* trong mô hình Mundell-Fleming là đường thẳng đứng trên hệ trục (e, Y).",
+      "Nhầm lẫn hiệu lực chính sách: Tài khóa hiệu quả dưới tỷ giá cố định; Tiền tệ hiệu quả dưới tỷ giá thả nổi."
+    ]
+  },
+
+  // ================= DẠNG 12: QUY TẮC TAYLOR & CHÍNH SÁCH TIỀN TỆ =================
+  {
+    id: "prob12",
+    category: "macro",
+    chapter: 11,
+    title: "Dạng 12: Quy Tắc Điều Hành Lãi Suất Taylor & Ứng Phó Cú Sốc Lạm Phát / Suy Thoái",
+    examLevel: "Đề thi Nghiệp vụ Ngân Hàng Trung Ương / Chuẩn Học thuật Vĩ mô",
+    context: `Ngân hàng Trung ương điều hành chính sách tiền tệ theo Quy tắc Taylor chuẩn:
+$$i = r^* + \\pi + 0.5(\\pi - \\pi^*) + 0.5(y - \\bar{y})$$
+Cho biết:
+- Lãi suất thực tế cân bằng dài hạn: $r^* = 2\\%$
+- Tỷ lệ lạm phát mục tiêu: $\\pi^* = 2\\%$
+- Tốc độ tăng trưởng sản lượng tiềm năng: $\\bar{y} = 6\\%$.`,
+    subQuestions: [
+      "a) Khi nền kinh tế đang ở trạng thái cân bằng toàn dụng ($\pi = 2\\%, y = 6\\%$), NHTW nên ấn định lãi suất danh nghĩa mục tiêu $i$ là bao nhiêu?",
+      "b) Giả sử xảy ra cú sốc tổng cầu khiến lạm phát tăng lên $\\pi = 6\\%$ và sản lượng tăng nóng lên $y = 8\\%$. Theo quy tắc Taylor, NHTW cần điều chỉnh lãi suất danh nghĩa lên bao nhiêu?",
+      "c) Tính lãi suất thực tế trong kịch bản (b). Giải thích nguyên lý Taylor (Taylor Principle): Tại sao NHTW phải tăng lãi suất danh nghĩa nhiều hơn 1-1 so với mức tăng của lạm phát?"
+    ],
+    fullSolutionHtml: `
+      <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Lãi suất tại trạng thái cân bằng mục tiêu</h4>
+          <p>Khi lạm phát đạt mục tiêu ($\\pi = \\pi^* = 2\\%$) và sản lượng ở mức tiềm năng ($y = \\bar{y} = 6\\%$):</p>
+          <p>Khoảng trống lạm phát: $\\pi - \\pi^* = 2 - 2 = 0$.</p>
+          <p>Khoảng trống sản lượng: $y - \\bar{y} = 6 - 6 = 0$.</p>
+          <p>$$i = r^* + \\pi + 0.5(0) + 0.5(0) = 2\\% + 2\\% = \\mathbf{4.0\\%}$$</p>
+          <p>Lãi suất danh nghĩa trung tính là 4.0%/năm.</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Phản ứng trước cú sốc lạm phát và Nguyên lý Taylor</h4>
+          <p>Khi $\\pi = 6\\%$ (vượt mục tiêu $6 - 2 = 4\\%$) và $y = 8\\%$ (tăng nóng $8 - 6 = 2\\%$):</p>
+          <p>$$i = 2\\% + 6\\% + 0.5(6 - 2) + 0.5(8 - 6)$$</p>
+          <p>$$i = 8\\% + 0.5(4\\%) + 0.5(2\\%) = 8\\% + 2\\% + 1\\% = \\mathbf{11.0\\%}$$</p>
+          <p>• <strong>Lãi suất thực tế mới:</strong> $r = i - \\pi = 11\\% - 6\\% = \\mathbf{5.0\\%}$ (Tăng từ $2\\%$ lên $5\\%$!).</p>
+          <p class="mt-2">• <strong>Giải thích Nguyên lý Taylor (Taylor Principle):</strong></p>
+          <p>Hệ số trước lạm phát là $1 + 0.5 = 1.5 > 1$. Khi lạm phát tăng thêm 1%, NHTW phải tăng lãi suất danh nghĩa thêm 1.5% (tức tăng lớn hơn 1-1). Điều này đảm bảo rằng <strong>LÃI SUẤT THỰC TẾ r SẼ TĂNG LÊN</strong>. Lãi suất thực tăng làm hạ nhiệt chi tiêu vay mượn và đầu tư, kéo tổng cầu giảm xuống, từ đó dập tắt lạm phát. Nếu NHTW tăng lãi suất danh nghĩa ít hơn 1-1, lãi suất thực tế sẽ giảm và vô tình đổ thêm dầu vào lửa lạm phát.</p>
+        </div>
+      </div>
+    `,
+    commonMistakes: [
+      "Quên cộng lãi suất thực tự nhiên r* vào công thức Taylor.",
+      "Tính nhầm lãi suất thực r = i - pi khi kiểm tra tính ổn định vĩ mô."
+    ]
   }
 ];
 
