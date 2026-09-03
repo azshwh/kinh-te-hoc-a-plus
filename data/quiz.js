@@ -1210,7 +1210,7 @@ const QUIZ_DATA = [
   {
     "id": "q68",
     "category": "micro",
-    "chapter: 4",
+    "chapter": 4,
     "topic": "Hàng thay thế hoàn hảo & Nghiệm góc",
     "difficulty": "advanced",
     "question": "Cho hàm thỏa dụng U(X, Y) = 2X + Y. Giá P_X = 6, P_Y = 2, thu nhập I = 60. Giỏ hàng tối ưu của người tiêu dùng là:",
@@ -1336,7 +1336,7 @@ const QUIZ_DATA = [
   {
     "id": "q75",
     "category": "macro",
-    "chapter: 8",
+    "chapter": 8,
     "topic": "Mô hình tăng trưởng Solow",
     "difficulty": "advanced",
     "question": "Trong mô hình tăng trưởng Solow, yếu tố duy nhất có thể tạo ra sự tăng trưởng liên tục và bền vững trong mức sống (sản lượng trên mỗi lao động Y/L) trong dài hạn là:",
