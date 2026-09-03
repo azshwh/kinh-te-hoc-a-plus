@@ -52,7 +52,7 @@
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col font-sans antialiased">
 
   <!-- TOP HEADER -->
-  <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
+  <header class="sticky top-0 z-40 w-full max-w-full overflow-hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-black text-xl shadow-md shadow-indigo-500/20">
@@ -94,66 +94,66 @@
     </div>
 
     <!-- NAVIGATION TABS -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800/60 overflow-x-auto">
+    <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800/60 overflow-x-auto">
       <nav class="flex space-x-2 py-2 text-sm font-medium whitespace-nowrap">
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 bg-indigo-600 text-white transition-all shadow-sm" data-tab="market">
           <i data-lucide="line-chart" class="w-4 h-4"></i>
-          <span>Đồ thị Cung - Cầu & Cân Bằng</span>
+          <span>Đồ thị cung - cầu và cân bằng</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="theory-hub">
           <i data-lucide="graduation-cap" class="w-4 h-4 text-rose-500"></i>
-          <span>Giảng Đường Quốc Tế & Lý Thuyết</span>
+          <span>Giảng đường quốc tế và lý thuyết</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="micro-solvers">
           <i data-lucide="calculator" class="w-4 h-4"></i>
-          <span>Giải Toán Vi Mô (4 Solvers)</span>
+          <span>Giải toán vi mô (4 solvers)</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="macro-solvers">
           <i data-lucide="globe" class="w-4 h-4"></i>
-          <span>Giải Toán Vĩ Mô (3 Solvers)</span>
+          <span>Giải toán vĩ mô (3 solvers)</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="worked-problems">
           <i data-lucide="file-check-2" class="w-4 h-4 text-emerald-500"></i>
-          <span>12 Bài Tập Tự Luận Đại Học</span>
+          <span>12 dạng bài tập tự luận</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="true-false">
           <i data-lucide="check-check" class="w-4 h-4 text-sky-500"></i>
-          <span>Nhận Định Đúng / Sai Giải Thích</span>
+          <span>40 nhận định đúng / sai</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="islm-lab">
           <i data-lucide="git-branch" class="w-4 h-4 text-purple-500"></i>
-          <span>Mô Hình IS - LM Lab</span>
+          <span>Mô hình IS - LM lab</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="mock-exams">
           <i data-lucide="clipboard-list" class="w-4 h-4 text-rose-500"></i>
-          <span>3 Đề Thi Chuẩn Học Kỳ</span>
+          <span>3 bộ đề thi học kỳ</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="traps">
           <i data-lucide="alert-octagon" class="w-4 h-4 text-amber-500"></i>
-          <span>Sổ Tay 20 Bẫy Đề Thi A+</span>
+          <span>Sổ tay 20 cạm bẫy đề thi</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="formulas">
           <i data-lucide="book-open" class="w-4 h-4"></i>
-          <span>Sổ Tay Công Thức KaTeX</span>
+          <span>Sổ tay công thức KaTeX</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="quiz">
           <i data-lucide="award" class="w-4 h-4"></i>
-          <span>Đấu Trường 80 Câu Trắc Nghiệm</span>
+          <span>Đấu trường 80 câu trắc nghiệm</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="flashcards">
           <i data-lucide="zap" class="w-4 h-4"></i>
-          <span>Flashcard Ôn Nhanh</span>
+          <span>Flashcard ôn tập thuật ngữ</span>
         </button>
         <button class="nav-btn px-4 py-2 rounded-xl flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" data-tab="strategy">
           <i data-lucide="sparkles" class="w-4 h-4 text-amber-500"></i>
-          <span>Hướng Dẫn Sử Dụng & Tư Duy ELI5</span>
+          <span>Hướng dẫn sử dụng và tư duy ELI5</span>
         </button>
       </nav>
     </div>
   </header>
 
   <!-- MAIN WRAPPER -->
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 overflow-x-hidden">
 
     <!-- ================= TAB 1: CUNG CẦU & ĐỒ THỊ ================= -->
     <section id="pane-market" class="tab-pane space-y-6">
@@ -1321,10 +1321,10 @@
       <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-purple-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl space-y-3">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-bold backdrop-blur-sm border border-white/10">
           <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-          Triết Lý Feynman: Giải Thích Cho Bạn Nhỏ 6 Tuổi Hiểu Sâu Sắc
+          Phương pháp Feynman: Giải thích cho bạn nhỏ 6 tuổi hiểu sâu sắc
         </div>
         <h2 class="text-2xl sm:text-3xl font-black tracking-tight">
-          Cẩm Nang Hướng Dẫn Sử Dụng & Kinh Tế Học "Dễ Như Kẹo Mút" 🍭
+          Cẩm nang hướng dẫn sử dụng và kinh tế học "dễ như kẹo mút" 🍭
         </h2>
         <p class="text-sm sm:text-base text-indigo-100 max-w-3xl leading-relaxed">
           <em>"Nếu bạn không thể giải thích một khái niệm kinh tế cho một đứa trẻ lớp 1 hiểu, điều đó có nghĩa là chính bạn cũng chưa thực sự hiểu bản chất của nó."</em> — Nền tảng EconMaster biến những đồ thị ngoằn ngoèo và công thức phức tạp thành những câu chuyện đời thường giản dị nhất.
@@ -1336,7 +1336,7 @@
         <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
           <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <i data-lucide="map" class="w-5 h-5 text-indigo-600"></i>
-            1. Bản Đồ 5 Bước Khai Thác Website Hiệu Quả Nhất
+            1. Bản đồ 5 bước khai thác nền tảng hiệu quả nhất
           </h3>
           <p class="text-xs text-slate-400 mt-1">Làm theo 5 bước này để đi từ con số 0 đến điểm A+ (9.5 - 10.0) nhanh nhất:</p>
         </div>
@@ -1345,7 +1345,7 @@
           <!-- Step 1 -->
           <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
             <div class="w-7 h-7 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">1</div>
-            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Kính Thần Ctrl+K</h4>
+            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Tìm kiếm nhanh với Ctrl + K</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               Bấm phím <strong>Ctrl + K</strong> (hoặc nút tìm kiếm trên đầu trang) để tra cứu tức thì bất kỳ từ khóa nào: "xăng", "thuế", "độc quyền", "GDP"...
             </p>
@@ -1354,7 +1354,7 @@
           <!-- Step 2 -->
           <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
             <div class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">2</div>
-            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Chơi Đồ Thị Động</h4>
+            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Mô phỏng đồ thị động</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               Vào tab <strong>"Đồ thị Cung - Cầu"</strong> hoặc <strong>"IS - LM Lab"</strong>, kéo các thanh trượt số liệu để xem đường cong nhảy múa trực quan.
             </p>
@@ -1363,7 +1363,7 @@
           <!-- Step 3 -->
           <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
             <div class="w-7 h-7 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs">3</div>
-            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Dùng Máy Giải Toán</h4>
+            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Máy giải toán kinh tế tự động</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               Gặp bài tập về nhà khó? Mở tab <strong>"Giải Toán Vi Mô / Vĩ Mô"</strong>, nhập số vào và nhận ngay lời giải chi tiết từng dòng có công thức KaTeX.
             </p>
@@ -1372,7 +1372,7 @@
           <!-- Step 4 -->
           <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
             <div class="w-7 h-7 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-xs">4</div>
-            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Phá Bẫy & Luyện Đề</h4>
+            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Nhận diện cạm bẫy đề thi</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               Duyệt qua tab <strong>"Sổ tay 20 Bẫy"</strong> và <strong>"40 Câu Đúng/Sai"</strong> để nắm bắt mọi ngón nghề gài bẫy của giảng viên ra đề thi.
             </p>
@@ -1381,7 +1381,7 @@
           <!-- Step 5 -->
           <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
             <div class="w-7 h-7 rounded-lg bg-rose-600 text-white flex items-center justify-center font-bold text-xs">5</div>
-            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Thi Thử Tính Giờ</h4>
+            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Thi thử bấm giờ chuẩn cấu trúc</h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               Mở tab <strong>"3 Đề Thi Chuẩn Học Kỳ"</strong>, bấm giờ 60-90 phút và so sánh bài làm của mình với barem chấm điểm từng 0.25đ.
             </p>
@@ -1397,7 +1397,7 @@
             Học Bằng Bản Năng Tự Nhiên
           </div>
           <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">
-            2. Hiểu Thấu 6 Khái Niệm Khó Nhất Bằng Những Câu Chuyện Đời Thường (Không Thể Quên)
+            2. Thấu hiểu 6 khái niệm cốt lõi qua câu chuyện đời thường
           </h3>
           <p class="text-xs text-slate-400 mt-1">Đọc xong phần này, bạn sẽ tự tin giải thích kinh tế học cho bất kỳ ai mà không sợ bị sai bản chất khoa học:</p>
         </div>
@@ -1406,7 +1406,7 @@
           <!-- Story 1: Chi phí cơ hội -->
           <div class="p-5 rounded-2xl bg-amber-50/50 dark:bg-slate-800 border border-amber-200 dark:border-slate-700 space-y-2.5">
             <div class="text-2xl">🍭 🏎️</div>
-            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Chi Phí Cơ Hội (Opportunity Cost)</h4>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Chi phí cơ hội (*opportunity cost*)</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               <strong>Chuyện kể:</strong> Bạn chỉ có đúng 10 nghìn đồng trong túi. Bạn rất thèm 1 cây kẹo mút (10k), nhưng bạn Bo lại rủ góp 10k để thuê xe ô tô điện chơi cùng. Bạn quyết định mua kẹo mút ăn.<br>
               <strong>Bản chất:</strong> Chi phí của cây kẹo mút không chỉ là tờ 10k, mà là <em>niềm vui được lái xe ô tô điện cùng bạn Bo mà bạn vừa phải từ bỏ</em>! Đó chính là Chi phí cơ hội.
@@ -1416,7 +1416,7 @@
           <!-- Story 2: Cung Cầu & Bàn tay vô hình -->
           <div class="p-5 rounded-2xl bg-sky-50/50 dark:bg-slate-800 border border-sky-200 dark:border-slate-700 space-y-2.5">
             <div class="text-2xl">🍦 ☀️ 🌧️</div>
-            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Cung - Cầu & Giá Cả Cân Bằng</h4>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Cung - cầu và giá cả cân bằng (*market equilibrium*)</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               <strong>Chuyện kể:</strong> Ngày nắng chang chang, cả cổng trường chỉ có 1 bác bán kem mà có 20 bạn xếp hàng muốn ăn. Bác bán kem tăng giá từ 5k lên 10k mà vẫn bán hết sạch (Cầu vượt Cung $\to$ Giá tăng).<br>
               Hôm sau trời đổ mưa rét căm căm, chẳng ai muốn ăn kem, bác bán kem ế ẩm phải đại hạ giá xuống 3k để bán nhanh về nhà (Cung vượt Cầu $\to$ Giá giảm). Đó chính là Bàn tay vô hình điều chỉnh giá!
@@ -1456,7 +1456,7 @@
           <!-- Story 6: Độc quyền -->
           <div class="p-5 rounded-2xl bg-indigo-50/50 dark:bg-slate-800 border border-indigo-200 dark:border-slate-700 space-y-2.5">
             <div class="text-2xl">🏜️ 🥤 👑</div>
-            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Sức Mạnh Độc Quyền (Monopoly)</h4>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Thế lực độc quyền bán (*monopoly power*)</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               <strong>Chuyện kể:</strong> Trong công viên giải trí rộng mênh mông đi bộ mỏi rã rời, chỉ có duy nhất 1 quầy bán nước ngọt của một bác, cấm mang nước từ ngoài vào. Bình thường lon nước giá 10k, bác bán 30k mà mặt vẫn lạnh như băng.<br>
               Dù vừa đắt vừa bực mình bạn vẫn phải mua vì không còn lựa chọn nào khác. Đó chính là Độc quyền thuần túy vì có rào cản ngăn người khác bán cùng!
@@ -1469,7 +1469,7 @@
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
         <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
           <i data-lucide="target" class="w-5 h-5 text-rose-500"></i>
-          3. Bộ Ba Bí Kíp Giữ Vững Điểm A+ Phòng Thi Của Thủ Khoa
+          3. Ba quy tắc giữ vững điểm A+ trong phòng thi
         </h3>
         <p class="text-xs text-slate-400">Các quy tắc cốt tử khi làm bài thi trắc nghiệm và tự luận đại học:</p>
       </div>
@@ -1480,7 +1480,7 @@
           <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-black">
             01
           </div>
-          <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base">Quy Tắc 3 Bước Xử Lý Đồ Thị</h3>
+          <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base">Quy tắc 3 bước xử lý đồ thị dịch chuyển</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             1. <strong>Xác định đường nào dịch chuyển</strong>: Biến cố ảnh hưởng đến người mua (Cầu) hay người bán (Cung)?<br>
             2. <strong>Xác định hướng dịch chuyển</strong>: Sang phải (Tăng) hay sang trái (Giảm)?<br>
@@ -1493,7 +1493,7 @@
           <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-black">
             02
           </div>
-          <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base">Tránh 5 Bẫy Mất Điểm Tức Tưởi</h3>
+          <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base">Phòng tránh 5 bẫy mất điểm phổ biến</h3>
           <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside">
             <li>Nhầm giữa <em>Thay đổi lượng cầu</em> (do giá chính nó) và <em>Thay đổi cầu</em> (do yếu tố khác).</li>
             <li>Quên nhân hệ số $1/2$ khi tính diện tích tam giác $CS$, $PS$, $DWL$.</li>
@@ -1508,7 +1508,7 @@
           <div class="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center font-black">
             03
           </div>
-          <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base">Lộ Trình Nước Rút 7 Ngày</h3>
+          <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base">Lộ trình ôn tập nước rút 7 ngày</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             • <strong>Ngày 1-2</strong>: Nắm chắc Cung Cầu, Co giãn, Thặng dư $CS/PS$ và Thuế.<br>
             • <strong>Ngày 3-4</strong>: Lý thuyết Chi phí $TC/MC/ATC$, Cạnh tranh hoàn hảo vs Độc quyền.<br>
