@@ -69,7 +69,7 @@ const QUIZ_DATA = [
     "correct": 1,
     "explanation": "Xăng dầu và xe máy chạy xăng là hàng thay thế cho xe máy điện. Khi giá xăng tăng, người dân giảm đi xe xăng và chuyển sang mua xe máy điện => Cầu xe máy điện tăng, đường cầu dịch chuyển sang phải. (Câu A và D làm thay đổi đường Cung hoặc di chuyển dọc đường cầu).",
     "isTrap": true,
-    "trapAdvice": "Bẫy phân biệt: Thay đổi GIÁ CỦA CHÍNH HÀNG HÓA ĐÓ chỉ gây ra sự DI CHUYỂN DỌC (movement along) trên đường cầu. Chỉ có các yếu tố ngoài giá (thu nhập, thị hiếu, giá hàng liên quan, số lượng người mua...) mới làm DỊCH CHUYỂN (shift) đường cầu!",
+    "trapAdvice": "Bẫy phân biệt: Thay đổi giá của chính hàng hóa đó chỉ gây ra sự di chuyển dọc (movement along) trên đường cầu. Chỉ có các yếu tố ngoài giá (thu nhập, thị hiếu, giá hàng liên quan, số lượng người mua...) mới làm dịch chuyển (shift) đường cầu!",
     "chapter": 2,
     "difficulty": "understand"
   },
@@ -103,9 +103,9 @@ const QUIZ_DATA = [
       "Lượng cung lớn hơn lượng cầu"
     ],
     "correct": 2,
-    "explanation": "Giá trần có hiệu lực phải nằm DƯỚI giá cân bằng. Tại mức giá thấp này, lượng cầu tăng cao (Q_D > Q*) trong khi người bán cắt giảm lượng cung (Q_S < Q*), dẫn đến tình trạng thiếu hụt (Shortage = Q_D - Q_S) và phát sinh chợ đen.",
+    "explanation": "Giá trần có hiệu lực phải nằm dưới giá cân bằng. Tại mức giá thấp này, lượng cầu tăng cao (Q_D > Q*) trong khi người bán cắt giảm lượng cung (Q_S < Q*), dẫn đến tình trạng thiếu hụt (Shortage = Q_D - Q_S) và phát sinh chợ đen.",
     "isTrap": true,
-    "trapAdvice": "Bẫy trần/sàn: 'Trần' (Ceiling) nằm ở trên đầu nhưng ĐỂ CÓ HIỆU LỰC lại phải đặt DƯỚI giá cân bằng! 'Sàn' (Floor) ở dưới chân nhưng để có hiệu lực lại phải đặt TRÊN giá cân bằng!",
+    "trapAdvice": "Bẫy trần/sàn: 'Trần' (Ceiling) nằm ở trên đầu nhưng để có hiệu lực lại phải đặt dưới giá cân bằng! 'Sàn' (Floor) ở dưới chân nhưng để có hiệu lực lại phải đặt trên giá cân bằng!",
     "chapter": 3,
     "difficulty": "apply"
   },
@@ -149,7 +149,7 @@ const QUIZ_DATA = [
     "id": "q9",
     "category": "micro",
     "topic": "Độ co giãn",
-    "question": "Nếu độ co giãn của cầu theo giá đối với nước ngọt có ga là |E_D| = 1.6, khi nhà sản xuất quyết định GIẢM giá bán thì Tổng doanh thu (TR) sẽ:",
+    "question": "Nếu độ co giãn của cầu theo giá đối với nước ngọt có ga là |E_D| = 1.6, khi nhà sản xuất quyết định giảm giá bán thì Tổng doanh thu (TR) sẽ:",
     "options": [
       "Tăng lên",
       "Giảm đi",
@@ -157,9 +157,9 @@ const QUIZ_DATA = [
       "Không thể xác định"
     ],
     "correct": 0,
-    "explanation": "Vì |E_D| = 1.6 > 1 (cầu co giãn nhiều), % tăng của lượng cầu lớn hơn % giảm của giá (%ΔQ > %ΔP). Do đó việc giảm giá sẽ làm Tổng doanh thu TR = P * Q TĂNG LÊN.",
+    "explanation": "Vì |E_D| = 1.6 > 1 (cầu co giãn nhiều), % tăng của lượng cầu lớn hơn % giảm của giá (%ΔQ > %ΔP). Do đó việc giảm giá sẽ làm Tổng doanh thu TR = P * Q tăng lên.",
     "isTrap": true,
-    "trapAdvice": "Mẹo nhớ: Cầu co giãn nhiều (|E| > 1) -> Giá và Doanh thu biến thiên NGƯỢC CHIỀU. Cầu co giãn ít (|E| < 1) -> Giá và Doanh thu biến thiên CÙNG CHIỀU.",
+    "trapAdvice": "Mẹo nhớ: Cầu co giãn nhiều (|E| > 1) -> Giá và Doanh thu biến thiên ngược chiều. Cầu co giãn ít (|E| < 1) -> Giá và Doanh thu biến thiên cùng chiều.",
     "chapter": 4,
     "difficulty": "apply"
   },
@@ -167,7 +167,7 @@ const QUIZ_DATA = [
     "id": "q10",
     "category": "micro",
     "topic": "Độ co giãn",
-    "question": "Biết hệ số co giãn chéo giữa hàng hóa X và Y là E_XY = -0.75, và co giãn theo thu nhập của X là E_I = 1.4. Kết luận nào sau đây là CHÍNH XÁC?",
+    "question": "Biết hệ số co giãn chéo giữa hàng hóa X và Y là E_XY = -0.75, và co giãn theo thu nhập của X là E_I = 1.4. Kết luận nào sau đây là chính xác?",
     "options": [
       "X là hàng thay thế cho Y, và X là hàng thứ cấp",
       "X là hàng bổ sung cho Y, và X là hàng cao cấp (xa xỉ)",
@@ -175,7 +175,7 @@ const QUIZ_DATA = [
       "X là hàng thay thế cho Y, và X là hàng thông thường thiết yếu"
     ],
     "correct": 1,
-    "explanation": "E_XY = -0.75 < 0 nghĩa là khi giá Y tăng, lượng mua X giảm -> X và Y là hai hàng hóa BỔ SUNG cho nhau. E_I = 1.4 > 1 nghĩa là tốc độ tăng cầu nhanh hơn tăng thu nhập -> X là hàng hóa CAO CẤP (xa xỉ).",
+    "explanation": "E_XY = -0.75 < 0 nghĩa là khi giá Y tăng, lượng mua X giảm -> X và Y là hai hàng hóa bổ sung cho nhau. E_I = 1.4 > 1 nghĩa là tốc độ tăng cầu nhanh hơn tăng thu nhập -> X là hàng hóa cao cấp (xa xỉ).",
     "isTrap": false,
     "trapAdvice": "Nhớ kỹ các mốc: E_I < 0: Cấp thấp; 0 < E_I <= 1: Thiết yếu; E_I > 1: Cao cấp. E_XY > 0: Thay thế; E_XY < 0: Bổ sung.",
     "chapter": 4,
@@ -213,7 +213,7 @@ const QUIZ_DATA = [
     "correct": 1,
     "explanation": "Phương trình đường ngân sách: X*P_X + Y*P_Y = I <=> Y = (I/P_Y) - (P_X/P_Y)*X. Do đó độ dốc của nó là -P_X / P_Y, phản ánh chi phí cơ hội thị trường của hàng hóa X tính bằng hàng hóa Y.",
     "isTrap": true,
-    "trapAdvice": "Bẫy: Độ dốc đường BÀNG QUAN là MRS_XY = -MU_X / MU_Y. Còn độ dốc đường NGÂN SÁCH là -P_X / P_Y. Tại điểm tối ưu hai đường này tiếp xúc nhau nên MRS_XY = P_X / P_Y.",
+    "trapAdvice": "Bẫy: Độ dốc đường bàng quan là MRS_XY = -MU_X / MU_Y. Còn độ dốc đường ngân sách là -P_X / P_Y. Tại điểm tối ưu hai đường này tiếp xúc nhau nên MRS_XY = P_X / P_Y.",
     "chapter": 5,
     "difficulty": "apply"
   },
@@ -257,7 +257,7 @@ const QUIZ_DATA = [
     "id": "q15",
     "category": "micro",
     "topic": "Sản xuất và Chi phí",
-    "question": "Trong ngắn hạn, một doanh nghiệp cạnh tranh hoàn hảo sẽ quyết định TẠM DỪNG SẢN XUẤT (đóng cửa) khi:",
+    "question": "Trong ngắn hạn, một doanh nghiệp cạnh tranh hoàn hảo sẽ quyết định tạm dừng sản xuất (đóng cửa) khi:",
     "options": [
       "Lợi nhuận âm (bị lỗ)",
       "Giá thị trường P < ATC_min",
@@ -267,7 +267,7 @@ const QUIZ_DATA = [
     "correct": 2,
     "explanation": "Trong ngắn hạn, dù đóng cửa doanh nghiệp vẫn phải trả toàn bộ chi phí cố định (FC). Nếu P >= AVC, doanh nghiệp thu hồi được chi phí biến đổi và một phần chi phí cố định nên vẫn nên sản xuất. Chỉ khi P < AVC_min, doanh nghiệp không bù đắp nổi chi phí biến đổi, sản xuất sẽ lỗ nhiều hơn là đóng cửa.",
     "isTrap": true,
-    "trapAdvice": "Bẫy cực phổ biến: Rất nhiều bạn chọn P < ATC. Khi P < ATC, doanh nghiệp chỉ bị lỗ nhưng VẪN TIẾP TỤC SẢN XUẤT trong ngắn hạn nếu P >= AVC! Chỉ đóng cửa khi P < AVC.",
+    "trapAdvice": "Bẫy cực phổ biến: Rất nhiều bạn chọn P < ATC. Khi P < ATC, doanh nghiệp chỉ bị lỗ nhưng vẫn tiếp tục sản xuất trong ngắn hạn nếu P >= AVC! Chỉ đóng cửa khi P < AVC.",
     "chapter": 6,
     "difficulty": "apply"
   },
@@ -293,7 +293,7 @@ const QUIZ_DATA = [
     "id": "q17",
     "category": "micro",
     "topic": "Cấu trúc thị trường",
-    "question": "Đặc điểm nào sau đây KHÔNG PHẢI là đặc điểm của thị trường Cạnh tranh hoàn hảo?",
+    "question": "Đặc điểm nào sau đây không phải là đặc điểm của thị trường Cạnh tranh hoàn hảo?",
     "options": [
       "Có vô số người mua và người bán",
       "Sản phẩm có sự khác biệt hóa mạnh mẽ",
@@ -301,9 +301,9 @@ const QUIZ_DATA = [
       "Người bán và người mua đều chấp nhận giá (Price takers)"
     ],
     "correct": 1,
-    "explanation": "Trong thị trường cạnh tranh hoàn hảo, sản phẩm là ĐỒNG NHẤT (homogeneous/identical), hoàn toàn không có sự khác biệt hóa. Khác biệt hóa sản phẩm là đặc điểm của thị trường Cạnh tranh độc quyền (Monopolistic Competition).",
+    "explanation": "Trong thị trường cạnh tranh hoàn hảo, sản phẩm là đồng nhất (homogeneous/identical), hoàn toàn không có sự khác biệt hóa. Khác biệt hóa sản phẩm là đặc điểm của thị trường Cạnh tranh độc quyền (Monopolistic Competition).",
     "isTrap": false,
-    "trapAdvice": "Đọc kỹ từ 'KHÔNG PHẢI' trong đề bài.",
+    "trapAdvice": "Đọc kỹ từ 'không phải' trong đề bài.",
     "chapter": 7,
     "difficulty": "understand"
   },
@@ -311,7 +311,7 @@ const QUIZ_DATA = [
     "id": "q18",
     "category": "macro",
     "topic": "Đo lường sản lượng quốc gia (GDP)",
-    "question": "Giao dịch nào sau đây ĐƯỢC TÍNH vào GDP của Việt Nam năm 2024?",
+    "question": "Giao dịch nào sau đây được tính vào GDP của Việt Nam năm 2024?",
     "options": [
       "Một người mua lại chiếc xe máy Honda đã qua sử dụng với giá 20 triệu đồng",
       "Chính phủ chi trả 500 tỷ đồng tiền lương hưu cho cán bộ về hưu",
@@ -321,7 +321,7 @@ const QUIZ_DATA = [
     "correct": 2,
     "explanation": "Hàng tồn kho được tính vào Hạng mục Đầu tư (I - Đầu tư hàng tồn kho) trong GDP của năm mà nó được sản xuất ra (2024). Câu A: hàng cũ không tính. Câu B: trợ cấp hưu trí là chi chuyển nhượng (Transfer payment - Tr) không tính vào GDP. Câu D: giao dịch cổ phiếu là chuyển giao tài sản tài chính, không tạo ra sản phẩm mới.",
     "isTrap": true,
-    "trapAdvice": "GDP tính theo NĂM SẢN XUẤT, không phụ thuộc vào việc đã bán được cho người tiêu dùng hay chưa. Nếu chưa bán, nó được hạch toán là đầu tư tồn kho của doanh nghiệp.",
+    "trapAdvice": "GDP tính theo năm sản xuất, không phụ thuộc vào việc đã bán được cho người tiêu dùng hay chưa. Nếu chưa bán, nó được hạch toán là đầu tư tồn kho của doanh nghiệp.",
     "chapter": 7,
     "difficulty": "apply"
   },
@@ -373,9 +373,9 @@ const QUIZ_DATA = [
       "CPI do ngân hàng trung ương tính toán, còn GDP Deflator do cục thuế tính"
     ],
     "correct": 1,
-    "explanation": "CPI sử dụng giỏ hàng cố định của năm gốc (chỉ số Laspeyres), và CPI có tính đến hàng nhập khẩu tiêu dùng (như ô tô, điện thoại nhập). Ngược lại, GDP Deflator dùng lượng sản xuất thực tế của năm hiện hành (chỉ số Paasche) và CHỈ tính hàng sản xuất trong nước.",
+    "explanation": "CPI sử dụng giỏ hàng cố định của năm gốc (chỉ số Laspeyres), và CPI có tính đến hàng nhập khẩu tiêu dùng (như ô tô, điện thoại nhập). Ngược lại, GDP Deflator dùng lượng sản xuất thực tế của năm hiện hành (chỉ số Paasche) và chỉ tính hàng sản xuất trong nước.",
     "isTrap": true,
-    "trapAdvice": "Nếu đề thi hỏi: 'Giá máy bay chiến đấu do Bộ Quốc phòng mua tăng thì chỉ số nào bị ảnh hưởng?' -> GDP Deflator tăng, CPI KHÔNG đổi (vì người tiêu dùng điển hình không mua máy bay chiến đấu)!",
+    "trapAdvice": "Nếu đề thi hỏi: 'Giá máy bay chiến đấu do Bộ Quốc phòng mua tăng thì chỉ số nào bị ảnh hưởng?' -> GDP Deflator tăng, CPI không đổi (vì người tiêu dùng điển hình không mua máy bay chiến đấu)!",
     "chapter": 9,
     "difficulty": "apply"
   },
@@ -393,7 +393,7 @@ const QUIZ_DATA = [
     "correct": 1,
     "explanation": "Phương trình Fisher: r ≈ i - π = 7% - 4% = 3%. Sức mua thực tế của số tiền bạn gửi tăng 3% sau một năm.",
     "isTrap": false,
-    "trapAdvice": "Ai được lợi khi lạm phát cao hơn dự kiến? Người đi vay ĐƯỢC LỢI vì trả nợ bằng đồng tiền có giá trị thực thấp hơn. Người cho vay BỊ THIỆT.",
+    "trapAdvice": "Ai được lợi khi lạm phát cao hơn dự kiến? Người đi vay được lợi vì trả nợ bằng đồng tiền có giá trị thực thấp hơn. Người cho vay bị thiệt.",
     "chapter": 9,
     "difficulty": "understand"
   },
@@ -429,7 +429,7 @@ const QUIZ_DATA = [
     "correct": 0,
     "explanation": "Lực lượng lao động (LF) = Có việc + Thất nghiệp = 48 + 2 = 50 triệu người. (15 triệu người không tìm việc không thuộc LF). Tỷ lệ thất nghiệp u = (Thất nghiệp / LF) * 100% = (2 / 50) * 100% = 4.0%.",
     "isTrap": true,
-    "trapAdvice": "Bẫy: Rất nhiều bạn lấy 2 chia cho Tổng dân số (48 + 2 + 15 = 65 triệu) ra 3.08%. Nhớ: Mẫu số tính tỷ lệ thất nghiệp BẮT BUỘC là LỰC LƯỢNG LAO ĐỘNG (LF), không phải tổng dân số!",
+    "trapAdvice": "Bẫy: Rất nhiều bạn lấy 2 chia cho Tổng dân số (48 + 2 + 15 = 65 triệu) ra 3.08%. Nhớ: Mẫu số tính tỷ lệ thất nghiệp bắt buộc là lực lượng lao động (LF), không phải tổng dân số!",
     "chapter": 10,
     "difficulty": "apply"
   },
@@ -447,7 +447,7 @@ const QUIZ_DATA = [
     "correct": 0,
     "explanation": "Số nhân tiền m_M = (cr + 1) / (cr + rr) = (0.25 + 1) / (0.25 + 0.15) = 1.25 / 0.4 = 3.125. NHTW mua trái phiếu làm cơ sở tiền MB tăng thêm 100 tỷ => Mức cung tiền tăng ΔMS = m_M * ΔMB = 3.125 * 100 = 312.5 tỷ đồng.",
     "isTrap": false,
-    "trapAdvice": "NHTW MUA trái phiếu -> Bơm tiền mặt vào lưu thông -> MB tăng -> Cung tiền MS tăng. Ngược lại NHTW BÁN trái phiếu -> Hút tiền về -> MS giảm.",
+    "trapAdvice": "NHTW mua trái phiếu -> Bơm tiền mặt vào lưu thông -> MB tăng -> Cung tiền MS tăng. Ngược lại NHTW bán trái phiếu -> Hút tiền về -> MS giảm.",
     "chapter": 10,
     "difficulty": "understand"
   },
@@ -455,7 +455,7 @@ const QUIZ_DATA = [
     "id": "q26",
     "category": "macro",
     "topic": "Tiền tệ & Hệ thống ngân hàng",
-    "question": "Hành động nào sau đây của Ngân hàng Trung ương KHÔNG làm tăng mức cung tiền trong nền kinh tế?",
+    "question": "Hành động nào sau đây của Ngân hàng Trung ương không làm tăng mức cung tiền trong nền kinh tế?",
     "options": [
       "Hạ tỷ lệ dự trữ bắt buộc đối với các ngân hàng thương mại",
       "Hạ lãi suất tái chiết khấu",
@@ -483,7 +483,7 @@ const QUIZ_DATA = [
     "correct": 0,
     "explanation": "3 lý do đường AD dốc xuống theo mức giá P: 1. Mức giá giảm -> của cải thực tăng -> tiêu dùng C tăng (Hiệu ứng của cải); 2. Mức giá giảm -> cầu tiền giảm -> lãi suất giảm -> đầu tư I tăng (Hiệu ứng lãi suất); 3. Lãi suất trong nước giảm -> vốn chảy ra -> đồng nội tệ giảm giá -> xuất khẩu ròng NX tăng (Hiệu ứng tỷ giá).",
     "isTrap": true,
-    "trapAdvice": "Bẫy Vi mô vs Vĩ mô: Rất nhiều bạn chọn 'Hiệu ứng thay thế và thu nhập'. Đó là lý do đường cầu cá nhân/thị trường VI MÔ dốc xuống, KHÔNG PHẢI đường Tổng cầu AD của VĨ MÔ!",
+    "trapAdvice": "Bẫy Vi mô vs Vĩ mô: Rất nhiều bạn chọn 'Hiệu ứng thay thế và thu nhập'. Đó là lý do đường cầu cá nhân/thị trường VI MÔ dốc xuống, không phải đường Tổng cầu AD của VĨ MÔ!",
     "chapter": 11,
     "difficulty": "understand"
   },
@@ -573,7 +573,7 @@ const QUIZ_DATA = [
     "correct": 0,
     "explanation": "Do rào cản gia nhập thị trường bằng 0, nếu có lợi nhuận kinh tế dương, các doanh nghiệp mới sẽ ồ ạt gia nhập làm tăng cung, kéo giá giảm cho đến khi P = ATC và lợi nhuận kinh tế bị triệt tiêu về 0 trong dài hạn.",
     "isTrap": true,
-    "trapAdvice": "Lợi nhuận kinh tế bằng 0 KHÔNG CÓ NGHĨA là chủ doanh nghiệp không có tiền! Họ vẫn nhận được lợi nhuận kế toán vừa đủ bù đắp chi phí cơ hội của vốn và công sức bỏ ra (được gọi là Lợi nhuận bình thường - Normal profit).",
+    "trapAdvice": "Lợi nhuận kinh tế bằng 0 không có nghĩa là chủ doanh nghiệp không có tiền! Họ vẫn nhận được lợi nhuận kế toán vừa đủ bù đắp chi phí cơ hội của vốn và công sức bỏ ra (được gọi là Lợi nhuận bình thường - Normal profit).",
     "chapter": 12,
     "difficulty": "understand"
   },
@@ -599,7 +599,7 @@ const QUIZ_DATA = [
     "id": "q34",
     "category": "micro",
     "topic": "Cung - Cầu & Cân bằng",
-    "question": "Khi cả đường Cầu và đường Cung của một mặt hàng đều dịch chuyển SANG PHẢI cùng một lúc, điều chắc chắn xảy ra là:",
+    "question": "Khi cả đường Cầu và đường Cung của một mặt hàng đều dịch chuyển sang phải cùng một lúc, điều chắc chắn xảy ra là:",
     "options": [
       "Giá cân bằng sẽ tăng",
       "Giá cân bằng sẽ giảm",
@@ -607,9 +607,9 @@ const QUIZ_DATA = [
       "Lượng cân bằng sẽ không đổi"
     ],
     "correct": 2,
-    "explanation": "Cầu tăng (dịch phải) làm P tăng, Q tăng. Cung tăng (dịch phải) làm P giảm, Q tăng. Kết hợp cả 2: Lượng cân bằng Q* CHẮC CHẮN TĂNG. Còn giá cân bằng P* chưa thể xác định được (phụ thuộc vào việc Cầu dịch nhiều hơn hay Cung dịch nhiều hơn).",
+    "explanation": "Cầu tăng (dịch phải) làm P tăng, Q tăng. Cung tăng (dịch phải) làm P giảm, Q tăng. Kết hợp cả 2: Lượng cân bằng Q* chắc chắn tăng. Còn giá cân bằng P* chưa thể xác định được (phụ thuộc vào việc Cầu dịch nhiều hơn hay Cung dịch nhiều hơn).",
     "isTrap": true,
-    "trapAdvice": "Mẹo thi A+: Khi cả 2 đường cùng dịch chuyển, LUÔN CÓ MỘT BIẾN CHẮC CHẮN VÀ MỘT BIẾN CHƯA THỂ XÁC ĐỊNH ĐƯỢC! Nhớ vẽ phác 2 trường hợp ra nháp trong 5 giây.",
+    "trapAdvice": "Mẹo thi A+: Khi cả 2 đường cùng dịch chuyển, luôn có một biến chắc chắn và một biến chưa thể xác định được! Nhớ vẽ phác 2 trường hợp ra nháp trong 5 giây.",
     "chapter": 2,
     "difficulty": "advanced"
   },
@@ -625,7 +625,7 @@ const QUIZ_DATA = [
       "35 triệu đồng"
     ],
     "correct": 1,
-    "explanation": "GDP chỉ tính giá trị của HÀNG HÓA CUỐI CÙNG (bánh mì bán cho người tiêu dùng = 25 triệu). Hoặc tính theo phương pháp Giá trị gia tăng (VA): VA_nông dân = 10; VA_bột mì = 18 - 10 = 8; VA_lò bánh = 25 - 18 = 7 => Tổng VA = 10 + 8 + 7 = 25 triệu đồng.",
+    "explanation": "GDP chỉ tính giá trị của hàng hóa cuối cùng (bánh mì bán cho người tiêu dùng = 25 triệu). Hoặc tính theo phương pháp Giá trị gia tăng (VA): VA_nông dân = 10; VA_bột mì = 18 - 10 = 8; VA_lò bánh = 25 - 18 = 7 => Tổng VA = 10 + 8 + 7 = 25 triệu đồng.",
     "isTrap": true,
     "trapAdvice": "Bẫy tính trùng (Double counting): Nếu cộng toàn bộ 10 + 18 + 25 = 53 triệu là sai nghiêm trọng vì giá trị lúa mì và bột mì đã nằm sẵn bên trong giá bán 25 triệu của chiếc bánh mì!",
     "chapter": 7,
@@ -717,7 +717,7 @@ const QUIZ_DATA = [
       "Lượng cân bằng Q* chắc chắn giảm."
     ],
     "correct": 2,
-    "explanation": "Thu nhập tăng -> Cầu dịch phải (P tăng, Q tăng). Giá nguyên liệu giảm -> Cung dịch phải (P giảm, Q tăng). Cả 2 sự kiện đều làm Q tăng -> Lượng cân bằng Q* CHẮC CHẮN TĂNG. Còn giá P* chưa xác định được.",
+    "explanation": "Thu nhập tăng -> Cầu dịch phải (P tăng, Q tăng). Giá nguyên liệu giảm -> Cung dịch phải (P giảm, Q tăng). Cả 2 sự kiện đều làm Q tăng -> Lượng cân bằng Q* chắc chắn tăng. Còn giá P* chưa xác định được.",
     "isTrap": true,
     "trapAdvice": "Cầu dịch phải + Cung dịch phải => Q* chắc chắn tăng, P* chưa xác định."
   },
@@ -789,7 +789,7 @@ const QUIZ_DATA = [
       "Giảm một nửa do số thu ngân sách tăng."
     ],
     "correct": 1,
-    "explanation": "Diện tích tam giác tổn thất vô ích DWL = 0.5 x t x ΔQ. Vì ΔQ tỷ lệ thuận với t, nên diện tích DWL tỷ lệ thuận với BÌNH PHƯƠNG mức thuế (t^2). Khi thuế tăng 2 lần, DWL tăng 2^2 = 4 lần!",
+    "explanation": "Diện tích tam giác tổn thất vô ích DWL = 0.5 x t x ΔQ. Vì ΔQ tỷ lệ thuận với t, nên diện tích DWL tỷ lệ thuận với bình phương mức thuế (t^2). Khi thuế tăng 2 lần, DWL tăng 2^2 = 4 lần!",
     "isTrap": true,
     "trapAdvice": "Mankiw nhấn mạnh: Tổn thất vô ích tăng theo cấp số nhân bậc hai của thuế suất!"
   },
@@ -863,7 +863,7 @@ const QUIZ_DATA = [
     "correct": 1,
     "explanation": "Doanh nghiệp sản xuất tại P = MC miễn là P >= AVC_min (không đóng cửa). Nếu P < AVC_min thì Q = 0. Do đó, đường cung ngắn hạn chính là nhánh đường MC nằm trên AVC_min.",
     "isTrap": true,
-    "trapAdvice": "Bẫy thi cực phổ biến: Học sinh hay chọn phần trên ATC_min. Đó là đường cung DÀI HẠN, còn NGẮN HẠN là nằm trên AVC_min!"
+    "trapAdvice": "Bẫy thi cực phổ biến: Học sinh hay chọn phần trên ATC_min. Đó là đường cung dài hạn, còn ngắn hạn là nằm trên AVC_min!"
   },
   {
     "id": "q49",
@@ -917,7 +917,7 @@ const QUIZ_DATA = [
     "correct": 1,
     "explanation": "Nhà độc quyền bán cho mỗi khách hàng đúng bằng mức giá sẵn lòng chi trả tối đa (WTP). Do đó CS = 0. Nhà độc quyền sản xuất đến mức P = MC (sản lượng cạnh tranh) nên không có giao dịch nào bị bỏ lỡ => DWL = 0!",
     "isTrap": true,
-    "trapAdvice": "Phân biệt giá hoàn hảo KHÔNG CÓ TỔN THẤT VÔ ÍCH (DWL = 0), nhưng người tiêu dùng bị tước đoạt toàn bộ thặng dư!"
+    "trapAdvice": "Phân biệt giá hoàn hảo không có tổn thất vô ích (DWL = 0), nhưng người tiêu dùng bị tước đoạt toàn bộ thặng dư!"
   },
   {
     "id": "q52",
@@ -943,7 +943,7 @@ const QUIZ_DATA = [
     "chapter": 7,
     "topic": "Đầu tư (I) trong GDP",
     "difficulty": "understand",
-    "question": "Giao dịch nào sau đây ĐƯỢC TÍNH vào thành phần Đầu tư (I) trong GDP của nền kinh tế?",
+    "question": "Giao dịch nào sau đây được tính vào thành phần Đầu tư (I) trong GDP của nền kinh tế?",
     "options": [
       "Một hộ gia đình mua 1.000 cổ phiếu mới phát hành của VinFast.",
       "Một hộ gia đình mua một căn hộ chung cư mới xây để ở.",
@@ -951,7 +951,7 @@ const QUIZ_DATA = [
       "Một doanh nghiệp mua lại nhà xưởng cũ từ một doanh nghiệp giải thể."
     ],
     "correct": 1,
-    "explanation": "Trong kinh tế vĩ mô, Đầu tư (I) là mua sắm tư bản mới: máy móc mới, hàng tồn kho mới, và NHÀ Ở MỚI của hộ gia đình. Mua cổ phiếu, gửi tiết kiệm là 'đầu tư tài chính' cá nhân, không tạo ra tư bản thực tế mới nên không tính vào I.",
+    "explanation": "Trong kinh tế vĩ mô, Đầu tư (I) là mua sắm tư bản mới: máy móc mới, hàng tồn kho mới, và nhà ở mới của hộ gia đình. Mua cổ phiếu, gửi tiết kiệm là 'đầu tư tài chính' cá nhân, không tạo ra tư bản thực tế mới nên không tính vào I.",
     "isTrap": true,
     "trapAdvice": "Bẫy từ ngữ: Ngôn ngữ hàng ngày gọi mua cổ phiếu là 'đầu tư', nhưng kinh tế học vĩ mô coi đó là Tiết kiệm (Saving), không phải Đầu tư (I)!"
   },
@@ -1051,7 +1051,7 @@ const QUIZ_DATA = [
     "chapter": 9,
     "topic": "Ai hưởng lợi và ai thiệt hại khi lạm phát bất ngờ xảy ra?",
     "difficulty": "advanced",
-    "question": "Khi lạm phát thực tế xảy ra CAO HƠN nhiều so với mức lạm phát dự kiến, của cải sẽ được tái phân phối từ:",
+    "question": "Khi lạm phát thực tế xảy ra cao hơn nhiều so với mức lạm phát dự kiến, của cải sẽ được tái phân phối từ:",
     "options": [
       "Người đi vay nợ sang người cho vay.",
       "Người cho vay (chủ nợ) sang người đi vay (con nợ).",
@@ -1059,7 +1059,7 @@ const QUIZ_DATA = [
       "Người sở hữu bất động sản sang người giữ tiền mặt."
     ],
     "correct": 1,
-    "explanation": "Khi lạm phát tăng cao bất ngờ, đồng tiền mất giá. Người đi vay trả nợ bằng số tiền có sức mua thấp hơn nhiều so với dự tính ban đầu -> Người đi vay ĐƯỢC LỢI, người cho vay BỊ THIỆT HẠI.",
+    "explanation": "Khi lạm phát tăng cao bất ngờ, đồng tiền mất giá. Người đi vay trả nợ bằng số tiền có sức mua thấp hơn nhiều so với dự tính ban đầu -> Người đi vay được lợi, người cho vay bị thiệt HẠI.",
     "isTrap": true,
     "trapAdvice": "Lạm phát bất ngờ: Có lợi cho người vay nợ (con nợ), có hại cho người cho vay (chủ nợ)!"
   },
@@ -1105,7 +1105,7 @@ const QUIZ_DATA = [
     "chapter": 10,
     "topic": "Lãi suất chiết khấu & Dự trữ bắt buộc",
     "difficulty": "understand",
-    "question": "Hành động nào sau đây của Ngân hàng Trung ương sẽ làm THU HẸP lượng cung tiền (Chính sách tiền tệ thắt chặt)?",
+    "question": "Hành động nào sau đây của Ngân hàng Trung ương sẽ làm thu hẹp lượng cung tiền (Chính sách tiền tệ thắt chặt)?",
     "options": [
       "Hạ tỷ lệ dự trữ bắt buộc (rr).",
       "Mua tín phiếu kho bạc trên thị trường mở.",
@@ -1293,7 +1293,7 @@ const QUIZ_DATA = [
       "Hiện tượng cạnh tranh hoàn hảo về giá"
     ],
     "correct": 1,
-    "explanation": "Doanh nghiệp độc quyền nhóm tin rằng: Nếu mình tăng giá, đối thủ sẽ KHÔNG theo (cầu co giãn mạnh); nếu mình giảm giá, đối thủ sẽ LẬP TỨC GIẢM THEO (cầu co giãn kém). Đường cầu bị gãy khúc tại mức giá hiện hành, làm đường MR có một khoảng gián đoạn thẳng đứng. Miễn là đường MC dao động trong khoảng gián đoạn này, mức giá P* tối ưu hoàn toàn KHÔNG THAY ĐỔI.",
+    "explanation": "Doanh nghiệp độc quyền nhóm tin rằng: Nếu mình tăng giá, đối thủ sẽ không theo (cầu co giãn mạnh); nếu mình giảm giá, đối thủ sẽ lập tức giảm theo (cầu co giãn kém). Đường cầu bị gãy khúc tại mức giá hiện hành, làm đường MR có một khoảng gián đoạn thẳng đứng. Miễn là đường MC dao động trong khoảng gián đoạn này, mức giá P* tối ưu hoàn toàn không thay đổi.",
     "isTrap": false,
     "trapAdvice": "Đường cầu gãy khúc giải thích vì sao các hãng viễn thông hay nước ngọt ít khi đơn phương đổi giá."
   },
@@ -1347,7 +1347,7 @@ const QUIZ_DATA = [
       "Tăng đầu tư máy móc tư bản (K)"
     ],
     "correct": 2,
-    "explanation": "Theo mô hình Solow, việc tăng tỷ lệ tiết kiệm chỉ tạo ra 'hiệu ứng mức' (Level effect) làm tăng sản lượng tạm thời cho đến khi đạt trạng thái dừng mới, sau đó tốc độ tăng trưởng Y/L lại quay về 0. Do quy luật năng suất cận biên giảm dần của tư bản, chỉ có TIẾN BỘ CÔNG NGHỆ (g) mới là động cơ duy nhất thúc đẩy sản lượng trên mỗi lao động tăng trưởng liên tục trong dài hạn.",
+    "explanation": "Theo mô hình Solow, việc tăng tỷ lệ tiết kiệm chỉ tạo ra 'hiệu ứng mức' (Level effect) làm tăng sản lượng tạm thời cho đến khi đạt trạng thái dừng mới, sau đó tốc độ tăng trưởng Y/L lại quay về 0. Do quy luật năng suất cận biên giảm dần của tư bản, chỉ có tiến bộ công nghệ (g) mới là động cơ duy nhất thúc đẩy sản lượng trên mỗi lao động tăng trưởng liên tục trong dài hạn.",
     "isTrap": true,
     "trapAdvice": "Tiết kiệm cao không làm tăng trưởng dài hạn mãi mãi, chỉ có Công nghệ mới làm được!"
   },
@@ -1365,7 +1365,7 @@ const QUIZ_DATA = [
       "Áp đặt giá trần lãi suất"
     ],
     "correct": 1,
-    "explanation": "Khi k* > k_gold*, nền kinh tế đang bị 'Kém hiệu quả động' do tích lũy quá nhiều tư bản (chi phí khấu hao bù đắp lớn hơn sản phẩm biên MPK). Giảm tỷ lệ tiết kiệm s sẽ lập tức làm TĂNG TIÊU DÙNG c* trong cả ngắn hạn lẫn dài hạn, đưa k* giảm về mức vàng tối ưu.",
+    "explanation": "Khi k* > k_gold*, nền kinh tế đang bị 'Kém hiệu quả động' do tích lũy quá nhiều tư bản (chi phí khấu hao bù đắp lớn hơn sản phẩm biên MPK). Giảm tỷ lệ tiết kiệm s sẽ lập tức làm tăng tiêu dùng c* trong cả ngắn hạn lẫn dài hạn, đưa k* giảm về mức vàng tối ưu.",
     "isTrap": false,
     "trapAdvice": "Tiết kiệm nhiều quá mức vàng là lãng phí tài nguyên của xã hội!"
   },
@@ -1375,7 +1375,7 @@ const QUIZ_DATA = [
     "chapter": 12,
     "topic": "Mô hình Mundell - Fleming & Tỷ giá thả nổi",
     "difficulty": "advanced",
-    "question": "Trong mô hình Mundell-Fleming với vốn luân chuyển hoàn hảo và TỶ GIÁ THẢ NỔI, chính sách nào sau đây có hiệu lực mạnh nhất trong việc tăng sản lượng quốc dân?",
+    "question": "Trong mô hình Mundell-Fleming với vốn luân chuyển hoàn hảo và tỷ giá thả nổi, chính sách nào sau đây có hiệu lực mạnh nhất trong việc tăng sản lượng quốc dân?",
     "options": [
       "Chính sách tài khóa mở rộng (tăng G)",
       "Chính sách tiền tệ mở rộng (tăng cung tiền MS)",
@@ -1383,9 +1383,9 @@ const QUIZ_DATA = [
       "Chính sách giảm thuế thu nhập (giảm T)"
     ],
     "correct": 1,
-    "explanation": "Dưới tỷ giá thả nổi: Tài khóa và Thuế quan hoàn toàn vô hiệu vì bị triệt tiêu bởi sự tăng giá của đồng nội tệ (NX giảm). Nhưng CHÍNH SÁCH TIỀN TỆ MỞ RỘNG có hiệu lực tối đa: Tăng MS làm lãi suất giảm tạm thời -> dòng vốn chảy ra -> đồng nội tệ giảm giá -> Xuất khẩu ròng NX tăng vọt -> Sản lượng Y tăng mạnh mẽ!",
+    "explanation": "Dưới tỷ giá thả nổi: Tài khóa và Thuế quan hoàn toàn vô hiệu vì bị triệt tiêu bởi sự tăng giá của đồng nội tệ (NX giảm). Nhưng chính sách tiền tệ mở rộng có hiệu lực tối đa: Tăng MS làm lãi suất giảm tạm thời -> dòng vốn chảy ra -> đồng nội tệ giảm giá -> Xuất khẩu ròng NX tăng vọt -> Sản lượng Y tăng mạnh mẽ!",
     "isTrap": true,
-    "trapAdvice": "Quy tắc vàng Mundell-Fleming: Tỷ giá THẢ NỔI = TIỀN TỆ thống trị; Tỷ giá CỐ ĐỊNH = TÀI KHÓA thống trị."
+    "trapAdvice": "Quy tắc vàng Mundell-Fleming: Tỷ giá thả nổi = TIỀN TỆ thống trị; Tỷ giá cố định = tài khóa thống trị."
   },
   {
     "id": "q78",
@@ -1401,7 +1401,7 @@ const QUIZ_DATA = [
       "Từ bỏ Cán cân thanh toán quốc tế"
     ],
     "correct": 2,
-    "explanation": "Các quốc gia Eurozone dùng chung một đồng tiền Euro (tương đương tỷ giá cố định tuyệt đối) và mở cửa dòng vốn tự do hoàn toàn giữa các nước thành viên. Cái giá phải trả là từng quốc gia (như Pháp, Ý, Hy Lạp) phải TỪ BỎ CHÍNH SÁCH TIỀN TỆ ĐỘC LẬP, trao quyền điều hành lãi suất cho Ngân hàng Trung ương Châu Âu (ECB).",
+    "explanation": "Các quốc gia Eurozone dùng chung một đồng tiền Euro (tương đương tỷ giá cố định tuyệt đối) và mở cửa dòng vốn tự do hoàn toàn giữa các nước thành viên. Cái giá phải trả là từng quốc gia (như Pháp, Ý, Hy Lạp) phải từ bỏ chính sách tiền tệ độc lập, trao quyền điều hành lãi suất cho Ngân hàng Trung ương Châu Âu (ECB).",
     "isTrap": false,
     "trapAdvice": "Trilemma: Không một quốc gia nào có thể cùng lúc đạt cả 3 mục tiêu độc lập tiền tệ, tỷ giá cố định và tự do vốn."
   },

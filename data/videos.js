@@ -146,8 +146,8 @@ const VIDEOS_DATA = [
     thumbnail: "https://img.youtube.com/vi/3midaQqm7NM/hqdefault.jpg",
     summary: "CrashCourse giải thích mối quan hệ vàng giữa độ co giãn và tổng doanh thu (TR = P x Q). Khi cầu co giãn (|E| > 1), giảm giá làm tăng TR. Khi cầu kém co giãn (|E| < 1), tăng giá làm tăng TR. Doanh thu cực đại khi |E| = 1.",
     keyTakeaways: [
-      "Cầu co giãn nhiều (|E| > 1): Tỷ lệ % tăng sản lượng lớn hơn tỷ lệ % giảm giá -> Doanh thu TĂNG khi GIẢM giá.",
-      "Cầu co giãn ít (|E| < 1): Tỷ lệ % giảm sản lượng nhỏ hơn tỷ lệ % tăng giá -> Doanh thu TĂNG khi TĂNG giá.",
+      "Cầu co giãn nhiều (|E| > 1): Tỷ lệ % tăng sản lượng lớn hơn tỷ lệ % giảm giá -> Doanh thu tăng khi giảm giá.",
+      "Cầu co giãn ít (|E| < 1): Tỷ lệ % giảm sản lượng nhỏ hơn tỷ lệ % tăng giá -> Doanh thu tăng khi tăng giá.",
       "Doanh thu đạt đỉnh tại điểm co giãn đơn vị (|E| = 1), tại đó Doanh thu cận biên MR = 0."
     ],
     examRelevance: "Bài tập điển hình: Cho hàm cầu Q = a - bP, tìm mức giá P để doanh nghiệp thu được doanh thu lớn nhất (giải bằng P = a / (2b) hoặc Ed = -1).",
@@ -173,8 +173,8 @@ const VIDEOS_DATA = [
     thumbnail: "https://img.youtube.com/vi/01lKDkYSFDg/hqdefault.jpg",
     summary: "CrashCourse phân tích sâu sắc các hệ lụy ngoài ý muốn khi chính phủ áp đặt giá trần (Price Ceiling) như kiểm soát giá thuê nhà và giá sàn (Price Floor) như lương tối thiểu. Dẫn chứng thị trường chợ đen, suy giảm chất lượng và tổn thất vô ích.",
     keyTakeaways: [
-      "Giá trần có hiệu lực phải NẰM DƯỚI giá cân bằng -> Gây ra sự thiếu hụt hàng hóa trầm trọng.",
-      "Giá sàn có hiệu lực phải NẰM TRÊN giá cân bằng -> Gây ra dư thừa hàng hóa.",
+      "Giá trần có hiệu lực phải nằm dưới giá cân bằng -> Gây ra sự thiếu hụt hàng hóa trầm trọng.",
+      "Giá sàn có hiệu lực phải nằm trên giá cân bằng -> Gây ra dư thừa hàng hóa.",
       "Cả hai chính sách can thiệp thô bạo đều làm giảm số lượng giao dịch và sinh ra Tổn thất vô ích (Deadweight Loss)."
     ],
     examRelevance: "Đề thi đại học thường lừa: 'Giá trần đặt trên giá cân bằng thì sao?' -> Câu trả lời: Không có hiệu lực, thị trường vẫn giao dịch ở giá cân bằng.",
@@ -329,7 +329,7 @@ const VIDEOS_DATA = [
     thumbnail: "https://img.youtube.com/vi/d8uTB5XorBw/hqdefault.jpg",
     summary: "Bức tranh toàn cảnh về 3 mục tiêu vĩ mô: 1. Tăng trưởng kinh tế (GDP); 2. Ổn định giá cả (Kiểm soát lạm phát); 3. Giữ thất nghiệp ở mức thấp. Phân tích công thức tính GDP theo phương pháp chi tiêu: GDP = C + I + G + NX.",
     keyTakeaways: [
-      "GDP là giá trị thị trường của tất cả hàng hóa và dịch vụ CUỐI CÙNG được sản xuất ra trong phạm vi một quốc gia trong một thời kỳ.",
+      "GDP là giá trị thị trường của tất cả hàng hóa và dịch vụ cuối cùng được sản xuất ra trong phạm vi một quốc gia trong một thời kỳ.",
       "Không tính hàng hóa trung gian (Intermediate goods) để tránh tính trùng 2 lần.",
       "Phân biệt GDP danh nghĩa (Nominal GDP) tính theo giá hiện hành và GDP thực tế (Real GDP) tính theo giá cố định năm gốc."
     ],
@@ -341,7 +341,7 @@ const VIDEOS_DATA = [
     ]
   },
 
-  // --- VĨ MÔ: CHƯƠNG 8 - TĂNG TRƯỞNG & NĂNG SUẤT ---
+  // --- VĨ MÔ: CHƯƠNG 8 - tăng TRƯỞNG & NĂNG SUẤT ---
   {
     id: "vid-14",
     category: "macro",
@@ -410,8 +410,8 @@ const VIDEOS_DATA = [
     thumbnail: "https://img.youtube.com/vi/1dq7mMort9o/hqdefault.jpg",
     summary: "Adriene Hill giải thích toàn diện cách Ngân hàng Trung ương (như Fed hay NHNN Việt Nam) kiểm soát lãi suất và lượng tiền lưu thông. 3 công cụ kinh điển: Hoạt động thị trường mở (OMO), Tỷ lệ dự trữ bắt buộc (RRR), và Lãi suất chiết khấu.",
     keyTakeaways: [
-      "Chính sách tiền tệ mở rộng: NHTW MUA trái phiếu chính phủ -> Bơm tiền vào lưu thông -> Lãi suất GIẢM -> Kích thích đầu tư (I) và GDP.",
-      "Chính sách tiền tệ thắt chặt: NHTW BÁN trái phiếu -> Hút tiền về -> Lãi suất TĂNG -> Kìm hãm lạm phát.",
+      "Chính sách tiền tệ mở rộng: NHTW mua trái phiếu chính phủ -> Bơm tiền vào lưu thông -> Lãi suất giảm -> Kích thích đầu tư (I) và GDP.",
+      "Chính sách tiền tệ thắt chặt: NHTW bán trái phiếu -> Hút tiền về -> Lãi suất tăng -> Kìm hãm lạm phát.",
       "Hoạt động thị trường mở (OMO) là công cụ được sử dụng phổ biến và linh hoạt nhất."
     ],
     examRelevance: "Đề thi vĩ mô luôn có câu hỏi chuỗi nhân quả: 'NHTW mua trái phiếu thì cung tiền, lãi suất, đầu tư và tổng cầu thay đổi thế nào?'.",

@@ -423,41 +423,61 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-/* Khóa tuyệt đối tỉ lệ hình học 1:1 cho toàn bộ Icons, chống méo lệch khi bẻ dòng */
-[data-lucide], svg.lucide, svg {
+/* ==========================================================================
+   HỆ THỐNG KHÓA TỈ LỆ VÀ CĂN CHỈNH ICON CHUẨN XÁC (PIXEL-PERFECT ICONS)
+   ========================================================================== */
+
+/* Khóa tỷ lệ 1:1 và chống méo khi text rớt dòng cho Lucide icons */
+i[data-lucide], svg.lucide {
   flex-shrink: 0 !important;
-  width: 1.25rem;
-  height: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-  display: inline-block !important;
-  vertical-align: middle !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: -0.125em !important;
+  aspect-ratio: 1 / 1 !important;
+  transition: transform 0.2s ease, stroke 0.2s ease;
 }
 
-.w-3\.5.h-3\.5, [data-lucide].w-3\.5 {
+/* Kích thước mặc định khi không có class kích thước của Tailwind */
+i[data-lucide]:not([class*="w-"]), svg.lucide:not([class*="w-"]) {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* Đảm bảo các kích cỡ phổ biến luôn vuông vắn 1:1 chuẩn pixel */
+.w-3\.5, [data-lucide].w-3\.5, svg.lucide.w-3\.5 {
   width: 0.875rem !important;
   height: 0.875rem !important;
-  min-width: 0.875rem !important;
-  min-height: 0.875rem !important;
 }
 
-.w-4.h-4, [data-lucide].w-4 {
+.w-4, [data-lucide].w-4, svg.lucide.w-4 {
   width: 1rem !important;
   height: 1rem !important;
-  min-width: 1rem !important;
-  min-height: 1rem !important;
 }
 
-.w-5.h-5, [data-lucide].w-5 {
+.w-5, [data-lucide].w-5, svg.lucide.w-5 {
   width: 1.25rem !important;
   height: 1.25rem !important;
-  min-width: 1.25rem !important;
-  min-height: 1.25rem !important;
 }
 
-.w-6.h-6, [data-lucide].w-6 {
+.w-6, [data-lucide].w-6, svg.lucide.w-6 {
   width: 1.5rem !important;
   height: 1.5rem !important;
-  min-width: 1.5rem !important;
-  min-height: 1.5rem !important;
+}
+
+.w-10, [data-lucide].w-10, svg.lucide.w-10 {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+
+/* Bảo vệ tuyệt đối SVG trong công thức toán KaTeX (căn bậc hai, dấu gạch ngang, mũi tên) */
+.katex svg, .katex-display svg {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  display: inline !important;
+  vertical-align: 0 !important;
+  flex-shrink: 0 !important;
 }

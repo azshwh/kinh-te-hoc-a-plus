@@ -11,7 +11,7 @@ const TRAPS_DATA = [
     title: "Di chuyển dọc (Movement Along) và dịch chuyển đường cầu (Shift)",
     severity: "Rất cao (90% sinh viên từng sai)",
     trapDesc: "Đề bài cho: 'Giá của hàng hóa X giảm xuống, điều này sẽ làm...'. Học sinh vội vã chọn: 'Đường cầu hàng hóa X dịch chuyển sang phải'.",
-    correctInsight: "chỉ có các yếu tố NGOÀI GIÁ (Thu nhập, Giá hàng liên quan, Thị hiếu, Kỳ vọng, Số lượng người mua) mới làm dịch chuyển đường cầu. Khi GIÁ của chính hàng hóa đó ($P_X$) thay đổi, đường cầu KHÔNG dịch chuyển mà chỉ xảy ra hiện tượng di chuyển dọc trên cùng đường cầu (Lượng cầu $Q_D$ thay đổi).",
+    correctInsight: "chỉ có các yếu tố ngoài giá (Thu nhập, Giá hàng liên quan, Thị hiếu, Kỳ vọng, Số lượng người mua) mới làm dịch chuyển đường cầu. Khi GIÁ của chính hàng hóa đó ($P_X$) thay đổi, đường cầu KHÔNG dịch chuyển mà chỉ xảy ra hiện tượng di chuyển dọc trên cùng đường cầu (Lượng cầu $Q_D$ thay đổi).",
     examTip: "Quy tắc vàng: Giá của chính nó thay đổi -> 'Lượng cầu' thay đổi (trượt dọc). Yếu tố khác thay đổi -> 'Cầu' thay đổi (dịch chuyển cả đường).",
     sampleQuestion: {
       q: "Khi giá của mặt hàng trà sữa trân châu giảm từ 50.000đ xuống 30.000đ, điều gì sẽ xảy ra?",
@@ -32,7 +32,7 @@ const TRAPS_DATA = [
     title: "Giá trần có hiệu lực (Binding) và không có hiệu lực (Non-binding)",
     severity: "Cao (Bẫy kinh điển trắc nghiệm)",
     trapDesc: "Đề bài: 'Giá cân bằng thị trường gạo là $P^* = 20$. Chính phủ quy định giá trần là $P_c = 25$. Thị trường sẽ bị thiếu hụt bao nhiêu?'. Sinh viên vội thay $P=25$ vào hàm cung cầu rồi trừ ra lượng thiếu hụt.",
-    correctInsight: "Giá trần (Price Ceiling) là mức giá tối đa hợp pháp. Nếu chính phủ quy định giá trần $P_c = 25$ CAO HƠN giá cân bằng $P^* = 20$, giá trần này KHÔNG CÓ HIỆU LỰC (Non-binding) vì thị trường tự do vẫn giao dịch ở mức $P=20$. Thị trường không bị thiếu hụt mà vẫn ở trạng thái cân bằng!",
+    correctInsight: "Giá trần (Price Ceiling) là mức giá tối đa hợp pháp. Nếu chính phủ quy định giá trần $P_c = 25$ cao hơn giá cân bằng $P^* = 20$, giá trần này không có hiệu lực (Non-binding) vì thị trường tự do vẫn giao dịch ở mức $P=20$. Thị trường không bị thiếu hụt mà vẫn ở trạng thái cân bằng!",
     examTip: "Quy tắc nhớ: Muốn có hiệu lực, Giá trần (Ceiling) phải nằm dưới giá cân bằng ($P_c < P^*$), còn Giá sàn (Floor) phải nằm trên giá cân bằng ($P_f > P^*$).",
     sampleQuestion: {
       q: "Thị trường có hàm cầu $Q_D = 100 - P$ và cung $Q_S = 2P - 20$. Nếu chính phủ đặt giá trần $P = 50$, điều gì xảy ra?",
@@ -53,7 +53,7 @@ const TRAPS_DATA = [
     title: "Gánh nặng thuế pháp lý và gánh nặng thuế thực tế",
     severity: "Rất cao",
     trapDesc: "Sinh viên nghĩ rằng: Chính phủ ban hành luật đánh thuế 5.000đ/lít xăng lên người bán thì người bán phải gánh chịu toàn bộ 5.000đ này.",
-    correctInsight: "Theo GS. Mankiw, gánh nặng thuế thực tế (Tax Incidence) không hề phụ thuộc vào việc luật pháp quy định ai là người nộp thuế. Gánh nặng thực tế được phân bổ theo ĐỘ CO GIÃN TƯƠNG ĐỐI: Bên nào kém co giãn hơn (ít phương án thay thế hơn) sẽ phải chịu phần lớn gánh nặng thuế.",
+    correctInsight: "Theo GS. Mankiw, gánh nặng thuế thực tế (Tax Incidence) không hề phụ thuộc vào việc luật pháp quy định ai là người nộp thuế. Gánh nặng thực tế được phân bổ theo độ co giãn tương đối: Bên nào kém co giãn hơn (ít phương án thay thế hơn) sẽ phải chịu phần lớn gánh nặng thuế.",
     examTip: "Nếu Cầu hoàn toàn không co giãn ($E_d = 0$ như thuốc chữa bệnh hiểm nghèo), người mua chịu 100% thuế. Nếu Cung hoàn toàn không co giãn ($E_s = 0$ như đất đai), người bán chịu 100% thuế.",
     sampleQuestion: {
       q: "Chính phủ đánh thuế $t = 2$ USD/sản phẩm lên người sản xuất. Kết quả phân bổ thuế phụ thuộc vào:",
@@ -75,7 +75,7 @@ const TRAPS_DATA = [
     severity: "Cao",
     trapDesc: "Nhìn thấy đường cầu dạng đường thẳng có độ dốc không đổi, học sinh kết luận: 'Độ co giãn của đường cầu này là hằng số ở mọi điểm'.",
     correctInsight: "Độ dốc của đường thẳng $Q = a - bP$ là $\\Delta Q / \\Delta P = -b$ (cố định), nhưng độ co giãn $E_d = (\\Delta Q / \\Delta P) \\times (P / Q) = -b \\times (P / Q)$. Khi di chuyển từ trên xuống dưới dọc đường cầu, tỷ số $P/Q$ giảm dần từ $\\infty$ về 0, nên độ co giãn biến thiên liên tục: từ co giãn nhiều ($|E| > 1$) ở nửa trên, qua co giãn đơn vị ($|E| = 1$) ở trung điểm, xuống kém co giãn ($|E| < 1$) ở nửa dưới.",
-    examTip: "Đường cầu thẳng có độ dốc không đổi NHƯNG độ co giãn thay đổi liên tục!",
+    examTip: "Đường cầu thẳng có độ dốc không đổi nhưng độ co giãn thay đổi liên tục!",
     sampleQuestion: {
       q: "Dọc theo một đường cầu dốc xuống dạng đường thẳng tuyến tính, khi giá giảm dần thì độ co giãn của cầu theo giá (|Ed|) sẽ:",
       options: [
@@ -95,7 +95,7 @@ const TRAPS_DATA = [
     title: "Lợi nhuận kinh tế bằng 0 (Zero Economic Profit) không đồng nghĩa phá sản",
     severity: "Rất cao (Bẫy thi cuối kỳ)",
     trapDesc: "Đề bài: 'Trong dài hạn, doanh nghiệp cạnh tranh hoàn hảo có lợi nhuận kinh tế bằng 0, vậy doanh nghiệp có nên đóng cửa không?'. Học sinh trả lời: 'Nên đóng cửa vì làm ăn không có lãi'.",
-    correctInsight: "Lợi nhuận kinh tế $\\pi_{kt} = TR - TC_{kinh\\,tế} = TR - (Chi\\,phí\\,hiện + Chi\\,phí\\,ẩn)$. Khi $\\pi_{kt} = 0$, điều đó có nghĩa là doanh nghiệp đang thu được LỢI NHUẬN KẾ TOÁN VỪA ĐỦ để bù đắp toàn bộ chi phí cơ hội của vốn và thời gian của chủ sở hữu (gọi là Lợi nhuận bình thường - Normal Profit). Chủ doanh nghiệp vẫn kiếm tiền ngang bằng với phương án đầu tư tốt nhất khác ngoài thị trường, do đó không hề bị phá sản và tiếp tục hoạt động!",
+    correctInsight: "Lợi nhuận kinh tế $\\pi_{kt} = TR - TC_{kinh\\,tế} = TR - (Chi\\,phí\\,hiện + Chi\\,phí\\,ẩn)$. Khi $\\pi_{kt} = 0$, điều đó có nghĩa là doanh nghiệp đang thu được lợi nhuận kế toán vừa đủ để bù đắp toàn bộ chi phí cơ hội của vốn và thời gian của chủ sở hữu (gọi là Lợi nhuận bình thường - Normal Profit). Chủ doanh nghiệp vẫn kiếm tiền ngang bằng với phương án đầu tư tốt nhất khác ngoài thị trường, do đó không hề bị phá sản và tiếp tục hoạt động!",
     examTip: "Lợi nhuận kinh tế = 0 $\\Leftrightarrow$ Lợi nhuận kế toán > 0 $\\Leftrightarrow$ Đang kiếm được lợi nhuận bình thường.",
     sampleQuestion: {
       q: "Khi một doanh nghiệp đạt lợi nhuận kinh tế bằng 0 (Zero economic profit), điều đó có nghĩa là:",
@@ -116,7 +116,7 @@ const TRAPS_DATA = [
     title: "Điểm đóng cửa sản xuất trong ngắn hạn: So với AVC hay ATC?",
     severity: "Cao",
     trapDesc: "Khi giá $P < ATC$, học sinh kết luận doanh nghiệp phải đóng cửa ngay lập tức trong ngắn hạn.",
-    correctInsight: "Trong ngắn hạn, chi phí cố định ($FC$) là chi phí chìm (Sunk cost), dù sản xuất hay đóng cửa thì doanh nghiệp VẪN PHẢI TRẢ $FC$. Doanh nghiệp chỉ đóng cửa ngắn hạn khi Giá bán không bù đắp nổi chi phí biến đổi trung bình ($P < AVC_{\\min}$). Nếu $AVC_{\\min} \\le P < ATC_{\\min}$, doanh nghiệp BỊ LỖ nhưng VẪN NÊN TIẾP TỤC SẢN XUẤT vì phần chênh lệch $P - AVC > 0$ giúp bù đắp một phần chi phí cố định $FC$!",
+    correctInsight: "Trong ngắn hạn, chi phí cố định ($FC$) là chi phí chìm (Sunk cost), dù sản xuất hay đóng cửa thì doanh nghiệp vẫn phải trả $FC$. Doanh nghiệp chỉ đóng cửa ngắn hạn khi Giá bán không bù đắp nổi chi phí biến đổi trung bình ($P < AVC_{\\min}$). Nếu $AVC_{\\min} \\le P < ATC_{\\min}$, doanh nghiệp bị lỗ nhưng vẫn nên tiếp tục sản xuất vì phần chênh lệch $P - AVC > 0$ giúp bù đắp một phần chi phí cố định $FC$!",
     examTip: "Ngắn hạn: Đóng cửa khi $P < AVC_{\\min}$. Dài hạn: Rời bỏ ngành khi $P < ATC_{\\min}$.",
     sampleQuestion: {
       q: "Một doanh nghiệp cạnh tranh có ATC = 15, AVC = 10. Nếu giá thị trường là P = 12, doanh nghiệp nên làm gì trong ngắn hạn?",
@@ -137,7 +137,7 @@ const TRAPS_DATA = [
     title: "Doanh thu cận biên (MR) của nhà độc quyền luôn nhỏ hơn mức giá (MR < P)",
     severity: "Trung bình - Cao",
     trapDesc: "Học sinh dùng công thức $P = MC$ để tìm điểm tối đa hóa lợi nhuận của doanh nghiệp độc quyền giống như cạnh tranh hoàn hảo.",
-    correctInsight: "Doanh nghiệp cạnh tranh hoàn hảo có $MR = P$ vì họ là người chấp nhận giá. Nhưng nhà độc quyền đối mặt với đường cầu dốc xuống, muốn bán thêm 1 sản phẩm họ PHẢI HẠ GIÁ của tất cả các sản phẩm bán ra -> Do đó $MR < P$ ở mọi mức sản lượng $Q > 0$. Điều kiện tối đa hóa lợi nhuận vẫn là $MR = MC$, nhưng mức giá bán $P$ sẽ được gióng lên đường CẦU tại sản lượng đó ($P > MR = MC$).",
+    correctInsight: "Doanh nghiệp cạnh tranh hoàn hảo có $MR = P$ vì họ là người chấp nhận giá. Nhưng nhà độc quyền đối mặt với đường cầu dốc xuống, muốn bán thêm 1 sản phẩm họ phải hạ giá của tất cả các sản phẩm bán ra -> Do đó $MR < P$ ở mọi mức sản lượng $Q > 0$. Điều kiện tối đa hóa lợi nhuận vẫn là $MR = MC$, nhưng mức giá bán $P$ sẽ được gióng lên đường cầu tại sản lượng đó ($P > MR = MC$).",
     examTip: "Với hàm cầu tuyến tính $P = a - bQ$, hàm doanh thu cận biên luôn có dạng $MR = a - 2bQ$ (độ dốc gấp đôi đường cầu).",
     sampleQuestion: {
       q: "Đường cầu của một nhà độc quyền là $P = 100 - 2Q$. Phương trình doanh thu cận biên (MR) là:",
@@ -158,7 +158,7 @@ const TRAPS_DATA = [
     title: "Lợi thế tuyệt đối và lợi thế so sánh (Comparative Advantage)",
     severity: "Rất cao",
     trapDesc: "Một quốc gia sản xuất cả lúa mì và máy bay đều nhanh hơn, năng suất hơn quốc gia kia -> Học sinh kết luận quốc gia đó không nên giao thương thương mại.",
-    correctInsight: "Theo David Ricardo và Mankiw: Cơ sở của thương mại quốc tế KHÔNG PHẢI là lợi thế tuyệt đối mà là LỢI THẾ SO SÁNH (chi phí cơ hội thấp hơn). Một quốc gia dù có lợi thế tuyệt đối ở TẤT CẢ các mặt hàng, nhưng KHÔNG THỂ có lợi thế so sánh ở tất cả các mặt hàng. Hai quốc gia vẫn luôn có thể cùng hưởng lợi từ thương mại khi mỗi bên chuyên môn hóa vào mặt hàng có chi phí cơ hội thấp hơn.",
+    correctInsight: "Theo David Ricardo và Mankiw: Cơ sở của thương mại quốc tế không phải là lợi thế tuyệt đối mà là lợi thế so sánh (chi phí cơ hội thấp hơn). Một quốc gia dù có lợi thế tuyệt đối ở tất cả các mặt hàng, nhưng không thể có lợi thế so sánh ở tất cả các mặt hàng. Hai quốc gia vẫn luôn có thể cùng hưởng lợi từ thương mại khi mỗi bên chuyên môn hóa vào mặt hàng có chi phí cơ hội thấp hơn.",
     examTip: "Tính chi phí cơ hội của mỗi sản phẩm = Số lượng sản phẩm kia phải từ bỏ. Bên nào có số từ bỏ nhỏ hơn thì bên đó có lợi thế so sánh.",
     sampleQuestion: {
       q: "Việt Nam sản xuất 1 tấn gạo mất 2 giờ, 1 cái áo mất 1 giờ. Thái Lan sản xuất 1 tấn gạo mất 3 giờ, 1 cái áo mất 3 giờ. Ai có lợi thế so sánh về gạo?",
@@ -181,8 +181,8 @@ const TRAPS_DATA = [
     title: "Các khoản mục không được tính vào GDP",
     severity: "Rất cao",
     trapDesc: "Đề bài liệt kê: Tiền trợ cấp thất nghiệp, tiền bán nhà cũ xây từ 10 năm trước, mua cổ phiếu Vinamilk. Học sinh cộng hết vào GDP.",
-    correctInsight: "GDP CHỈ TÍNH giá trị của hàng hóa và dịch vụ CUỐI CÙNG được SẢN XUẤT MỚI trong kỳ. Không tính:\n1. Các khoản chuyển giao thu nhập của chính phủ ($Tr$ như trợ cấp thất nghiệp, học bổng, lương hưu) vì không đổi lấy hàng hóa/dịch vụ mới.\n2. Giao dịch hàng hóa đã qua sử dụng (xe cũ, nhà cũ).\n3. Giao dịch tài sản tài chính thuần túy (mua cổ phiếu, trái phiếu).\n4. Hoạt động kinh tế phi chính thức, tự cung tự cấp.",
-    examTip: "Công thức chi tiêu chính phủ $G$ trong GDP KHÔNG BAO GỒM trợ cấp $Tr$!",
+    correctInsight: "GDP chỉ tính giá trị của hàng hóa và dịch vụ cuối cùng được sản xuất mới trong kỳ. Không tính:\n1. Các khoản chuyển giao thu nhập của chính phủ ($Tr$ như trợ cấp thất nghiệp, học bổng, lương hưu) vì không đổi lấy hàng hóa/dịch vụ mới.\n2. Giao dịch hàng hóa đã qua sử dụng (xe cũ, nhà cũ).\n3. Giao dịch tài sản tài chính thuần túy (mua cổ phiếu, trái phiếu).\n4. Hoạt động kinh tế phi chính thức, tự cung tự cấp.",
+    examTip: "Công thức chi tiêu chính phủ $G$ trong GDP không bao gồm trợ cấp $Tr$!",
     sampleQuestion: {
       q: "Khoản mục nào sau đây ĐƯỢC TÍNH vào GDP của Việt Nam năm 2026?",
       options: [
@@ -202,7 +202,7 @@ const TRAPS_DATA = [
     title: "Bốn điểm khác biệt cốt lõi giữa CPI và chỉ số điều chỉnh GDP",
     severity: "Rất cao (Câu hỏi điểm 9-10)",
     trapDesc: "Đề bài: 'Giá xe Mercedes nhập khẩu từ Đức tăng 20%, điều này làm chỉ số nào tăng?'. Sinh viên chọn: 'Cả CPI và GDP Deflator đều tăng'.",
-    correctInsight: "GDP Deflator CHỈ đo lường hàng hóa sản xuất TRONG NƯỚC (vì chữ D = Domestic). Hàng nhập khẩu KHÔNG NẰM TRONG GDP nên KHÔNG ẢNH HƯỞNG đến GDP Deflator! Ngược lại, CPI đo lường giỏ hàng hóa người tiêu dùng mua, nên giá hàng tiêu dùng nhập khẩu (như xe Mercedes, iPhone) TĂNG sẽ LÀM CPI TĂNG.",
+    correctInsight: "GDP Deflator chỉ đo lường hàng hóa sản xuất trong nước (vì chữ D = Domestic). Hàng nhập khẩu không nằm trong GDP nên không ảnh hưởng đến GDP Deflator! Ngược lại, CPI đo lường giỏ hàng hóa người tiêu dùng mua, nên giá hàng tiêu dùng nhập khẩu (như xe Mercedes, iPhone) tăng sẽ làm CPI tăng.",
     examTip: "Hàng nhập khẩu: Ảnh hưởng CPI, KHÔNG ảnh hưởng GDP Deflator. Hàng tư liệu sản xuất trong nước (máy ủi, máy dệt): Ảnh hưởng GDP Deflator, KHÔNG ảnh hưởng CPI.",
     sampleQuestion: {
       q: "Nếu giá máy bay chiến đấu do Bộ Quốc phòng đặt hàng sản xuất trong nước tăng giá, chỉ số nào sẽ tăng?",
@@ -223,7 +223,7 @@ const TRAPS_DATA = [
     title: "Giảm lạm phát (Disinflation) khác biệt hoàn toàn với giảm phát (Deflation)",
     severity: "Cao",
     trapDesc: "Báo chí viết: 'Lạm phát của Việt Nam giảm từ 4% xuống 2%'. Học sinh kết luận: 'Mức giá chung của nền kinh tế đang giảm xuống'.",
-    correctInsight: "• Giảm lạm phát (Disinflation): Tỷ lệ lạm phát giảm nhưng VẪN DƯƠNG (ví dụ từ +4% xuống +2%). Điều đó có nghĩa là GIÁ CẢ VẪN ĐANG TĂNG, chỉ là TĂNG CHẬM HƠN so với trước!\n• Giảm phát (Deflation): Tỷ lệ lạm phát ÂM (ví dụ -1%), lúc này mức giá chung mới THỰC SỰ GIẢM XUỐNG.",
+    correctInsight: "• Giảm lạm phát (Disinflation): Tỷ lệ lạm phát giảm nhưng vẫn dương (ví dụ từ +4% xuống +2%). Điều đó có nghĩa là giá cả vẫn đang tăng, chỉ là tăng chậm hơn so với trước!\n• Giảm phát (Deflation): Tỷ lệ lạm phát ÂM (ví dụ -1%), lúc này mức giá chung mới thực sự giảm xuống.",
     examTip: "Lạm phát giảm từ 5% về 2% -> Mức giá P vẫn tăng!",
     sampleQuestion: {
       q: "Khi nền kinh tế chuyển từ tỷ lệ lạm phát 6%/năm sang 3%/năm, hiện tượng này được gọi là:",
@@ -244,8 +244,8 @@ const TRAPS_DATA = [
     title: "Điều kiện để một người được tính là thất nghiệp (Unemployed)",
     severity: "Rất cao",
     trapDesc: "Đề bài: 'Bác Ba 50 tuổi vừa nghỉ hưu và ở nhà chăm cháu, không có nhu cầu đi làm. Bác Ba có bị tính là thất nghiệp không?'. Sinh viên chọn: 'Có vì không có việc làm'.",
-    correctInsight: "Theo chuẩn ILO và Mankiw: Để được tính là Thất nghiệp, một người phải thỏa mãn ĐỒNG THỜI 3 điều kiện:\n1. Trong độ tuổi lao động;\n2. Đang KHÔNG CÓ VIỆC LÀM;\n3. Đang TÍCH CỰC TÌM KIẾM VIỆC LÀM trong 4 tuần gần nhất.\nNhững người không muốn tìm việc (nghỉ hưu sớm, nội trợ, sinh viên toàn thời gian, người nản chí) được xếp vào nhóm 'NGOÀI LỰC LƯỢNG LAO ĐỘNG' (Not in Labor Force), KHÔNG ĐƯỢC TÍNH vào số người thất nghiệp!",
-    examTip: "Tỷ lệ thất nghiệp $u = \\frac{Số\\,người\\,thất\\,nghiệp}{Lực\\,lượng\\,lao\\,động} \\times 100\\%$. Mẫu số là Lực lượng lao động, KHÔNG PHẢI toàn bộ dân số!",
+    correctInsight: "Theo chuẩn ILO và Mankiw: Để được tính là Thất nghiệp, một người phải thỏa mãn đồng thời 3 điều kiện:\n1. Trong độ tuổi lao động;\n2. Đang không có việc làm;\n3. Đang tích cực tìm kiếm việc làm trong 4 tuần gần nhất.\nNhững người không muốn tìm việc (nghỉ hưu sớm, nội trợ, sinh viên toàn thời gian, người nản chí) được xếp vào nhóm 'ngoài lực lượng lao động' (Not in Labor Force), không được tính vào số người thất nghiệp!",
+    examTip: "Tỷ lệ thất nghiệp $u = \\frac{Số\\,người\\,thất\\,nghiệp}{Lực\\,lượng\\,lao\\,động} \\times 100\\%$. Mẫu số là Lực lượng lao động, không phải toàn bộ dân số!",
     sampleQuestion: {
       q: "Một người công nhân bị sa thải, sau 3 tháng tìm việc không thành công đã chán nản và từ bỏ việc tìm việc, ở nhà chơi game. Người này được phân loại là:",
       options: [
@@ -265,7 +265,7 @@ const TRAPS_DATA = [
     title: "Ngân hàng trung ương mua trái phiếu làm tăng hay giảm cung tiền?",
     severity: "Cao",
     trapDesc: "Học sinh hay bị nhầm lẫn chiều tác động của Hoạt động thị trường mở (OMO).",
-    correctInsight: "Hãy nhớ quy tắc 'Tiền trao cháo múc':\n• NHTW MUA trái phiếu: NHTW thu tờ giấy trái phiếu về và BƠM TIỀN MẶT RA -> Cung tiền $MS$ TĂNG -> Lãi suất $r$ GIẢM -> Kích thích đầu tư $I$ -> Tổng cầu $AD$ dịch phải.\n• NHTW BÁN trái phiếu: NHTW phát hành giấy và THU TIỀN MẶT VỀ két sắt -> Cung tiền $MS$ GIẢM -> Lãi suất $r$ TĂNG -> Kìm hãm lạm phát.",
+    correctInsight: "Hãy nhớ quy tắc 'Tiền trao cháo múc':\n• NHTW mua trái phiếu: NHTW thu tờ giấy trái phiếu về và bơm tiền mặt ra -> Cung tiền $MS$ tăng -> Lãi suất $r$ giảm -> Kích thích đầu tư $I$ -> Tổng cầu $AD$ dịch phải.\n• NHTW bán trái phiếu: NHTW phát hành giấy và thu tiền mặt về két sắt -> Cung tiền $MS$ giảm -> Lãi suất $r$ tăng -> Kìm hãm lạm phát.",
     examTip: "Mua = Bơm tiền (Mở rộng). Bán = Hút tiền (Thắt chặt).",
     sampleQuestion: {
       q: "Để chống lại nguy cơ lạm phát quá cao, Ngân hàng Trung ương nên thực hiện biện pháp nào?",
@@ -286,7 +286,7 @@ const TRAPS_DATA = [
     title: "Tại sao đường tổng cầu (AD) dốc xuống?",
     severity: "Rất cao (Câu hỏi phân loại A+)",
     trapDesc: "Khi hỏi tại sao đường Tổng cầu $AD$ dốc xuống, sinh viên giải thích: 'Vì giá tăng thì người ta mua hàng thay thế khác'.",
-    correctInsight: "Đó là cách giải thích của VI MÔ cho 1 hàng hóa đơn lẻ! Trong VĨ MÔ, mức giá chung $P$ tăng là GIÁ CỦA TẤT CẢ HÀNG HÓA đều tăng, nên không thể chạy sang hàng hóa khác để thay thế được. Đường $AD$ dốc xuống bởi 3 HIỆU ỨNG VĨ MÔ HOÀN TOÀN KHÁC BIỆT:\n1. Hiệu ứng của cải Pigou (P tăng làm giảm sức mua thực tế của tiền -> giảm tiêu dùng C).\n2. Hiệu ứng lãi suất Keynes (P tăng làm tăng cầu tiền -> lãi suất tăng -> giảm đầu tư I).\n3. Hiệu ứng tỷ giá Mundell-Fleming (P tăng làm hàng trong nước đắt tương đối -> giảm xuất khẩu ròng NX).",
+    correctInsight: "Đó là cách giải thích của VI MÔ cho 1 hàng hóa đơn lẻ! Trong VĨ MÔ, mức giá chung $P$ tăng là GIÁ CỦA tất cả HÀNG HÓA đều tăng, nên không thể chạy sang hàng hóa khác để thay thế được. Đường $AD$ dốc xuống bởi 3 hiệu ứng vĩ mô hoàn toàn khác biệt:\n1. Hiệu ứng của cải Pigou (P tăng làm giảm sức mua thực tế của tiền -> giảm tiêu dùng C).\n2. Hiệu ứng lãi suất Keynes (P tăng làm tăng cầu tiền -> lãi suất tăng -> giảm đầu tư I).\n3. Hiệu ứng tỷ giá Mundell-Fleming (P tăng làm hàng trong nước đắt tương đối -> giảm xuất khẩu ròng NX).",
     examTip: "Vi mô dốc xuống do Thay thế & Thu nhập. Vĩ mô dốc xuống do Của cải, Lãi suất, và Tỷ giá hối đoái!",
     sampleQuestion: {
       q: "Lý do nào sau đây giải thích tại sao đường Tổng cầu (AD) có độ dốc âm theo mô hình kinh tế vĩ mô?",
@@ -328,7 +328,7 @@ const TRAPS_DATA = [
     title: "Hiệu ứng đuổi kịp (Catch-up Effect) và giới hạn năng suất tư bản",
     severity: "Trung bình",
     trapDesc: "Học sinh nghĩ rằng cứ đổ thêm thật nhiều tiền đầu tư máy móc (Tư bản K) thì tốc độ tăng trưởng kinh tế sẽ mãi mãi tăng cao.",
-    correctInsight: "Theo mô hình tăng trưởng Solow và Mankiw: Hàm sản xuất có tính chất LỢI SUẤT GIẢM DẦN CỦA TƯ BẢN. Một nước nghèo có rất ít máy móc, thêm 1 máy tính sẽ tăng vọt năng suất (Hiệu ứng đuổi kịp). Nhưng một nước giàu đã có đầy đủ thiết bị, thêm 1 máy tính chỉ tạo thêm rất ít sản lượng. Trong dài hạn, tăng trưởng bền vững chỉ có THỂ đến từ TIẾN BỘ CÔNG NGHỆ (Technology), không thể chỉ dựa vào tích lũy tư bản!",
+    correctInsight: "Theo mô hình tăng trưởng Solow và Mankiw: Hàm sản xuất có tính chất lợi suất giảm dần của tư bản. Một nước nghèo có rất ít máy móc, thêm 1 máy tính sẽ tăng vọt năng suất (Hiệu ứng đuổi kịp). Nhưng một nước giàu đã có đầy đủ thiết bị, thêm 1 máy tính chỉ tạo thêm rất ít sản lượng. Trong dài hạn, tăng trưởng bền vững chỉ có THỂ đến từ TIẾN BỘ CÔNG NGHỆ (Technology), không thể chỉ dựa vào tích lũy tư bản!",
     examTip: "Tích lũy vốn chỉ thúc đẩy tăng trưởng cao trong ngắn hạn. Dài hạn phụ thuộc vào Công nghệ.",
     sampleQuestion: {
       q: "Hiệu ứng đuổi kịp (Catch-up effect) ngụ ý rằng:",
@@ -391,7 +391,7 @@ const TRAPS_DATA = [
     title: "Sự đánh đổi giữa lạm phát và thất nghiệp chỉ tồn tại trong ngắn hạn",
     severity: "Cao",
     trapDesc: "Học sinh cho rằng chính phủ có thể vĩnh viễn duy trì tỷ lệ thất nghiệp cực thấp bằng cách chấp nhận một mức lạm phát cao liên tục.",
-    correctInsight: "Theo Milton Friedman và Mankiw:\n• Trong ngắn hạn: Đường Phillips dốc xuống, có sự đánh đổi giữa lạm phát và thất nghiệp.\n• Trong dài hạn: Khi mọi người điều chỉnh KỲ VỌNG LẠM PHÁT, đường Phillips dài hạn (LRPC) trở thành một ĐƯỜNG THẲNG ĐỨNG tại mức Tỷ lệ thất nghiệp tự nhiên ($u_n$). Mọi nỗ lực bơm tiền để giảm thất nghiệp dưới mức tự nhiên chỉ tạo ra lạm phát cao hơn mà không hề làm giảm thất nghiệp!",
+    correctInsight: "Theo Milton Friedman và Mankiw:\n• Trong ngắn hạn: Đường Phillips dốc xuống, có sự đánh đổi giữa lạm phát và thất nghiệp.\n• Trong dài hạn: Khi mọi người điều chỉnh kỳ vọng lạm phát, đường Phillips dài hạn (LRPC) trở thành một đường thẳng đứng tại mức Tỷ lệ thất nghiệp tự nhiên ($u_n$). Mọi nỗ lực bơm tiền để giảm thất nghiệp dưới mức tự nhiên chỉ tạo ra lạm phát cao hơn mà không hề làm giảm thất nghiệp!",
     examTip: "Đường Phillips dài hạn thẳng đứng tại tỷ lệ thất nghiệp tự nhiên.",
     sampleQuestion: {
       q: "Theo quan điểm kinh tế học hiện đại, trong dài hạn đường cong Phillips có hình dạng:",
@@ -412,7 +412,7 @@ const TRAPS_DATA = [
     title: "Tính trung tính của tiền tệ trong dài hạn (Monetary Neutrality)",
     severity: "Rất cao (Câu chốt điểm A+)",
     trapDesc: "Học sinh nghĩ rằng in gấp đôi số tiền thì của cải của quốc gia và mức sống của mọi người dân sẽ tăng gấp đôi.",
-    correctInsight: "Sự phân đôi cổ điển (Classical Dichotomy): Tách các biến số thành Biến danh nghĩa (tính bằng tiền) và Biến thực tế (tính bằng hiện vật, giờ công, sản lượng). Tính trung tính của tiền tệ chỉ ra rằng: Việc thay đổi cung tiền CHỈ làm thay đổi các biến danh nghĩa (mức giá $P$, tiền lương danh nghĩa $W$, GDP danh nghĩa), KHÔNG THỂ làm thay đổi các biến thực tế (GDP thực tế $Y$, việc làm, thất nghiệp, tiền lương thực tế $W/P$) trong dài hạn!",
+    correctInsight: "Sự phân đôi cổ điển (Classical Dichotomy): Tách các biến số thành Biến danh nghĩa (tính bằng tiền) và Biến thực tế (tính bằng hiện vật, giờ công, sản lượng). Tính trung tính của tiền tệ chỉ ra rằng: Việc thay đổi cung tiền chỉ làm thay đổi các biến danh nghĩa (mức giá $P$, tiền lương danh nghĩa $W$, GDP danh nghĩa), không thể làm thay đổi các biến thực tế (GDP thực tế $Y$, việc làm, thất nghiệp, tiền lương thực tế $W/P$) trong dài hạn!",
     examTip: "In thêm tiền chỉ sinh ra lạm phát danh nghĩa, không tạo thêm được của cải thực sự.",
     sampleQuestion: {
       q: "Khái niệm 'Tính trung tính của tiền tệ' (Monetary Neutrality) khẳng định rằng sự thay đổi cung tiền sẽ:",
