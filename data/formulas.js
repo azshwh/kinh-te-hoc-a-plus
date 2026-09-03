@@ -141,7 +141,7 @@ const FORMULAS_DATA = [
     "id": "micro-4",
     "category": "micro",
     "chapter": "Chương 3: Độ co giãn của Cung & Cầu",
-    "title": "Độ co giãn của Cầu theo Giá (E_D) & Tác động đến Doanh thu (TR)",
+    "title": "Độ co giãn của Cầu theo Giá ($E_D$) & Tác động đến Doanh thu ($TR$)",
     "formula": "E_D^{khoảng} = \\frac{Q_2 - Q_1}{(Q_1 + Q_2)/2} \\div \\frac{P_2 - P_1}{(P_1 + P_2)/2}, \\quad E_D^{điểm} = Q'(P) \\times \\frac{P}{Q}",
     "description": "Đo lường mức độ phản ứng của lượng cầu trước sự thay đổi của giá cả.",
     "variables": [
@@ -182,7 +182,7 @@ const FORMULAS_DATA = [
     "id": "micro-5",
     "category": "micro",
     "chapter": "Chương 3: Độ co giãn của Cung & Cầu",
-    "title": "Độ co giãn theo Thu nhập (E_I) & Co giãn chéo (E_XY)",
+    "title": "Độ co giãn theo Thu nhập ($E_I$) & Co giãn chéo ($E_{XY}$)",
     "formula": "E_I = \\frac{\\%\\Delta Q}{\\%\\Delta I}, \\quad E_{XY} = \\frac{\\%\\Delta Q_X}{\\%\\Delta P_Y}",
     "description": "Phân loại tính chất của hàng hóa dựa vào dấu và độ lớn của hệ số co giãn.",
     "variables": [
@@ -219,7 +219,7 @@ const FORMULAS_DATA = [
       "entity": "Hãng Xe Điện Tesla vs Cuộc Chiến Nền Tảng Spotify & Apple Music",
       "badge": "Chiến Lược Phân Loại Thị Trường",
       "title": "Xe điện sang trọng trong suy thoái và sự dịch chuyển thuê bao âm nhạc",
-      "context": "Khi lạm phát toàn cầu năm 2022 làm giảm thu nhập thực tế của người dân, doanh số các thương hiệu xa xỉ như Porsche, Tesla vẫn duy trì tăng trưởng, trong khi lượng tiêu thụ xe máy phổ thông sụt giảm. Đồng thời, khi Apple Music tăng giá thuê bao từ $9.99 lên $10.99, Spotify ghi nhận lượng người dùng mới tăng kỷ lục.",
+      "context": "Khi lạm phát toàn cầu năm 2022 làm giảm thu nhập thực tế của người dân, doanh số các thương hiệu xa xỉ như Porsche, Tesla vẫn duy trì tăng trưởng, trong khi lượng tiêu thụ xe máy phổ thông sụt giảm. Đồng thời, khi Apple Music tăng giá thuê bao từ 9.99 USD lên 10.99 USD, Spotify ghi nhận lượng người dùng mới tăng kỷ lục.",
       "analysis": "Tesla Model S thuộc nhóm hàng xa xỉ ($E_I > 1$), tiêu dùng bởi tầng lớp có của cải lớn ít bị tổn thương bởi suy thoái thu nhập ngắn hạn. Trong khi đó, Apple Music và Spotify là hai hàng hóa thay thế hoàn hảo ($E_{XY} > 0$). Khi giá Apple Music tăng ($P_Y \\uparrow$), lượng cầu dịch vụ của Spotify tăng theo ($Q_X \\uparrow$).",
       "lesson": "Dấu dương hay âm của $E_I$ và $E_{XY}$ quyết định toàn bộ định vị phân khúc khách hàng và chiến lược phòng thủ trước đối thủ cạnh tranh."
     }
@@ -612,7 +612,7 @@ const FORMULAS_DATA = [
     "id": "macro-5",
     "category": "macro",
     "chapter": "Chương 9: Tiền tệ, Hệ thống ngân hàng & Số nhân tiền",
-    "title": "Cung tiền (MS), Cơ sở tiền (MB) & Số nhân tiền (m_M)",
+    "title": "Cung tiền ($M^S$), Cơ sở tiền ($MB$) & Số nhân tiền ($m_M$)",
     "formula": "MS = m_M \\times MB, \\quad m_M = \\frac{cr + 1}{cr + rr}",
     "description": "Ngân hàng thương mại tạo ra tiền thông qua hệ thống dự trữ một phần.",
     "variables": [

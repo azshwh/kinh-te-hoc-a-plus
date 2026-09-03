@@ -768,7 +768,7 @@ function initFormulasTab() {
     }
 
     container.innerHTML = filtered.map(item => `
-      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 sm:p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
         <div class="flex items-center justify-between mb-3">
           <span class="text-xs font-bold px-2.5 py-1 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
             ${item.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
@@ -787,7 +787,7 @@ function initFormulasTab() {
               <i data-lucide="info" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
               Chú giải ký hiệu & Đơn vị đo lường:
             </h4>
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto -mx-1 sm:mx-0">
               <table class="w-full text-xs text-left border-collapse">
                 <thead>
                   <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
