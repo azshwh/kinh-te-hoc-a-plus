@@ -1604,3 +1604,273 @@ function initTheoryHub() {
   renderActiveChapter();
 }
 
+// ================= SỔ TAY 20 BẪY ĐỀ THI A+ =================
+function initTrapsTab() {
+  const container = document.getElementById('traps-grid');
+  if (!container || typeof TRAPS_DATA === 'undefined') return;
+
+  const filterBtns = document.querySelectorAll('.trap-filter-btn');
+
+  function renderTraps(category = 'all') {
+    const filtered = TRAPS_DATA.filter(item => category === 'all' || item.category === category);
+    container.innerHTML = filtered.map(item => `
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-bold text-xs flex items-center justify-center">
+              ${item.id}
+            </span>
+            <span class="text-xs font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
+              ${item.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
+            </span>
+          </div>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.severity === 'high' ? 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' : 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300'}">
+            ${item.severity === 'high' ? '⚠️ Tỷ lệ sai > 80%' : '⚡ Dễ nhầm lẫn'}
+          </span>
+        </div>
+
+        <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base leading-snug">${item.title}</h3>
+
+        <div class="p-3 bg-rose-50 dark:bg-rose-950/30 rounded-xl border border-rose-100 dark:border-rose-900/50 text-xs text-rose-900 dark:text-rose-200">
+          <strong>❌ Ngộ nhận thường gặp:</strong> ${item.misconception}
+        </div>
+
+        <div class="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-100 dark:border-emerald-900/50 text-xs text-emerald-900 dark:text-emerald-200">
+          <strong>✓ Bản chất theo Mankiw:</strong> ${item.mankiwInsight}
+        </div>
+
+        <div class="p-2.5 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-900 text-xs text-amber-800 dark:text-amber-300 font-semibold">
+          💡 ${item.proTip}
+        </div>
+
+        <!-- Practice Question Toggle -->
+        <div class="pt-2 border-t border-slate-100 dark:border-slate-800">
+          <button class="btn-toggle-trap-q text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1" data-trap-id="${item.id}">
+            <span>Làm thử câu trắc nghiệm thực chiến</span> →
+          </button>
+          <div id="trap-q-box-${item.id}" class="hidden mt-3 p-3 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700 text-xs space-y-2">
+            <p class="font-semibold text-slate-800 dark:text-slate-100">${item.sampleQuestion.question}</p>
+            <div class="space-y-1.5">
+              ${item.sampleQuestion.options.map((opt, oIdx) => `
+                <button class="trap-opt-btn w-full text-left p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-indigo-50 dark:hover:bg-indigo-950 transition-colors" data-trap-id="${item.id}" data-opt="${oIdx}" data-correct="${item.sampleQuestion.correct}">
+                  ${opt}
+                </button>
+              `).join('')}
+            </div>
+            <div id="trap-expl-${item.id}" class="hidden p-2 rounded-lg text-xs"></div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    renderMath(container);
+
+    // Event listeners for question toggle
+    container.querySelectorAll('.btn-toggle-trap-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-trap-id');
+        const box = document.getElementById(`trap-q-box-${id}`);
+        if (box) box.classList.toggle('hidden');
+      });
+    });
+
+    // Event listeners for option select
+    container.querySelectorAll('.trap-opt-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const trapId = btn.getAttribute('data-trap-id');
+        const opt = parseInt(btn.getAttribute('data-opt'), 10);
+        const correct = parseInt(btn.getAttribute('data-correct'), 10);
+        const explDiv = document.getElementById(`trap-expl-${trapId}`);
+        const trapItem = TRAPS_DATA.find(t => t.id === parseInt(trapId, 10));
+
+        if (opt === correct) {
+          btn.classList.add('bg-emerald-500', 'text-white', 'border-emerald-600');
+          explDiv.className = 'p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-200 border border-emerald-300';
+          explDiv.innerHTML = `<strong>✓ Chính xác tuyệt đối!</strong> ${trapItem.sampleQuestion.explanation}`;
+        } else {
+          btn.classList.add('bg-rose-500', 'text-white', 'border-rose-600');
+          explDiv.className = 'p-2.5 rounded-lg bg-rose-50 dark:bg-rose-950 text-rose-800 dark:text-rose-200 border border-rose-300';
+          explDiv.innerHTML = `<strong>❌ Bạn đã dính bẫy!</strong> ${trapItem.sampleQuestion.explanation}`;
+        }
+        explDiv.classList.remove('hidden');
+        renderMath(explDiv);
+      });
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-indigo-600', 'text-white');
+        b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      });
+      btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      btn.classList.add('bg-indigo-600', 'text-white');
+      renderTraps(btn.getAttribute('data-filter'));
+    });
+  });
+
+  renderTraps('all');
+}
+
+// ================= UNIVERSAL SEARCH (Ctrl + K) =================
+function initUniversalSearch() {
+  const modal = document.getElementById('search-modal');
+  const openBtn = document.getElementById('btn-open-search');
+  const closeBtn = document.getElementById('search-modal-close');
+  const input = document.getElementById('search-modal-input');
+  const resultsDiv = document.getElementById('search-modal-results');
+
+  if (!modal || !input || !resultsDiv) return;
+
+  function openSearch() {
+    modal.classList.remove('hidden');
+    input.value = '';
+    input.focus();
+    renderResults('');
+  }
+
+  function closeSearch() {
+    modal.classList.add('hidden');
+  }
+
+  if (openBtn) openBtn.addEventListener('click', openSearch);
+  if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeSearch();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      openSearch();
+    }
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeSearch();
+    }
+  });
+
+  input.addEventListener('input', (e) => {
+    renderResults(e.target.value.trim().toLowerCase());
+  });
+
+  function renderResults(q) {
+    if (!q) {
+      resultsDiv.innerHTML = `<p class="text-xs text-center text-slate-400 py-6">Nhập từ khóa bất kỳ để tra cứu tức thì toàn bộ 12 chương lý thuyết, 17 video, 20 bẫy đề thi và công thức...</p>`;
+      return;
+    }
+
+    let matches = [];
+
+    // 1. Search Theory
+    if (typeof THEORY_DATA !== 'undefined') {
+      THEORY_DATA.forEach(chap => {
+        if (chap.title.toLowerCase().includes(q) || chap.subtitle.toLowerCase().includes(q) || chap.overview.toLowerCase().includes(q)) {
+          matches.push({
+            type: 'theory',
+            badge: `Chương ${chap.number}`,
+            badgeColor: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300',
+            title: chap.title,
+            snippet: chap.subtitle,
+            action: () => {
+              switchTab('theory-hub');
+              const item = document.querySelector(`.chapter-nav-item[data-chapter-id="${chap.id}"]`);
+              if (item) item.click();
+            }
+          });
+        }
+      });
+    }
+
+    // 2. Search Videos
+    if (typeof VIDEOS_DATA !== 'undefined') {
+      VIDEOS_DATA.forEach(vid => {
+        if (vid.title.toLowerCase().includes(q) || vid.vietnameseTitle.toLowerCase().includes(q) || (vid.examRelevance && vid.examRelevance.toLowerCase().includes(q))) {
+          matches.push({
+            type: 'video',
+            badge: vid.channel,
+            badgeColor: 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300',
+            title: vid.vietnameseTitle,
+            snippet: vid.examRelevance || vid.title,
+            action: () => {
+              switchTab('theory-hub');
+              if (typeof window.handleOpenVideo === 'function') window.handleOpenVideo(vid.id);
+            }
+          });
+        }
+      });
+    }
+
+    // 3. Search Traps
+    if (typeof TRAPS_DATA !== 'undefined') {
+      TRAPS_DATA.forEach(trap => {
+        if (trap.title.toLowerCase().includes(q) || trap.misconception.toLowerCase().includes(q) || trap.mankiwInsight.toLowerCase().includes(q)) {
+          matches.push({
+            type: 'trap',
+            badge: `Bẫy ${trap.id}`,
+            badgeColor: 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300',
+            title: trap.title,
+            snippet: trap.mankiwInsight,
+            action: () => {
+              switchTab('traps');
+            }
+          });
+        }
+      });
+    }
+
+    // 4. Search Formulas
+    if (typeof FORMULAS_DATA !== 'undefined') {
+      FORMULAS_DATA.forEach(f => {
+        if (f.title.toLowerCase().includes(q) || f.formula.toLowerCase().includes(q) || f.description.toLowerCase().includes(q)) {
+          matches.push({
+            type: 'formula',
+            badge: 'Công thức',
+            badgeColor: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300',
+            title: f.title,
+            snippet: `${f.formula} - ${f.description}`,
+            action: () => {
+              switchTab('formulas');
+            }
+          });
+        }
+      });
+    }
+
+    if (matches.length === 0) {
+      resultsDiv.innerHTML = `<p class="text-xs text-center text-slate-400 py-6">Không tìm thấy nội dung phù hợp với "<strong>${q}</strong>". Hãy thử từ khóa khác như "thặng dư", "độc quyền", "CPI", "số nhân"...</p>`;
+      return;
+    }
+
+    resultsDiv.innerHTML = matches.slice(0, 10).map((m, idx) => `
+      <div class="search-result-item p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl cursor-pointer transition-colors" data-idx="${idx}">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${m.badgeColor}">${m.badge}</span>
+          <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">${m.title}</h4>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">${m.snippet}</p>
+      </div>
+    `).join('');
+
+    resultsDiv.querySelectorAll('.search-result-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const idx = parseInt(item.getAttribute('data-idx'), 10);
+        closeSearch();
+        matches[idx].action();
+      });
+    });
+  }
+}
+
+// ================= A+ READINESS TRACKER =================
+function updateReadinessMeter() {
+  const percentEl = document.getElementById('readiness-percent');
+  if (!percentEl) return;
+  let score = 45;
+  if (localStorage.getItem('econ_last_quiz_score')) score += 25;
+  if (localStorage.getItem('econ_theme')) score += 10;
+  if (score > 100) score = 100;
+  percentEl.textContent = `${score}%`;
+}
+
