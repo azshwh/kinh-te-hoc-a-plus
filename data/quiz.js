@@ -1170,6 +1170,276 @@ const QUIZ_DATA = [
     "explanation": "Theo PPP: e = P_trong nước / P_nước ngoài = 120.000 VND / 5 USD = 24.000 VND / USD.",
     "isTrap": false,
     "trapAdvice": "Chỉ số Big Mac Index nổi tiếng của tạp chí The Economist dựa trên đúng lý thuyết PPP này của Mankiw."
+  },
+  {
+    "id": "q66",
+    "category": "micro",
+    "chapter": 4,
+    "topic": "Phân rã Slutsky & Hàng hóa Giffen",
+    "difficulty": "advanced",
+    "question": "Khi giá hàng hóa X tăng lên, người tiêu dùng mua nhiều hàng hóa X hơn trước. Điều này khẳng định chắc chắn rằng hàng hóa X là:",
+    "options": [
+      "Hàng hóa thông thường có hiệu ứng thay thế rất mạnh",
+      "Hàng hóa cấp thấp có Hiệu ứng thu nhập cùng dấu và áp đảo hoàn toàn Hiệu ứng thay thế",
+      "Hàng hóa xa xỉ có độ co giãn theo thu nhập lớn hơn 1",
+      "Hàng hóa bổ sung hoàn hảo"
+    ],
+    "correct": 1,
+    "explanation": "Đây là hiện tượng Hàng hóa Giffen. Hiệu ứng thay thế luôn làm giảm cầu khi giá tăng (SE < 0). Để tổng lượng cầu tăng khi giá tăng, hàng hóa đó bắt buộc phải là Hàng cấp thấp (sức mua giảm làm tăng cầu hàng rẻ, IE > 0) VÀ độ lớn của Hiệu ứng thu nhập phải lớn hơn Hiệu ứng thay thế (|IE| > |SE|).",
+    "isTrap": true,
+    "trapAdvice": "Hàng Giffen là tập con cực đoan của Hàng cấp thấp, mọi hàng Giffen đều là hàng cấp thấp nhưng không phải mọi hàng cấp thấp đều là hàng Giffen."
+  },
+  {
+    "id": "q67",
+    "category": "micro",
+    "chapter": 4,
+    "topic": "Hàm thỏa dụng Leontief",
+    "difficulty": "advanced",
+    "question": "Một người tiêu dùng có hàm thỏa dụng U(X, Y) = min(2X, 5Y). Tỷ lệ kết hợp tối ưu giữa hai hàng hóa X và Y của người này luôn là:",
+    "options": [
+      "X / Y = 2 / 5",
+      "X / Y = 5 / 2 (tức 2X = 5Y)",
+      "Phụ thuộc vào mức giá P_X và P_Y",
+      "Phụ thuộc vào mức thu nhập I"
+    ],
+    "correct": 1,
+    "explanation": "Với hàm min Leontief (hàng bổ sung hoàn hảo), điểm tối ưu luôn nằm tại đỉnh góc nhọn: 2X = 5Y => X/Y = 5/2, hoàn toàn không phụ thuộc vào giá cả P_X, P_Y hay thu nhập I!",
+    "isTrap": true,
+    "trapAdvice": "Đừng bao giờ cố lấy đạo hàm MU_X / MU_Y với hàm min Leontief! Luôn cho 2 thành phần trong ngoặc bằng nhau."
+  },
+  {
+    "id": "q68",
+    "category": "micro",
+    "chapter: 4",
+    "topic": "Hàng thay thế hoàn hảo & Nghiệm góc",
+    "difficulty": "advanced",
+    "question": "Cho hàm thỏa dụng U(X, Y) = 2X + Y. Giá P_X = 6, P_Y = 2, thu nhập I = 60. Giỏ hàng tối ưu của người tiêu dùng là:",
+    "options": [
+      "X = 5, Y = 15",
+      "X = 10, Y = 0 (mua toàn bộ X)",
+      "X = 0, Y = 30 (mua toàn bộ Y)",
+      "X = 6, Y = 12"
+    ],
+    "correct": 2,
+    "explanation": "MRS_XY = MU_X / MU_Y = 2 / 1 = 2. Tỷ giá P_X / P_Y = 6 / 2 = 3. Vì MRS = 2 < P_X / P_Y = 3 => MU_X / P_X (2/6 = 0.33) < MU_Y / P_Y (1/2 = 0.5) => Mỗi đồng chi cho Y đem lại thỏa dụng cao hơn. Người tiêu dùng sẽ chọn nghiệm góc: mua toàn bộ Y: Y* = 60 / 2 = 30 và X* = 0.",
+    "isTrap": true,
+    "trapAdvice": "Hàm tuyến tính luôn dẫn đến nghiệm góc nếu MRS khác P_X/P_Y."
+  },
+  {
+    "id": "q69",
+    "category": "micro",
+    "chapter": 5,
+    "topic": "Đường đồng lượng & Tối ưu sản xuất dài hạn",
+    "difficulty": "advanced",
+    "question": "Để tối thiểu hóa chi phí sản xuất một mức sản lượng cho trước trong dài hạn, doanh nghiệp nên phân bổ vốn (K) và lao động (L) sao cho:",
+    "options": [
+      "MP_L = MP_K",
+      "MRTS_{LK} = w / r (tức MP_L / w = MP_K / r)",
+      "w = r",
+      "TC = FC + VC"
+    ],
+    "correct": 1,
+    "explanation": "Trong dài hạn, chi phí tối thiểu đạt được tại tiếp điểm giữa đường đồng lượng và đường đồng phí, nơi Tỷ lệ thay thế kỹ thuật biên bằng tỷ số giá yếu tố sản xuất: MRTS_{LK} = MP_L / MP_K = w / r <=> MP_L / w = MP_K / r (sản phẩm biên trên mỗi đồng chi phí bỏ ra cho các yếu tố phải bằng nhau).",
+    "isTrap": false,
+    "trapAdvice": "Quy tắc biên tương đương quy tắc tối đa hóa thỏa dụng MU_X / P_X = MU_Y / P_Y của người tiêu dùng."
+  },
+  {
+    "id": "q70",
+    "category": "micro",
+    "chapter": 6,
+    "topic": "Độc quyền nhóm Cournot",
+    "difficulty": "advanced",
+    "question": "Trong mô hình độc quyền nhóm Cournot với 2 doanh nghiệp cạnh tranh về sản lượng, Hàm phản ứng (Reaction function) của doanh nghiệp 1 cho biết:",
+    "options": [
+      "Mức giá doanh nghiệp 1 sẽ đặt khi biết giá của doanh nghiệp 2",
+      "Mức sản lượng tối đa hóa lợi nhuận của doanh nghiệp 1 ứng với mỗi mức sản lượng dự kiến của doanh nghiệp 2",
+      "Mức chi phí tối thiểu của doanh nghiệp 1",
+      "Thỏa thuận cấu kết giữa 2 doanh nghiệp"
+    ],
+    "correct": 1,
+    "explanation": "Hàm phản ứng Q_1 = R_1(Q_2) biểu diễn chiến lược sản lượng tối ưu nhất của doanh nghiệp 1 ứng với bất kỳ mức sản lượng nào mà đối thủ (doanh nghiệp 2) đưa ra thị trường.",
+    "isTrap": false,
+    "trapAdvice": "Giao điểm của 2 hàm phản ứng R_1 và R_2 chính là Cân bằng Cournot-Nash."
+  },
+  {
+    "id": "q71",
+    "category": "micro",
+    "chapter": 6,
+    "topic": "Mô hình Stackelberg",
+    "difficulty": "advanced",
+    "question": "So với mô hình Cournot, trong mô hình Stackelberg (với cùng hàm cầu và chi phí), doanh nghiệp đi đầu (Leader) sẽ đạt được:",
+    "options": [
+      "Sản lượng thấp hơn và lợi nhuận thấp hơn",
+      "Sản lượng cao hơn và lợi nhuận cao hơn nhờ lợi thế người đi trước (First-mover advantage)",
+      "Mức giá bán cao hơn đối thủ đi sau",
+      "Lợi nhuận bằng đúng mô hình cạnh tranh hoàn hảo"
+    ],
+    "correct": 1,
+    "explanation": "Người dẫn đầu Stackelberg biết trước cách người đi sau phản ứng, nên chủ động chọn mức sản lượng lớn hơn để chiếm thị phần, ép đối thủ phải thu hẹp sản lượng. Kết quả: Leader đạt sản lượng và lợi nhuận cao hơn đáng kể so với khi chia đều thị phần trong Cournot.",
+    "isTrap": false,
+    "trapAdvice": "Lợi thế người đi trước là khái niệm chiến lược cốt lõi trong lý thuyết trò chơi và quản trị kinh doanh."
+  },
+  {
+    "id": "q72",
+    "category": "micro",
+    "chapter": 6,
+    "topic": "Mô hình đường cầu gãy khúc (Sweezy)",
+    "difficulty": "advanced",
+    "question": "Mô hình đường cầu gãy khúc của Paul Sweezy được sử dụng để giải thích hiện tượng nào trong thị trường độc quyền nhóm?",
+    "options": [
+      "Sự sụp đổ của các liên minh Cartel",
+      "Tính cứng nhắc của giá cả (Price rigidity) ngay cả khi chi phí biên MC thay đổi trong một khoảng nhất định",
+      "Chiến lược định giá ăn thịt của độc quyền thuần túy",
+      "Hiện tượng cạnh tranh hoàn hảo về giá"
+    ],
+    "correct": 1,
+    "explanation": "Doanh nghiệp độc quyền nhóm tin rằng: Nếu mình tăng giá, đối thủ sẽ KHÔNG theo (cầu co giãn mạnh); nếu mình giảm giá, đối thủ sẽ LẬP TỨC GIẢM THEO (cầu co giãn kém). Đường cầu bị gãy khúc tại mức giá hiện hành, làm đường MR có một khoảng gián đoạn thẳng đứng. Miễn là đường MC dao động trong khoảng gián đoạn này, mức giá P* tối ưu hoàn toàn KHÔNG THAY ĐỔI.",
+    "isTrap": false,
+    "trapAdvice": "Đường cầu gãy khúc giải thích vì sao các hãng viễn thông hay nước ngọt ít khi đơn phương đổi giá."
+  },
+  {
+    "id": "q73",
+    "category": "micro",
+    "chapter": 7,
+    "topic": "Cầu yếu tố sản xuất & Cạnh tranh vs Độc quyền",
+    "difficulty": "advanced",
+    "question": "Đối với một doanh nghiệp độc quyền bán trên thị trường sản phẩm, đường cầu lao động của doanh nghiệp này là:",
+    "options": [
+      "Đường VMP_L = P x MP_L",
+      "Đường MRP_L = MR x MP_L (nằm phía dưới đường VMP_L)",
+      "Đường tiền lương W nằm ngang",
+      "Đường chi phí cận biên MC"
+    ],
+    "correct": 1,
+    "explanation": "Doanh nghiệp độc quyền bán đối mặt với đường cầu dốc xuống nên MR < P. Doanh thu sản phẩm biên từ lao động là MRP_L = MR x MP_L < P x MP_L (VMP_L). Vì vậy, nhà độc quyền luôn thuê ít lao động hơn so với doanh nghiệp cạnh tranh hoàn hảo tại cùng một mức lương thị trường.",
+    "isTrap": true,
+    "trapAdvice": "Chỉ trong cạnh tranh hoàn hảo mới có P = MR => VMP_L = MRP_L. Độc quyền thì luôn dùng MRP_L!"
+  },
+  {
+    "id": "q74",
+    "category": "micro",
+    "chapter": 6,
+    "topic": "Bất đối xứng thông tin & Adverse Selection",
+    "difficulty": "advanced",
+    "question": "Trong mô hình 'Thị trường xe quả chanh' (Market for Lemons) của GS. George Akerlof (Nobel 2001), khi người mua không thể phân biệt xe tốt (đào) và xe xấu (chanh), kết cục thị trường là:",
+    "options": [
+      "Giá xe tốt sẽ tăng vọt",
+      "Người mua trả mức giá bình quân, khiến chủ xe tốt rút lui khỏi thị trường, đẩy thị trường vào vòng xoáy chỉ còn xe chất lượng kém (Lựa chọn bất lợi)",
+      "Chỉ xe tốt được giao dịch",
+      "Thị trường tự động đạt hiệu quả Pareto"
+    ],
+    "correct": 1,
+    "explanation": "Do không phân biệt được chất lượng, người mua chỉ sẵn sàng trả mức giá trung bình. Mức giá này quá thấp đối với chủ xe tốt, khiến họ rút khỏi thị trường. Tỷ lệ xe hỏng (lemons) trên thị trường tăng lên, kéo giá người mua trả giảm sâu hơn nữa, dần dần triệt tiêu toàn bộ giao dịch xe tốt. Đây là hiện tượng Lựa chọn bất lợi (Adverse Selection).",
+    "isTrap": false,
+    "trapAdvice": "Giải pháp khắc phục bất đối xứng thông tin: Phát tín hiệu (Signaling như bảo hành, bằng cấp) và Sàng lọc (Screening)."
+  },
+  {
+    "id": "q75",
+    "category": "macro",
+    "chapter: 8",
+    "topic": "Mô hình tăng trưởng Solow",
+    "difficulty": "advanced",
+    "question": "Trong mô hình tăng trưởng Solow, yếu tố duy nhất có thể tạo ra sự tăng trưởng liên tục và bền vững trong mức sống (sản lượng trên mỗi lao động Y/L) trong dài hạn là:",
+    "options": [
+      "Tăng tỷ lệ tiết kiệm (s)",
+      "Tăng tốc độ tăng trưởng dân số (n)",
+      "Tiến bộ công nghệ (g)",
+      "Tăng đầu tư máy móc tư bản (K)"
+    ],
+    "correct": 2,
+    "explanation": "Theo mô hình Solow, việc tăng tỷ lệ tiết kiệm chỉ tạo ra 'hiệu ứng mức' (Level effect) làm tăng sản lượng tạm thời cho đến khi đạt trạng thái dừng mới, sau đó tốc độ tăng trưởng Y/L lại quay về 0. Do quy luật năng suất cận biên giảm dần của tư bản, chỉ có TIẾN BỘ CÔNG NGHỆ (g) mới là động cơ duy nhất thúc đẩy sản lượng trên mỗi lao động tăng trưởng liên tục trong dài hạn.",
+    "isTrap": true,
+    "trapAdvice": "Tiết kiệm cao không làm tăng trưởng dài hạn mãi mãi, chỉ có Công nghệ mới làm được!"
+  },
+  {
+    "id": "q76",
+    "category": "macro",
+    "chapter": 8,
+    "topic": "Quy tắc vàng tích lũy tư bản Solow",
+    "difficulty": "advanced",
+    "question": "Một nền kinh tế đang ở trạng thái dừng với mức tư bản cao hơn mức tư bản theo Quy tắc vàng (k* > k_gold*). Để đưa nền kinh tế về điểm vàng tối đa hóa tiêu dùng, chính phủ nên:",
+    "options": [
+      "Tăng tỷ lệ tiết kiệm",
+      "Giảm tỷ lệ tiết kiệm (s)",
+      "Tăng tốc độ tăng dân số",
+      "Áp đặt giá trần lãi suất"
+    ],
+    "correct": 1,
+    "explanation": "Khi k* > k_gold*, nền kinh tế đang bị 'Kém hiệu quả động' do tích lũy quá nhiều tư bản (chi phí khấu hao bù đắp lớn hơn sản phẩm biên MPK). Giảm tỷ lệ tiết kiệm s sẽ lập tức làm TĂNG TIÊU DÙNG c* trong cả ngắn hạn lẫn dài hạn, đưa k* giảm về mức vàng tối ưu.",
+    "isTrap": false,
+    "trapAdvice": "Tiết kiệm nhiều quá mức vàng là lãng phí tài nguyên của xã hội!"
+  },
+  {
+    "id": "q77",
+    "category": "macro",
+    "chapter": 12,
+    "topic": "Mô hình Mundell - Fleming & Tỷ giá thả nổi",
+    "difficulty": "advanced",
+    "question": "Trong mô hình Mundell-Fleming với vốn luân chuyển hoàn hảo và TỶ GIÁ THẢ NỔI, chính sách nào sau đây có hiệu lực mạnh nhất trong việc tăng sản lượng quốc dân?",
+    "options": [
+      "Chính sách tài khóa mở rộng (tăng G)",
+      "Chính sách tiền tệ mở rộng (tăng cung tiền MS)",
+      "Chính sách tăng thuế quan nhập khẩu",
+      "Chính sách giảm thuế thu nhập (giảm T)"
+    ],
+    "correct": 1,
+    "explanation": "Dưới tỷ giá thả nổi: Tài khóa và Thuế quan hoàn toàn vô hiệu vì bị triệt tiêu bởi sự tăng giá của đồng nội tệ (NX giảm). Nhưng CHÍNH SÁCH TIỀN TỆ MỞ RỘNG có hiệu lực tối đa: Tăng MS làm lãi suất giảm tạm thời -> dòng vốn chảy ra -> đồng nội tệ giảm giá -> Xuất khẩu ròng NX tăng vọt -> Sản lượng Y tăng mạnh mẽ!",
+    "isTrap": true,
+    "trapAdvice": "Quy tắc vàng Mundell-Fleming: Tỷ giá THẢ NỔI = TIỀN TỆ thống trị; Tỷ giá CỐ ĐỊNH = TÀI KHÓA thống trị."
+  },
+  {
+    "id": "q78",
+    "category": "macro",
+    "chapter": 12,
+    "topic": "Bộ ba bất khả thi (The Trilemma)",
+    "difficulty": "advanced",
+    "question": "Khu vực đồng tiền chung Châu Âu (Eurozone) đã chọn từ bỏ mục tiêu nào trong Bộ ba bất khả thi (Trilemma)?",
+    "options": [
+      "Từ bỏ Tỷ giá hối đoái cố định",
+      "Từ bỏ Dòng vốn luân chuyển tự do",
+      "Từ bỏ Chính sách tiền tệ độc lập của từng quốc gia thành viên",
+      "Từ bỏ Cán cân thanh toán quốc tế"
+    ],
+    "correct": 2,
+    "explanation": "Các quốc gia Eurozone dùng chung một đồng tiền Euro (tương đương tỷ giá cố định tuyệt đối) và mở cửa dòng vốn tự do hoàn toàn giữa các nước thành viên. Cái giá phải trả là từng quốc gia (như Pháp, Ý, Hy Lạp) phải TỪ BỎ CHÍNH SÁCH TIỀN TỆ ĐỘC LẬP, trao quyền điều hành lãi suất cho Ngân hàng Trung ương Châu Âu (ECB).",
+    "isTrap": false,
+    "trapAdvice": "Trilemma: Không một quốc gia nào có thể cùng lúc đạt cả 3 mục tiêu độc lập tiền tệ, tỷ giá cố định và tự do vốn."
+  },
+  {
+    "id": "q79",
+    "category": "macro",
+    "chapter": 11,
+    "topic": "Tương đương Ricardo (Ricardian Equivalence)",
+    "difficulty": "advanced",
+    "question": "Học thuyết Tương đương Ricardo cho rằng người tiêu dùng duy lý sẽ phản ứng như thế nào khi chính phủ giảm thuế hôm nay và tài trợ bằng nợ công?",
+    "options": [
+      "Tăng mạnh chi tiêu tiêu dùng vì thu nhập khả dụng trước mắt tăng",
+      "Giữ nguyên mức tiêu dùng và tăng tiết kiệm đúng bằng số tiền thuế được giảm để dành đóng thuế trong tương lai",
+      "Rút hết tiền gửi ngân hàng mua vàng",
+      "Vay thêm tiền ngân hàng để chi tiêu"
+    ],
+    "correct": 1,
+    "explanation": "Theo Tương đương Ricardo, người tiêu dùng dự đoán việc phát hành nợ công hôm nay đồng nghĩa với việc chính phủ sẽ phải tăng thuế trong tương lai để trả nợ. Do đó họ không hề cảm thấy giàu lên, mà sẽ tiết kiệm toàn bộ khoản giảm thuế để chuẩn bị cho nghĩa vụ thuế tương lai, khiến Tổng cầu AD không đổi.",
+    "isTrap": false,
+    "trapAdvice": "Đây là luận điểm bác bỏ số nhân kích cầu thuế của trường phái Tân cổ điển."
+  },
+  {
+    "id": "q80",
+    "category": "macro",
+    "chapter": 11,
+    "topic": "Quy tắc lãi suất Taylor",
+    "difficulty": "advanced",
+    "question": "Nguyên lý Taylor (Taylor Principle) đòi hỏi hệ số phản ứng của Ngân hàng Trung ương trước lạm phát phải lớn hơn 1 nhằm đảm bảo:",
+    "options": [
+      "Lãi suất danh nghĩa giữ nguyên",
+      "Lãi suất thực tế r phải tăng lên khi lạm phát tăng, qua đó kìm hãm tổng cầu và ổn định giá cả",
+      "Tỷ lệ thất nghiệp luôn bằng 0%",
+      "Lạm phát tăng nhanh hơn lãi suất"
+    ],
+    "correct": 1,
+    "explanation": "Theo Fisher r = i - pi. Muốn lãi suất thực tế r tăng để hạ nhiệt nền kinh tế, tốc độ tăng của lãi suất danh nghĩa i bắt buộc phải lớn hơn tốc độ tăng của lạm phát pi (hệ số phản ứng > 1). Nếu hệ số < 1, lãi suất thực tế sẽ giảm và gây mất ổn định vĩ mô.",
+    "isTrap": false,
+    "trapAdvice": "Quy tắc Taylor là kim chỉ nam điều hành chính sách tiền tệ của các NHTW lớn nhất thế giới hiện nay."
   }
 ];
 
