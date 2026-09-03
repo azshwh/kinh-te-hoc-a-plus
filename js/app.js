@@ -771,7 +771,7 @@ function initFormulasTab() {
       <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 sm:p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
         <div class="flex items-center justify-between mb-3">
           <span class="text-xs font-bold px-2.5 py-1 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
-            ${item.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
+            ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
           </span>
           <span class="text-xs text-slate-400">${item.chapter}</span>
         </div>
@@ -1405,7 +1405,7 @@ function initTheoryHub() {
       <div class="border-b border-slate-100 dark:border-slate-800 pb-6">
         <div class="flex items-center gap-2 mb-2">
           <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold ${isMicro ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
-            ${isMicro ? 'KINH TẾ VI MÔ' : 'KINH TẾ VĨ MÔ'} • CHƯƠNG ${chap.number}
+            ${isMicro ? 'Kinh tế vi mô' : 'Kinh tế vĩ mô'} • Chương ${chap.number}
           </span>
         </div>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 mb-2">
@@ -1589,7 +1589,7 @@ function initTheoryHub() {
               ${v.duration}
             </span>
             <span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold ${v.category === 'micro' ? 'bg-indigo-600 text-white' : 'bg-emerald-600 text-white'}">
-              ${v.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
+              ${v.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
             </span>
             ${isCurrentPlaying ? '<span class="absolute top-2 right-2 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-600 text-white animate-pulse">ĐANG PHÁT</span>' : ''}
           </div>
@@ -1707,7 +1707,7 @@ function initTrapsTab() {
               ${item.id}
             </span>
             <span class="text-xs font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
-              ${item.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
+              ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
             </span>
           </div>
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.severity === 'high' ? 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' : 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300'}">
@@ -2015,7 +2015,7 @@ function initWorkedProblemsTab() {
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
           <div class="flex items-center gap-2">
             <span class="px-2.5 py-1 rounded-lg font-bold text-xs ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
-              ${item.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
+              ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
             </span>
             <h3 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-slate-100">${item.title}</h3>
           </div>
@@ -2110,7 +2110,7 @@ function initTrueFalseTab() {
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2">
             <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
-              Chương ${item.chapter} • ${item.category === 'micro' ? 'VI MÔ' : 'VĨ MÔ'}
+              Chương ${item.chapter} • ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
             </span>
           </div>
           <span class="text-xs font-semibold text-slate-400">${item.topic}</span>

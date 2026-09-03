@@ -11,7 +11,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,7 +21,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Be Vietnam Pro"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace']
           },
           colors: {
@@ -164,10 +164,10 @@
         <div>
           <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <i data-lucide="activity" class="w-5 h-5 text-indigo-600"></i>
-            Phòng Thí Nghiệm Đồ Thị Cung - Cầu & Phân Tích Chính Sách
+            Phòng thí nghiệm đồ thị cung - cầu và phân tích chính sách
           </h2>
           <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Tự động giải phương trình, vẽ đường cung cầu động, phân tích tác động của Thuế, Giá trần, Giá sàn và tính tổn thất vô ích ($DWL$).
+            Tự động giải phương trình, vẽ đường cung cầu động, phân tích tác động của thuế, giá trần, giá sàn và tổn thất vô ích ($DWL$).
           </p>
         </div>
         <!-- Quick Presets -->
@@ -198,7 +198,7 @@
             <!-- Demand Function Input -->
             <div class="p-4 bg-red-50/50 dark:bg-red-950/20 rounded-xl border border-red-100 dark:border-red-900/40">
               <label class="block text-xs font-bold text-red-700 dark:text-red-400 mb-2">
-                HÀM CẦU: $Q_D = a - bP$
+                Hàm cầu: $Q_D = a - bP$
               </label>
               <div class="grid grid-cols-2 gap-3">
                 <div>
@@ -215,7 +215,7 @@
             <!-- Supply Function Input -->
             <div class="p-4 bg-blue-50/50 dark:bg-blue-950/20 rounded-xl border border-blue-100 dark:border-blue-900/40">
               <label class="block text-xs font-bold text-blue-700 dark:text-blue-400 mb-2">
-                HÀM CUNG: $Q_S = c + dP$
+                Hàm cung: $Q_S = c + dP$
               </label>
               <div class="grid grid-cols-2 gap-3">
                 <div>
@@ -232,13 +232,13 @@
             <!-- Policy Selector -->
             <div class="p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-xl border border-purple-100 dark:border-purple-900/40 space-y-3">
               <label class="block text-xs font-bold text-purple-700 dark:text-purple-400">
-                CHÍNH SÁCH CAN THIỆP CỦA CHÍNH PHỦ
+                Chính sách can thiệp của chính phủ
               </label>
               <select id="policy-type" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-medium">
-                <option value="none">Không can thiệp (Thị trường tự do)</option>
-                <option value="tax">Đánh thuế t vào sản phẩm</option>
-                <option value="ceiling">Quy định Giá trần (Price Ceiling)</option>
-                <option value="floor">Quy định Giá sàn (Price Floor)</option>
+                <option value="none">Không can thiệp (thị trường tự do)</option>
+                <option value="tax">Đánh thuế đơn vị ($t$) vào sản phẩm</option>
+                <option value="ceiling">Quy định giá trần (*price ceiling*)</option>
+                <option value="floor">Quy định giá sàn (*price floor*)</option>
               </select>
               <div>
                 <span class="text-[11px] text-slate-500 font-medium">Giá trị chính sách (t hoặc mức giá P):</span>
@@ -281,7 +281,7 @@
         <div>
           <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <i data-lucide="graduation-cap" class="w-6 h-6 text-indigo-600"></i>
-            Giảng Đường Quốc Tế & Lý Thuyết Chuyên Sâu
+            Giảng đường quốc tế và lý thuyết chuyên sâu
           </h2>
           <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
             Học kinh tế học từ bản chất qua các bài giảng được đánh giá cao nhất thế giới (MRU, CrashCourse, Jacob Clifford, Khan Academy) & tài liệu 12 chương chuẩn A+.
@@ -292,11 +292,11 @@
         <div class="flex items-center bg-slate-100 dark:bg-slate-800 p-1.5 rounded-xl">
           <button id="btn-subtab-theory" class="px-4 py-2 rounded-lg text-xs font-bold transition-all bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-sm flex items-center gap-1.5">
             <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
-            <span>Lý Thuyết 12 Chương</span>
+            <span>Lý thuyết 12 chương</span>
           </button>
           <button id="btn-subtab-videos" class="px-4 py-2 rounded-lg text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 flex items-center gap-1.5">
             <i data-lucide="play-circle" class="w-3.5 h-3.5"></i>
-            <span>Video Quốc Tế Tuyển Chọn (17)</span>
+            <span>17 video bài giảng quốc tế</span>
           </button>
         </div>
       </div>
@@ -520,7 +520,7 @@
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
         <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
           <i data-lucide="cpu" class="w-5 h-5 text-indigo-600"></i>
-          Bộ Công Cụ Tính Toán Kinh Tế Vi Mô Toàn Diện
+          Công cụ tính toán kinh tế vi mô toàn diện
         </h2>
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
           Giải nhanh độ co giãn theo phương pháp trung điểm, suy biến hàm chi phí, xác định điểm hòa vốn và quyết định sản xuất tối ưu.
@@ -535,8 +535,8 @@
               1
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-200">Tính Độ Co Giãn Khoảng (Midpoint)</h3>
-              <p class="text-xs text-slate-400">Đánh giá độ co giãn của cầu và tác động đến Doanh thu ($TR$)</p>
+              <h3 class="font-bold text-slate-800 dark:text-slate-200">Độ co giãn khoảng (phương pháp trung điểm)</h3>
+              <p class="text-xs text-slate-400">Đánh giá độ co giãn của cầu và tác động đến tổng doanh thu ($TR$)</p>
             </div>
           </div>
 
@@ -560,7 +560,7 @@
           </div>
 
           <button id="btn-calc-elasticity" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold text-sm transition-colors shadow-sm">
-            Tính Toán & Phân Tích Doanh Thu
+            Tính toán và phân tích doanh thu
           </button>
 
           <div id="elast-result" class="pt-2"></div>
@@ -573,7 +573,7 @@
               2
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-200">Phân Tích Hàm Chi Phí Doanh Nghiệp</h3>
+              <h3 class="font-bold text-slate-800 dark:text-slate-200">Phân tích hàm chi phí doanh nghiệp</h3>
               <p class="text-xs text-slate-400">Cho hàm $TC = aQ^2 + bQ + c$</p>
             </div>
           </div>
@@ -599,7 +599,7 @@
           </div>
 
           <button id="btn-calc-cost" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold text-sm transition-colors shadow-sm">
-            Phân Tích Chi Phí & Điểm Hòa Vốn
+            Phân tích chi phí và điểm hòa vốn
           </button>
 
           <div id="cost-result" class="pt-2"></div>
@@ -693,7 +693,7 @@
       <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
         <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
           <i data-lucide="landmark" class="w-5 h-5 text-indigo-600"></i>
-          Bộ Công Cụ Tính Toán Kinh Tế Vĩ Mô
+          Công cụ tính toán kinh tế vĩ mô
         </h2>
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
           Xác định cơ sở tiền, số nhân tiền gửi ngân hàng, tính GDP chi tiêu và phân tích các chính sách tiền tệ.
@@ -708,7 +708,7 @@
               1
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-200">Mô Hình Số Nhân Tiền & Cung Tiền</h3>
+              <h3 class="font-bold text-slate-800 dark:text-slate-200">Mô hình số nhân tiền và cung tiền</h3>
               <p class="text-xs text-slate-400">$m_M = (cr + 1) / (cr + rr)$ và $MS = m_M \times MB$</p>
             </div>
           </div>
@@ -729,7 +729,7 @@
           </div>
 
           <button id="btn-calc-money" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold text-sm transition-colors shadow-sm">
-            Tính Số Nhân Tiền & Khối Tiền Tệ MS
+            Tính số nhân tiền và cung tiền $M^S$
           </button>
 
           <div id="macro-money-result" class="pt-2"></div>
@@ -742,7 +742,7 @@
               2
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-200">Đo Lường GDP (Phương Pháp Chi Tiêu)</h3>
+              <h3 class="font-bold text-slate-800 dark:text-slate-200">Đo lường GDP theo phương pháp chi tiêu</h3>
               <p class="text-xs text-slate-400">$GDP = C + I + G + NX$ (Đơn vị: Tỷ đồng)</p>
             </div>
           </div>
@@ -770,7 +770,7 @@
           </div>
 
           <button id="btn-calc-gdp" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold text-sm transition-colors shadow-sm">
-            Tính GDP & Cán Cân Thương Mại
+            Tính GDP và cán cân thương mại
           </button>
 
           <div id="macro-gdp-result" class="pt-2"></div>
@@ -783,7 +783,7 @@
               3
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-200">Mô Hình Số Nhân Chi Tiêu Keynes & Bù Đắp Khoảng Trống Sản Lượng</h3>
+              <h3 class="font-bold text-slate-800 dark:text-slate-200">Mô hình số nhân chi tiêu Keynes và bù đắp sản lượng</h3>
               <p class="text-xs text-slate-400">Tiêu dùng $C = C_0 + MPC(1 - t)Y$, Chi tiêu tự định $A_0 = C_0 + I_0 + G_0 + NX_0$, Số nhân $k = 1 / [1 - MPC(1 - t)]$</p>
             </div>
           </div>
@@ -897,7 +897,7 @@
         <div>
           <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <i data-lucide="git-branch" class="w-5 h-5 text-purple-600"></i>
-            Phòng Thí Nghiệm Mô Hình Cân Bằng Đồng Thời IS - LM & Lấn Át Đầu Tư
+            Phòng thí nghiệm mô hình cân bằng đồng thời IS - LM & Lấn Át Đầu Tư
           </h2>
           <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
             Thiết lập phương trình đường IS (thị trường hàng hóa), đường LM (thị trường tiền tệ), tìm điểm cân bằng $(r^*, Y^*)$, và mô phỏng tác động lấn át khi thực thi chính sách tài khóa / tiền tệ.
@@ -1072,7 +1072,7 @@
         <div>
           <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <i data-lucide="bookmark" class="w-5 h-5 text-indigo-600"></i>
-            Sổ Tay Công Thức Toàn Tập & Cảnh Báo Bẫy Thi Cử
+            Sổ tay công thức toàn tập và lưu ý thi cử
           </h2>
           <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
             Toàn bộ công thức chuẩn KaTeX cho Vi mô & Vĩ mô, kèm ví dụ thực chiến và mẹo né các bẫy điểm 9-10.
