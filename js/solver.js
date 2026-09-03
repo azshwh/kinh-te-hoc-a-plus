@@ -453,6 +453,77 @@ const EconSolver = {
       taxMultiplier: Number((-MPC / (1 - slope)).toFixed(3)),
       gapAnalysis
     };
+  },
+
+  /**
+   * Solver 7: Mô hình Cân bằng đồng thời IS - LM và Phối hợp chính sách
+   */
+  solveISLM(C0, MPC, T, I0, d, G, NX = 0, MSP = 500, k_money = 0.5, h_money = 40, deltaG = 0, deltaM = 0) {
+    if (MPC <= 0 || MPC >= 1) throw new Error("MPC phải trong khoảng (0, 1).");
+    if (k_money <= 0 || h_money <= 0 || d <= 0) throw new Error("Các hệ số độ nhạy (d, k, h) phải lớn hơn 0.");
+
+    // 1. Phương trình IS ban đầu: Y = [A0 / (1 - MPC)] - [d / (1 - MPC)] * r
+    const A0_IS = C0 - MPC * T + I0 + G + NX;
+    const mult_exp = 1 / (1 - MPC);
+    const is_intercept = mult_exp * A0_IS;
+    const is_slope = mult_exp * d;
+
+    // 2. Phương trình LM ban đầu: Y = (1 / k_money) * MSP + (h_money / k_money) * r
+    const lm_intercept = MSP / k_money;
+    const lm_slope = h_money / k_money;
+
+    // 3. Cân bằng đồng thời IS = LM
+    const r_star = (is_intercept - lm_intercept) / (is_slope + lm_slope);
+    const Y_star = lm_intercept + lm_slope * r_star;
+    const I_star = I0 - d * r_star;
+
+    // 4. Phân tích chính sách nếu có deltaG hoặc deltaM
+    let policyAnalysis = null;
+    if (deltaG !== 0 || deltaM !== 0) {
+      const new_G = G + deltaG;
+      const new_MSP = MSP + deltaM;
+      const new_A0 = C0 - MPC * T + I0 + new_G + NX;
+      const new_is_intercept = mult_exp * new_A0;
+      const new_lm_intercept = new_MSP / k_money;
+
+      const new_r = (new_is_intercept - new_lm_intercept) / (is_slope + lm_slope);
+      const new_Y = new_lm_intercept + lm_slope * new_r;
+      const new_I = I0 - d * new_r;
+
+      const deltaI = new_I - I_star;
+      const keynesDeltaY = mult_exp * deltaG;
+      const actualDeltaY = new_Y - Y_star;
+      const crowdedOutY = keynesDeltaY - actualDeltaY;
+
+      policyAnalysis = {
+        new_G, new_MSP,
+        new_r: Number(new_r.toFixed(3)),
+        new_Y: Number(new_Y.toFixed(2)),
+        new_I: Number(new_I.toFixed(2)),
+        deltaI: Number(deltaI.toFixed(2)),
+        actualDeltaY: Number(actualDeltaY.toFixed(2)),
+        crowdedOutY: Number(crowdedOutY.toFixed(2))
+      };
+    }
+
+    return {
+      IS: {
+        formula: `Y = ${is_intercept.toFixed(1)} - ${is_slope.toFixed(1)}r`,
+        intercept: Number(is_intercept.toFixed(2)),
+        slope: Number(is_slope.toFixed(2))
+      },
+      LM: {
+        formula: `Y = ${lm_intercept.toFixed(1)} + ${lm_slope.toFixed(1)}r`,
+        intercept: Number(lm_intercept.toFixed(2)),
+        slope: Number(lm_slope.toFixed(2))
+      },
+      equilibrium: {
+        r: Number(r_star.toFixed(3)),
+        Y: Number(Y_star.toFixed(2)),
+        I: Number(I_star.toFixed(2))
+      },
+      policyAnalysis
+    };
   }
 };
 
