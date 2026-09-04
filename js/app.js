@@ -474,14 +474,14 @@ function handleMonopolyCalculation() {
       <div class="p-4 bg-purple-50 dark:bg-slate-800 rounded-xl border border-purple-200 dark:border-slate-700 space-y-3 text-sm">
         <div class="grid grid-cols-2 gap-2 text-xs">
           <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-purple-200 dark:border-purple-800">
-            <p class="font-bold text-purple-700 dark:text-purple-300 uppercase">1. Độc quyền thuần túy (MR = MC)</p>
+            <p class="font-bold text-purple-700 dark:text-purple-300">1. Độc quyền thuần túy ($MR = MC$)</p>
             <p>• Sản lượng: $Q_M = \\mathbf{${res.monopoly.Q}}$</p>
             <p>• Mức giá bán: $P_M = \\mathbf{${res.monopoly.P}}$</p>
             <p>• Lợi nhuận: $\\pi_M = \\mathbf{${res.monopoly.profit}}$</p>
             <p>• Chỉ số Lerner ($L$): $\\mathbf{${res.monopoly.lernerIndex}}$</p>
           </div>
           <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-emerald-200 dark:border-emerald-800">
-            <p class="font-bold text-emerald-700 dark:text-emerald-300 uppercase">2. Cạnh tranh hoàn hảo (P = MC)</p>
+            <p class="font-bold text-emerald-700 dark:text-emerald-300">2. Cạnh tranh hoàn hảo ($P = MC$)</p>
             <p>• Sản lượng: $Q_C = \\mathbf{${res.competitive.Q}}$</p>
             <p>• Mức giá bán: $P_C = \\mathbf{${res.competitive.P}}$</p>
             <p>• Thặng dư người mua: $CS_C = \\mathbf{${res.competitive.CS}}$</p>
@@ -787,7 +787,7 @@ function initFormulasTab() {
         
         ${item.variables && item.variables.length > 0 ? `
           <div class="my-3 p-3.5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700/80">
-            <h4 class="text-xs font-bold text-indigo-900 dark:text-indigo-200 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+            <h4 class="text-xs font-bold text-indigo-900 dark:text-indigo-200 tracking-wide mb-2 flex items-center gap-1.5">
               <i data-lucide="info" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
               Chú giải ký hiệu & Đơn vị đo lường:
             </h4>
@@ -2222,7 +2222,7 @@ function initISLMLab() {
       if (res.policyAnalysis) {
         policyHtml = `
           <div class="p-3.5 bg-purple-50 dark:bg-purple-950/40 rounded-xl border border-purple-200 dark:border-purple-800 text-xs space-y-1.5">
-            <p class="font-bold text-purple-900 dark:text-purple-200 uppercase">Tác Động Thực Thi Chính Sách (ΔG = ${deltaG}, ΔM = ${deltaM}):</p>
+            <p class="font-bold text-purple-900 dark:text-purple-200">Tác động thực thi chính sách ($\Delta G = ${deltaG}, \Delta M = ${deltaM}$):</p>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
               <div class="p-2 bg-white dark:bg-slate-900 rounded border border-purple-100 dark:border-purple-900">
                 • Lãi suất mới: <strong class="text-purple-600 dark:text-purple-400">${res.policyAnalysis.new_r}%</strong>
@@ -2248,17 +2248,17 @@ function initISLMLab() {
         <div class="space-y-3">
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
             <div class="p-3 bg-indigo-50 dark:bg-slate-800 rounded-xl border border-indigo-200 dark:border-slate-700">
-              <p class="font-bold text-indigo-700 dark:text-indigo-300 uppercase">Đường IS (Thị trường hàng hóa)</p>
+              <p class="font-bold text-indigo-700 dark:text-indigo-300">Đường IS (Thị trường hàng hóa)</p>
               <p class="text-sm font-extrabold mt-1">$IS: ${res.IS.formula}$</p>
               <p class="text-slate-500 text-[11px] mt-0.5">Dốc xuống: lãi suất r tăng làm đầu tư giảm, sản lượng giảm.</p>
             </div>
             <div class="p-3 bg-emerald-50 dark:bg-slate-800 rounded-xl border border-emerald-200 dark:border-slate-700">
-              <p class="font-bold text-emerald-700 dark:text-emerald-300 uppercase">Đường LM (Thị trường tiền tệ)</p>
+              <p class="font-bold text-emerald-700 dark:text-emerald-300">Đường LM (Thị trường tiền tệ)</p>
               <p class="text-sm font-extrabold mt-1">$LM: ${res.LM.formula}$</p>
               <p class="text-slate-500 text-[11px] mt-0.5">Dốc lên: sản lượng Y tăng làm cầu tiền tăng, kéo lãi suất tăng.</p>
             </div>
             <div class="p-3 bg-amber-50 dark:bg-slate-800 rounded-xl border border-amber-200 dark:border-slate-700">
-              <p class="font-bold text-amber-700 dark:text-amber-300 uppercase">Cân bằng đồng thời (E*)</p>
+              <p class="font-bold text-amber-700 dark:text-amber-300">Cân bằng đồng thời ($E^*$)</p>
               <p class="text-sm font-extrabold mt-1 text-amber-800 dark:text-amber-300">$r^* = ${res.equilibrium.r}\\% \\quad Y^* = ${res.equilibrium.Y}$</p>
               <p class="text-slate-500 text-[11px] mt-0.5">Đầu tư tư nhân tại cân bằng: $I^* = ${res.equilibrium.I}$ tỷ.</p>
             </div>
@@ -2444,7 +2444,7 @@ function initMockExamsTab() {
     container.innerHTML = `
       <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
         <div class="text-center border-b border-slate-200 dark:border-slate-800 pb-5">
-          <span class="text-xs font-bold px-3 py-1 bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300 rounded-full uppercase tracking-wider">
+          <span class="text-xs font-bold px-3 py-1 bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300 rounded-full tracking-wider">
             Đề Thi Học Kỳ Chính Thức
           </span>
           <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-slate-100 mt-2">${exam.title}</h3>
@@ -2455,7 +2455,7 @@ function initMockExamsTab() {
 
         ${exam.parts.map(part => `
           <div class="space-y-4 pt-2">
-            <h4 class="font-extrabold text-sm sm:text-base text-indigo-600 dark:text-indigo-400 uppercase tracking-wide border-b border-indigo-100 dark:border-slate-800 pb-1.5">
+            <h4 class="font-extrabold text-sm sm:text-base text-indigo-600 dark:text-indigo-400 tracking-wide border-b border-indigo-100 dark:border-slate-800 pb-1.5">
               ${part.partTitle}
             </h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 italic">${part.description}</p>
@@ -2504,7 +2504,7 @@ function initMockExamsTab() {
 
         <div id="mock-exam-solution-box" class="hidden pt-4 space-y-6">
           <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200 dark:border-emerald-800 text-xs space-y-4">
-            <h4 class="font-black text-sm text-emerald-800 dark:text-emerald-300 uppercase">
+            <h4 class="font-black text-sm text-emerald-800 dark:text-emerald-300">
               Barem Chấm Điểm & Lời Giải Chính Thức
             </h4>
 
