@@ -1595,7 +1595,7 @@ function initTheoryHub() {
             <span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold ${v.category === 'micro' ? 'bg-indigo-600 text-white' : 'bg-emerald-600 text-white'}">
               ${v.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
             </span>
-            ${isCurrentPlaying ? '<span class="absolute top-2 right-2 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-600 text-white animate-pulse">ĐANG PHÁT</span>' : ''}
+            ${isCurrentPlaying ? '<span class="absolute top-2 right-2 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-600 text-white animate-pulse">Đang phát</span>' : ''}
           </div>
 
           <!-- Video Details -->
