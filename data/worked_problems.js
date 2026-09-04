@@ -175,7 +175,7 @@ $$TC = Q^2 + 10Q + 100$$
           <p>Điều kiện tối ưu: $P = MC \\iff 50 = 2Q + 10 \\iff 2Q = 40 \\implies \\mathbf{Q^* = 20}$ sản phẩm.</p>
           <p>• Tổng doanh thu: $TR = P \\times Q^* = 50 \\times 20 = \\mathbf{1.000}$ nghìn đồng.</p>
           <p>• Tổng chi phí: $TC = (20)^2 + 10(20) + 100 = 400 + 200 + 100 = \\mathbf{700}$ nghìn đồng.</p>
-          <p>• Lợi nhuận kinh tế: $\pi$ = TR - TC = 1.000 - 700 = \\mathbf{300}$ nghìn đồng.</p>
+          <p>• Lợi nhuận kinh tế: $\pi = TR - TC = 1.000 - 700 = \\mathbf{300}$ nghìn đồng.</p>
         </div>
       </div>
     `,
@@ -216,7 +216,7 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
           <p>• Tổng sản lượng: $Q = Q_1 + Q_2 = 40 + 30 = 70$.</p>
           <p>• Tổng doanh thu: $TR = P_1 Q_1 + P_2 Q_2 = 60(40) + 80(30) = 2.400 + 2.400 = 4.800$.</p>
           <p>• Tổng chi phí: $TC = 20(70) + 500 = 1.400 + 500 = 1.900$.</p>
-          <p>• <strong>Tổng lợi nhuận:</strong> $\pi$ = TR - TC = 4.800 - 1.900 = \\mathbf{2.900}$.</p>
+          <p>• <strong>Tổng lợi nhuận:</strong> $\pi = TR - TC = 4.800 - 1.900 = \\mathbf{2.900}$.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
@@ -484,7 +484,7 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
           <p class="mt-2">• <strong>Cân bằng Cournot:</strong> Thay $Q_2$ vào $Q_1$:</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Q_1 = 45 - 0.5(45 - 0.5Q_1) = 45 - 22.5 + 0.25Q_1 \\iff 0.75Q_1 = 22.5 \\implies \\mathbf{Q_1^* = 30, Q_2^* = 30}$$</div>
           <p>Tổng sản lượng: $Q = 30 + 30 = 60$. Mức giá thị trường: $P = 100 - 60 = \\mathbf{40}$.</p>
-          <p>Lợi nhuận mỗi DN: $\pi$_1 = $\pi$_2 = (P - MC) \\times Q_i = (40 - 10) \\times 30 = \\mathbf{900}$.</p>
+          <p>Lợi nhuận mỗi DN: $\pi_1 = \pi_2 = (P - MC) \\times Q_i = (40 - 10) \\times 30 = \\mathbf{900}$.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
@@ -495,8 +495,8 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
           <p>Cho $MR_1 = MC_1 \\iff 55 - Q_1 = 10 \\implies \\mathbf{Q_{1, Stackelberg}^* = 45}$.</p>
           <p>DN 2 đi sau chấp nhận sản lượng: $Q_2 = 45 - 0.5(45) = \\mathbf{22.5}$.</p>
           <p>Tổng sản lượng: $Q = 45 + 22.5 = 67.5$. Giá bán: $P = 100 - 67.5 = \\mathbf{32.5}$.</p>
-          <p>• Lợi nhuận người dẫn đầu: $\pi$_1 = (32.5 - 10) \\times 45 = \\mathbf{1.012.5}$ (Tăng so với Cournot 900!).</p>
-          <p>• Lợi nhuận người đi sau: $\pi$_2 = (32.5 - 10) \\times 22.5 = \\mathbf{506.25}$ (Giảm một nửa so với Cournot!).</p>
+          <p>• Lợi nhuận người dẫn đầu: $\pi_1 = (32.5 - 10) \\times 45 = \\mathbf{1.012.5}$ (Tăng so với Cournot 900!).</p>
+          <p>• Lợi nhuận người đi sau: $\pi_2 = (32.5 - 10) \\times 22.5 = \\mathbf{506.25}$ (Giảm một nửa so với Cournot!).</p>
           <p class="mt-2"><strong>Kết luận:</strong> Lợi thế của người đi trước (First-mover advantage) giúp người dẫn đầu chiếm thị phần áp đảo và đạt lợi nhuận cao nhất.</p>
         </div>
       </div>
@@ -640,7 +640,7 @@ Cho biết:
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Phản ứng trước cú sốc lạm phát và Nguyên lý Taylor</h4>
-          <p>Khi $\pi$ = 6\\%$ (vượt mục tiêu $6 - 2 = 4\\%$) và $y = 8\\%$ (tăng nóng $8 - 6 = 2\\%$):</p>
+          <p>Khi $\pi = 6\\%$ (vượt mục tiêu $6 - 2 = 4\\%$) và $y = 8\\%$ (tăng nóng $8 - 6 = 2\\%$):</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = 2\\% + 6\\% + 0.5(6 - 2) + 0.5(8 - 6)$$</div>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = 8\\% + 0.5(4\\%) + 0.5(2\\%) = 8\\% + 2\\% + 1\\% = \\mathbf{11.0\\%}$$</div>
           <p>• <strong>Lãi suất thực tế mới:</strong> $r = i - $\pi$ = 11\\% - 6\\% = \\mathbf{5.0\\%}$ (Tăng từ $2\\%$ lên $5\\%$!).</p>
