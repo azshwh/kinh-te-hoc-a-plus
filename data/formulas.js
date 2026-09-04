@@ -352,7 +352,7 @@ const FORMULAS_DATA = [
     "category": "micro",
     "chapter": "Chương 6: Bốn cấu trúc thị trường và lý thuyết trò chơi",
     "title": "Cân bằng Nash (Nash equilibrium) và thế lưỡng nan của người tù (prisoner's dilemma)",
-    "formula": "\\text{Cân bằng Nash}: $\pi$_i(s_i^*, s_{-i}^*) \\ge $\pi$_i(s_i, s_{-i}^*) \\quad \\forall s_i",
+    "formula": "\\text{Cân bằng Nash}: \\pi_i(s_i^*, s_{-i}^*) \\ge \\pi_i(s_i, s_{-i}^*) \\quad \\forall s_i",
     "description": "Một tập hợp các chiến lược được gọi là cân bằng Nash nếu không có bất kỳ người chơi nào có động cơ đơn phương thay đổi chiến lược khi các đối thủ giữ nguyên lựa chọn của họ.",
     "variables": [
       {
