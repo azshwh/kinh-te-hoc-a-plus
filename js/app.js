@@ -374,7 +374,7 @@ function updateMarketChartData(a, b, c, d, solution) {
 
   if (solution.new && solution.policy.type === 'tax') {
     datasets.push({
-      label: `Đường Cung sau thuế S' (t=${solution.policy.value})`,
+      label: `Đường cung sau thuế S' (t=${solution.policy.value})`,
       data: supplyTaxPoints,
       borderColor: '#8b5cf6',
       borderDash: [5, 5],
@@ -2258,7 +2258,7 @@ function initISLMLab() {
               <p class="text-slate-500 text-[11px] mt-0.5">Dốc lên: sản lượng Y tăng làm cầu tiền tăng, kéo lãi suất tăng.</p>
             </div>
             <div class="p-3 bg-amber-50 dark:bg-slate-800 rounded-xl border border-amber-200 dark:border-slate-700">
-              <p class="font-bold text-amber-700 dark:text-amber-300 uppercase">Cân Bằng Đồng Thời (E*)</p>
+              <p class="font-bold text-amber-700 dark:text-amber-300 uppercase">Cân bằng đồng thời (E*)</p>
               <p class="text-sm font-extrabold mt-1 text-amber-800 dark:text-amber-300">$r^* = ${res.equilibrium.r}\\% \\quad Y^* = ${res.equilibrium.Y}$</p>
               <p class="text-slate-500 text-[11px] mt-0.5">Đầu tư tư nhân tại cân bằng: $I^* = ${res.equilibrium.I}$ tỷ.</p>
             </div>
@@ -2329,7 +2329,7 @@ function initISLMLab() {
         tension: 0
       },
       {
-        label: `Điểm Cân Bằng E* (Y*=${Y_star}, r*=${r_star}%)`,
+        label: `Điểm cân bằng E* (Y*=${Y_star}, r*=${r_star}%)`,
         data: [{ x: Y_star, y: r_star }],
         borderColor: '#f59e0b',
         backgroundColor: '#f59e0b',
@@ -2350,7 +2350,7 @@ function initISLMLab() {
         tension: 0
       });
       datasets.push({
-        label: `Điểm Cân Bằng Mới E₁*`,
+        label: `Điểm cân bằng mới E₁*`,
         data: [{ x: res.policyAnalysis.new_Y, y: res.policyAnalysis.new_r }],
         borderColor: '#9333ea',
         backgroundColor: '#9333ea',
@@ -2372,12 +2372,12 @@ function initISLMLab() {
         maintainAspectRatio: false,
         scales: {
           x: {
-            title: { display: true, text: 'Sản Lượng Quốc Dân (Y)', color: textColor, font: { weight: 'bold' } },
+            title: { display: true, text: 'Sản lượng quốc dân (Y)', color: textColor, font: { weight: 'bold' } },
             ticks: { color: textColor },
             grid: { color: gridColor }
           },
           y: {
-            title: { display: true, text: 'Lãi Suất Thị Trường (r%)', color: textColor, font: { weight: 'bold' } },
+            title: { display: true, text: 'Lãi suất thị trường (r%)', color: textColor, font: { weight: 'bold' } },
             ticks: { color: textColor },
             grid: { color: gridColor }
           }
