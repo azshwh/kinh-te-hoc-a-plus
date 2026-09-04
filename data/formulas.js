@@ -516,7 +516,7 @@ const FORMULAS_DATA = [
     "category": "macro",
     "chapter": "Chương 9: Lạm phát, chỉ số giá tiêu dùng và thị trường lao động",
     "title": "Chỉ số giá tiêu dùng (consumer price index - CPI), tỷ lệ lạm phát (inflation rate) và hiệu ứng Fisher (Fisher effect)",
-    "formula": "CPI_t = \\frac{\\sum (P_{i, t} \\times Q_{i, 0})}{\\sum (P_{i, 0} \\times Q_{i, 0})} \\times 100, \\quad $\pi$_t = \\frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \\times 100\\%, \\quad i \\approx r + $\pi$",
+    "formula": "CPI_t = \\frac{\\sum (P_{i, t} \\times Q_{i, 0})}{\\sum (P_{i, 0} \\times Q_{i, 0})} \\times 100, \\quad \\pi_t = \\frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \\times 100\\%, \\quad i \\approx r + \\pi",
     "description": "Đo lường sự biến động chi phí sinh hoạt bình quân của một hộ gia đình điển hình qua thời gian thông qua một giỏ hàng hóa và dịch vụ tiêu dùng cố định.",
     "variables": [
       {
