@@ -226,12 +226,16 @@
     ]
   },
   "worked_problems.js": {
-    "mathIssuesCount": 4,
+    "mathIssuesCount": 8,
     "mathIssuesSample": [
-      "\\\\bar{y}",
-      "\\\\bar{y}",
-      "\\\\bar{y}",
-      "\\\\bar{y}"
+      "(\\delta",
+      "\\delta",
+      "\\pi",
+      "(\\pi",
+      "\\bar{y}",
+      "\\bar{y}",
+      "\\bar{y}",
+      "\\pi"
     ],
     "doubleParens": [],
     "rawAsterisks": [],
@@ -264,17 +268,18 @@
     ]
   },
   "theory.js": {
-    "mathIssuesCount": 9,
+    "mathIssuesCount": 12,
     "mathIssuesSample": [
+      "\\tilde{k}",
+      "(\\tilde{k}",
       "\\\\delta",
       "\\\\tilde{k}",
       "\\\\delta,",
       "\\\\delta",
       "\\\\delta",
       "\\\\pi",
-      "\\\\pi",
-      "\\\\pi",
-      "\\\\pi,"
+      "\\pi",
+      "(\\pi"
     ],
     "doubleParens": [],
     "rawAsterisks": [],

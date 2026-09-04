@@ -617,23 +617,23 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\pi$ = 0.05$
     title: "Dạng 12: Quy tắc điều hành lãi suất Taylor và ứng phó cú sốc vĩ mô",
     examLevel: "Đề thi Nghiệp vụ Ngân Hàng Trung Ương / Chuẩn Học thuật Vĩ mô",
     context: `Ngân hàng Trung ương điều hành chính sách tiền tệ theo Quy tắc Taylor chuẩn:
-$i = r^* + \pi + 0.5(\pi - \pi^*) + 0.5(y - \bar{y})$
+$$i = r^* + \pi + 0.5(\pi - \pi^*) + 0.5(y - \bar{y})$$
 Cho biết:
-- Lãi suất thực tế cân bằng dài hạn: $r^* = 2\\%$
-- Tỷ lệ lạm phát mục tiêu: $\pi^*$ = 2\\%$
-- Tốc độ tăng trưởng sản lượng tiềm năng: $\\bar{y} = 6\\%$.`,
+- Lãi suất thực tế cân bằng dài hạn: $r^* = 2\%$
+- Tỷ lệ lạm phát mục tiêu: $\pi^* = 2\%$
+- Tốc độ tăng trưởng sản lượng tiềm năng: $\bar{y} = 6\%$.`,
     subQuestions: [
       "a) Khi nền kinh tế đang ở trạng thái cân bằng toàn dụng ($\pi = 2\\%, y = 6\\%$), NHTW nên ấn định lãi suất danh nghĩa mục tiêu $i$ là bao nhiêu?",
-      "b) Giả sử xảy ra cú sốc tổng cầu khiến lạm phát tăng lên $\pi$ = 6\\%$ và sản lượng tăng nóng lên $y = 8\\%$. Theo quy tắc Taylor, NHTW cần điều chỉnh lãi suất danh nghĩa lên bao nhiêu?",
+      "b) Giả sử xảy ra cú sốc tổng cầu khiến lạm phát tăng lên $\pi = 6\%$ và sản lượng tăng nóng lên $y = 8\%$. Theo quy tắc Taylor, NHTW cần điều chỉnh lãi suất danh nghĩa lên bao nhiêu?",
       "c) Tính lãi suất thực tế trong kịch bản (b). Giải thích nguyên lý Taylor (Taylor Principle): Tại sao NHTW phải tăng lãi suất danh nghĩa nhiều hơn 1-1 so với mức tăng của lạm phát?"
     ],
     fullSolutionHtml: `
       <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Lãi suất tại trạng thái cân bằng mục tiêu</h4>
-          <p>Khi lạm phát đạt mục tiêu ($\pi$ = $\pi^*$ = 2\\%$) và sản lượng ở mức tiềm năng ($y = \\bar{y} = 6\\%$):</p>
-          <p>Khoảng trống lạm phát: $\pi$ - $\pi^*$ = 2 - 2 = 0$.</p>
-          <p>Khoảng trống sản lượng: $y - \\bar{y} = 6 - 6 = 0$.</p>
+          <p>Khi lạm phát đạt mục tiêu ($\pi = \pi^* = 2\%$) và sản lượng ở mức tiềm năng ($y = \bar{y} = 6\%$):</p>
+          <p>Khoảng trống lạm phát: $\pi - \pi^* = 2 - 2 = 0$.</p>
+          <p>Khoảng trống sản lượng: $y - \bar{y} = 6 - 6 = 0$.</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = r^* + \pi + 0.5(0) + 0.5(0) = 2\\% + 2\\% = \\mathbf{4.0\\%}$$</div>
           <p>Lãi suất danh nghĩa trung tính là 4.0%/năm.</p>
         </div>
