@@ -517,7 +517,7 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
     context: `Hàm sản xuất tổng hợp của một nền kinh tế có dạng Cobb-Douglas:
 $$Y = F(K, L) = K^{0.5} L^{0.5} \\implies y = k^{0.5}$$
 (Trong đó: y = Y/L là sản lượng trên một lao động; k = K/L là tư bản trên một lao động).
-Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\pi$ = 0.05$, tốc độ tăng dân số $n = 0.01$, tiến bộ công nghệ $g = 0$.`,
+Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\delta = 0.05$, tốc độ tăng dân số $n = 0.01$, tiến bộ công nghệ $g = 0$.`,
     subQuestions: [
       "a) Xác định mức tư bản trạng thái dừng ($k^*$), sản lượng trạng thái dừng ($y^*$), tiêu dùng trên một lao động ($c^*$) và đầu tư trạng thái dừng ($i^*$).",
       "b) Thiết lập điều kiện Quy tắc vàng của tích lũy tư bản (Golden Rule). Hãy xác định mức tư bản $k_{gold}^*$ và tỷ lệ tiết kiệm vàng $s_{gold}$ tối đa hóa tiêu dùng bền vững.",
