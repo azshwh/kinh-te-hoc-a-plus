@@ -2118,20 +2118,22 @@ function initTrueFalseTab() {
     }
 
     container.innerHTML = filtered.map(item => `
-      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow space-y-3">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
-              Chương ${item.chapter} • ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
-            </span>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full space-y-3">
+        <div class="flex-1 flex flex-col space-y-3">
+          <div class="flex items-center justify-between min-h-[1.5rem]">
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
+                Chương ${item.chapter} • ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
+              </span>
+            </div>
+            <span class="text-xs font-semibold text-slate-400">${item.topic}</span>
           </div>
-          <span class="text-xs font-semibold text-slate-400">${item.topic}</span>
-        </div>
 
-        <div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700/50">
-          <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-snug">
-            "${item.statement}"
-          </p>
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700/50 flex-1 flex items-center min-h-[4.5rem]">
+            <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-snug">
+              "${item.statement}"
+            </p>
+          </div>
         </div>
 
         <button class="btn-reveal-tf w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-sky-50 dark:hover:bg-sky-950 text-sky-700 dark:text-sky-300 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1" data-tf-id="${item.id}">
