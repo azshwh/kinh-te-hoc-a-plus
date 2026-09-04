@@ -107,7 +107,7 @@ const TRUE_FALSE_DATA = [
     statement: "Khi một doanh nghiệp đạt lợi nhuận kinh tế bằng 0, chủ doanh nghiệp nên đóng cửa vì không thu được lợi nhuận gì cho công sức của mình.",
     verdict: "SAI",
     explanation: "Lợi nhuận kinh tế = Tổng doanh thu - (Chi phí hiện + Chi phí ẩn). Chi phí ẩn đã bao gồm tiền lương tương xứng cho công sức quản lý của chủ doanh nghiệp và lợi tức cơ hội của số vốn tự có bỏ vào kinh doanh. Do đó, khi Lợi nhuận kinh tế bằng 0, doanh nghiệp đang kiếm được lợi nhuận bình thường (Normal Profit), tức là chủ doanh nghiệp vẫn được nhận mức thù lao hoàn toàn tương đương với cơ hội tốt nhất ở bên ngoài.",
-    academicFormula: "$\pi$_{kinh\\,tế} = 0 \\iff $\pi$_{kế\\,toán} = \\text{Chi phí cơ hội ẩn} > 0",
+    academicFormula: "\pi_{\text{kinh tế}} = 0 \iff \pi_{\text{kế toán}} = \text{Chi phí cơ hội ẩn} > 0",
     graphTip: "Vẽ đồ thị cân bằng dài hạn của cạnh tranh hoàn hảo tại $P = ATC_{\\min}$, ở đó $1$_{kinh\\,tế} = 0$.",
     examTip: "Lợi nhuận kinh tế bằng 0 là trạng thái cân bằng dài hạn bình thường và lý tưởng của thị trường cạnh tranh."
   },
@@ -229,7 +229,7 @@ const TRUE_FALSE_DATA = [
     statement: "Tăng tỷ lệ tiết kiệm và đầu tư máy móc trong nước có thể duy trì tốc độ tăng trưởng kinh tế cao vô hạn trong dài hạn.",
     verdict: "SAI",
     explanation: "Theo Mô hình tăng trưởng Solow, tư bản chịu quy luật Lợi suất giảm dần (Diminishing returns to capital). Khi mức tích lũy tư bản ngày càng cao, mỗi đồng vốn đầu tư thêm vào máy móc mang lại sản lượng biên ngày càng nhỏ, trong khi chi phí khấu hao tăng tuyến tính theo lượng tư bản. Nền kinh tế sẽ đạt tới Trạng thái dừng (Steady State), tại đó đầu tư mới chỉ đủ bù đắp khấu hao, tăng trưởng GDP trên đầu người sẽ dừng lại. Trong dài hạn, động lực duy nhất duy trì tăng trưởng liên tục là tiến bộ công nghệ ($A$).",
-    academicFormula: "Y = A \\cdot F(K, L) \\implies MP_K \\downarrow \\text{ khi } K \\uparrow \\implies \\text{Hội tụ về trạng thái dừng } s \\cdot f(k^*) = (n + g + $\delta$)k^*",
+    academicFormula: "Y = A \\cdot F(K, L) \\implies MP_K \\downarrow \\text{ khi } K \\uparrow \\implies \\text{Hội tụ về trạng thái dừng } s \\cdot f(k^*) = (n + g + \delta)k^*",
     graphTip: "Vẽ đồ thị Solow với hàm đầu tư $s \\cdot f(k)$ cong xuống cắt đường khấu hao $($\delta$ + n)k$ tại điểm dừng $k^*$.",
     examTip: "Tiết kiệm cao chỉ làm tăng mức sản lượng trong trạng thái dừng, không làm thay đổi tốc độ tăng trưởng dài hạn."
   },
@@ -337,7 +337,7 @@ const TRUE_FALSE_DATA = [
     statement: "Theo học thuyết Ngang giá sức mua (PPP), nếu quốc gia có tỷ lệ lạm phát cao hơn nước ngoài thì đồng tiền của quốc gia đó sẽ có xu hướng tăng giá trên thị trường ngoại hối.",
     verdict: "SAI",
     explanation: "Theo PPP, tỷ giá danh nghĩa phản ánh tỷ lệ giá cả giữa hai quốc gia: $e = P^* / P$. Lấy logarit và đạo hàm theo thời gian: $\\%\\Delta e = $\pi$^* - \\pi$. Nếu quốc gia trong nước có lạm phát cao hơn nước ngoài ($1$ > $\pi$^*$), sức mua nội tệ giảm nhanh hơn ngoại tệ, dẫn đến đồng nội tệ phải giảm giá (mất giá) so với đồng ngoại tệ để duy trì sự cân bằng sức mua hàng hóa giữa hai quốc gia.",
-    academicFormula: "\\%\\Delta e \\approx $\pi$^* - $\pi$ < 0 \\implies \\text{Đồng nội tệ giảm giá (Depreciation)}",
+    academicFormula: "\\%\Delta e \approx \pi^* - \pi < 0 \\implies \\text{Đồng nội tệ giảm giá (Depreciation)}",
     graphTip: "Nêu quy luật Một giá (Law of One Price) làm nền tảng cho học thuyết PPP.",
     examTip: "Lạm phát cao luôn làm suy yếu và giảm giá đồng tiền quốc gia trong dài hạn."
   },
@@ -409,7 +409,7 @@ const TRUE_FALSE_DATA = [
     statement: "Một doanh nghiệp cạnh tranh hoàn hảo trên cả thị trường sản phẩm và thị trường lao động sẽ thuê lao động cho đến khi Giá trị sản phẩm biên của lao động bằng mức tiền lương thị trường (VMP_L = W).",
     verdict: "ĐÚNG",
     explanation: "Doanh thu biên từ việc thuê thêm 1 công nhân là Doanh thu sản phẩm biên: $MRP_L = MR \\times MP_L$. Trong thị trường cạnh tranh hoàn hảo, doanh nghiệp là người chấp nhận giá nên $MR = P$, do đó $MRP_L = VMP_L = P \\times MP_L$. Chi phí biên để thuê thêm 1 công nhân là tiền lương $W$. Để tối đa hóa lợi nhuận, doanh nghiệp thuê lao động đến khi Doanh thu biên bằng Chi phí biên: $VMP_L = W$. Đường $VMP_L$ dốc xuống do quy luật năng suất cận biên giảm dần chính là đường cầu lao động của doanh nghiệp.",
-    academicFormula: "\\text{Tối đa hóa } $\pi$: \\quad \\frac{\\Delta TR}{\\Delta L} = \\frac{\\Delta TC}{\\Delta L} \\iff P \\times MP_L = W \\implies VMP_L = W",
+    academicFormula: "\text{Tối đa hóa } \pi: \\quad \\frac{\\Delta TR}{\\Delta L} = \\frac{\\Delta TC}{\\Delta L} \\iff P \\times MP_L = W \\implies VMP_L = W",
     graphTip: "Vẽ đường VMP_L dốc xuống cắt đường tiền lương W nằm ngang tại lượng lao động tối ưu L*.",
     examTip: "Nếu doanh nghiệp có độc quyền bán trên thị trường sản phẩm: P > MR => Đường cầu lao động là MR x MP_L (thấp hơn VMP_L)."
   },
@@ -421,7 +421,7 @@ const TRUE_FALSE_DATA = [
     statement: "Mức tư bản theo Quy tắc vàng (Golden Rule) trong mô hình Solow là mức tư bản đạt được khi tỷ lệ tiết kiệm s = 100%.",
     verdict: "SAI",
     explanation: "Mục tiêu của Quy tắc vàng trong mô hình Solow là tối đa hóa mức tiêu dùng trên mỗi lao động ($c^*$) ở trạng thái dừng, không phải tối đa hóa sản lượng hay tư bản. Nếu tỷ lệ tiết kiệm $s = 100\\%$, toàn bộ sản lượng làm ra đều đem đi đầu tư tích lũy tư bản và mức tiêu dùng bằng 0 ($c = 0$), xã hội sẽ chết đói! Mức tư bản vàng $k_{gold}^*$ đạt được khi độ dốc hàm sản xuất bằng độ dốc đường khấu hao bù đắp: $MPK = $\delta$ + n + g$. Tỷ lệ tiết kiệm vàng luôn nằm trong khoảng $0 < s_{gold} < 1$.",
-    academicFormula: "c^* = f(k) - ($\delta$ + n + g)k \\implies \\frac{dc^*}{dk} = 0 \\iff MPK = $\delta$ + n + g",
+    academicFormula: "c^* = f(k) - (\delta + n + g)k \implies \frac{dc^*}{dk} = 0 \iff MPK = \delta + n + g",
     graphTip: "Vẽ đồ thị tiêu dùng c* là khoảng cách thẳng đứng giữa đường sản lượng f(k) và đường (delta+n)k đạt cực đại.",
     examTip: "Nền kinh tế có thể bị 'Kém hiệu quả động' (Dynamic Inefficiency) nếu tích lũy quá nhiều tư bản vượt quá mức vàng (s > s_gold)."
   },
@@ -469,7 +469,7 @@ const TRUE_FALSE_DATA = [
     statement: "Theo Nguyên lý Taylor, khi lạm phát vượt quá mức mục tiêu thêm 1%, Ngân hàng Trung ương phải tăng lãi suất danh nghĩa ít hơn 1% để không gây tổn hại đến việc làm và tăng trưởng.",
     verdict: "SAI",
     explanation: "Nguyên lý Taylor (Taylor Principle) khẳng định điều hoàn toàn ngược lại: Khi lạm phát tăng thêm 1%, NHTW phải tăng lãi suất danh nghĩa nhiều hơn 1% (trong quy tắc chuẩn của John Taylor, hệ số là 1.5). Theo phương trình Fisher ($r \\approx i - \\pi$), chỉ khi lãi suất danh nghĩa $i$ tăng nhanh hơn tốc độ lạm phát $\\pi$ thì lãi suất thực tế ($r$) mới tăng lên. Lãi suất thực tế tăng làm chi phí vốn đắt đỏ, kìm hãm tiêu dùng và đầu tư, kéo tổng cầu giảm để dập tắt lạm phát. Nếu tăng lãi suất danh nghĩa ít hơn 1%, lãi suất thực tế sẽ bị giảm sút, vô tình nới lỏng tiền tệ và làm lạm phát bùng nổ dữ dội hơn.",
-    academicFormula: "\\frac{\\Delta i}{\\Delta $\pi$} > 1 \\implies \\Delta r = \\Delta i - \\Delta $\pi$ > 0 \\quad (\\text{Nguyên lý Taylor})",
+    academicFormula: "\frac{\Delta i}{\Delta \pi} > 1 \implies \Delta r = \Delta i - \Delta \pi > 0 \\quad (\\text{Nguyên lý Taylor})",
     graphTip: "Vẽ đồ thị phản ứng của lãi suất thực tế r khi NHTW tuân thủ hệ số Taylor > 1.",
     examTip: "Thập niên 1970 Mỹ bị lạm phát 14% do Fed tăng lãi suất ít hơn lạm phát; Paul Volcker giải quyết được nhờ áp dụng nguyên lý Taylor."
   },

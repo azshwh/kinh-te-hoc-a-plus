@@ -643,7 +643,7 @@ Cho biết:
           <p>Khi $\pi = 6\\%$ (vượt mục tiêu $6 - 2 = 4\\%$) và $y = 8\\%$ (tăng nóng $8 - 6 = 2\\%$):</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = 2\\% + 6\\% + 0.5(6 - 2) + 0.5(8 - 6)$$</div>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = 8\\% + 0.5(4\\%) + 0.5(2\\%) = 8\\% + 2\\% + 1\\% = \\mathbf{11.0\\%}$$</div>
-          <p>• <strong>Lãi suất thực tế mới:</strong> $r = i - $\pi$ = 11\\% - 6\\% = \\mathbf{5.0\\%}$ (Tăng từ $2\\%$ lên $5\\%$!).</p>
+          <p>• <strong>Lãi suất thực tế mới:</strong> $r = i - \pi = 11\% - 6\% = \mathbf{5.0\%}$ (Tăng từ $2\\%$ lên $5\\%$!).</p>
           <p class="mt-2">• <strong>Giải thích Nguyên lý Taylor (Taylor Principle):</strong></p>
           <p>Hệ số trước lạm phát là $1 + 0.5 = 1.5 > 1$. Khi lạm phát tăng thêm 1%, NHTW phải tăng lãi suất danh nghĩa thêm 1.5% (tức tăng lớn hơn 1-1). Điều này đảm bảo rằng <strong>lãi suất thực tế r sẽ tăng lên</strong>. Lãi suất thực tăng làm hạ nhiệt chi tiêu vay mượn và đầu tư, kéo tổng cầu giảm xuống, từ đó dập tắt lạm phát. Nếu NHTW tăng lãi suất danh nghĩa ít hơn 1-1, lãi suất thực tế sẽ giảm và vô tình đổ thêm dầu vào lửa lạm phát.</p>
         </div>

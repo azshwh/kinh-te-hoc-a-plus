@@ -330,7 +330,7 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị sản phẩm (chiếc, tấn...)"
       },
       {
-        "symbol": "$\pi$_M",
+        "symbol": "\pi_M",
         "meaning": "Lợi nhuận kinh tế siêu ngạch của nhà độc quyền (economic profit)",
         "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       }
@@ -366,7 +366,7 @@ const FORMULAS_DATA = [
         "unit": "Quyết định hành động của các đối thủ"
       },
       {
-        "symbol": "$\pi$_i",
+        "symbol": "\pi_i",
         "meaning": "Mức lợi ích hoặc lợi nhuận thanh toán của người chơi (payoff)",
         "unit": "Đơn vị tiền tệ hoặc điểm thỏa dụng"
       }
@@ -525,7 +525,7 @@ const FORMULAS_DATA = [
         "unit": "Điểm chỉ số (năm gốc = 100)"
       },
       {
-        "symbol": "$\pi$_t",
+        "symbol": "\pi_t",
         "meaning": "Tỷ lệ lạm phát trong kỳ (inflation rate)",
         "unit": "Tỷ lệ phần trăm (% / năm hoặc % / tháng)"
       },
