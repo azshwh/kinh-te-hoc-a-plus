@@ -175,7 +175,7 @@ $$TC = Q^2 + 10Q + 100$$
           <p>Điều kiện tối ưu: $P = MC \\iff 50 = 2Q + 10 \\iff 2Q = 40 \\implies \\mathbf{Q^* = 20}$ sản phẩm.</p>
           <p>• Tổng doanh thu: $TR = P \\times Q^* = 50 \\times 20 = \\mathbf{1.000}$ nghìn đồng.</p>
           <p>• Tổng chi phí: $TC = (20)^2 + 10(20) + 100 = 400 + 200 + 100 = \\mathbf{700}$ nghìn đồng.</p>
-          <p>• Lợi nhuận kinh tế: $\$\pi$ = TR - TC = 1.000 - 700 = \\mathbf{300}$ nghìn đồng.</p>
+          <p>• Lợi nhuận kinh tế: $\pi$ = TR - TC = 1.000 - 700 = \\mathbf{300}$ nghìn đồng.</p>
         </div>
       </div>
     `,
@@ -216,7 +216,7 @@ Hãng có thể bán thuốc trên hai thị trường tách biệt:
           <p>• Tổng sản lượng: $Q = Q_1 + Q_2 = 40 + 30 = 70$.</p>
           <p>• Tổng doanh thu: $TR = P_1 Q_1 + P_2 Q_2 = 60(40) + 80(30) = 2.400 + 2.400 = 4.800$.</p>
           <p>• Tổng chi phí: $TC = 20(70) + 500 = 1.400 + 500 = 1.900$.</p>
-          <p>• <strong>Tổng lợi nhuận:</strong> $\$\pi$ = TR - TC = 4.800 - 1.900 = \\mathbf{2.900}$.</p>
+          <p>• <strong>Tổng lợi nhuận:</strong> $\pi$ = TR - TC = 4.800 - 1.900 = \\mathbf{2.900}$.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
@@ -484,7 +484,7 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
           <p class="mt-2">• <strong>Cân bằng Cournot:</strong> Thay $Q_2$ vào $Q_1$:</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$Q_1 = 45 - 0.5(45 - 0.5Q_1) = 45 - 22.5 + 0.25Q_1 \\iff 0.75Q_1 = 22.5 \\implies \\mathbf{Q_1^* = 30, Q_2^* = 30}$$</div>
           <p>Tổng sản lượng: $Q = 30 + 30 = 60$. Mức giá thị trường: $P = 100 - 60 = \\mathbf{40}$.</p>
-          <p>Lợi nhuận mỗi DN: $\$\pi$_1 = \$\pi$_2 = (P - MC) \\times Q_i = (40 - 10) \\times 30 = \\mathbf{900}$.</p>
+          <p>Lợi nhuận mỗi DN: $\pi$_1 = $\pi$_2 = (P - MC) \\times Q_i = (40 - 10) \\times 30 = \\mathbf{900}$.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
@@ -495,8 +495,8 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
           <p>Cho $MR_1 = MC_1 \\iff 55 - Q_1 = 10 \\implies \\mathbf{Q_{1, Stackelberg}^* = 45}$.</p>
           <p>DN 2 đi sau chấp nhận sản lượng: $Q_2 = 45 - 0.5(45) = \\mathbf{22.5}$.</p>
           <p>Tổng sản lượng: $Q = 45 + 22.5 = 67.5$. Giá bán: $P = 100 - 67.5 = \\mathbf{32.5}$.</p>
-          <p>• Lợi nhuận người dẫn đầu: $\$\pi$_1 = (32.5 - 10) \\times 45 = \\mathbf{1.012.5}$ (Tăng so với Cournot 900!).</p>
-          <p>• Lợi nhuận người đi sau: $\$\pi$_2 = (32.5 - 10) \\times 22.5 = \\mathbf{506.25}$ (Giảm một nửa so với Cournot!).</p>
+          <p>• Lợi nhuận người dẫn đầu: $\pi$_1 = (32.5 - 10) \\times 45 = \\mathbf{1.012.5}$ (Tăng so với Cournot 900!).</p>
+          <p>• Lợi nhuận người đi sau: $\pi$_2 = (32.5 - 10) \\times 22.5 = \\mathbf{506.25}$ (Giảm một nửa so với Cournot!).</p>
           <p class="mt-2"><strong>Kết luận:</strong> Lợi thế của người đi trước (First-mover advantage) giúp người dẫn đầu chiếm thị phần áp đảo và đạt lợi nhuận cao nhất.</p>
         </div>
       </div>
@@ -517,7 +517,7 @@ Cả hai doanh nghiệp đều có hàm chi phí sản xuất giống nhau: $TC_
     context: `Hàm sản xuất tổng hợp của một nền kinh tế có dạng Cobb-Douglas:
 $$Y = F(K, L) = K^{0.5} L^{0.5} \\implies y = k^{0.5}$$
 (Trong đó: y = Y/L là sản lượng trên một lao động; k = K/L là tư bản trên một lao động).
-Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\$\delta$ = 0.05$, tốc độ tăng dân số $n = 0.01$, tiến bộ công nghệ $g = 0$.`,
+Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\pi$ = 0.05$, tốc độ tăng dân số $n = 0.01$, tiến bộ công nghệ $g = 0$.`,
     subQuestions: [
       "a) Xác định mức tư bản trạng thái dừng ($k^*$), sản lượng trạng thái dừng ($y^*$), tiêu dùng trên một lao động ($c^*$) và đầu tư trạng thái dừng ($i^*$).",
       "b) Thiết lập điều kiện Quy tắc vàng của tích lũy tư bản (Golden Rule). Hãy xác định mức tư bản $k_{gold}^*$ và tỷ lệ tiết kiệm vàng $s_{gold}$ tối đa hóa tiêu dùng bền vững.",
@@ -527,8 +527,8 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\$\delta$ = 
       <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Trạng thái dừng ban đầu (k*, y*, c*)</h4>
-          <p>Phương trình tích lũy tư bản Solow: $\\Delta k = s \\cdot f(k) - (\$\delta$ + n)k$.</p>
-          <p>Tại trạng thái dừng: $\\Delta k = 0 \\iff s \\cdot k^{0.5} = (\$\delta$ + n)k$</p>
+          <p>Phương trình tích lũy tư bản Solow: $\\Delta k = s \\cdot f(k) - ($\delta$ + n)k$.</p>
+          <p>Tại trạng thái dừng: $\\Delta k = 0 \\iff s \\cdot k^{0.5} = ($\delta$ + n)k$</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$0.3 k^{0.5} = (0.05 + 0.01)k = 0.06k \\iff \\frac{k}{k^{0.5}} = \\frac{0.3}{0.06} = 5$$</div>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies k^{0.5} = 5 \\implies \\mathbf{k^* = 25} \\text{ (tư bản trên mỗi lao động)}$$</div>
           <p>• Sản lượng trạng thái dừng: $y^* = f(k^*) = (25)^{0.5} = \\mathbf{5}$.</p>
@@ -538,15 +538,15 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\$\delta$ = 
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Quy tắc vàng của tích lũy tư bản (Golden Rule)</h4>
-          <p>Tiêu dùng tại trạng thái dừng: $c(k) = f(k) - (\$\delta$ + n)k$.</p>
+          <p>Tiêu dùng tại trạng thái dừng: $c(k) = f(k) - ($\delta$ + n)k$.</p>
           <p>Để tối đa hóa tiêu dùng bền vững, lấy đạo hàm theo k và cho bằng 0:</p>
-          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$c'(k) = f'(k) - (\$\delta$ + n) = 0 \\iff \\mathbf{MPK = \$\delta$ + n}$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$c'(k) = f'(k) - (\delta + n) = 0 \\iff \\mathbf{MPK = \delta + n}$$</div>
           <p>Với hàm $f(k) = k^{0.5} \\implies MPK = 0.5 k^{-0.5} = \\frac{0.5}{k^{0.5}}$.</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\frac{0.5}{k^{0.5}} = 0.05 + 0.01 = 0.06 \\iff k^{0.5} = \\frac{0.5}{0.06} = \\frac{25}{3} \\approx 8.333$$</div>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$\\implies \\mathbf{k_{gold}^* = \\left(\\frac{25}{3}\\right)^2 = \\frac{625}{9} \\approx 69.44}$$</div>
           <p>• Sản lượng tại điểm vàng: $y_{gold}^* = (69.44)^{0.5} = 8.333$.</p>
-          <p>• Tỷ lệ tiết kiệm vàng cần thiết: $s_{gold} = \\frac{(\$\delta$ + n)k_{gold}^*}{y_{gold}^*} = \\frac{0.06 \\times 69.44}{8.333} = \\mathbf{0.50} \\text{ (tức } 50\\%\\text{)}$.</p>
-          <p>• Tiêu dùng cực đại tại điểm vàng: $c_{gold}^* = y^* - (\$\delta$ + n)k^* = 8.333 - 4.167 = \\mathbf{4.166} > 3.5$.</p>
+          <p>• Tỷ lệ tiết kiệm vàng cần thiết: $s_{gold} = \\frac{($\delta$ + n)k_{gold}^*}{y_{gold}^*} = \\frac{0.06 \\times 69.44}{8.333} = \\mathbf{0.50} \\text{ (tức } 50\\%\\text{)}$.</p>
+          <p>• Tiêu dùng cực đại tại điểm vàng: $c_{gold}^* = y^* - ($\delta$ + n)k^* = 8.333 - 4.167 = \\mathbf{4.166} > 3.5$.</p>
           <p class="mt-2"><strong>Nhận xét:</strong> Mức tư bản hiện tại $k^* = 25 < k_{gold}^* = 69.44$ và tỷ lệ tiết kiệm $s = 0.3 < s_{gold} = 0.5$. Nền kinh tế đang <strong>thiếu hụt tư bản</strong> so với Quy tắc vàng. Để nâng cao mức sống cho các thế hệ tương lai, quốc gia cần tăng tỷ lệ tiết kiệm từ 30% lên 50%.</p>
         </div>
       </div>
@@ -617,33 +617,33 @@ Cho biết tỷ lệ tiết kiệm $s = 0.3$, tỷ lệ khấu hao $\$\delta$ = 
     title: "Dạng 12: Quy tắc điều hành lãi suất Taylor và ứng phó cú sốc vĩ mô",
     examLevel: "Đề thi Nghiệp vụ Ngân Hàng Trung Ương / Chuẩn Học thuật Vĩ mô",
     context: `Ngân hàng Trung ương điều hành chính sách tiền tệ theo Quy tắc Taylor chuẩn:
-$$i = r^* + \$\pi$ + 0.5(\$\pi$ - \$\pi$^*) + 0.5(y - \\bar{y})$$
+$i = r^* + \pi + 0.5(\pi - \pi^*) + 0.5(y - \bar{y})$
 Cho biết:
 - Lãi suất thực tế cân bằng dài hạn: $r^* = 2\\%$
-- Tỷ lệ lạm phát mục tiêu: $\$\pi$^* = 2\\%$
+- Tỷ lệ lạm phát mục tiêu: $\pi^*$ = 2\\%$
 - Tốc độ tăng trưởng sản lượng tiềm năng: $\\bar{y} = 6\\%$.`,
     subQuestions: [
       "a) Khi nền kinh tế đang ở trạng thái cân bằng toàn dụng ($\pi = 2\\%, y = 6\\%$), NHTW nên ấn định lãi suất danh nghĩa mục tiêu $i$ là bao nhiêu?",
-      "b) Giả sử xảy ra cú sốc tổng cầu khiến lạm phát tăng lên $\$\pi$ = 6\\%$ và sản lượng tăng nóng lên $y = 8\\%$. Theo quy tắc Taylor, NHTW cần điều chỉnh lãi suất danh nghĩa lên bao nhiêu?",
+      "b) Giả sử xảy ra cú sốc tổng cầu khiến lạm phát tăng lên $\pi$ = 6\\%$ và sản lượng tăng nóng lên $y = 8\\%$. Theo quy tắc Taylor, NHTW cần điều chỉnh lãi suất danh nghĩa lên bao nhiêu?",
       "c) Tính lãi suất thực tế trong kịch bản (b). Giải thích nguyên lý Taylor (Taylor Principle): Tại sao NHTW phải tăng lãi suất danh nghĩa nhiều hơn 1-1 so với mức tăng của lạm phát?"
     ],
     fullSolutionHtml: `
       <div class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu a: Lãi suất tại trạng thái cân bằng mục tiêu</h4>
-          <p>Khi lạm phát đạt mục tiêu ($\$\pi$ = \$\pi$^* = 2\\%$) và sản lượng ở mức tiềm năng ($y = \\bar{y} = 6\\%$):</p>
-          <p>Khoảng trống lạm phát: $\$\pi$ - \$\pi$^* = 2 - 2 = 0$.</p>
+          <p>Khi lạm phát đạt mục tiêu ($\pi$ = $\pi^*$ = 2\\%$) và sản lượng ở mức tiềm năng ($y = \\bar{y} = 6\\%$):</p>
+          <p>Khoảng trống lạm phát: $\pi$ - $\pi^*$ = 2 - 2 = 0$.</p>
           <p>Khoảng trống sản lượng: $y - \\bar{y} = 6 - 6 = 0$.</p>
-          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = r^* + \$\pi$ + 0.5(0) + 0.5(0) = 2\\% + 2\\% = \\mathbf{4.0\\%}$$</div>
+          <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = r^* + \pi + 0.5(0) + 0.5(0) = 2\\% + 2\\% = \\mathbf{4.0\\%}$$</div>
           <p>Lãi suất danh nghĩa trung tính là 4.0%/năm.</p>
         </div>
 
         <div class="p-3.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700">
           <h4 class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">Lời giải câu b & c: Phản ứng trước cú sốc lạm phát và Nguyên lý Taylor</h4>
-          <p>Khi $\$\pi$ = 6\\%$ (vượt mục tiêu $6 - 2 = 4\\%$) và $y = 8\\%$ (tăng nóng $8 - 6 = 2\\%$):</p>
+          <p>Khi $\pi$ = 6\\%$ (vượt mục tiêu $6 - 2 = 4\\%$) và $y = 8\\%$ (tăng nóng $8 - 6 = 2\\%$):</p>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = 2\\% + 6\\% + 0.5(6 - 2) + 0.5(8 - 6)$$</div>
           <div class="my-1.5 overflow-x-auto text-indigo-700 dark:text-indigo-300">$$i = 8\\% + 0.5(4\\%) + 0.5(2\\%) = 8\\% + 2\\% + 1\\% = \\mathbf{11.0\\%}$$</div>
-          <p>• <strong>Lãi suất thực tế mới:</strong> $r = i - \$\pi$ = 11\\% - 6\\% = \\mathbf{5.0\\%}$ (Tăng từ $2\\%$ lên $5\\%$!).</p>
+          <p>• <strong>Lãi suất thực tế mới:</strong> $r = i - $\pi$ = 11\\% - 6\\% = \\mathbf{5.0\\%}$ (Tăng từ $2\\%$ lên $5\\%$!).</p>
           <p class="mt-2">• <strong>Giải thích Nguyên lý Taylor (Taylor Principle):</strong></p>
           <p>Hệ số trước lạm phát là $1 + 0.5 = 1.5 > 1$. Khi lạm phát tăng thêm 1%, NHTW phải tăng lãi suất danh nghĩa thêm 1.5% (tức tăng lớn hơn 1-1). Điều này đảm bảo rằng <strong>lãi suất thực tế r sẽ tăng lên</strong>. Lãi suất thực tăng làm hạ nhiệt chi tiêu vay mượn và đầu tư, kéo tổng cầu giảm xuống, từ đó dập tắt lạm phát. Nếu NHTW tăng lãi suất danh nghĩa ít hơn 1-1, lãi suất thực tế sẽ giảm và vô tình đổ thêm dầu vào lửa lạm phát.</p>
         </div>
