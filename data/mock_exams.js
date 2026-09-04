@@ -11,7 +11,7 @@ const MOCK_EXAMS_DATA = [
     totalPoints: 10,
     parts: [
       {
-        partTitle: "PHẦN I: TRẮC NGHIỆM KHÁCH QUAN (4.0 ĐIỂM)",
+        partTitle: "Phần I: Trắc nghiệm khách quan (4.0 ĐIỂM)",
         description: "Chọn đáp án đúng nhất trong 10 câu hỏi sau (mỗi câu 0.4 điểm):",
         questions: [
           {
@@ -75,7 +75,7 @@ const MOCK_EXAMS_DATA = [
         ]
       },
       {
-        partTitle: "PHẦN III: BÀI TẬP TỰ LUẬN TÍNH TOÁN (3.0 ĐIỂM)",
+        partTitle: "Phần III: Bài tập tự luận tính toán (3.0 ĐIỂM)",
         description: "Trình bày lời giải chi tiết từng bước cho bài toán sau:",
         problemText: `Thị trường lúa gạo có hàm cầu: $Q_D = 100 - 2P$ và hàm cung: $Q_S = 20 + 2P$ (P tính bằng nghìn đồng/kg; Q tính bằng nghìn tấn).
 a) Xác định giá ($P^*$) và lượng ($Q^*$) cân bằng. Tính thặng dư tiêu dùng ($CS$) và thặng dư sản xuất ($PS$). (1.0đ)
@@ -111,12 +111,12 @@ $DWL = \\frac{1}{2} \\times (P_f - P^*) \\times (Q_S - Q^*) + \\dots = \\mathbf{
     totalPoints: 10,
     parts: [
       {
-        partTitle: "PHẦN I: TRẮC NGHIỆM KHÁCH QUAN (4.0 ĐIỂM)",
+        partTitle: "Phần I: Trắc nghiệm khách quan (4.0 ĐIỂM)",
         description: "Chọn đáp án đúng nhất (mỗi câu 0.4 điểm):",
         questions: [
           {
             qNum: 1,
-            text: "Giao dịch nào sau đây ĐƯỢC TÍNH vào GDP của Việt Nam năm 2025?",
+            text: "Giao dịch nào sau đây được tính vào GDP của Việt Nam năm 2025?",
             options: ["Một người mua xe máy Honda cũ đời 2020", "Nhà nước chi trả lương cho giáo viên trường công lập", "Chính phủ chi trả tiền trợ cấp cho cựu chiến binh", "Một công ty mua 500 triệu đồng cổ phiếu trên sàn HoSE"],
             correct: 1,
             point: 0.4,
@@ -124,7 +124,7 @@ $DWL = \\frac{1}{2} \\times (P_f - P^*) \\times (Q_S - Q^*) + \\dots = \\mathbf{
           },
           {
             qNum: 2,
-            text: "Số nhân tiền tệ mm sẽ GIẢM XUỐNG khi:",
+            text: "Số nhân tiền tệ mm sẽ giảm xuống khi:",
             options: ["Tỷ lệ dự trữ bắt buộc của ngân hàng giảm", "Người dân giữ ít tiền mặt hơn", "Tỷ lệ nắm giữ tiền mặt cr của người dân tăng vọt", "NHTW mua vào trái phiếu chính phủ"],
             correct: 2,
             point: 0.4,
@@ -284,7 +284,7 @@ $\\mathbf{Y_1^* = 1.000 + 50(11.5) = 1.575}$.
         ]
       },
       {
-        partTitle: "PHẦN III: BÀI TẬP TỔNG HỢP TỰ LUẬN (3.0 ĐIỂM)",
+        partTitle: "PHẦN III: Bài tập tổng hợp tự luận (3.0 ĐIỂM)",
         description: "Giải bài toán độc quyền nhóm Cournot sau:",
         problemText: `Thị trường gồm 2 doanh nghiệp độc quyền nhóm đối mặt với đường cầu: $P = 100 - (Q_1 + Q_2)$.
 Cả 2 doanh nghiệp đều có chi phí biên không đổi: $MC_1 = MC_2 = 10$ và không có chi phí cố định.

@@ -330,7 +330,7 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị sản phẩm (chiếc, tấn...)"
       },
       {
-        "symbol": "\\pi_M",
+        "symbol": "\$\pi$_M",
         "meaning": "Lợi nhuận kinh tế siêu ngạch của nhà độc quyền (economic profit)",
         "unit": "Đơn vị tiền tệ (triệu đồng, USD)"
       }
@@ -352,7 +352,7 @@ const FORMULAS_DATA = [
     "category": "micro",
     "chapter": "Chương 6: Bốn cấu trúc thị trường và lý thuyết trò chơi",
     "title": "Cân bằng Nash (Nash equilibrium) và thế lưỡng nan của người tù (prisoner's dilemma)",
-    "formula": "\\text{Cân bằng Nash}: \\pi_i(s_i^*, s_{-i}^*) \\ge \\pi_i(s_i, s_{-i}^*) \\quad \\forall s_i",
+    "formula": "\\text{Cân bằng Nash}: \$\pi$_i(s_i^*, s_{-i}^*) \\ge \$\pi$_i(s_i, s_{-i}^*) \\quad \\forall s_i",
     "description": "Một tập hợp các chiến lược được gọi là cân bằng Nash nếu không có bất kỳ người chơi nào có động cơ đơn phương thay đổi chiến lược khi các đối thủ giữ nguyên lựa chọn của họ.",
     "variables": [
       {
@@ -366,7 +366,7 @@ const FORMULAS_DATA = [
         "unit": "Quyết định hành động của các đối thủ"
       },
       {
-        "symbol": "\\pi_i",
+        "symbol": "\$\pi$_i",
         "meaning": "Mức lợi ích hoặc lợi nhuận thanh toán của người chơi (payoff)",
         "unit": "Đơn vị tiền tệ hoặc điểm thỏa dụng"
       }
@@ -516,7 +516,7 @@ const FORMULAS_DATA = [
     "category": "macro",
     "chapter": "Chương 9: Lạm phát, chỉ số giá tiêu dùng và thị trường lao động",
     "title": "Chỉ số giá tiêu dùng (consumer price index - CPI), tỷ lệ lạm phát (inflation rate) và hiệu ứng Fisher (Fisher effect)",
-    "formula": "CPI_t = \\frac{\\sum (P_{i, t} \\times Q_{i, 0})}{\\sum (P_{i, 0} \\times Q_{i, 0})} \\times 100, \\quad \\pi_t = \\frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \\times 100\\%, \\quad i \\approx r + \\pi",
+    "formula": "CPI_t = \\frac{\\sum (P_{i, t} \\times Q_{i, 0})}{\\sum (P_{i, 0} \\times Q_{i, 0})} \\times 100, \\quad \$\pi$_t = \\frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \\times 100\\%, \\quad i \\approx r + \$\pi$",
     "description": "Đo lường sự biến động chi phí sinh hoạt bình quân của một hộ gia đình điển hình qua thời gian thông qua một giỏ hàng hóa và dịch vụ tiêu dùng cố định.",
     "variables": [
       {
@@ -525,7 +525,7 @@ const FORMULAS_DATA = [
         "unit": "Điểm chỉ số (năm gốc = 100)"
       },
       {
-        "symbol": "\\pi_t",
+        "symbol": "\$\pi$_t",
         "meaning": "Tỷ lệ lạm phát trong kỳ (inflation rate)",
         "unit": "Tỷ lệ phần trăm (% / năm hoặc % / tháng)"
       },
@@ -540,7 +540,7 @@ const FORMULAS_DATA = [
         "unit": "Tỷ lệ phần trăm (% / năm)"
       }
     ],
-    "example": "Gửi tiền tiết kiệm với lãi suất danh nghĩa $i = 8\\%/năm$, tỷ lệ lạm phát kỳ vọng là $\\pi = 3\\%/năm$: lãi suất thực tế người gửi nhận được xấp xỉ $r = 8\\% - 3\\% = 5\\%/năm$.",
+    "example": "Gửi tiền tiết kiệm với lãi suất danh nghĩa $i = 8\\%/năm$, tỷ lệ lạm phát kỳ vọng là $\$\pi$ = 3\\%/năm$: lãi suất thực tế người gửi nhận được xấp xỉ $r = 8\\% - 3\\% = 5\\%/năm$.",
     "examTrap": "Phân biệt giữa chỉ số $CPI$ và chỉ số điều chỉnh $GDP$: $CPI$ sử dụng quyền số giỏ hàng cố định của năm gốc ($Q_0$) và bao gồm cả hàng tiêu dùng nhập khẩu; chỉ số điều chỉnh $GDP$ sử dụng sản lượng thay đổi của năm hiện hành ($Q_t$) và chỉ đo lường hàng hóa sản xuất nội địa, không tính hàng nhập khẩu.",
     "notes": "Hiệu ứng Fisher (Fisher effect): Trong dài hạn, khi tỷ lệ lạm phát kỳ vọng tăng 1%, ngân hàng thương mại và thị trường sẽ điều chỉnh tăng lãi suất danh nghĩa thêm đúng 1% để giữ cho lãi suất thực tế không đổi.",
     "caseStudy": {
@@ -755,7 +755,7 @@ const FORMULAS_DATA = [
         "unit": "Đơn vị sản phẩm hoặc giá trị thực tế"
       }
     ],
-    "example": "Nếu cung tiền $M$ tăng trưởng 10%/năm, sản lượng thực tế $Y$ tăng 3%/năm, tốc độ vòng quay tiền tệ $V$ ổn định không đổi: tỷ lệ lạm phát dài hạn sẽ là $\\pi = \\%\\Delta P = 10\\% - 3\\% = 7\\%/năm$.",
+    "example": "Nếu cung tiền $M$ tăng trưởng 10%/năm, sản lượng thực tế $Y$ tăng 3%/năm, tốc độ vòng quay tiền tệ $V$ ổn định không đổi: tỷ lệ lạm phát dài hạn sẽ là $\$\pi$ = \\%\\Delta P = 10\\% - 3\\% = 7\\%/năm$.",
     "examTrap": "Nguyên lý tính trung tính của tiền tệ (monetary neutrality): Các nhà kinh tế học cổ điển chỉ ra rằng trong dài hạn, việc gia tăng cung tiền tệ chỉ làm thay đổi các biến số danh nghĩa (như mức giá $P$, tiền lương danh nghĩa), hoàn toàn không có khả năng làm biến đổi các biến số thực tế (như sản lượng thực tế $Y$, việc làm).",
     "notes": "Hiện tượng siêu lạm phát xuất hiện khi tỷ lệ lạm phát vượt quá 50% mỗi tháng. Nguyên nhân duy nhất của mọi cuộc siêu lạm phát trong lịch sử đều bắt nguồn từ việc chính phủ thâm hụt ngân sách trầm trọng và lạm dụng việc in tiền để trang trải nợ nần.",
     "caseStudy": {

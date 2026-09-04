@@ -16,7 +16,7 @@ const FLASHCARDS_DATA = [
     category: "micro",
     topic: "Cung - Cầu",
     front: "Phân biệt 'Thay đổi lượng cầu' vs 'Thay đổi cầu'?",
-    back: "• Thay đổi LƯỢNG cầu: Do GIÁ CỦA CHÍNH HÀNG ĐÓ thay đổi => Gây di chuyển dọc (Movement) trên đường cầu.\n• Thay đổi CẦU: Do các yếu tố ngoài giá (thu nhập, sở thích, giá hàng liên quan...) => Làm DỊCH CHUYỂN (Shift) cả đường cầu.",
+    back: "• Thay đổi lượng cầu: Do giá của chính hàng hóa đó thay đổi => Gây di chuyển dọc (Movement) trên đường cầu.\n• Thay đổi cầu: Do các yếu tố ngoài giá (thu nhập, sở thích, giá hàng liên quan...) => Làm dịch chuyển (Shift) cả đường cầu.",
     tip: "Bẫy chiếm 30% câu trắc nghiệm lý thuyết!"
   },
   {
@@ -24,7 +24,7 @@ const FLASHCARDS_DATA = [
     category: "micro",
     topic: "Cung - Cầu",
     front: "Giá trần (Price Ceiling) & Giá sàn (Price Floor) có hiệu lực khi nào?",
-    back: "• Giá trần có hiệu lực: P_trần < P* (gây THIẾU HỤT hàng hóa, chợ đen).\n• Giá sàn có hiệu lực: P_sàn > P* (gây DƯ THỪA hàng hóa, chính phủ phải mua giải cứu).",
+    back: "• Giá trần có hiệu lực: P_trần < P* (gây thiếu hụt hàng hóa, chợ đen).\n• Giá sàn có hiệu lực: P_sàn > P* (gây dư thừa hàng hóa, chính phủ phải mua giải cứu).",
     tip: "Trần ở dưới, Sàn ở trên mới có hiệu lực!"
   },
   {
@@ -32,7 +32,7 @@ const FLASHCARDS_DATA = [
     category: "micro",
     topic: "Độ co giãn",
     front: "Quy tắc định giá theo độ co giãn của cầu để tối đa hóa doanh thu (TR)?",
-    back: "• |E_D| > 1 (Co giãn nhiều): Nên GIẢM GIÁ để tăng doanh thu.\n• |E_D| < 1 (Co giãn ít / thiết yếu): Nên TĂNG GIÁ để tăng doanh thu.\n• |E_D| = 1 (Co giãn đơn vị): Doanh thu TR đạt cực đại.",
+    back: "• |E_D| > 1 (Co giãn nhiều): Nên giảm giá để tăng doanh thu.\n• |E_D| < 1 (Co giãn ít / thiết yếu): Nên tăng giá để tăng doanh thu.\n• |E_D| = 1 (Co giãn đơn vị): Doanh thu TR đạt cực đại.",
     tip: "Nhớ: Co giãn nhiều thì Giá và Doanh thu biến thiên ngược chiều!"
   },
   {
@@ -48,7 +48,7 @@ const FLASHCARDS_DATA = [
     category: "micro",
     topic: "Sản xuất & Chi phí",
     front: "Đường MC cắt ATC và AVC tại điểm nào?",
-    back: "Đường Chi phí cận biên (MC) luôn đi qua ĐIỂM CỰC TIỂU của cả đường Chi phí trung bình (ATC_min) và Chi phí biến đổi trung bình (AVC_min).",
+    back: "Đường Chi phí cận biên (MC) luôn đi qua điểm cực tiểu của cả đường Chi phí trung bình (ATC_min) và Chi phí biến đổi trung bình (AVC_min).",
     tip: "Để tìm mức Q mà ATC cực tiểu, giải phương trình: MC = ATC."
   },
   {
@@ -56,7 +56,7 @@ const FLASHCARDS_DATA = [
     category: "micro",
     topic: "Cấu trúc thị trường",
     front: "Điều kiện tối đa hóa lợi nhuận chung và đường cung của doanh nghiệp cạnh tranh?",
-    back: "• Điều kiện chung: MR = MC.\n• Cạnh tranh hoàn hảo: P = MR = MC.\n• Đường cung ngắn hạn: Là phần đường MC nằm PHÍA TRÊN điểm AVC_min (nếu P < AVC_min thì đóng cửa).",
+    back: "• Điều kiện chung: MR = MC.\n• Cạnh tranh hoàn hảo: P = MR = MC.\n• Đường cung ngắn hạn: Là phần đường MC nằm phía trên điểm AVC_min (nếu P < AVC_min thì đóng cửa).",
     tip: "Doanh nghiệp độc quyền có MR dốc gấp đôi đường cầu: Cầu P = a - bQ => MR = a - 2bQ."
   },
   {
@@ -80,8 +80,8 @@ const FLASHCARDS_DATA = [
     category: "micro",
     topic: "Độ co giãn chéo",
     front: "Dấu của Độ co giãn chéo E_XY nói lên điều gì?",
-    back: "• E_XY > 0: Hai hàng hóa THAY THẾ (Giá Pepsi tăng -> Cầu Coca tăng).\n• E_XY < 0: Hai hàng hóa BỔ SUNG (Giá xăng tăng -> Cầu xe máy giảm).\n• E_XY = 0: Hai hàng hóa độc lập.",
-    tip: "Khác với độ co giãn theo giá (thường lấy trị tuyệt đối), độ co giãn chéo và co giãn thu nhập PHẢI GIỮ NGUYÊN DẤU!"
+    back: "• E_XY > 0: Hai hàng hóa thay thế (Giá Pepsi tăng -> Cầu Coca tăng).\n• E_XY < 0: Hai hàng hóa bổ sung (Giá xăng tăng -> Cầu xe máy giảm).\n• E_XY = 0: Hai hàng hóa độc lập.",
+    tip: "Khác với độ co giãn theo giá (thường lấy trị tuyệt đối), độ co giãn chéo và co giãn thu nhập phải giữ nguyên dấu!"
   },
 
   // --- VĨ MÔ ---
@@ -90,7 +90,7 @@ const FLASHCARDS_DATA = [
     category: "macro",
     topic: "Đo lường GDP",
     front: "Định nghĩa GDP và công thức tính theo luồng chi tiêu?",
-    back: "GDP là giá trị thị trường của toàn bộ hàng hóa & dịch vụ CUỐI CÙNG sản xuất TRONG NƯỚC trong một thời kỳ.\nCông thức: GDP = C + I + G + NX.",
+    back: "GDP là giá trị thị trường của toàn bộ hàng hóa & dịch vụ cuối cùng sản xuất trong nước trong một thời kỳ.\nCông thức: GDP = C + I + G + NX.",
     tip: "G không gồm trợ cấp (Tr). I gồm cả nhà ở mới của hộ gia đình."
   },
   {
@@ -106,7 +106,7 @@ const FLASHCARDS_DATA = [
     category: "macro",
     topic: "Lạm phát",
     front: "Phân biệt CPI và GDP Deflator qua 2 tiêu chí cốt lõi?",
-    back: "1. Hàng nhập khẩu: Có trong CPI (nếu dân mua), KHÔNG CÓ trong GDP Deflator.\n2. Giỏ hàng: CPI dùng giỏ hàng CỐ ĐỊNH; GDP Deflator dùng giỏ hàng THAY ĐỔI theo năm hiện hành.",
+    back: "1. Hàng nhập khẩu: Có trong CPI (nếu dân mua), không có trong GDP Deflator.\n2. Giỏ hàng: CPI dùng giỏ hàng cố định; GDP Deflator dùng giỏ hàng thay đổi theo năm hiện hành.",
     tip: "Máy ủi nội địa tăng giá -> Deflator tăng, CPI không đổi. Xe BMW nhập tăng giá -> CPI tăng, Deflator không đổi."
   },
   {
@@ -138,7 +138,7 @@ const FLASHCARDS_DATA = [
     category: "macro",
     topic: "Chính sách tài khóa",
     front: "Số nhân chi tiêu Keynes và Hiện tượng lấn át (Crowding-out)?",
-    back: "• Số nhân chi tiêu: k = 1 / [1 - MPC(1 - t)]. Mức tăng sản lượng lý thuyết: ΔY = k x ΔG.\n• Hiện tượng lấn át: Chính phủ vay nợ tài trợ chi tiêu làm LÃI SUẤT TĂNG, bóp nghẹt đầu tư tư nhân (I giảm), làm giảm hiệu quả kích thích kinh tế.",
+    back: "• Số nhân chi tiêu: k = 1 / [1 - MPC(1 - t)]. Mức tăng sản lượng lý thuyết: ΔY = k x ΔG.\n• Hiện tượng lấn át: Chính phủ vay nợ tài trợ chi tiêu làm lãi suất tăng, bóp nghẹt đầu tư tư nhân (I giảm), làm giảm hiệu quả kích thích kinh tế.",
     tip: "MPC càng cao thì số nhân chi tiêu càng lớn!"
   },
   {
