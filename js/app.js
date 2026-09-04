@@ -772,59 +772,63 @@ function initFormulasTab() {
     }
 
     container.innerHTML = filtered.map(item => `
-      <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 sm:p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-xs font-bold px-2.5 py-1 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
-            ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
-          </span>
-          <span class="text-xs text-slate-400">${item.chapter}</span>
-        </div>
-        <h3 class="font-bold text-lg text-slate-900 dark:text-slate-100 mb-2">${item.title}</h3>
-        <div class="math-card my-3 p-4 text-center overflow-x-auto shadow-sm">
-          <div class="text-lg font-bold text-indigo-700 dark:text-indigo-300">$$${item.formula}$$</div>
-        </div>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">${item.description}</p>
-        
-        ${item.variables && item.variables.length > 0 ? `
-          <div class="my-3 p-3.5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700/80">
-            <h4 class="text-xs font-bold text-indigo-900 dark:text-indigo-200 tracking-wide mb-2 flex items-center gap-1.5">
-              <i data-lucide="info" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
-              Chú giải ký hiệu & Đơn vị đo lường:
-            </h4>
-            <div class="overflow-x-auto -mx-1 sm:mx-0">
-              <table class="w-full text-xs text-left border-collapse">
-                <thead>
-                  <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
-                    <th class="py-1 px-2 font-semibold">Ký hiệu</th>
-                    <th class="py-1 px-2 font-semibold">Ý nghĩa kinh tế</th>
-                    <th class="py-1 px-2 font-semibold text-emerald-600 dark:text-emerald-400">Đơn vị đo chuẩn</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
-                  ${item.variables.map(v => `
-                    <tr>
-                      <td class="py-1.5 px-2 font-mono font-bold text-indigo-600 dark:text-indigo-400">$${v.symbol}$</td>
-                      <td class="py-1.5 px-2">${v.meaning}</td>
-                      <td class="py-1.5 px-2 font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-50/50 dark:bg-emerald-950/20 rounded">${v.unit || 'Không có đơn vị'}</td>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 sm:p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col h-full justify-between">
+        <div class="flex-1 flex flex-col">
+          <div class="flex items-center justify-between mb-3 min-h-[1.75rem]">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
+              ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
+            </span>
+            <span class="text-xs text-slate-400 font-medium">${item.chapter}</span>
+          </div>
+          <div class="min-h-[3.25rem] flex items-center mb-2">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-slate-100 leading-snug">${item.title}</h3>
+          </div>
+          <div class="math-card my-2.5 p-3.5 sm:p-4 text-center overflow-x-auto shadow-sm min-h-[5.5rem] flex items-center justify-center">
+            <div class="text-base sm:text-lg font-bold text-indigo-700 dark:text-indigo-300 w-full">$$${item.formula}$$</div>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mb-3 min-h-[2.5rem] flex items-center leading-relaxed">${item.description}</p>
+          
+          ${item.variables && item.variables.length > 0 ? `
+            <div class="my-3 p-3.5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700/80">
+              <h4 class="text-xs font-bold text-indigo-900 dark:text-indigo-200 tracking-wide mb-2 flex items-center gap-1.5">
+                <i data-lucide="info" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+                Chú giải ký hiệu & Đơn vị đo lường:
+              </h4>
+              <div class="overflow-x-auto -mx-1 sm:mx-0">
+                <table class="w-full text-xs text-left border-collapse">
+                  <thead>
+                    <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+                      <th class="py-1 px-2 font-semibold">Ký hiệu</th>
+                      <th class="py-1 px-2 font-semibold">Ý nghĩa kinh tế</th>
+                      <th class="py-1 px-2 font-semibold text-emerald-600 dark:text-emerald-400">Đơn vị đo chuẩn</th>
                     </tr>
-                  `).join('')}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                    ${item.variables.map(v => `
+                      <tr>
+                        <td class="py-1.5 px-2 font-mono font-bold text-indigo-600 dark:text-indigo-400 align-middle">$${v.symbol}$</td>
+                        <td class="py-1.5 px-2 align-middle">${v.meaning}</td>
+                        <td class="py-1.5 px-2 font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-50/50 dark:bg-emerald-950/20 rounded align-middle">${v.unit || 'Không có đơn vị'}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-        ` : ''}
-        
-        ${item.example ? `
-          <div class="text-xs bg-slate-50 dark:bg-slate-900/40 p-3 rounded-lg border border-slate-200 dark:border-slate-800 mb-3 text-slate-700 dark:text-slate-300">
-            <strong>Ví dụ áp dụng:</strong> ${item.example}
-          </div>
-        ` : ''}
+          ` : ''}
+          
+          ${item.example ? `
+            <div class="text-xs bg-slate-50 dark:bg-slate-900/40 p-3 rounded-lg border border-slate-200 dark:border-slate-800 mb-3 text-slate-700 dark:text-slate-300 leading-relaxed">
+              <strong>Ví dụ áp dụng:</strong> ${item.example}
+            </div>
+          ` : ''}
 
-        ${item.examTrap ? `
-          <div class="text-xs bg-amber-50 dark:bg-amber-950/40 p-3 rounded-lg border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 mb-3">
-            <strong>⚠️ BẪY ĐỀ THI:</strong> ${item.examTrap}
-          </div>
-        ` : ''}
+          ${item.examTrap ? `
+            <div class="text-xs bg-amber-50 dark:bg-amber-950/40 p-3 rounded-lg border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 mb-3 leading-relaxed">
+              <strong>⚠️ BẪY ĐỀ THI:</strong> ${item.examTrap}
+            </div>
+          ` : ''}
+        </div>
 
         ${item.caseStudy ? `
           <div class="mt-4 p-4 bg-gradient-to-br from-indigo-50/70 to-purple-50/70 dark:from-slate-900/90 dark:to-indigo-950/40 rounded-xl border border-indigo-200/80 dark:border-indigo-800/60 text-xs space-y-2">
@@ -1704,33 +1708,37 @@ function initTrapsTab() {
   function renderTraps(category = 'all') {
     const filtered = TRAPS_DATA.filter(item => category === 'all' || item.category === category);
     container.innerHTML = filtered.map(item => `
-      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow space-y-3">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 font-bold text-xs font-mono">
-              Bẫy #${item.id.replace('trap-', '')}
-            </span>
-            <span class="text-xs font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
-              ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full space-y-3">
+        <div class="flex-1 flex flex-col space-y-3">
+          <div class="flex items-center justify-between min-h-[1.5rem]">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 font-bold text-xs font-mono">
+                Bẫy #${item.id.replace('trap-', '')}
+              </span>
+              <span class="text-xs font-bold px-2 py-0.5 rounded-full ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
+                ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
+              </span>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.severity && item.severity.toLowerCase().includes('cao') ? 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' : 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300'}">
+              ${item.severity && item.severity.toLowerCase().includes('cao') ? '⚠️ Tỷ lệ sai > 80%' : '⚡ Dễ nhầm lẫn'}
             </span>
           </div>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.severity && item.severity.toLowerCase().includes('cao') ? 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' : 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300'}">
-            ${item.severity && item.severity.toLowerCase().includes('cao') ? '⚠️ Tỷ lệ sai > 80%' : '⚡ Dễ nhầm lẫn'}
-          </span>
-        </div>
 
-        <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base leading-snug">${item.title}</h3>
+          <div class="min-h-[2.75rem] flex items-center">
+            <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base leading-snug">${item.title}</h3>
+          </div>
 
-        <div class="p-3 bg-rose-50 dark:bg-rose-950/30 rounded-xl border border-rose-100 dark:border-rose-900/50 text-xs text-rose-900 dark:text-rose-200">
-          <strong>❌ Ngộ nhận thường gặp:</strong> ${item.trapDesc || item.misconception || 'Cần đặc biệt lưu ý ngữ cảnh bài thi.'}
-        </div>
+          <div class="p-3 bg-rose-50 dark:bg-rose-950/30 rounded-xl border border-rose-100 dark:border-rose-900/50 text-xs text-rose-900 dark:text-rose-200 leading-relaxed">
+            <strong>❌ Ngộ nhận thường gặp:</strong> ${item.trapDesc || item.misconception || 'Cần đặc biệt lưu ý ngữ cảnh bài thi.'}
+          </div>
 
-        <div class="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-100 dark:border-emerald-900/50 text-xs text-emerald-900 dark:text-emerald-200">
-          <strong>✓ Bản chất theo Mankiw:</strong> ${item.correctInsight || item.mankiwInsight || 'Nắm vững định nghĩa và bản chất kinh tế học.'}
-        </div>
+          <div class="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-100 dark:border-emerald-900/50 text-xs text-emerald-900 dark:text-emerald-200 leading-relaxed">
+            <strong>✓ Bản chất theo Mankiw:</strong> ${item.correctInsight || item.mankiwInsight || 'Nắm vững định nghĩa và bản chất kinh tế học.'}
+          </div>
 
-        <div class="p-2.5 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-900 text-xs text-amber-800 dark:text-amber-300 font-semibold">
-          💡 ${item.examTip || item.proTip || 'Đọc kỹ câu hỏi trắc nghiệm trước khi chọn phương án.'}
+          <div class="p-2.5 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-900 text-xs text-amber-800 dark:text-amber-300 font-semibold leading-relaxed">
+            💡 ${item.examTip || item.proTip || 'Đọc kỹ câu hỏi trắc nghiệm trước khi chọn phương án.'}
+          </div>
         </div>
 
         <!-- Practice Question Toggle -->

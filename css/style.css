@@ -60,13 +60,13 @@ body {
   background: rgba(99, 102, 241, 0.7);
 }
 
-/* KaTeX formula readability and elegance */
+/* KaTeX formula display styling */
 .katex-display {
-  margin: 0.85em 0 !important;
+  margin: 0.45rem 0 !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
   max-width: 100% !important;
-  padding: 0.5rem 0.75rem;
+  padding: 0.25rem 0.5rem !important;
   background: rgba(99, 102, 241, 0.03);
   border-radius: 0.625rem;
   border: 1px solid rgba(99, 102, 241, 0.08);
@@ -78,16 +78,43 @@ body {
   border-color: rgba(99, 102, 241, 0.18);
 }
 
-/* Math card container */
+/* When .katex-display is inside an already styled box, remove nested borders/backgrounds to ensure clean alignment */
+.math-card .katex-display,
+.step-box .katex-display,
+.formula-box .katex-display,
+table .katex-display,
+div[class*="bg-white"] .katex-display,
+div[class*="bg-slate"] .katex-display,
+div[class*="bg-indigo"] .katex-display {
+  margin: 0 !important;
+  padding: 0.1rem 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Math card container with uniform alignment and height */
 .math-card {
   background: linear-gradient(135deg, rgba(245, 247, 255, 0.95) 0%, rgba(243, 244, 246, 0.95) 100%);
   border: 1px solid rgba(199, 210, 254, 0.8);
   border-radius: 0.875rem;
+  min-height: 5.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .dark .math-card {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.85) 100%);
   border-color: rgba(99, 102, 241, 0.25);
+}
+
+/* Variables table cell vertical alignment */
+table td, table th {
+  vertical-align: middle !important;
 }
 
 /* Solver step box */
