@@ -79,7 +79,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob5_micro",
+    "id": "prob5",
     "category": "micro",
     "chapter": 1,
     "title": "Dạng 5: Đường giới hạn khả năng sản xuất (PPF), chi phí cơ hội và lợi thế so sánh",
@@ -97,7 +97,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob6_micro",
+    "id": "prob6",
     "category": "micro",
     "chapter": 2,
     "title": "Dạng 6: Can thiệp giá trần, giá sàn, hạn ngạch và tính tổn thất phúc lợi xã hội (DWL)",
@@ -167,7 +167,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob10_micro",
+    "id": "prob10",
     "category": "micro",
     "chapter": 3,
     "title": "Dạng 10: Độ co giãn của cầu, phân loại hàng hóa và chiến lược tối đa hóa doanh thu",
@@ -185,7 +185,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob11_micro",
+    "id": "prob11",
     "category": "micro",
     "chapter": 5,
     "title": "Dạng 11: Tối ưu hóa sản xuất dài hạn Cobb-Douglas và đường mở rộng sản xuất",
@@ -203,7 +203,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob12_micro",
+    "id": "prob12",
     "category": "micro",
     "chapter": 6,
     "title": "Dạng 12: Ngoại ứng tiêu cực, đánh thuế Pigou và hàng hóa công cộng",
@@ -221,7 +221,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob5",
+    "id": "prob13",
     "category": "macro",
     "chapter": 7,
     "title": "Dạng 13: Hạch toán GDP, GNP, NNP, NI, PI, DI theo hệ thống SNA",
@@ -239,7 +239,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob14_macro",
+    "id": "prob14",
     "category": "macro",
     "chapter": 7,
     "title": "Dạng 14: GDP danh nghĩa, GDP thực tế, chỉ số giảm phát GDP Deflator và tốc độ tăng trưởng",
@@ -257,7 +257,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob15_macro",
+    "id": "prob15",
     "category": "macro",
     "chapter": 9,
     "title": "Dạng 15: Chỉ số CPI, tính tỷ lệ lạm phát, hiệu ứng Fisher và thị trường lao động (Okun)",
@@ -275,7 +275,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob16_macro",
+    "id": "prob16",
     "category": "macro",
     "chapter": 10,
     "title": "Dạng 16: Mô hình tạo tiền và cung tiền đầy đủ (MB, cr, rr, mM) và 3 công cụ NHTW",
@@ -293,7 +293,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob17_macro",
+    "id": "prob17",
     "category": "macro",
     "chapter": 11,
     "title": "Dạng 17: Mô hình thu nhập - chi tiêu giản đơn (Keynes 45 độ) và số nhân ngân sách",
@@ -311,7 +311,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob6",
+    "id": "prob18",
     "category": "macro",
     "chapter": 11,
     "title": "Dạng 18: Mô hình cân bằng IS - LM và đo lường hiện tượng lấn át đầu tư",
@@ -329,7 +329,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob10",
+    "id": "prob19",
     "category": "macro",
     "chapter": 8,
     "title": "Dạng 19: Mô hình tăng trưởng Solow - Swan và quy tắc vàng tích lũy tư bản",
@@ -347,7 +347,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob11",
+    "id": "prob20",
     "category": "macro",
     "chapter": 12,
     "title": "Dạng 20: Mô hình Mundell - Fleming: Tỷ giá thả nổi vs tỷ giá cố định",
@@ -365,7 +365,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob12",
+    "id": "prob21",
     "category": "macro",
     "chapter": 11,
     "title": "Dạng 21: Quy tắc điều hành lãi suất Taylor và ứng phó các cú sốc vĩ mô",
@@ -383,7 +383,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob22_macro",
+    "id": "prob22",
     "category": "macro",
     "chapter": 12,
     "title": "Dạng 22: Mô hình Tổng cung - Tổng cầu (AD - AS) và cú sốc cung bất lợi (Stagflation)",
@@ -401,7 +401,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob23_macro",
+    "id": "prob23",
     "category": "macro",
     "chapter": 12,
     "title": "Dạng 23: Đánh đổi Lạm phát - Thất nghiệp trên đường Phillips (SRPC và LRPC)",
@@ -419,7 +419,7 @@ const WORKED_PROBLEMS_DATA = [
     ]
   },
   {
-    "id": "prob24_macro",
+    "id": "prob24",
     "category": "macro",
     "chapter": 12,
     "title": "Dạng 24: Tỷ giá hối đoái, ngang giá sức mua (PPP) và phân tích cán cân thương mại",
