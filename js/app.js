@@ -2013,7 +2013,7 @@ function updateReadinessMeter() {
   percentEl.textContent = `${score}%`;
 }
 
-// ================= 12 BÀI TẬP TỰ LUẬN ĐẠI HỌC =================
+// ================= 24 BÀI TẬP TỰ LUẬN CASE STUDY ĐẠI HỌC =================
 function initWorkedProblemsTab() {
   const container = document.getElementById('worked-problems-container');
   if (!container || typeof WORKED_PROBLEMS_DATA === 'undefined') return;
@@ -2025,13 +2025,17 @@ function initWorkedProblemsTab() {
     container.innerHTML = filtered.map(item => `
       <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
-          <div class="flex items-center gap-2">
+          <div class="flex flex-wrap items-center gap-2">
             <span class="px-2.5 py-1 rounded-lg font-bold text-xs ${item.category === 'micro' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300'}">
               ${item.category === 'micro' ? 'Vi mô' : 'Vĩ mô'}
             </span>
-            <h3 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-slate-100">${item.title}</h3>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-900/60 flex items-center gap-1">
+              <i data-lucide="briefcase" class="w-3 h-3"></i>
+              <span>${item.caseStudyTag || 'Case study thực tế'}</span>
+            </span>
+            <h3 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-slate-100 w-full sm:w-auto mt-1 sm:mt-0">${item.title}</h3>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+          <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 self-start sm:self-center shrink-0">
             🎯 ${item.examLevel}
           </span>
         </div>
@@ -2048,12 +2052,29 @@ function initWorkedProblemsTab() {
         <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <button class="btn-toggle-problem-solution px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5" data-prob-id="${item.id}">
             <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-            <span>Xem Lời Giải Chi Tiết Từng Bước (Chuẩn Điểm 10)</span>
+            <span>Xem lời giải chi tiết từng bước (chuẩn điểm 10)</span>
           </button>
         </div>
 
         <div id="prob-solution-${item.id}" class="hidden mt-3 space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800">
           ${item.fullSolutionHtml}
+          
+          ${item.caseStudyInsight ? `
+            <div class="p-4 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/40 dark:to-orange-950/30 rounded-xl border border-amber-200/80 dark:border-amber-900/60 text-xs space-y-2">
+              <div class="flex items-center gap-1.5 font-bold text-amber-900 dark:text-amber-200">
+                <i data-lucide="lightbulb" class="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0"></i>
+                <span>Đúc kết quyết định kinh tế & Ý nghĩa thực tiễn</span>
+              </div>
+              ${item.caseStudyInsight.entity ? `
+                <p class="text-amber-950 dark:text-amber-300"><strong>🏢 Tổ chức / Doanh nghiệp:</strong> ${item.caseStudyInsight.entity}</p>
+              ` : ''}
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed">${item.caseStudyInsight.content}</p>
+              ${item.caseStudyInsight.takeaway ? `
+                <p class="text-indigo-900 dark:text-indigo-300 bg-white/70 dark:bg-slate-900/60 p-2.5 rounded-lg border border-amber-200/50 dark:border-amber-800/40 font-medium"><strong>⭐ Bài học kinh tế:</strong> ${item.caseStudyInsight.takeaway}</p>
+              ` : ''}
+            </div>
+          ` : ''}
+
           ${item.commonMistakes && item.commonMistakes.length > 0 ? `
             <div class="p-3 bg-rose-50 dark:bg-rose-950/40 rounded-xl border border-rose-200 dark:border-rose-900 text-xs text-rose-800 dark:text-rose-200">
               <p class="font-bold mb-1">⚠️ Cạm bẫy dễ mất điểm tự luận:</p>
@@ -2077,8 +2098,8 @@ function initWorkedProblemsTab() {
           const isHidden = solEl.classList.contains('hidden');
           solEl.classList.toggle('hidden');
           btn.innerHTML = isHidden 
-            ? `<i data-lucide="eye-off" class="w-3.5 h-3.5"></i> <span>Thu Gọn Lời Giải</span>`
-            : `<i data-lucide="eye" class="w-3.5 h-3.5"></i> <span>Xem Lời Giải Chi Tiết Từng Bước (Chuẩn Điểm 10)</span>`;
+            ? `<i data-lucide="eye-off" class="w-3.5 h-3.5"></i> <span>Thu gọn lời giải</span>`
+            : `<i data-lucide="eye" class="w-3.5 h-3.5"></i> <span>Xem lời giải chi tiết từng bước (chuẩn điểm 10)</span>`;
           if (window.lucide) window.lucide.createIcons();
           if (isHidden) renderMath(solEl);
         }
