@@ -1850,10 +1850,37 @@ function initUniversalSearch() {
   });
 
   input.addEventListener('input', (e) => {
-    renderResults(e.target.value.trim().toLowerCase());
+    renderResults(e.target.value);
   });
 
-  function renderResults(q) {
+  function removeVietnameseTones(str) {
+    if (!str) return '';
+    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+    str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+    str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+    str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+    str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+    str = str.replace(/đ/g, "d");
+    str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+    str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+    str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+    str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+    str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+    str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+    str = str.replace(/Đ/g, "D");
+    str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // ̀ ́ ̃ ̉ ̣  huyền, sắc, ngã, hỏi, nặng
+    str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // ˆ ̆ ̛  Â, Ê, Ă, Ơ, Ư
+    str = str.replace(/ + /g, " ");
+    str = str.trim();
+    // Khử thêm dấu ngoặc, phẩy, v.v nếu cần, nhưng để so sánh chuỗi đơn giản thì không bắt buộc
+    return str;
+  }
+
+  function renderResults(rawQ) {
+    const q = rawQ.trim().toLowerCase();
+    const qNoTones = removeVietnameseTones(q).toLowerCase();
+
     if (!q) {
       resultsDiv.innerHTML = `<p class="text-xs text-center text-slate-400 py-6">Nhập từ khóa bất kỳ để tra cứu tức thì toàn bộ 12 chương lý thuyết, 17 video, 20 bẫy đề thi và công thức...</p>`;
       return;
@@ -1861,10 +1888,21 @@ function initUniversalSearch() {
 
     let matches = [];
 
+    function checkMatch(...fields) {
+      return fields.some(f => {
+        if (!f) return false;
+        const lowerF = f.toLowerCase();
+        if (lowerF.includes(q)) return true;
+        const fNoTones = removeVietnameseTones(lowerF).toLowerCase();
+        if (fNoTones.includes(qNoTones)) return true;
+        return false;
+      });
+    }
+
     // 1. Search Theory
     if (typeof THEORY_DATA !== 'undefined') {
       THEORY_DATA.forEach(chap => {
-        if (chap.title.toLowerCase().includes(q) || chap.subtitle.toLowerCase().includes(q) || chap.overview.toLowerCase().includes(q)) {
+        if (checkMatch(chap.title, chap.subtitle, chap.overview)) {
           matches.push({
             type: 'theory',
             badge: `Chương ${chap.number}`,
@@ -1884,7 +1922,7 @@ function initUniversalSearch() {
     // 2. Search Videos
     if (typeof VIDEOS_DATA !== 'undefined') {
       VIDEOS_DATA.forEach(vid => {
-        if (vid.title.toLowerCase().includes(q) || vid.vietnameseTitle.toLowerCase().includes(q) || (vid.examRelevance && vid.examRelevance.toLowerCase().includes(q))) {
+        if (checkMatch(vid.title, vid.vietnameseTitle, vid.examRelevance)) {
           matches.push({
             type: 'video',
             badge: vid.channel,
@@ -1903,7 +1941,7 @@ function initUniversalSearch() {
     // 3. Search Traps
     if (typeof TRAPS_DATA !== 'undefined') {
       TRAPS_DATA.forEach(trap => {
-        if (trap.title.toLowerCase().includes(q) || trap.misconception.toLowerCase().includes(q) || trap.mankiwInsight.toLowerCase().includes(q)) {
+        if (checkMatch(trap.title, trap.misconception, trap.mankiwInsight)) {
           matches.push({
             type: 'trap',
             badge: `Bẫy ${trap.id}`,
@@ -1921,7 +1959,7 @@ function initUniversalSearch() {
     // 4. Search Formulas
     if (typeof FORMULAS_DATA !== 'undefined') {
       FORMULAS_DATA.forEach(f => {
-        if (f.title.toLowerCase().includes(q) || f.formula.toLowerCase().includes(q) || f.description.toLowerCase().includes(q)) {
+        if (checkMatch(f.title, f.formula, f.description)) {
           matches.push({
             type: 'formula',
             badge: 'Công thức',
@@ -1939,7 +1977,7 @@ function initUniversalSearch() {
     // 5. Search Worked Problems
     if (typeof WORKED_PROBLEMS_DATA !== 'undefined') {
       WORKED_PROBLEMS_DATA.forEach(prob => {
-        if (prob.title.toLowerCase().includes(q) || prob.context.toLowerCase().includes(q)) {
+        if (checkMatch(prob.title, prob.context)) {
           matches.push({
             type: 'problem',
             badge: 'Tự luận A+',
@@ -1957,7 +1995,7 @@ function initUniversalSearch() {
     // 6. Search True/False
     if (typeof TRUE_FALSE_DATA !== 'undefined') {
       TRUE_FALSE_DATA.forEach(tf => {
-        if (tf.statement.toLowerCase().includes(q) || tf.topic.toLowerCase().includes(q) || tf.explanation.toLowerCase().includes(q)) {
+        if (checkMatch(tf.statement, tf.topic, tf.explanation)) {
           matches.push({
             type: 'tf',
             badge: `Đúng/Sai: ${tf.verdict}`,
@@ -1973,11 +2011,21 @@ function initUniversalSearch() {
     }
 
     if (matches.length === 0) {
-      resultsDiv.innerHTML = `<p class="text-xs text-center text-slate-400 py-6">Không tìm thấy nội dung phù hợp với "<strong>${q}</strong>". Hãy thử từ khóa khác như "thặng dư", "độc quyền", "CPI", "số nhân"...</p>`;
+      resultsDiv.innerHTML = `<p class="text-xs text-center text-slate-400 py-6">Không tìm thấy nội dung phù hợp với "<strong>${rawQ}</strong>". Hãy thử từ khóa khác như "thặng dư", "độc quyền", "CPI", "số nhân"...</p>`;
       return;
     }
 
-    resultsDiv.innerHTML = matches.slice(0, 10).map((m, idx) => `
+    // Bổ sung header đếm kết quả tìm kiếm
+    const resultCountHtml = `
+      <div class="flex items-center justify-between px-2 pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
+        <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+          Tìm thấy <strong class="text-indigo-600 dark:text-indigo-400">${matches.length}</strong> kết quả cho "${rawQ}"
+        </span>
+        ${matches.length > 20 ? `<span class="text-[10px] text-slate-400">Hiển thị top 20</span>` : ''}
+      </div>
+    `;
+
+    resultsDiv.innerHTML = resultCountHtml + matches.slice(0, 20).map((m, idx) => `
       <div class="search-result-item p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl cursor-pointer transition-colors" data-idx="${idx}">
         <div class="flex items-center gap-2 mb-1">
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${m.badgeColor}">${m.badge}</span>
